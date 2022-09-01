@@ -1,0 +1,17 @@
+#!/bin/bash
+
+do_one() {
+	program_flash -f $1 -offset $2 \
+		-flash_type qspi_single \
+		-fsbl fsbl.elf -blank_check -verify \
+		-cable type xilinx_tcf url TCP:127.0.0.1:3121
+}
+
+echo "MAKE sure KV260 is powered on an stopped at U-boot"
+echo "ensure there is only one Xilinx board attached to the PC"
+echo "Hit enter to continue"
+read 
+
+# this is an unused area in the qspi and should be safe 
+# to test with
+do_one data_64k.bin 0x140000

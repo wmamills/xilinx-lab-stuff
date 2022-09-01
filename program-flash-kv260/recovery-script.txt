@@ -1,0 +1,8 @@
+
+if test x"${multiboot}" -eq x"1f0"; then
+	echo "****** KIRA RECOVERY MODE ******"
+	sf probe 0 0 0
+	sf read 0x10000000 0x02280000 0x01c00000
+	mboot 0x10000000
+	echo "RECOVERY FAILED!!!"
+fi

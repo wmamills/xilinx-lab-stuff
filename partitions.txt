@@ -1,0 +1,29 @@
+QSPI Partitions
+
+	MB*	offset		size
+_____________________________________________________________________________________________
+mtd0	00	0000_0000	  8_0000	imgsel
+mtd1	10	0008_0000	  8_0000	"" backup
+mtd2		0010_0000	  2_0000	imgsel variables
+mtd3		0012_0000	  2_0000	"" backup
+mtd4		0014_0000	  C_0000	unused, Open_1
+mtd5	40	0020_0000 	 D0_0000 	Image A
+mtd6		00F0_0000	  8_0000 	"catch area for Image A" ???
+mtd7	1F0	00F8_0000	 D0_0000 	Image B
+mtd8		01C8_0000	  8_0000 	"catch area for Image B" ???
+mtd9		01D0_0000	 10_0000	unused, Open_2
+mtd10	3C0	01E0_0000	 20_0000	recovery image
+mtd11	400	0200_0000	 20_0000 	"" backup
+mtd12		0220_0000	  2_0000	U-boot vars 
+mtd13		0222_0000	  2_0000	U-boot vars (not really used, filled with pattern)
+mtd14		0224_0000	  1_0000	sha256 signature of QSPI image
+mtd15		0225_0000	1DB_0000	user area	
+		    0225_0000         3_0000    1st 3 64k sectors are locked on starter kit (mistake??)
+		    03E8_0000	     18_0000	qspi boot script in default u-boot vars
+end 		0400_0000	
+
+MB* = multiboot
+
+mtd 0,1,10, & 11 are locked on kv260 and won't respond to erase/write commands using program_flash.
+This is true if board is running u-boot or recovery image.
+I suspect they were permenantly locked at the factory.

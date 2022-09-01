@@ -1,0 +1,29 @@
+#!/bin/bash
+
+do_one() {
+	program_flash -f $1 -offset $2 \
+		-flash_type qspi_single \
+		-fsbl fsbl.elf -blank_check -verify \
+		-cable type xilinx_tcf url TCP:127.0.0.1:3121
+}
+
+echo "MAKE sure KV260 is powered on an stopped at U-boot"
+echo "ensure there is only one Xilinx board attached to the PC"
+echo "Hit enter to continue"
+read 
+
+# write the image selector & recovery and the 2nd copies
+do_one imgsel.bin 	0x0000000
+do_one imgsel.bin 	0x0080000
+do_one recovery.bin 	0x1E00000
+do_one recovery.bin     0x2000000
+
+do_one sha256.bin	0x2240000
+
+# set image A & B while we are here
+do_one BOOT.BIN		0x0200000
+do_one BOOT.BIN		0x0F80000
+
+# maybe these are needed
+do_one sel-reg.bin	0x0100000
+do_one sel-reg.bin	0x0120000
