@@ -4,15 +4,28 @@
 
 # Deploy assets to a Xilinx Kira board
 
-ME=$(readlink -f $0)
-ME_BASE=$(basename $ME)
+ME_DIR=$(dirname $(readlink -f $0))
+ME_BASE=$(basename $0)
+ME=${ME_DIR}/${ME_BASE}
 DEV_IP=$1
 WHERE=$2
 
-BLOCK_SIZE_MEG=8
+BLOCK_SIZE_MEG=64
 BLOCK_SIZE="${BLOCK_SIZE_MEG}M"
 BLOCK_SIZE_FULL="$(( $BLOCK_SIZE_MEG * 1024 * 1024 ))"
 USER=root
+
+ssh_rekey() {
+    # check board is alive at IP_ADDR
+    if ! ping -c 1 ${DEV_IP}; then
+        echo "Board at ${DEV_IP} does not repsond to ping"
+        exit 3
+    fi
+
+    # recovey has a new SSH machine ID each time, re-prime
+    ssh-keygen -R ${DEV_IP}
+    ssh -o StrictHostKeyChecking=no ${USER}@${DEV_IP} true
+}
 
 do_on_target() {
     export PATH="/usr/local/bin:/usr/bin:/bin:/usr/local/sbin:/usr/sbin:/sbin"
@@ -140,8 +153,8 @@ do_host_big_file() {
         fi
 
         #echo "f=$f BLOCK=$BLOCK"
-        scp $f root@$DEV_IP: >/dev/null 
-        ssh root@$DEV_IP ./$ME_BASE on_target_chunk $DEV $f $BLOCK
+        scp $f ${USER}@${DEV_IP}: >/dev/null 
+        ssh ${USER}@${DEV_IP} ./${ME_BASE} on_target_chunk $DEV $f $BLOCK
     done
 
     echo ""
@@ -158,21 +171,14 @@ do_on_host() {
     if [ -n "$WHERE" ]; then
         cd $WHERE
     fi
-    # check board is alive at IP_ADDR
-    if ! ping -c 1 $DEV_IP; then
-        echo "Board at $DEV_IP does not repsond to ping"
-        exit 3
-    fi
 
-    # recovey has a new SSH machine ID each time, re-prime
-    ssh-keygen -R $DEV_IP
-    ssh -o StrictHostKeyChecking=no root@192.168.157.43 true
+    ssh_rekey
 
     # transfer all recovery assets to DUT
     for f in ./ImageA.bin ./ImageB.bin ./BOOT.BIN /.boot.bin ./u-boot-vars.bin ./u-boot-vars2.bin; do
         if [ -r $f ]; then
             #echo "Transfer $f"
-            scp $f root@$DEV_IP:
+            scp $f ${USER}@${DEV_IP}:
             ANY=true
         fi
     done
@@ -189,12 +195,12 @@ do_on_host() {
     fi
     
     # copy this script to the DUT
-    #echo "Transfer $ME"
-    scp $ME root@$DEV_IP:
+    #echo "Transfer ${ME}"
+    scp ${ME} ${USER}@${DEV_IP}:
 
     # now execute on DUT
     # return code is whatever subscript returns
-    ssh root@$DEV_IP ./$(basename $ME) on_target
+    ssh ${USER}@${DEV_IP} ./${ME_BASE} on_target
 
     for f in ./sd.img ./emmc.img ./usb.img; do
         if [ -r $f ]; then
@@ -205,21 +211,92 @@ do_on_host() {
 
 
 do_help() {
+    echo "kira-deploy: update the recovery assets of a given Xilinx Kira board"
+    echo "kira-depoly device-ip [asset-dir]"
+    exit 2
+}
+
+do_on_target_update_recovery() {
+    export PATH="/usr/local/bin:/usr/bin:/bin:/usr/local/sbin:/usr/sbin:/sbin"
+
+    if [ -r recovery.fit ]; then
+        echo "Update recovery.fit"
+        # erase main part of mtd15 after first 3 64k sectors
+        # first 3 sectors are locked for some reason (mistake?)
+        flash_erase /dev/mtd15 0x30000 448
+        dd if=recovery.fit of=/dev/mtd15 bs=64k seek=3
+    fi
+
+    if [ -r recovery-script.scr ]; then
+        echo "Update recovery-script.scr"
+        # Use first 64K of Open_2 for recovery script 
+        flash_erase /dev/mtd9 0 1
+        dd if=recovery-script.scr of=/dev/mtd9 bs=64k
+    fi
+
+    if [ -r recovery-boot.bin ]; then
+        echo "Update recovery-boot.bin"
+        # update the recovey-u-boot images
+        flash_erase /dev/mtd10 0 0
+        dd if=recovery-boot.bin of=/dev/mtd10 bs=64k
+        flash_erase /dev/mtd11 0 0
+        dd if=recovery-boot.bin of=/dev/mtd11 bs=64k
+    fi
+}
+
+do_on_host_update_recovery() {
+    ANY=false
+
+    ssh_rekey
+
+    # transfer all recovery assets to DUT
+    for f in ./recovery-boot.bin recovery.fit recovery-script.scr; do
+        if [ -r $f ]; then
+            #echo "Transfer $f"
+            scp $f ${USER}@${DEV_IP}:
+            ANY=true
+        fi
+    done
+
+    if ! $ANY; then
+        echo "No recovery assets found!"
+        exit 4
+    fi
+    
+    # copy this script to the DUT
+    #echo "Transfer ${ME}"
+    scp ${ME} ${USER}@${DEV_IP}:
+
+    # now execute on DUT
+    # return code is whatever subscript returns
+    ssh ${USER}@${DEV_IP} ./${ME_BASE} on_target_update_recovery
+}
+
+do_help_update_recovery() {
     echo "kira-update-recovery: update the recovery assets of a given Xilinx Kira board"
     echo "kira-update-recovery device-ip [asset-dir]"
     exit 2
 }
 
-
-case $DEV_IP in
-on_target*)
-    shift
-    do_$DEV_IP "$@"
-    ;;
-"")
-    do_help
+case ${ME_BASE} in
+kira-update-recovery*)
+    CMD_EXTRA="_update_recovery"
     ;;
 *)
-    do_on_host
+    CMD_EXTRA=""
+esac
+
+#echo "ME_BASE=$ME_BASE CMD_EXTRA=$CMD_EXTRA"
+
+case ${DEV_IP} in
+on_target*)
+    shift
+    do_${DEV_IP} "$@"
+    ;;
+"")
+    do_help${CMD_EXTRA}
+    ;;
+*)
+    do_on_host${CMD_EXTRA}
     ;;
 esac
