@@ -47,7 +47,7 @@ do_on_target() {
     fi
 
     if ! $BOOT_DONE; then 
-        for f in BOOT.BIN boot.bin; do
+        for f in ImageAB.bin BOOT.BIN boot.bin; do
             if [ -r $f ]; then
                 echo "Update Boot Image A with $f"
                 flash_erase /dev/mtd5 0 0
@@ -191,7 +191,8 @@ do_on_host() {
     ssh_rekey
 
     # transfer all recovery assets to DUT
-    for f in ./ImageA.bin ./ImageB.bin ./BOOT.BIN /.boot.bin ./u-boot-vars.bin ./u-boot-vars2.bin; do
+    for f in ./ImageA.bin ./ImageB.bin ./ImageAB.bin ./BOOT.BIN ./boot.bin \
+             ./u-boot-vars.bin ./u-boot-vars2.bin; do
         if [ -r $f ]; then
             #echo "Transfer $f"
             scp $f ${USER}@${DEV_IP}:
