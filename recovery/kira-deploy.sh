@@ -3,6 +3,7 @@
 # Target side runs in busybox ash so avoid bash'isums
 
 # Deploy assets to a Xilinx Kira board
+# Also acts as kira-update-recovery if used with that name
 
 ME_DIR=$(dirname $(readlink -f $0))
 ME_BASE=$(basename $0)
@@ -226,8 +227,26 @@ do_on_host() {
 
 
 do_help() {
-    echo "kira-deploy: update the recovery assets of a given Xilinx Kira board"
+    echo "kira-deploy: update software for testing of a given Xilinx Kira board"
     echo "kira-depoly device-ip [asset-dir]"
+    echo "handles:"
+    echo "    ImageA.bin and/or ImageB.bin, updates specific boot image in QSPI"
+    echo "        if neither of these if found:"
+    echo "        ImageAB.bin, BOOT.BIN or boot.bin,"
+    echo "            updates BOTH boot images in QSPI"
+    echo "    sd.img{,.gz,.bz2,.xz}   writes to SD card"
+    echo "    emmc.img{,.gz,.bz2,.xz} writes to the user portion of emmc"
+    echo "    usb.img{,.gz,.bz2,.xz}  writes to the first USB storage (/dev/sda)"
+    echo "less common:"
+    echo "    u-boot-vars.bin  written to mtd12"
+    echo "        also written to mts13 unless below file is present"
+    echo "    u-boot-vars2.bin written to mtd13"
+    echo "    Note: a zero length file for any QSPI area effectively erases it"
+    echo "    "
+    echo "    sel-reg.bin an explicit value for the imgsel settings partitions"
+    echo "    If any boot image is given and this file is not given,"
+    echo "        then a default image is used that sets A as the active image"
+    echo "    both mtd2 and mtd3 are written"
     exit 2
 }
 
@@ -290,6 +309,13 @@ do_on_host_update_recovery() {
 do_help_update_recovery() {
     echo "kira-update-recovery: update the recovery assets of a given Xilinx Kira board"
     echo "kira-update-recovery device-ip [asset-dir]"
+    echo "handles:"
+    echo "    recovery.fit          fit image to use for software update"
+    echo "                          offset 0x3_0000 of mtd15"
+    echo "    recovery-script.src   script to active recovery (mtd9)"
+    echo "    recovery-boot.bin     boot.bin for recovery mode (mtd10 & mtd11)"
+    echo "NOTE:"
+    echo "    imgsel.bin is never updated this way as it is not safe"
     exit 2
 }
 
