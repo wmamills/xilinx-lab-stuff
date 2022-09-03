@@ -183,6 +183,7 @@ do_host_big_file() {
 
 do_on_host() {
     ANY=false
+    DEF_SEL_REG=${ME_DIR}/sel-reg-ImageA.bin
 
     if [ -n "$WHERE" ]; then
         cd $WHERE
@@ -199,6 +200,19 @@ do_on_host() {
             ANY=true
         fi
     done
+
+    # if an explicit img-sel.bin is given, use it
+    if [ -r ./sel-reg.bin ]; then
+            scp ./sel-reg.bin ${USER}@${DEV_IP}:
+            ANY=true
+    elif $ANY; then
+        # otherwise use the default if any mtd partitions are being updated
+        if [ ! -r ${DEF_SEL_REG} ]; then
+            echo "error: default imgsel settings file ${DEF_SEL_REG} not found"
+            exit 2
+        fi
+        scp ${DEF_SEL_REG} ${USER}@${DEV_IP}:sel-reg.bin
+    fi
 
     for f in ./sd.img ./emmc.img ./usb.img; do
         if [ -r $f ]; then
