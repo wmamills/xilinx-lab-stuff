@@ -1,7 +1,17 @@
-if test x"${multiboot}" = x"40"; then
+setenv model $board_name
+if setexpr model gsub .*$starter* $starter; then
+    setenv multiboot_recovery 1f0
+else
+    setenv multiboot_recovery 3c0
+fi
+
+if test x"${multiboot}" = x"${multiboot_recovery}"; then
     echo "****** KIRA RECOVERY MODE ******"
     sf probe 0 0 0
     sf read 0x10000000 0x02280000 0x01c00000
+    setenv bootargs ${bootargs} recovery_mode=1
     bootm 0x10000000
     echo "RECOVERY FAILED!!!"
+else
+    echo "not recovery mode??"
 fi
