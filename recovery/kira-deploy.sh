@@ -140,7 +140,13 @@ do_host_big_file() {
 
     cd $TEMPDIR
     split --bytes=$BLOCK_SIZE -d $ASSETS_DIR/$FILE $FILE-
+    LAST=false
     for f in $FILE-*; do
+        if $LAST; then
+            echo "Error: $LAST_FILE was not $BLOCK_SIZE and was not last file"
+            exit 4
+        fi
+
         BLOCK=$(echo $f | sed -e "s#^${FILE}-##")
 
         # coreutils split (version 8.30-3ubuntu2)
@@ -150,6 +156,15 @@ do_host_big_file() {
             BLOCK=$(( $BLOCK - 990000 + 990 ))
         elif [ $BLOCK -gt 8999 ]; then
             BLOCK=$(( $BLOCK - 9000 + 90 ))
+        fi
+
+        CHUNK_SIZE=$(stat -t $f | cut -d' ' -f2)
+        if [ $CHUNK_SIZE -ne $BLOCK_SIZE_FULL ]; then
+            dd if=/dev/zero of=${f}.pad bs=$BLOCK_SIZE count=1 >/dev/null 2>&1
+            dd if=$f of=${f}.pad conv=notrunc >/dev/null 2>&1
+            LAST=true;
+            LAST_FILE=$f
+            f=${f}.pad
         fi
 
         #echo "f=$f BLOCK=$BLOCK"
