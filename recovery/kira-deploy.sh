@@ -124,14 +124,17 @@ do_host_big_file() {
     ASSETS_DIR=$(readlink -f .)
 
     case $FILE in
-    usb.img)
+    usb.img*)
         DEV=sda
+        BASE=usb.img
         ;;
-    emmc.img)
+    emmc.img*)
         DEV=mmcblk0
+        BASE=emmc.img
         ;;
-    sd.img)
+    sd.img*)
         DEV=mmcblk1
+        BASE=sd.img
         ;;
     *)
         echo "unknown device for $FILE"
@@ -139,16 +142,43 @@ do_host_big_file() {
 
     echo "TEMPDIR=$TEMPDIR DEV=$DEV FILE=$FILE BLOCK_SIZE=$BLOCK_SIZE"
 
+    FILE_EXT=$(echo $FILE | sed -e "s/^$BASE//")
+    FULL_FILE=$TEMPDIR/$BASE
+    case $FILE_EXT in
+    "")
+        # do nothing, use file as is
+        true
+        FULL_FILE=$ASSETS_DIR/$FILE
+        ;;
+    .gz)
+        echo "decompressing $FILE"
+        zcat $FILE >$FULL_FILE
+        ;;
+    .bz2)
+        echo "decompressing $FILE"
+        bzcat $FILE >$FULL_FILE
+        ;;
+    .xz)
+        echo "decompressing $FILE"
+        xzcat $FILE >$FULL_FILE
+        ;;
+    *)
+        echo "unknown compression extension $FILE_EXT for $FILE"
+        exit 4
+    esac
+
     cd $TEMPDIR
-    split --bytes=$BLOCK_SIZE -d $ASSETS_DIR/$FILE $FILE-
+    echo "splitting $BASE into $BLOCK_SIZE chunks"
+    split --bytes=$BLOCK_SIZE -d $FULL_FILE $BASE-
+    echo "processing chunks:"
     LAST=false
-    for f in $FILE-*; do
+    for f in $BASE-*; do
         if $LAST; then
             echo "Error: $LAST_FILE was not $BLOCK_SIZE and was not last file"
             exit 4
         fi
 
-        BLOCK=$(echo $f | sed -e "s#^${FILE}-##")
+        BLOCK=$(echo $f | sed -e "s#^${BASE}-##")
 
         # coreutils split (version 8.30-3ubuntu2)
         # uses strange numerical sequences
@@ -174,15 +204,17 @@ do_host_big_file() {
     done
 
     echo ""
-    echo "DONE $FILE"
+    echo "DONE $BASE"
 
-    rm $FILE-*
+    rm $BASE-*
+    rm $BASE >/dev/null 2>&1 || true
     cd $ASSETS_DIR
     rmdir $TEMPDIR
 }
 
 do_on_host() {
     ANY=false
+    ANY_MTD=false
     DEF_SEL_REG=${ME_DIR}/sel-reg-ImageA.bin
 
     if [ -n "$WHERE" ]; then
@@ -191,12 +223,22 @@ do_on_host() {
 
     ssh_rekey
 
+    for f in ./sd.img ./emmc.img ./usb.img; do
+        for c in "" .gz .bz2 .xz; do
+            if [ -r ${f}${c} ]; then
+                ANY=true
+                break
+            fi
+        done
+    done
+
     # transfer all recovery assets to DUT
     for f in ./ImageA.bin ./ImageB.bin ./ImageAB.bin ./BOOT.BIN ./boot.bin \
              ./u-boot-vars.bin ./u-boot-vars2.bin; do
         if [ -r $f ]; then
             #echo "Transfer $f"
             scp $f ${USER}@${DEV_IP}:
+            ANY_MTD=true
             ANY=true
         fi
     done
@@ -205,7 +247,8 @@ do_on_host() {
     if [ -r ./sel-reg.bin ]; then
             scp ./sel-reg.bin ${USER}@${DEV_IP}:
             ANY=true
-    elif $ANY; then
+            ANY_MTD=true
+    elif $ANY_MTD; then
         # otherwise use the default if any mtd partitions are being updated
         if [ ! -r ${DEF_SEL_REG} ]; then
             echo "error: default imgsel settings file ${DEF_SEL_REG} not found"
@@ -213,12 +256,6 @@ do_on_host() {
         fi
         scp ${DEF_SEL_REG} ${USER}@${DEV_IP}:sel-reg.bin
     fi
-
-    for f in ./sd.img ./emmc.img ./usb.img; do
-        if [ -r $f ]; then
-            ANY=true
-        fi
-    done
 
     if ! $ANY; then
         echo "No deployment assets found!"
@@ -231,12 +268,17 @@ do_on_host() {
 
     # now execute on DUT
     # return code is whatever subscript returns
-    ssh ${USER}@${DEV_IP} ./${ME_BASE} on_target
+    if $ANY_MTD; then
+        ssh ${USER}@${DEV_IP} ./${ME_BASE} on_target
+    fi
 
     for f in ./sd.img ./emmc.img ./usb.img; do
-        if [ -r $f ]; then
-            do_host_big_file $(basename $f)
-        fi
+        for c in "" .gz .bz2 .xz; do
+            if [ -r ${f}${c} ]; then
+                do_host_big_file $(basename ${f}${c})
+                break
+            fi
+        done
     done
 }
 
