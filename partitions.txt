@@ -19,6 +19,7 @@ mtd13       0222_0000     2_0000    U-boot vars (not really used, filled with pa
 mtd14       0224_0000     1_0000    sha256 signature of QSPI image
 mtd15       0225_0000   1DB_0000    user area
             0225_0000     3_0000    1st 3 64k sectors are locked on starter kit (mistake??)
+            0228_0000   1C0_0000    (448 64K blocks, 28MB)
             03E8_0000    18_0000    qspi boot script in default u-boot vars
 end         0400_0000
 
