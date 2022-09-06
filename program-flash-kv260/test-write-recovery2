@@ -12,5 +12,5 @@ echo "ensure there is only one Xilinx board attached to the PC"
 echo "Hit enter to continue"
 read 
 
-do_one recovery.bin     0x2000000
+do_one xilinx-recovery.bin     0x2000000
 

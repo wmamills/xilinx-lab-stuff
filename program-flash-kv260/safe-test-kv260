@@ -7,6 +7,10 @@ do_one() {
 		-cable type xilinx_tcf url TCP:127.0.0.1:3121
 }
 
+if [ ! -r data_64k.bin ]; then
+    dd if=/dev/urandom of=data_64k.bin bs=64k count=1
+fi
+
 echo "MAKE sure KV260 is powered on an stopped at U-boot"
 echo "ensure there is only one Xilinx board attached to the PC"
 echo "Hit enter to continue"
