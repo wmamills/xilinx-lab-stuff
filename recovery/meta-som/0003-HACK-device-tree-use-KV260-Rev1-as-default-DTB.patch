@@ -1,0 +1,41 @@
+From 00bf7ec45e5f28f13b7b702972cf06c8eeb5c93c Mon Sep 17 00:00:00 2001
+From: Bill Mills <bill.mills@linaro.org>
+Date: Sat, 10 Sep 2022 16:18:24 +0000
+Subject: [PATCH 3/3] HACK: device-tree: use KV260 Rev1 as default DTB
+
+The first attempt at DT matching did not work.
+This patch changes the default DTB to be KV260 Rev1 (w/ Starter SOM)
+This makes production SOM work just like starter SOM.
+Ethernet now works in U-boot and kernel gets real MAC addr
+(thus it gets the same IP addr each time)
+
+This makes USB work in the kernel as well as Starter SOM.
+(kernel gives error messages on some accesses but it still seems to work.)
+
+Signed-off-by: Bill Mills <bill.mills@linaro.org>
+---
+ recipes-bsp/device-tree/device-tree.bbappend | 10 ++++++++++
+ 1 file changed, 10 insertions(+)
+
+diff --git a/recipes-bsp/device-tree/device-tree.bbappend b/recipes-bsp/device-tree/device-tree.bbappend
+index 50c7fae..467d05f 100644
+--- a/recipes-bsp/device-tree/device-tree.bbappend
++++ b/recipes-bsp/device-tree/device-tree.bbappend
+@@ -36,3 +36,13 @@ EXTRA_DT_FILES:kv260-starter-kit += "\
+     zynqmp-sck-kv-g-revQEMU.dts \
+     zynqmp-sck-kv-g-revZ.dts \
+     "
++
++hack_system_top() {
++    bbwarn "HACK: Use KV260 Rev1 as the default DTB"
++    mv ${B}/system-top.dtb ${B}/system-top-sk-som.dtb
++    cp ${B}/system-top-zynqmp-sck-kv-g-rev1.dtb ${B}/system-top.dtb
++}
++
++do_compile:append:k26() {
++    bb.build.exec_func('hack_system_top', d)
++}
+\ No newline at end of file
+-- 
+2.25.1
+

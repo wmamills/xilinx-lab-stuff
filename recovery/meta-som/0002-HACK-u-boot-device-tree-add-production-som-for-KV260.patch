@@ -1,0 +1,28 @@
+From 1a5824df977aa1736d67908afd9da659a33553dc Mon Sep 17 00:00:00 2001
+From: OpenAMP CI <builder@openampproject.org>
+Date: Sat, 10 Sep 2022 16:14:30 +0000
+Subject: [PATCH 2/3] HACK: u-boot device tree add production som for KV260
+
+This is what I tried but it did not work.
+
+Signed-off-by: Bill Mills <bill.mills@linaro.org>
+---
+ recipes-bsp/u-boot/u-boot-xlnx_%.bbappend | 2 ++
+ 1 file changed, 2 insertions(+)
+
+diff --git a/recipes-bsp/u-boot/u-boot-xlnx_%.bbappend b/recipes-bsp/u-boot/u-boot-xlnx_%.bbappend
+index 6b203e9..691f2df 100644
+--- a/recipes-bsp/u-boot/u-boot-xlnx_%.bbappend
++++ b/recipes-bsp/u-boot/u-boot-xlnx_%.bbappend
+@@ -40,6 +40,8 @@ CC_DTBS_DUP:k26 = " \
+ 		zynqmp-${PREFIX}-k26-xcl2g-revA-sck-kr-g-revA:zynqmp-${PREFIX}-k26-xcl2g-rev1-sck-kr-g-revA \
+ 		zynqmp-${PREFIX}-k26-xcl2g-revA-sck-kr-g-revB:zynqmp-${PREFIX}-k26-xcl2g-rev1-sck-kr-g-revB \
+ 		zynqmp-${PREFIX}-k26-xcl2g-revA-sck-kr-g-revB:zynqmp-${PREFIX}-k26-xcl2g-rev1-sck-kr-g-rev1 \
++		zynqmp-smk-k26-xcl2g-revA-sck-kr-g-revB:zynqmp-sm-k26-xcl2g-rev1-sck-kr-g-rev1 \
++		zynqmp-smk-k26-xcl2g-revA-sck-kr-g-revB:"zynqmp-sm-k26-xcl2g-rev1 -sck-kr-g-rev1" \
+ 		zynqmp-${PREFIX}-k26-xcl2g-revA-sck-kv-g-revA:zynqmp-${PREFIX}-k26-xcl2g-ed-revA-sck-kv-g-revA \
+ 		zynqmp-${PREFIX}-k26-xcl2g-revA-sck-kv-g-revB:zynqmp-${PREFIX}-k26-xcl2g-ed-revA-sck-kv-g-revB \
+ 		zynqmp-${PREFIX}-k26-xcl2g-revA-sck-kr-g-revA:zynqmp-${PREFIX}-k26-xcl2g-ed-revA-sck-kr-g-revA \
+-- 
+2.25.1
+
