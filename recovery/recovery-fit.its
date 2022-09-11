@@ -20,7 +20,7 @@
                 };
                 fdt {
                         description = "DTB";
-                        data = /incbin/("system-zynqmp-sck-kv-g-revB.dtb");
+                        data = /incbin/("zynqmp-sm-k26-revA-sck-kv-g-revB.dtb");
                         type = "flat_dt";
                         arch = "arm64";
                         compression = "none";
