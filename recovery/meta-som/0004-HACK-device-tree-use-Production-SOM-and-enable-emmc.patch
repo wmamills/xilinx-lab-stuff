@@ -1,0 +1,69 @@
+From 02be6bb6789d9cde38d8a582089e5393f4af64d2 Mon Sep 17 00:00:00 2001
+From: Bill Mills <bill.mills@linaro.org>
+Date: Sun, 11 Sep 2022 13:14:57 +0000
+Subject: [PATCH 4/5] HACK: device-tree: use Production SOM and enable emmc
+
+Switch to the production SOM as the base for all builds.
+However, Xilinx devicetree does not have emmc enabled even in -sm- version
+So add an explicit enable.
+
+This did not work.
+U-boot would try to talk to emmc but would get:
+Card did not respond to voltage select! : -110
+
+Signed-off-by: Bill Mills <bill.mills@linaro.org>
+---
+ conf/machine/k26-som.conf                      | 2 +-
+ recipes-bsp/device-tree/device-tree.bbappend   | 1 +
+ recipes-bsp/device-tree/files/emmc.dtsi        | 4 ++++
+ recipes-bsp/device-tree/files/system-conf.dtsi | 1 +
+ 4 files changed, 7 insertions(+), 1 deletion(-)
+ create mode 100644 recipes-bsp/device-tree/files/emmc.dtsi
+
+diff --git a/conf/machine/k26-som.conf b/conf/machine/k26-som.conf
+index e0c29bc..6dcfc4f 100644
+--- a/conf/machine/k26-som.conf
++++ b/conf/machine/k26-som.conf
+@@ -32,7 +32,7 @@ EXTRA_IMAGEDEPENDS += "board-id-data"
+ SPL_BINARY = ""
+ EXTRA_IMAGEDEPENDS:remove = "virtual/boot-bin "
+ #PACKAGES_LIST:append = " imgsel"
+-YAML_DT_BOARD_FLAGS:k26-som = "{BOARD zynqmp-smk-k26-reva}"
++YAML_DT_BOARD_FLAGS:k26-som = "{BOARD zynqmp-sm-k26-reva}"
+ 
+ YAML_SERIAL_CONSOLE_BAUDRATE = "115200"
+ 
+diff --git a/recipes-bsp/device-tree/device-tree.bbappend b/recipes-bsp/device-tree/device-tree.bbappend
+index 467d05f..653cd28 100644
+--- a/recipes-bsp/device-tree/device-tree.bbappend
++++ b/recipes-bsp/device-tree/device-tree.bbappend
+@@ -1,6 +1,7 @@
+ FILESEXTRAPATHS:prepend:k26 := "${THISDIR}/files:"
+ 
+ SRC_URI:append:k26 = " file://openamp.dtsi "
++SRC_URI:append:k26 = " file://emmc.dtsi "
+ 
+ do_configure:append:k26() {
+      if [ -e ${WORKDIR}/openamp.dtsi ]; then
+diff --git a/recipes-bsp/device-tree/files/emmc.dtsi b/recipes-bsp/device-tree/files/emmc.dtsi
+new file mode 100644
+index 0000000..ea5cf5e
+--- /dev/null
++++ b/recipes-bsp/device-tree/files/emmc.dtsi
+@@ -0,0 +1,4 @@
++
++&sdhci0 {
++    status = "okay";
++};
+diff --git a/recipes-bsp/device-tree/files/system-conf.dtsi b/recipes-bsp/device-tree/files/system-conf.dtsi
+index 1bf2026..1061448 100644
+--- a/recipes-bsp/device-tree/files/system-conf.dtsi
++++ b/recipes-bsp/device-tree/files/system-conf.dtsi
+@@ -15,3 +15,4 @@
+ 	local-mac-address = [ff ff ff ff ff ff];
+ };
+ 
++/include/ "emmc.dtsi"
+-- 
+2.25.1
+
