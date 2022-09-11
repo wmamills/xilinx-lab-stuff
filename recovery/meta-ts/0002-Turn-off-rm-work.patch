@@ -1,0 +1,36 @@
+From 3c0dd1b3e19117a88bc3c00300e790194afee6cb Mon Sep 17 00:00:00 2001
+From: Bill Mills <bill.mills@linaro.org>
+Date: Sun, 11 Sep 2022 10:11:06 -0400
+Subject: [PATCH 2/2] Turn off rm-work
+
+rm-work is a horrible idea for development as it deletes at least 50% of
+what you need to look at when things go wrong.  (Not all problems cause
+build errors.)
+
+rm-work is really not needed for CI builds etc because the VM/container
+used for the build will probibly be delete afterward.
+
+If you do want the effects of rm-work:
+* rm -rf of build/tmp is better
+* mv build/tmp $BASE/to-delete/tmp-$RANDOM is even better
+
+Signed-off-by: Bill Mills <bill.mills@linaro.org>
+---
+ ci/base.yml | 1 -
+ 1 file changed, 1 deletion(-)
+
+diff --git a/ci/base.yml b/ci/base.yml
+index 4077109..a89949e 100644
+--- a/ci/base.yml
++++ b/ci/base.yml
+@@ -50,7 +50,6 @@ local_conf_header:
+     EXTRA_IMAGE_FEATURES:append = " debug-tweaks"
+     BB_NUMBER_THREADS = "16"
+     PARALLEL_MAKE = "-j16"
+-    INHERIT += "rm_work"
+     PACKAGECONFIG:append:pn-perf = " coresight"
+     BB_ENV_PASSTHROUGH_ADDITIONS = "UEFI_CERT_FILE"
+     UEFI_CERT_FILE = "${TOPDIR}/../meta-trustedsubstrate/uefi-certificates/uefi_certs.tgz"
+-- 
+2.25.1
+

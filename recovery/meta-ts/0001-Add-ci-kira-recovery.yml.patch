@@ -1,0 +1,44 @@
+From 44b469e9257535ba824c3d869bd3742160770730 Mon Sep 17 00:00:00 2001
+From: Bill Mills <bill.mills@linaro.org>
+Date: Sun, 11 Sep 2022 10:07:34 -0400
+Subject: [PATCH 1/2] Add ci/kira-recovery.yml
+
+Add a kas target for building the Xilinx K{V,R}260 recovery mode assets.
+
+Right now we are only using the core-image-minimal image from this.
+
+Signed-off-by: Bill Mills <bill.mills@linaro.org>
+---
+ ci/zynqmp-kira-recovery.yml | 19 +++++++++++++++++++
+ 1 file changed, 19 insertions(+)
+ create mode 100644 ci/zynqmp-kira-recovery.yml
+
+diff --git a/ci/zynqmp-kira-recovery.yml b/ci/zynqmp-kira-recovery.yml
+new file mode 100644
+index 0000000..3594e18
+--- /dev/null
++++ b/ci/zynqmp-kira-recovery.yml
+@@ -0,0 +1,19 @@
++header:
++  version: 9
++  includes:
++    - base.yml
++    - meta-openembedded.yml
++
++machine: zynqmp-production
++
++local_conf_header:
++  image-extras: |
++    IMAGE_INSTALL:append = " dropbear rsync mtd-utils "
++    IMAGE_FSTYPES = "tar.gz cpio.gz"
++
++  bugs: |
++    # Only ping until errors can be resolved
++    TEST_SUITES = "ping"
++
++target:
++  - core-image-minimal
+\ No newline at end of file
+-- 
+2.25.1
+
