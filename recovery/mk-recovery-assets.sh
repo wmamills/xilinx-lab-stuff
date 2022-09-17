@@ -34,10 +34,12 @@ do_default() {
     mkimage -f recovery-fit.its recovery.fit
     mkimage -T script -d recovery-script.txt recovery-script.scr
     mkimage -T script -d recovery-update-script.txt recovery-update-script.scr
+    mkimage -T script -d recovery-boot-script.txt recovery-boot-script.scr
 }
 
 do_sudo_sdcard() {
-    SDIMG_FILE=recovery-sdcard.img
+    SDIMG_FILE=$1
+    SCRIPT_FILE=$2
     VFAT=$(pwd)
 
     KPART_OUT=$(kpartx -avs $SDIMG_FILE | head -n 1 | cut -d ' ' -f 3)
@@ -53,7 +55,7 @@ do_sudo_sdcard() {
     B=/media/${LOOPDEV}p1
 
     echo "populate boot partition"
-    cp    --preserve=timestamps $VFAT/recovery-update-script.scr $B/boot.scr
+    cp    --preserve=timestamps $VFAT/$SCRIPT_FILE $B/boot.scr
     for f in recovery-boot.bin recovery.fit recovery-script.scr; do
         cp    --preserve=timestamps $VFAT/$f $B
     done
@@ -80,14 +82,15 @@ cleanup_sdimg_priv() {
     kpartx -dv $SDIMG_FILE
 }
 
-do_sdcard() {
-    SDIMG_FILE=recovery-sdcard.img
+do_one_sdcard() {
+    SDIMG_FILE=$1
+    SCRIPT_FILE=$2
 
     dd if=/dev/zero of=$SDIMG_FILE bs=1M count=64
     cat sd-full-vfat.sfdisk | /sbin/sfdisk $SDIMG_FILE
 
     echo "This will require sudo"
-    if ! sudo $ME sudo_sdcard; then
+    if ! sudo $ME sudo_sdcard $SDIMG_FILE $SCRIPT_FILE; then
         rm $SDIMG_FILE
         abort "can't get sudo or image creation failed"
     fi
@@ -100,17 +103,23 @@ do_sdcard() {
     bzip2 $SDIMG_FILE
 }
 
+do_sdcard() {
+    do_one_sdcard recovery-update-sdcard.img recovery-update-script.scr
+    do_one_sdcard recovery-boot-sdcard.img   recovery-boot-script.scr
+}
+
 do_all() {
     do_initrd
     do_default
     do_sdcard
 }
 
-case $1 in
+case ${ACTION} in
 "")
     do_default
     ;;
 *)
-    do_${ACTION}
+    shift
+    do_${ACTION} "$@"
     ;;
 esac

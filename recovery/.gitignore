@@ -2,4 +2,4 @@ test*
 core-min.cpio.gz
 recovery.fit
 recovery-*script.scr
-recovery-sdcard.img.bz2.20*
+*-sdcard.img.bz2.20*

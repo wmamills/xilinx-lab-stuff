@@ -1,0 +1,9 @@
+echo "*** KIRA: Boot recovery.fit as normal test payload ***"
+setenv bootdev mmc
+setenv bootpart 1:1
+setenv loadaddr 0x10000000
+load $bootdev $bootpart $loadaddr recovery.fit
+bootm $loadaddr
+
+echo "BOOT SCRIPT FAILED"
+poweroff
