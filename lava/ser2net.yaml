@@ -1,0 +1,36 @@
+%YAML 1.1
+---
+# This is a ser2net configuration file
+# It shows the config stanzas for the kv260 board
+#
+# NOTE: The "XFL1EMYMAA30" string below is the serial number of the
+#       Carrier card.
+
+define: &banner \r\nser2net port \p device \d [\B] (Debian GNU/Linux)\r\n\r\n
+
+# Note: -if00 is for JTAG
+# Note: -if01 is main console
+connection: &kv260_uart1
+    accepter: tcp,7001
+    enable: on
+    options:
+      kickolduser: true
+      telnet-brk-on-sync: true
+    connector: serialdev,
+              /dev/serial/by-id/usb-Xilinx_ML_Carrier_Card_XFL1EMYMAA30-if01-port0,
+              115200n81,local
+
+# Note: -if02 is used by PMU firmware at startup but can be used by
+# an R5 or A53's afterward
+connection: &kv260_uart2
+    accepter: tcp,7002
+    enable: on
+    options:
+      kickolduser: true
+      telnet-brk-on-sync: true
+    connector: serialdev,
+              /dev/serial/by-id/usb-Xilinx_ML_Carrier_Card_XFL1EMYMAA30-if02-port0,
+              115200n81,local
+
+# Note: -if03 is not really a UART, it is for misc board control
+# (it control's the write-protect for the carrier cards I2C EEPROM)

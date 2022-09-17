@@ -1,0 +1,33 @@
+# Example device dictionary for kv260
+# based on https://ledge.validation.linaro.org/scheduler/device/lng-stm32mp157-01/devicedict
+#
+# This runs on Bill's lava setup
+# It uses a USB based 2 relay board for all control
+# relayctl  my utility to control various relays
+# relay3    the name of the relay in my setup
+# relay3 1  power control
+# relay3 2  recovery pushbutton control
+#
+# currently does not use a specific device-type
+
+{% extends 'base-uboot.jinja2' %}
+{% set power_off_command = [
+'/usr/local/bin/relayctl relay3 1 off',
+'/usr/local/bin/relayctl relay3 2 off' ] %}
+{% set bootloader_prompt = 'ZynqMP>' %}
+{% set hard_reset_command = '/usr/local/bin/relayctl relay3 1 cycle 15' %}
+{% set connection_list = ['uart0'] %}
+{% set connection_commands = {'uart0': 'telnet localhost 7001'} %}
+{% set connection_tags = {'uart0': ['primary', 'telnet']} %}
+{% set power_on_command = '/usr/local/bin/relayctl relay3 1 on' %}
+{% set flasher_deploy_commands = [
+'bash -c \'echo KIRA FLASHER UID=$UID PWD=$PWD PATH=$PATH\'',
+'/usr/local/bin/relayctl relay3 1 off',
+'/usr/local/bin/relayctl relay3 2 on',
+'sleep 5',
+'/usr/local/bin/relayctl relay3 1 on',
+'sleep 60',
+'/usr/local/bin/kira-deploy.sh 192.168.2.199 .',
+'/usr/local/bin/relayctl relay3 1 off',
+'/usr/local/bin/relayctl relay3 2 off' ] %}
+{# set sync_to_lava = {'device_type': 'kv260', 'worker': 'labhost1.home', 'tags': [], 'aliases': []} #}

@@ -1,0 +1,41 @@
+# Boot the board, interrupt u-boot and give it some commands
+
+device_type: kv260
+
+job_name: U-boot commands
+
+timeouts:
+  job:
+    minutes: 60
+  action:
+    minutes: 20
+  connection:
+    minutes: 20
+
+priority: medium
+
+visibility: public
+
+context:
+  test_character_delay: 30
+
+actions:
+
+- boot:
+    timeout:
+      minutes: 15
+    method: u-boot
+    # The real final U-boot message in EFI mode is below
+    # HOWEVER, neither of the below were effective
+    # LAVA complains about the first and ignores the second
+    #     uboot_final_message: "EFI stub: UEFI Secure Boot is enabled."
+    #     final_message: "EFI stub: UEFI Secure Boot is enabled."
+    prompt:
+      - "ZynqMP>"
+    commands:
+      - ls mmc 1:1 /
+      - ls mmc 1:2 /
+      - efidebug boot dump
+      - echo "Fake out LAVA as it is looking for this string; echo "Starting kernel"
+
+

@@ -2,6 +2,8 @@
 Scripts to program a kira platform via JTAG
 # recovery
 Assets and scripts to support Linux ssh based recovery mode for Kira
+# lava
+Lava integration notes, files and example jobs
 # Google Docs
 * [kv260 in board farm](https://docs.google.com/document/d/1WPiJrFQj5dPloldIa9zXi8KFF91dGdsFzdTM3DwKrDU/edit?usp=sharing)
 # Todo
