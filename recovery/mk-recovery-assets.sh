@@ -9,6 +9,10 @@ set -e
 
 : ${DEBUG:=false}
 
+if $DEBUG; then
+    set -x
+fi
+
 abort() {
     echo "ERROR: $@"
     exit 2
