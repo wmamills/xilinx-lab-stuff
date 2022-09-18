@@ -18,14 +18,35 @@ USER=root
 
 ssh_rekey() {
     # check board is alive at IP_ADDR
-    if ! ping -c 1 ${DEV_IP}; then
-        echo "Board at ${DEV_IP} does not repsond to ping"
-        exit 3
-    fi
+    echo "Check that board at ${DEV_IP} is alive"
+    TIMEOUT=60
+    COUNT=0
+    while ! ping -c 1 ${DEV_IP} >/dev/null; do
+        if [ $COUNT -gt $TIMEOUT ]; then
+            echo "Board at ${DEV_IP} does not repsond to ping"
+            exit 3
+        fi
+        echo -n "."
+        sleep 1
+        COUNT=$(( COUNT + 1 ))
+    done
+    echo "Board at ${DEV_IP} is alive"
 
-    # recovey has a new SSH machine ID each time, re-prime
+    # recovery has a new SSH machine ID each time, re-prime
     ssh-keygen -R ${DEV_IP}
-    ssh -o StrictHostKeyChecking=no ${USER}@${DEV_IP} true
+
+    TIMEOUT=60
+    COUNT=0
+    while ! ssh -o StrictHostKeyChecking=no ${USER}@${DEV_IP} true >/dev/null 2>&1; do
+        if [ $COUNT -gt $TIMEOUT ]; then
+            echo "Can't ssh into Board at ${DEV_IP}"
+            exit 3
+        fi
+        echo -n "."
+        sleep 1
+        COUNT=$(( COUNT + 1 ))
+    done
+    echo "Board at ${DEV_IP} ready"
 }
 
 do_on_target() {

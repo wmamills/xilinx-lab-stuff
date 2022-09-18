@@ -13,8 +13,6 @@ Lava integration notes, files and example jobs
   * Some of this is now done
   * add OE builds to mk-recovery-assets.sh??
 * lock down SSH to known keys only
-* make kira-deploy wait for ping (60 seconds?)
-  * shorten the delay in device dict to 10 to 20 seconds
 * Make it easier to deploy sdcard images
   * lava deploy can't rename or create symlinks and we want to download existing files
   * make kira-deploy take more arguments that specify symlinks to create
