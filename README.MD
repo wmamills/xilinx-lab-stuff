@@ -14,7 +14,18 @@ Lava integration notes, files and example jobs
   * add OE builds to mk-recovery-assets.sh??
 * lock down SSH to known keys only
 * delete kira-recovey-update.sh support as it can not do recovery-boot.bin??
+* make kira-deploy wait for ping (60 seconds?)
+  * shorten the delay in device dict to 10 to 20 seconds
+* Make it easier to deploy sdcard images
+  * lava deploy can't rename or create symlinks and we want to download existing files
+  * make kira-deploy take more arguments that specify symlinks to create
+  * change device dict to pass along Image args
+  * make meta-ts job deploy sdcard also
+  * run 10 iterations of full meta-ts
+* Add more LAVA example jobs
+  * A firmware only job
+  * A job with firmware and very small sdcard
+* Move some of the device dictionary into a device type (?)
 ## Maybe
-* add default for single *.wic[.gz] or *.iso[.xz] etc to go to SD?
 * Handle file based overlays?  rsync deployment?
 * add usb utils? sfdisk? mkfs.{ext4,vfat}
