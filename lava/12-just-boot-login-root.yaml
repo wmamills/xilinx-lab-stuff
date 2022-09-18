@@ -1,0 +1,38 @@
+# Just boot the existing firmware and OS image
+# You should get logs no matter what
+# To get the a job complete the board needs to be running
+#     the recovery-boot-sdcard image
+
+device_type: kv260
+
+job_name: Boot existing image and login as root
+
+timeouts:
+  job:
+    minutes: 60
+  action:
+    minutes: 20
+  connection:
+    minutes: 20
+
+priority: medium
+
+visibility: public
+
+context:
+  test_character_delay: 30
+
+actions:
+
+- boot:
+    timeout:
+      minutes: 15
+    method: minimal
+    prompts:
+      - 'kira-recovery:'
+    auto_login:
+      login_prompt: 'login:'
+      username: "root"
+      password_prompt: 'Password:'
+      password: "root"
+
