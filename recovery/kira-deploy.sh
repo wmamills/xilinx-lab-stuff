@@ -307,83 +307,6 @@ do_help() {
     exit 2
 }
 
-do_on_target_update_recovery() {
-    export PATH="/usr/local/bin:/usr/bin:/bin:/usr/local/sbin:/usr/sbin:/sbin"
-
-    if [ -r recovery.fit ]; then
-        echo "Update recovery.fit"
-        # erase main part of mtd15 after first 3 64k sectors
-        # first 3 sectors are locked for some reason (mistake?)
-        flash_erase /dev/mtd15 0x30000 448
-        dd if=recovery.fit of=/dev/mtd15 bs=64k seek=3
-    fi
-
-    if [ -r recovery-script.scr ]; then
-        echo "Update recovery-script.scr"
-        # Use first 64K of Open_2 for recovery script 
-        flash_erase /dev/mtd9 0 1
-        dd if=recovery-script.scr of=/dev/mtd9 bs=64k
-    fi
-
-    if [ -r recovery-boot.bin ]; then
-        echo "Update recovery-boot.bin"
-        # update the recovey-u-boot images
-        flash_erase /dev/mtd10 0 0
-        dd if=recovery-boot.bin of=/dev/mtd10 bs=64k
-        flash_erase /dev/mtd11 0 0
-        dd if=recovery-boot.bin of=/dev/mtd11 bs=64k
-    fi
-}
-
-do_on_host_update_recovery() {
-    ANY=false
-
-    ssh_rekey
-
-    # transfer all recovery assets to DUT
-    for f in ./recovery-boot.bin recovery.fit recovery-script.scr; do
-        if [ -r $f ]; then
-            #echo "Transfer $f"
-            scp $f ${USER}@${DEV_IP}:
-            ANY=true
-        fi
-    done
-
-    if ! $ANY; then
-        echo "No recovery assets found!"
-        exit 4
-    fi
-    
-    # copy this script to the DUT
-    #echo "Transfer ${ME}"
-    scp ${ME} ${USER}@${DEV_IP}:
-
-    # now execute on DUT
-    # return code is whatever subscript returns
-    ssh ${USER}@${DEV_IP} ./${ME_BASE} on_target_update_recovery
-}
-
-do_help_update_recovery() {
-    echo "kira-update-recovery: update the recovery assets of a given Xilinx Kira board"
-    echo "kira-update-recovery device-ip [asset-dir]"
-    echo "handles:"
-    echo "    recovery.fit          fit image to use for software update"
-    echo "                          offset 0x3_0000 of mtd15"
-    echo "    recovery-script.src   script to active recovery (mtd9)"
-    echo "    recovery-boot.bin     boot.bin for recovery mode (mtd10 & mtd11)"
-    echo "NOTE:"
-    echo "    imgsel.bin is never updated this way as it is not safe"
-    exit 2
-}
-
-case ${ME_BASE} in
-kira-update-recovery*)
-    CMD_EXTRA="_update_recovery"
-    ;;
-*)
-    CMD_EXTRA=""
-esac
-
 #echo "ME_BASE=$ME_BASE CMD_EXTRA=$CMD_EXTRA"
 
 case ${DEV_IP} in
@@ -392,9 +315,9 @@ on_target*)
     do_${DEV_IP} "$@"
     ;;
 "")
-    do_help${CMD_EXTRA}
+    do_help
     ;;
 *)
-    do_on_host${CMD_EXTRA}
+    do_on_host
     ;;
 esac

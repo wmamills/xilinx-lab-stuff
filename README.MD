@@ -13,7 +13,6 @@ Lava integration notes, files and example jobs
   * Some of this is now done
   * add OE builds to mk-recovery-assets.sh??
 * lock down SSH to known keys only
-* delete kira-recovey-update.sh support as it can not do recovery-boot.bin??
 * make kira-deploy wait for ping (60 seconds?)
   * shorten the delay in device dict to 10 to 20 seconds
 * Make it easier to deploy sdcard images
