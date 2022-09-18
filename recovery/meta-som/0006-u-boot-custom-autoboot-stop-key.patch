@@ -1,0 +1,33 @@
+From dbdfd45f33c02757907340213f4856aa64557cae Mon Sep 17 00:00:00 2001
+From: Bill Mills <bill.mills@linaro.org>
+Date: Sun, 18 Sep 2022 00:14:07 +0000
+Subject: [PATCH 6/6] u-boot: custom autoboot stop key
+
+To avoid stray characters from stopping recovery,
+Use a specific stop string and flush input before the countdown.
+
+Signed-off-by: Bill Mills <bill.mills@linaro.org>
+---
+ recipes-bsp/u-boot/files/som_bootmenu.cfg | 10 ++++++++++
+ 1 file changed, 10 insertions(+)
+
+diff --git a/recipes-bsp/u-boot/files/som_bootmenu.cfg b/recipes-bsp/u-boot/files/som_bootmenu.cfg
+index b68b52d..c8d6a8f 100644
+--- a/recipes-bsp/u-boot/files/som_bootmenu.cfg
++++ b/recipes-bsp/u-boot/files/som_bootmenu.cfg
+@@ -1,2 +1,12 @@
+ CONFIG_USE_DEFAULT_ENV_FILE=y
+ CONFIG_DEFAULT_ENV_FILE="./vars"
++
++# new for recovery
++CONFIG_AUTOBOOT_KEYED=y
++CONFIG_AUTOBOOT_FLUSH_STDIN=y
++CONFIG_AUTOBOOT_PROMPT="Autoboot in %d seconds, Hit RR to stop\n"
++# CONFIG_AUTOBOOT_ENCRYPTION is not set
++CONFIG_AUTOBOOT_DELAY_STR=""
++CONFIG_AUTOBOOT_STOP_STR="RR"
++# CONFIG_AUTOBOOT_KEYED_CTRLC is not set
++
+-- 
+2.25.1
+
