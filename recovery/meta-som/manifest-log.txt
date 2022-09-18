@@ -1,0 +1,51 @@
+commit dabcce437019e0ee52e4bd8ad1803439eee3e988
+Author: Manikanta Sreeram <msreeram@xilinx.com>
+Date:   Mon Jun 27 10:48:15 2022 -0600
+
+    move default.xml to branch based HEAD
+    
+    Signed-off-by: Manikanta Sreeram <msreeram@xilinx.com>
+
+commit aecc1d26ff41edfd1557000d8234f36ba076452b
+Author: Manikanta Sreeram <msreeram@xilinx.com>
+Date:   Mon Jun 27 10:45:15 2022 -0600
+
+    tagged manifest for 2022.1 update2 release
+    
+    Signed-off-by: Manikanta Sreeram <msreeram@xilinx.com>
+
+commit 7171371d878756877c8ecd712adee4c7340a03da
+Author: Manikanta Sreeram <msreeram@xilinx.com>
+Date:   Wed Jun 15 04:54:28 2022 -0600
+
+    add new layers for som update2 release
+    
+    Signed-off-by: Manikanta Sreeram <msreeram@xilinx.com>
+
+commit c426cf594188fef4ecc3789f4b31015775f52df0
+Author: Manikanta Sreeram <msreeram@xilinx.com>
+Date:   Mon May 23 07:12:12 2022 -0600
+
+    move default.xml to branch based HEAD
+    
+    Signed-off-by: Manikanta Sreeram <msreeram@xilinx.com>
+
+commit f76ec0a0aff86fbece50b69da8b866baf0dd1eda
+Author: Manikanta Sreeram <msreeram@xilinx.com>
+Date:   Mon May 23 07:08:57 2022 -0600
+
+    tagged manifest for 2022.1 update1 release
+    
+    Signe-off-by: Manikanta Sreeram <msreeram@xilinx.com>
+
+commit 4ca3e699fb3ae96b57a8736c39616397b89355b1
+Author: Manikanta Sreeram <msreeram@xilinx.com>
+Date:   Sun May 8 19:28:29 2022 -0600
+
+    move default.xml to branch based HEAD
+
+commit b78effb9e8b258d263a7f4e29cc9d17ee4fe0194
+Author: Manikanta Sreeram <msreeram@xilinx.com>
+Date:   Sun May 8 19:17:32 2022 -0600
+
+    tagged manifest for 2022.1 release

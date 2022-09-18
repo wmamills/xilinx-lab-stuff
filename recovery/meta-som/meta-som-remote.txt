@@ -1,0 +1,2 @@
+xilinx	https://github.com/Xilinx/meta-som (fetch)
+xilinx	https://github.com/Xilinx/meta-som (push)

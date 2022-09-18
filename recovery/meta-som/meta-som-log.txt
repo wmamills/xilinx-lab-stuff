@@ -1,0 +1,44 @@
+commit cfc0246b7cdda1a07ae68032de539737fa36b0c6
+Author: Vishal Patel <vishal.patel@amd.com>
+Date:   Mon Aug 22 10:10:58 2022 -0700
+
+    xmutil: Rename platformstats to xlnx_platformstats
+    
+    Signed-off-by: Vishal Patel <vishal.patel@amd.com>
+    Signed-off-by: Mark Hatle <mark.hatle@amd.com>
+    (cherry picked from commit 550cdc6d42dd935729b45f2fd97f3c39f85ede17)
+    Signed-off-by: Mark Hatle <mark.hatle@amd.com>
+
+commit aab4092efab1566a216dc375e1e128d59e244b2e
+Author: jues <jue.sun@xilinx.com>
+Date:   Fri Aug 12 18:19:49 2022 -0700
+
+    kria-dashboard: Move to current latest 2022.1 version
+    
+    The service and script are now part of the repository
+    
+    Cleanup do_install section
+    - sysvinit is no longer supported
+    
+    Signed-off-by: jues <jue.sun@xilinx.com>
+    
+    Split patch into rename and update (this is the update part)
+    Reword commit message to match split work
+    
+    Signed-off-by: Mark Hatle <mark.hatle@amd.com>
+    (cherry picked from commit 0008d8735012d3241ce404f37c48b973931cc54e)
+    Signed-off-by: Mark Hatle <mark.hatle@amd.com>
+
+commit 54df6412c34472c5bd7bc7573033918483c8fc45
+Author: jues <jue.sun@xilinx.com>
+Date:   Fri Aug 12 18:19:49 2022 -0700
+
+    changes made to update som-dashboard to kria dashboard
+    
+    Signed-off-by: jues <jue.sun@xilinx.com>
+    
+    Split patch into rename and update (this is the rename part)
+    
+    Signed-off-by: Mark Hatle <mark.hatle@amd.com>
+    (cherry picked from commit ba57d4d15572557d7bd382716c08d2acd98d7e26)
+    Signed-off-by: Mark Hatle <mark.hatle@amd.com>
