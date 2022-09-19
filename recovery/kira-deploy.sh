@@ -8,13 +8,13 @@
 ME_DIR=$(dirname $(readlink -f $0))
 ME_BASE=$(basename $0)
 ME=${ME_DIR}/${ME_BASE}
-DEV_IP=$1
-WHERE=$2
 
 BLOCK_SIZE_MEG=64
 BLOCK_SIZE="${BLOCK_SIZE_MEG}M"
 BLOCK_SIZE_FULL="$(( $BLOCK_SIZE_MEG * 1024 * 1024 ))"
 USER=root
+
+set -e
 
 ssh_rekey() {
     # check board is alive at IP_ADDR
@@ -234,6 +234,10 @@ do_host_big_file() {
 }
 
 do_on_host() {
+    DEV_IP=$1
+    WHERE=$2
+    shift 2
+
     ANY=false
     ANY_MTD=false
     DEF_SEL_REG=${ME_DIR}/sel-reg-ImageA.bin
@@ -241,6 +245,60 @@ do_on_host() {
     if [ -n "$WHERE" ]; then
         cd $WHERE
     fi
+
+    # look for directories (from LAVA deploy images: for example)
+    # First look for MTD (.bin) files
+    for i in ImageA ImageB ImageAB boot sel-reg u-boot-vars u-boot-vars2; do
+        if [ ! -d $i ]; then continue; fi
+        if [ -e $i.bin ]; then
+            echo "Warning: ignoring directory $i as $i.bin already exists"
+            continue
+        fi
+        FOUND=""
+        for f in $i/*.bin; do
+            # ignore non matching wild cars
+            if [ ! -e $f ]; then continue; fi
+            if [ -n "$FOUND" ]; then
+                echo "There were too many *.bin files in $i"
+                echo "Found at least $FOUND and $i/$f"
+                FOUND=""
+                break
+            fi
+            FOUND=$f
+        done
+        if [ -n "$FOUND" ]; then
+            ln -s $FOUND $i.bin
+        else
+            echo "WARNING: no %i.bin found/used"
+        fi
+    done
+
+    # now look for disk images
+    for i in sd emmc usb; do
+        if [ ! -d $i ]; then continue; fi
+        if [ -e $i.img ]; then
+            echo "Warning: ignoring directory $i as $i.img already exists"
+            continue
+        fi
+        FOUND=""
+        for f in $i/*.img $i/*.wic; do
+            # ignore non matching wild cars
+            if [ ! -e $f ]; then continue; fi
+            echo "f=$f FOUND=|$FOUND|"
+            if [ -n "$FOUND" ]; then
+                echo "There were too many disk image files in $i"
+                echo "Found at least $FOUND and $f"
+                FOUND=""
+                break
+            fi
+            FOUND=$f
+        done
+        if [ -n "$FOUND" ]; then
+            ln -s $FOUND $i.img
+        else
+            echo "WARNING: no $i.img found/used"
+        fi
+    done
 
     ssh_rekey
 
@@ -264,7 +322,7 @@ do_on_host() {
         fi
     done
 
-    # if an explicit img-sel.bin is given, use it
+    # if an explicit sel-bin.bin is given, use it
     if [ -r ./sel-reg.bin ]; then
             scp ./sel-reg.bin ${USER}@${DEV_IP}:
             ANY=true
@@ -325,20 +383,33 @@ do_help() {
     echo "    If any boot image is given and this file is not given,"
     echo "        then a default image is used that sets A as the active image"
     echo "    both mtd2 and mtd3 are written"
+    echo "lava deploy to flasher support"
+    echo "    the deploy section can contains an images: list"
+    echo "    each image goes into a directory of the same name"
+    echo "    use image names of:"
+    echo "       ImageA ImageB boot sel-reg u-boot-vars u-boot-vars2"
+    echo "       sd emmc usb"
+    echo "   each directory should only contain 1 file of the specified type"
+    echo "       mtd items look for *.bin"
+    echo "   disk images look for *.img or *.wic"
+    echo "       (decompression should happen in lava)"
+    echo "   only supply the image names for what you want to update"
+    echo "   any existing files or symlinks in the base directory take precedence"
     exit 2
 }
 
 #echo "ME_BASE=$ME_BASE CMD_EXTRA=$CMD_EXTRA"
 
-case ${DEV_IP} in
+ACTION=$1
+case ${ACTION} in
 on_target*)
     shift
-    do_${DEV_IP} "$@"
+    do_${ACTION} "$@"
     ;;
 "")
     do_help
     ;;
 *)
-    do_on_host
+    do_on_host "$@"
     ;;
 esac

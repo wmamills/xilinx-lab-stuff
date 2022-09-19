@@ -11,8 +11,6 @@
 #    https://ledge.validation.linaro.org/scheduler/job/52735
 # which is the same as job 52594 but with a stable firmware url
 #
-# !!Currently this is skipping the SD card download and update!!
-#
 # This is modeled after the ST32MP157c-dk2 job at the time
 #    https://ledge.validation.linaro.org/scheduler/job/52735
 # which is the same as job 52594 but with a stable firmware url
@@ -39,23 +37,17 @@ context:
 actions:
 
 - deploy:
-    to: downloads
+    timeout:
+      minutes: 60
+    to: flasher
     images:
       ImageA:
         url: https://snapshots.linaro.org/components/ledge/ts/264/zynqmp-starter/ImageA.bin
       ImageB:
         url: https://snapshots.linaro.org/components/ledge/ts/264/zynqmp-starter/ImageB.bin
-
-- deploy:
-    timeout:
-      minutes: 60
-    to: flasher
-    images:
-        ImageA:
-            url: downloads://ImageA.bin
-        ImageB:
-            url: downloads://ImageB.bin
-    os: oe
+      sd:
+        url: http://snapshots.linaro.org/components/ledge/oe/ledge-multi-armv8/1472/rpb/ledge-qemuarm64/ledge-iot-lava-ledge-qemuarm64-20220912232805.rootfs.wic.gz
+        compression: gz
 
 - boot:
     timeout:
