@@ -1,0 +1,1323 @@
+- {"dt": "2022-09-19T23:16:30.674356", "lvl": "info", "msg": "lava-dispatcher, installed at version: 2022.08"}
+- {"dt": "2022-09-19T23:16:30.674654", "lvl": "info", "msg": "start: 0 validate"}
+- {"dt": "2022-09-19T23:16:30.674828", "lvl": "info", "msg": "Start time: 2022-09-19 23:16:30.674819+00:00 (UTC)"}
+- {"dt": "2022-09-19T23:16:30.675009", "lvl": "debug", "msg": "Validating that https://snapshots.linaro.org/components/ledge/ts/264/zynqmp-starter/ImageA.bin exists"}
+- {"dt": "2022-09-19T23:16:31.580120", "lvl": "debug", "msg": "Validating that https://snapshots.linaro.org/components/ledge/ts/264/zynqmp-starter/ImageB.bin exists"}
+- {"dt": "2022-09-19T23:16:32.785450", "lvl": "debug", "msg": "Validating that http://snapshots.linaro.org/components/ledge/oe/ledge-multi-armv8/1472/rpb/ledge-qemuarm64/ledge-iot-lava-ledge-qemuarm64-20220912232805.rootfs.wic.gz exists"}
+- {"dt": "2022-09-19T23:16:33.245203", "lvl": "warning", "msg": "WARNING: Using boot commands supplied in the job definition, NOT the LAVA device configuration"}
+- {"dt": "2022-09-19T23:16:33.246243", "lvl": "info", "msg": "validate duration: 2.57"}
+- {"dt": "2022-09-19T23:16:33.246518", "lvl": "results", "msg": {"case": "validate", "definition": "lava", "result": "pass"}}
+- {"dt": "2022-09-19T23:16:33.246958", "lvl": "info", "msg": "start: 1 deploy-flasher-retry (timeout 01:00:00) [common]"}
+- {"dt": "2022-09-19T23:16:33.247265", "lvl": "debug", "msg": "start: 1.1 deploy-flasher (timeout 01:00:00) [common]"}
+- {"dt": "2022-09-19T23:16:33.247564", "lvl": "debug", "msg": "start: 1.1.1 download-retry (timeout 01:00:00) [common]"}
+- {"dt": "2022-09-19T23:16:33.247857", "lvl": "debug", "msg": "start: 1.1.1.1 http-download (timeout 01:00:00) [common]"}
+- {"dt": "2022-09-19T23:16:33.248294", "lvl": "info", "msg": "downloading https://snapshots.linaro.org/components/ledge/ts/264/zynqmp-starter/ImageA.bin"}
+- {"dt": "2022-09-19T23:16:33.248529", "lvl": "debug", "msg": "saving as /var/lib/lava/dispatcher/tmp/282/deploy-flasher-heoech0y/ImageA/ImageA.bin"}
+- {"dt": "2022-09-19T23:16:33.248756", "lvl": "debug", "msg": "total size: 283348 (0MB)"}
+- {"dt": "2022-09-19T23:16:33.248978", "lvl": "debug", "msg": "No compression specified"}
+- {"dt": "2022-09-19T23:16:34.242575", "lvl": "debug", "msg": "progress  11% (0MB)"}
+- {"dt": "2022-09-19T23:16:34.430574", "lvl": "debug", "msg": "progress  23% (0MB)"}
+- {"dt": "2022-09-19T23:16:34.521880", "lvl": "debug", "msg": "progress  34% (0MB)"}
+- {"dt": "2022-09-19T23:16:34.524420", "lvl": "debug", "msg": "progress  46% (0MB)"}
+- {"dt": "2022-09-19T23:16:34.710360", "lvl": "debug", "msg": "progress  57% (0MB)"}
+- {"dt": "2022-09-19T23:16:34.802397", "lvl": "debug", "msg": "progress  69% (0MB)"}
+- {"dt": "2022-09-19T23:16:34.895884", "lvl": "debug", "msg": "progress  80% (0MB)"}
+- {"dt": "2022-09-19T23:16:34.986875", "lvl": "debug", "msg": "progress  92% (0MB)"}
+- {"dt": "2022-09-19T23:16:34.988957", "lvl": "debug", "msg": "progress 100% (0MB)"}
+- {"dt": "2022-09-19T23:16:34.992106", "lvl": "info", "msg": "0MB downloaded in 1.74s (0.16MB/s)"}
+- {"dt": "2022-09-19T23:16:34.992875", "lvl": "debug", "msg": "end: 1.1.1.1 http-download (duration 00:00:02) [common]"}
+- {"dt": "2022-09-19T23:16:34.993155", "lvl": "results", "msg": {"case": "http-download", "definition": "lava", "duration": "1.75", "extra": {"label": "ImageA", "md5sum": "d95954aa37da036d6ce3fb42097aea8f", "sha256sum": "2e8433c60382bacc1acc659a74b6b389d176b09b0cf0bf3fb2fcd334f60b7df4", "sha512sum": "a454dbef840a1cf6c2f0f28221e5b8a5e3fc2ed2415560f66cf8a2a3a8a2b1d462de469c879eb9ffca031c2edcbee1d274f1ed00f641922aecd1dac9fcc1ab81", "size": ! "283348"}, "level": "1.1.1.1", "namespace": "common", "result": "pass"}}
+- {"dt": "2022-09-19T23:16:34.993740", "lvl": "debug", "msg": "end: 1.1.1 download-retry (duration 00:00:02) [common]"}
+- {"dt": "2022-09-19T23:16:34.994038", "lvl": "debug", "msg": "start: 1.1.2 download-retry (timeout 00:59:58) [common]"}
+- {"dt": "2022-09-19T23:16:34.994334", "lvl": "debug", "msg": "start: 1.1.2.1 http-download (timeout 00:59:58) [common]"}
+- {"dt": "2022-09-19T23:16:34.994755", "lvl": "info", "msg": "downloading https://snapshots.linaro.org/components/ledge/ts/264/zynqmp-starter/ImageB.bin"}
+- {"dt": "2022-09-19T23:16:34.994991", "lvl": "debug", "msg": "saving as /var/lib/lava/dispatcher/tmp/282/deploy-flasher-heoech0y/ImageB/ImageB.bin"}
+- {"dt": "2022-09-19T23:16:34.995215", "lvl": "debug", "msg": "total size: 1606416 (1MB)"}
+- {"dt": "2022-09-19T23:16:34.995437", "lvl": "debug", "msg": "No compression specified"}
+- {"dt": "2022-09-19T23:16:36.006235", "lvl": "debug", "msg": "progress   2% (0MB)"}
+- {"dt": "2022-09-19T23:16:36.285112", "lvl": "debug", "msg": "progress   8% (0MB)"}
+- {"dt": "2022-09-19T23:16:36.484263", "lvl": "debug", "msg": "progress  14% (0MB)"}
+- {"dt": "2022-09-19T23:16:36.653830", "lvl": "debug", "msg": "progress  20% (0MB)"}
+- {"dt": "2022-09-19T23:16:36.838111", "lvl": "debug", "msg": "progress  26% (0MB)"}
+- {"dt": "2022-09-19T23:16:37.022152", "lvl": "debug", "msg": "progress  32% (0MB)"}
+- {"dt": "2022-09-19T23:16:37.120534", "lvl": "debug", "msg": "progress  38% (0MB)"}
+- {"dt": "2022-09-19T23:16:37.302675", "lvl": "debug", "msg": "progress  44% (0MB)"}
+- {"dt": "2022-09-19T23:16:37.416684", "lvl": "debug", "msg": "progress  50% (0MB)"}
+- {"dt": "2022-09-19T23:16:37.502137", "lvl": "debug", "msg": "progress  55% (0MB)"}
+- {"dt": "2022-09-19T23:16:37.678109", "lvl": "debug", "msg": "progress  61% (0MB)"}
+- {"dt": "2022-09-19T23:16:37.790433", "lvl": "debug", "msg": "progress  67% (1MB)"}
+- {"dt": "2022-09-19T23:16:37.953445", "lvl": "debug", "msg": "progress  73% (1MB)"}
+- {"dt": "2022-09-19T23:16:38.062712", "lvl": "debug", "msg": "progress  79% (1MB)"}
+- {"dt": "2022-09-19T23:16:38.235431", "lvl": "debug", "msg": "progress  85% (1MB)"}
+- {"dt": "2022-09-19T23:16:38.339364", "lvl": "debug", "msg": "progress  91% (1MB)"}
+- {"dt": "2022-09-19T23:16:38.507757", "lvl": "debug", "msg": "progress  97% (1MB)"}
+- {"dt": "2022-09-19T23:16:38.519676", "lvl": "info", "msg": "1MB downloaded in 3.52s (0.43MB/s)"}
+- {"dt": "2022-09-19T23:16:38.520463", "lvl": "debug", "msg": "end: 1.1.2.1 http-download (duration 00:00:04) [common]"}
+- {"dt": "2022-09-19T23:16:38.520732", "lvl": "results", "msg": {"case": "http-download", "definition": "lava", "duration": "3.53", "extra": {"label": "ImageB", "md5sum": "da413d768acf8942cd8336262a514f2c", "sha256sum": "d862ee63b1fc68c0524b34f1a232c556741ec096e2ca74fb8f762c4404294ba3", "sha512sum": "5a41f787db8bae85366e868c1c6e239246597e1c95e86f1558b896747a789743c986ae1db38342b187268dd940ed268d4395c849559f52f88e9b975c97ba50af", "size": ! "1606416"}, "level": "1.1.2.1", "namespace": "common", "result": "pass"}}
+- {"dt": "2022-09-19T23:16:38.521331", "lvl": "debug", "msg": "end: 1.1.2 download-retry (duration 00:00:04) [common]"}
+- {"dt": "2022-09-19T23:16:38.521634", "lvl": "debug", "msg": "start: 1.1.3 download-retry (timeout 00:59:55) [common]"}
+- {"dt": "2022-09-19T23:16:38.521931", "lvl": "debug", "msg": "start: 1.1.3.1 http-download (timeout 00:59:55) [common]"}
+- {"dt": "2022-09-19T23:16:38.522369", "lvl": "info", "msg": "downloading http://snapshots.linaro.org/components/ledge/oe/ledge-multi-armv8/1472/rpb/ledge-qemuarm64/ledge-iot-lava-ledge-qemuarm64-20220912232805.rootfs.wic.gz"}
+- {"dt": "2022-09-19T23:16:38.522612", "lvl": "debug", "msg": "saving as /var/lib/lava/dispatcher/tmp/282/deploy-flasher-heoech0y/sd/ledge-iot-lava-ledge-qemuarm64-20220912232805.rootfs.wic"}
+- {"dt": "2022-09-19T23:16:38.522839", "lvl": "debug", "msg": "total size: 379332541 (361MB)"}
+- {"dt": "2022-09-19T23:16:38.523063", "lvl": "info", "msg": "Using gunzip to decompress gz"}
+- {"dt": "2022-09-19T23:16:39.212763", "lvl": "debug", "msg": "progress   0% (0MB)"}
+- {"dt": "2022-09-19T23:16:59.149249", "lvl": "debug", "msg": "progress   5% (18MB)"}
+- {"dt": "2022-09-19T23:17:19.984178", "lvl": "debug", "msg": "progress  10% (36MB)"}
+- {"dt": "2022-09-19T23:17:36.087350", "lvl": "debug", "msg": "progress  15% (54MB)"}
+- {"dt": "2022-09-19T23:17:56.238941", "lvl": "debug", "msg": "progress  20% (72MB)"}
+- {"dt": "2022-09-19T23:18:16.812333", "lvl": "debug", "msg": "progress  25% (90MB)"}
+- {"dt": "2022-09-19T23:18:34.613057", "lvl": "debug", "msg": "progress  30% (108MB)"}
+- {"dt": "2022-09-19T23:18:48.168604", "lvl": "debug", "msg": "progress  35% (126MB)"}
+- {"dt": "2022-09-19T23:19:08.880791", "lvl": "debug", "msg": "progress  40% (144MB)"}
+- {"dt": "2022-09-19T23:19:31.680518", "lvl": "debug", "msg": "progress  45% (162MB)"}
+- {"dt": "2022-09-19T23:19:49.667816", "lvl": "debug", "msg": "progress  50% (180MB)"}
+- {"dt": "2022-09-19T23:20:06.780507", "lvl": "debug", "msg": "progress  55% (198MB)"}
+- {"dt": "2022-09-19T23:20:17.275538", "lvl": "debug", "msg": "progress  60% (217MB)"}
+- {"dt": "2022-09-19T23:20:27.396541", "lvl": "debug", "msg": "progress  65% (235MB)"}
+- {"dt": "2022-09-19T23:20:50.125689", "lvl": "debug", "msg": "progress  70% (253MB)"}
+- {"dt": "2022-09-19T23:21:10.185333", "lvl": "debug", "msg": "progress  75% (271MB)"}
+- {"dt": "2022-09-19T23:21:26.610151", "lvl": "debug", "msg": "progress  80% (289MB)"}
+- {"dt": "2022-09-19T23:21:41.349679", "lvl": "debug", "msg": "progress  85% (307MB)"}
+- {"dt": "2022-09-19T23:22:10.507373", "lvl": "debug", "msg": "progress  90% (325MB)"}
+- {"dt": "2022-09-19T23:22:49.200638", "lvl": "debug", "msg": "progress  95% (343MB)"}
+- {"dt": "2022-09-19T23:23:17.124366", "lvl": "debug", "msg": "progress 100% (361MB)"}
+- {"dt": "2022-09-19T23:23:17.518446", "lvl": "info", "msg": "361MB downloaded in 399.00s (0.91MB/s)"}
+- {"dt": "2022-09-19T23:23:17.519302", "lvl": "debug", "msg": "end: 1.1.3.1 http-download (duration 00:06:39) [common]"}
+- {"dt": "2022-09-19T23:23:17.519646", "lvl": "results", "msg": {"case": "http-download", "definition": "lava", "duration": "399.00", "extra": {"label": "sd", "md5sum": "a4db67c9e3412be630c6f16c9b1eb22b", "sha256sum": "8ef1a7eb4d0208344b23ac9db8819266d04b4a1480d0f58ca99381712bae9ebc", "sha512sum": "e03544ec4a874506ed87f7dc86fc48674cbd748c635b37264f8e1468494f6c416837d9a8ef2184d169f93358b664193afcfb33aef124ac7e3126447f142f8ac1", "size": ! "379332541"}, "level": "1.1.3.1", "namespace": "common", "result": "pass"}}
+- {"dt": "2022-09-19T23:23:17.520298", "lvl": "debug", "msg": "end: 1.1.3 download-retry (duration 00:06:39) [common]"}
+- {"dt": "2022-09-19T23:23:17.521003", "lvl": "debug", "msg": "Calling: 'nice' 'bash' '-c' 'echo KIRA FLASHER UID=$UID PWD=$PWD PATH=$PATH'"}
+- {"dt": "2022-09-19T23:23:17.529201", "lvl": "debug", "msg": ">> KIRA FLASHER UID=0 PWD=/var/lib/lava/dispatcher/tmp/282/deploy-flasher-heoech0y PATH=/usr/local/bin:/usr/local/sbin:/bin:/usr/bin:/usr/sbin:/sbin\r"}
+- {"dt": "2022-09-19T23:23:17.530190", "lvl": "debug", "msg": "Returned 0 in 0 seconds"}
+- {"dt": "2022-09-19T23:23:17.631317", "lvl": "debug", "msg": "Calling: 'nice' '/usr/local/bin/relayctl' 'relay3' '1' 'off'"}
+- {"dt": "2022-09-19T23:23:17.683539", "lvl": "debug", "msg": "Returned 0 in 0 seconds"}
+- {"dt": "2022-09-19T23:23:17.784802", "lvl": "debug", "msg": "Calling: 'nice' '/usr/local/bin/relayctl' 'relay3' '2' 'on'"}
+- {"dt": "2022-09-19T23:23:17.835130", "lvl": "debug", "msg": "Returned 0 in 0 seconds"}
+- {"dt": "2022-09-19T23:23:17.936371", "lvl": "debug", "msg": "Calling: 'nice' 'sleep' '10'"}
+- {"dt": "2022-09-19T23:23:27.943740", "lvl": "debug", "msg": "Returned 0 in 10 seconds"}
+- {"dt": "2022-09-19T23:23:28.045311", "lvl": "debug", "msg": "Calling: 'nice' '/usr/local/bin/relayctl' 'relay3' '1' 'on'"}
+- {"dt": "2022-09-19T23:23:28.091051", "lvl": "debug", "msg": "Returned 0 in 0 seconds"}
+- {"dt": "2022-09-19T23:23:28.192141", "lvl": "debug", "msg": "Calling: 'nice' 'sleep' '20'"}
+- {"dt": "2022-09-19T23:23:48.199249", "lvl": "debug", "msg": "Returned 0 in 20 seconds"}
+- {"dt": "2022-09-19T23:23:48.300894", "lvl": "debug", "msg": "Calling: 'nice' '/usr/local/bin/kira-deploy.sh' '192.168.2.199' '.'"}
+- {"dt": "2022-09-19T23:23:48.313163", "lvl": "debug", "msg": ">> f=sd/ledge-iot-lava-ledge-qemuarm64-20220912232805.rootfs.wic FOUND=||\r"}
+- {"dt": "2022-09-19T23:23:48.313790", "lvl": "debug", "msg": ">> Check that board at 192.168.2.199 is alive\r"}
+- {"dt": "2022-09-19T23:23:48.315318", "lvl": "debug", "msg": ">> Board at 192.168.2.199 is alive\r"}
+- {"dt": "2022-09-19T23:23:48.318567", "lvl": "debug", "msg": ">> # Host 192.168.2.199 found: line 4\r"}
+- {"dt": "2022-09-19T23:23:48.318965", "lvl": "debug", "msg": ">> /root/.ssh/known_hosts updated.\r"}
+- {"dt": "2022-09-19T23:23:48.319115", "lvl": "debug", "msg": ">> Original contents retained as /root/.ssh/known_hosts.old\r"}
+- {"dt": "2022-09-19T23:23:53.442173", "lvl": "debug", "msg": ">> .....Board at 192.168.2.199 ready\r"}
+- {"dt": "2022-09-19T23:23:53.546842", "lvl": "debug", "msg": ">> \rImageA.bin                                      0%    0     0.0KB/s   --:-- ETA\rImageA.bin                                    100%  277KB  36.7MB/s   00:00    \r"}
+- {"dt": "2022-09-19T23:23:53.694675", "lvl": "debug", "msg": ">> \rImageB.bin                                      0%    0     0.0KB/s   --:-- ETA\rImageB.bin                                    100% 1569KB  30.5MB/s   00:00    \r"}
+- {"dt": "2022-09-19T23:23:53.793518", "lvl": "debug", "msg": ">> \rsel-reg-ImageA.bin                              0%    0     0.0KB/s   --:-- ETA\rsel-reg-ImageA.bin                            100%  256   500.1KB/s   00:00    \r"}
+- {"dt": "2022-09-19T23:23:53.892702", "lvl": "debug", "msg": ">> \rkira-deploy.sh                                  0%    0     0.0KB/s   --:-- ETA\rkira-deploy.sh                                100%   11KB  13.7MB/s   00:00    \r"}
+- {"dt": "2022-09-19T23:23:53.993246", "lvl": "debug", "msg": ">> Update Boot Image A\r"}
+- {"dt": "2022-09-19T23:23:58.141245", "lvl": "debug", "msg": ">> \rErasing 13312 Kibyte @ 0 --  0 % complete \rErasing 13312 Kibyte @ 0 -- 100 % complete \r"}
+- {"dt": "2022-09-19T23:23:58.651675", "lvl": "debug", "msg": ">> 4+1 records in\r"}
+- {"dt": "2022-09-19T23:23:58.652106", "lvl": "debug", "msg": ">> 4+1 records out\r"}
+- {"dt": "2022-09-19T23:23:58.652577", "lvl": "debug", "msg": ">> Update Boot Image B\r"}
+- {"dt": "2022-09-19T23:24:02.768386", "lvl": "debug", "msg": ">> \rErasing 13312 Kibyte @ 0 --  0 % complete \rErasing 13312 Kibyte @ 0 -- 100 % complete \r"}
+- {"dt": "2022-09-19T23:24:05.593573", "lvl": "debug", "msg": ">> 24+1 records in\r"}
+- {"dt": "2022-09-19T23:24:05.594028", "lvl": "debug", "msg": ">> 24+1 records out\r"}
+- {"dt": "2022-09-19T23:24:05.594506", "lvl": "debug", "msg": ">> Update IMGSEL variables\r"}
+- {"dt": "2022-09-19T23:24:05.719242", "lvl": "debug", "msg": ">> \rErasing 128 Kibyte @ 0 --  0 % complete \rErasing 128 Kibyte @ 0 -- 100 % complete \r"}
+- {"dt": "2022-09-19T23:24:05.721790", "lvl": "debug", "msg": ">> 0+1 records in\r"}
+- {"dt": "2022-09-19T23:24:05.722102", "lvl": "debug", "msg": ">> 0+1 records out\r"}
+- {"dt": "2022-09-19T23:24:05.722568", "lvl": "debug", "msg": ">> Update 2nd copy\r"}
+- {"dt": "2022-09-19T23:24:05.845570", "lvl": "debug", "msg": ">> \rErasing 128 Kibyte @ 0 --  0 % complete \rErasing 128 Kibyte @ 0 -- 100 % complete \r"}
+- {"dt": "2022-09-19T23:24:05.848172", "lvl": "debug", "msg": ">> 0+1 records in\r"}
+- {"dt": "2022-09-19T23:24:05.848474", "lvl": "debug", "msg": ">> 0+1 records out\r"}
+- {"dt": "2022-09-19T23:24:05.853695", "lvl": "debug", "msg": ">> TEMPDIR=/tmp/tmp.D6QQSRPonD DEV=mmcblk1 FILE=sd.img BLOCK_SIZE=64M\r"}
+- {"dt": "2022-09-19T23:24:05.856096", "lvl": "debug", "msg": ">> splitting sd.img into 64M chunks\r"}
+- {"dt": "2022-09-19T23:24:20.956101", "lvl": "debug", "msg": ">> processing chunks:\r"}
+- {"dt": "2022-09-19T23:33:41.600457", "lvl": "debug", "msg": ">> ****.............***..........*.*..\r"}
+- {"dt": "2022-09-19T23:33:41.600866", "lvl": "debug", "msg": ">> DONE sd.img\r"}
+- {"dt": "2022-09-19T23:33:41.837113", "lvl": "debug", "msg": "Returned 0 in 593 seconds"}
+- {"dt": "2022-09-19T23:33:41.938332", "lvl": "debug", "msg": "Calling: 'nice' '/usr/local/bin/relayctl' 'relay3' '1' 'off'"}
+- {"dt": "2022-09-19T23:33:41.988881", "lvl": "debug", "msg": "Returned 0 in 0 seconds"}
+- {"dt": "2022-09-19T23:33:42.090188", "lvl": "debug", "msg": "Calling: 'nice' '/usr/local/bin/relayctl' 'relay3' '2' 'off'"}
+- {"dt": "2022-09-19T23:33:42.138718", "lvl": "debug", "msg": "Returned 0 in 0 seconds"}
+- {"dt": "2022-09-19T23:33:42.240011", "lvl": "debug", "msg": "end: 1.1 deploy-flasher (duration 00:17:09) [common]"}
+- {"dt": "2022-09-19T23:33:42.240385", "lvl": "info", "msg": "end: 1 deploy-flasher-retry (duration 00:17:09) [common]"}
+- {"dt": "2022-09-19T23:33:42.240697", "lvl": "info", "msg": "start: 2 uboot-action (timeout 00:15:00) [common]"}
+- {"dt": "2022-09-19T23:33:42.240998", "lvl": "debug", "msg": "start: 2.1 uboot-from-media (timeout 00:15:00) [common]"}
+- {"dt": "2022-09-19T23:33:42.241289", "lvl": "debug", "msg": "end: 2.1 uboot-from-media (duration 00:00:00) [common]"}
+- {"dt": "2022-09-19T23:33:42.241563", "lvl": "debug", "msg": "start: 2.2 bootloader-overlay (timeout 00:15:00) [common]"}
+- {"dt": "2022-09-19T23:33:42.242356", "lvl": "debug", "msg": "substitutions:"}
+- {"dt": "2022-09-19T23:33:42.242604", "lvl": "debug", "msg": "- {DTB}: None"}
+- {"dt": "2022-09-19T23:33:42.242842", "lvl": "debug", "msg": "- {INITRD}: None"}
+- {"dt": "2022-09-19T23:33:42.243067", "lvl": "debug", "msg": "- {KERNEL}: None"}
+- {"dt": "2022-09-19T23:33:42.243290", "lvl": "debug", "msg": "- {LAVA_MAC}: None"}
+- {"dt": "2022-09-19T23:33:42.243508", "lvl": "debug", "msg": "- {PRESEED_CONFIG}: None"}
+- {"dt": "2022-09-19T23:33:42.243724", "lvl": "debug", "msg": "- {PRESEED_LOCAL}: None"}
+- {"dt": "2022-09-19T23:33:42.243936", "lvl": "debug", "msg": "- {RAMDISK}: None"}
+- {"dt": "2022-09-19T23:33:42.244148", "lvl": "debug", "msg": "- {ROOT_PART}: None"}
+- {"dt": "2022-09-19T23:33:42.244359", "lvl": "debug", "msg": "- {ROOT}: None"}
+- {"dt": "2022-09-19T23:33:42.244570", "lvl": "debug", "msg": "- {SERVER_IP}: 192.168.2.5"}
+- {"dt": "2022-09-19T23:33:42.244779", "lvl": "debug", "msg": "- {TEE}: None"}
+- {"dt": "2022-09-19T23:33:42.244989", "lvl": "info", "msg": "Parsed boot commands:"}
+- {"dt": "2022-09-19T23:33:42.245218", "lvl": "info", "msg": "- ls mmc 1:1 /"}
+- {"dt": "2022-09-19T23:33:42.245433", "lvl": "info", "msg": "- ls mmc 1:2 /"}
+- {"dt": "2022-09-19T23:33:42.245639", "lvl": "info", "msg": "- efidebug boot order"}
+- {"dt": "2022-09-19T23:33:42.245848", "lvl": "info", "msg": "- printenv -e BootNext"}
+- {"dt": "2022-09-19T23:33:42.246056", "lvl": "info", "msg": "- efidebug boot dump"}
+- {"dt": "2022-09-19T23:33:42.246262", "lvl": "info", "msg": "- setenv -e -rt -bs BootNext"}
+- {"dt": "2022-09-19T23:33:42.246468", "lvl": "info", "msg": "- efidebug boot rm -b 1"}
+- {"dt": "2022-09-19T23:33:42.246673", "lvl": "info", "msg": "- efidebug boot add -b 1 BootLedge mmc 1:1 efi/boot/bootaa64.efi -i mmc 1:1 ledge-initramfs.rootfs.cpio.gz -s 'console=ttyPS1,115200 console=tty0 root=UUID=6091b3a4-ce08-3020-93a6-f755a22ef03b rootwait panic=60'"}
+- {"dt": "2022-09-19T23:33:42.246904", "lvl": "info", "msg": "- efidebug boot order 1"}
+- {"dt": "2022-09-19T23:33:42.247112", "lvl": "info", "msg": "- echo \"Starting kernel\"; bootefi bootmgr"}
+- {"dt": "2022-09-19T23:33:42.247373", "lvl": "debug", "msg": "end: 2.2 bootloader-overlay (duration 00:00:00) [common]"}
+- {"dt": "2022-09-19T23:33:42.247666", "lvl": "debug", "msg": "start: 2.3 connect-device (timeout 00:15:00) [common]"}
+- {"dt": "2022-09-19T23:33:42.247900", "lvl": "info", "msg": "[common] connect-device Connecting to device using 'telnet localhost 7001'"}
+- {"dt": "2022-09-19T23:33:42.253532", "lvl": "debug", "msg": "Setting prompt string to ['lava-test: # ']"}
+- {"dt": "2022-09-19T23:33:42.254024", "lvl": "debug", "msg": "end: 2.3 connect-device (duration 00:00:00) [common]"}
+- {"dt": "2022-09-19T23:33:42.254243", "lvl": "debug", "msg": "start: 2.4 uboot-commands (timeout 00:15:00) [common]"}
+- {"dt": "2022-09-19T23:33:42.254439", "lvl": "debug", "msg": "start: 2.4.1 reset-device (timeout 00:15:00) [common]"}
+- {"dt": "2022-09-19T23:33:42.254647", "lvl": "debug", "msg": "start: 2.4.1.1 pdu-reboot (timeout 00:15:00) [common]"}
+- {"dt": "2022-09-19T23:33:42.255252", "lvl": "debug", "msg": "Calling: 'nice' '/usr/local/bin/relayctl' 'relay3' '1' 'cycle' '15'"}
+- {"dt": "2022-09-19T23:33:57.334152", "lvl": "debug", "msg": "Returned 0 in 15 seconds"}
+- {"dt": "2022-09-19T23:33:57.435721", "lvl": "debug", "msg": "end: 2.4.1.1 pdu-reboot (duration 00:00:15) [common]"}
+- {"dt": "2022-09-19T23:33:57.436140", "lvl": "results", "msg": {"case": "pdu-reboot", "definition": "lava", "duration": "15.18", "extra": {"status": "success"}, "level": "2.4.1.1", "namespace": "common", "result": "pass"}}
+- {"dt": "2022-09-19T23:33:57.436660", "lvl": "debug", "msg": "end: 2.4.1 reset-device (duration 00:00:15) [common]"}
+- {"dt": "2022-09-19T23:33:57.436985", "lvl": "debug", "msg": "start: 2.4.2 bootloader-interrupt (timeout 00:14:45) [common]"}
+- {"dt": "2022-09-19T23:33:57.437286", "lvl": "debug", "msg": "Setting prompt string to ['Hit any key to stop autoboot']"}
+- {"dt": "2022-09-19T23:33:57.437531", "lvl": "debug", "msg": "bootloader-interrupt: Wait for prompt ['Hit any key to stop autoboot'] (timeout 00:15:00)"}
+- {"dt": "2022-09-19T23:33:57.438394", "lvl": "target", "msg": "Trying ::1..."}
+- {"dt": "2022-09-19T23:33:57.438641", "lvl": "target", "msg": "Connected to localhost."}
+- {"dt": "2022-09-19T23:33:57.438864", "lvl": "target", "msg": "Escape character is '^]'."}
+- {"dt": "2022-09-19T23:33:57.439082", "lvl": "target", "msg": "\0"}
+- {"dt": "2022-09-19T23:33:58.592937", "lvl": "target", "msg": "\0"}
+- {"dt": "2022-09-19T23:33:58.593277", "lvl": "target", "msg": "<debug_uart>"}
+- {"dt": "2022-09-19T23:33:59.021780", "lvl": "target", "msg": ""}
+- {"dt": "2022-09-19T23:33:59.022068", "lvl": "target", "msg": "U-Boot SPL 2022.07-rc3 (May 27 2022 - 12:50:42 +0000)"}
+- {"dt": "2022-09-19T23:33:59.022307", "lvl": "target", "msg": "PMUFW:\tv1.1"}
+- {"dt": "2022-09-19T23:33:59.022534", "lvl": "target", "msg": "Loading new PMUFW cfg obj (2032 bytes)"}
+- {"dt": "2022-09-19T23:33:59.024975", "lvl": "target", "msg": "Silicon version:\t3"}
+- {"dt": "2022-09-19T23:33:59.025284", "lvl": "target", "msg": "EL Level:\tEL3"}
+- {"dt": "2022-09-19T23:33:59.025521", "lvl": "target", "msg": "Chip ID:\txck26"}
+- {"dt": "2022-09-19T23:33:59.037784", "lvl": "target", "msg": "Secure Boot:\tnot authenticated, not encrypted"}
+- {"dt": "2022-09-19T23:33:59.038072", "lvl": "target", "msg": "Multiboot:\t64"}
+- {"dt": "2022-09-19T23:33:59.040948", "lvl": "target", "msg": "Trying to boot from SPI"}
+- {"dt": "2022-09-19T23:33:59.480682", "lvl": "target", "msg": "NOTICE:  BL31: v2.6(release):v2.6-879-gc3bdd3d3cf-dirty"}
+- {"dt": "2022-09-19T23:34:00.298790", "lvl": "target", "msg": "NOTICE:  BL31: Built : 09:30:50, May  9 2022\uFFFDH\uFFFD\\\"\uFFFD\uFFFD\u055D}\u0545\uFFFD\uFFFD\uFFFD6R\uFFFD"}
+- {"dt": "2022-09-19T23:34:00.299092", "lvl": "target", "msg": ""}
+- {"dt": "2022-09-19T23:34:00.314792", "lvl": "target", "msg": "U-Boot 2022.07-rc3 (May 27 2022 - 12:50:42 +0000)"}
+- {"dt": "2022-09-19T23:34:00.315081", "lvl": "target", "msg": ""}
+- {"dt": "2022-09-19T23:34:00.315316", "lvl": "target", "msg": "CPU:   ZynqMP"}
+- {"dt": "2022-09-19T23:34:00.315540", "lvl": "target", "msg": "Silicon: v3"}
+- {"dt": "2022-09-19T23:34:00.823690", "lvl": "target", "msg": "Detected name: zynqmp-sm-k26-xcl2gc-rev1 -sck-kv-g-rev1"}
+- {"dt": "2022-09-19T23:34:00.826835", "lvl": "target", "msg": "Model: ZynqMP SM-K26 Rev1/B/A"}
+- {"dt": "2022-09-19T23:34:00.827123", "lvl": "target", "msg": "Board: Xilinx ZynqMP"}
+- {"dt": "2022-09-19T23:34:01.098799", "lvl": "target", "msg": "DRAM:  4 GiB"}
+- {"dt": "2022-09-19T23:34:01.194808", "lvl": "target", "msg": "PMUFW:\tv1.1"}
+- {"dt": "2022-09-19T23:34:01.431701", "lvl": "target", "msg": "Xilinx I2C FRU format at nvmem0:"}
+- {"dt": "2022-09-19T23:34:01.431987", "lvl": "target", "msg": " Manufacturer Name: XILINX"}
+- {"dt": "2022-09-19T23:34:01.432222", "lvl": "target", "msg": " Product Name: SM-K26-XCL2GC"}
+- {"dt": "2022-09-19T23:34:01.432443", "lvl": "target", "msg": " Serial No: XFL1OTRUW0NW"}
+- {"dt": "2022-09-19T23:34:01.434895", "lvl": "target", "msg": " Part Number: 5057-02  "}
+- {"dt": "2022-09-19T23:34:01.435187", "lvl": "target", "msg": " File ID: 0x0"}
+- {"dt": "2022-09-19T23:34:01.435424", "lvl": "target", "msg": " Revision Number: 1 "}
+- {"dt": "2022-09-19T23:34:01.655677", "lvl": "target", "msg": "Xilinx I2C FRU format at nvmem1:"}
+- {"dt": "2022-09-19T23:34:01.655965", "lvl": "target", "msg": " Manufacturer Name: XILINX"}
+- {"dt": "2022-09-19T23:34:01.658857", "lvl": "target", "msg": " Product Name: SCK-KV-G        "}
+- {"dt": "2022-09-19T23:34:01.671655", "lvl": "target", "msg": " Serial No: XFL1EMYMAA30"}
+- {"dt": "2022-09-19T23:34:01.671940", "lvl": "target", "msg": " Part Number: 5066-01  "}
+- {"dt": "2022-09-19T23:34:01.672176", "lvl": "target", "msg": " File ID: 0x0"}
+- {"dt": "2022-09-19T23:34:01.672406", "lvl": "target", "msg": " Revision Number: 1"}
+- {"dt": "2022-09-19T23:34:01.672625", "lvl": "target", "msg": "EL Level:\tEL2"}
+- {"dt": "2022-09-19T23:34:01.672843", "lvl": "target", "msg": "Chip ID:\txck26"}
+- {"dt": "2022-09-19T23:34:01.674863", "lvl": "target", "msg": "Secure Boot:\tnot authenticated, not encrypted"}
+- {"dt": "2022-09-19T23:34:01.690798", "lvl": "target", "msg": "Core:  127 devices, 33 uclasses, devicetree: fit"}
+- {"dt": "2022-09-19T23:34:01.786808", "lvl": "target", "msg": "7[r[999;999H[6n8NAND:  0 MiB"}
+- {"dt": "2022-09-19T23:34:02.823601", "lvl": "target", "msg": "MMC:   mmc@ff160000: 0, mmc@ff170000: 1"}
+- {"dt": "2022-09-19T23:34:02.826743", "lvl": "target", "msg": "Loading Environment from nowhere... OK"}
+- {"dt": "2022-09-19T23:34:02.827029", "lvl": "target", "msg": "In:    serial"}
+- {"dt": "2022-09-19T23:34:02.839530", "lvl": "target", "msg": "Out:   serial"}
+- {"dt": "2022-09-19T23:34:02.839777", "lvl": "target", "msg": "Err:   serial"}
+- {"dt": "2022-09-19T23:34:02.839925", "lvl": "target", "msg": "Bootmode: QSPI_MODE"}
+- {"dt": "2022-09-19T23:34:02.840065", "lvl": "target", "msg": "Reset reason:\tSOFT "}
+- {"dt": "2022-09-19T23:34:03.367540", "lvl": "target", "msg": "Net:   PHY reset timed out"}
+- {"dt": "2022-09-19T23:34:03.367935", "lvl": "target", "msg": ""}
+- {"dt": "2022-09-19T23:34:03.368176", "lvl": "target", "msg": "ZYNQ GEM: ff0e0000, mdio bus ff0e0000, phyaddr 1, interface rgmii-id"}
+- {"dt": "2022-09-19T23:34:03.368407", "lvl": "target", "msg": "eth0: ethernet@ff0e0000"}
+- {"dt": "2022-09-19T23:34:03.368885", "lvl": "input", "msg": "\n"}
+- {"dt": "2022-09-19T23:34:03.419488", "lvl": "target", "msg": "Hit any key to stop autoboot:"}
+- {"dt": "2022-09-19T23:34:03.419902", "lvl": "debug", "msg": "end: 2.4.2 bootloader-interrupt (duration 00:00:06) [common]"}
+- {"dt": "2022-09-19T23:34:03.420231", "lvl": "debug", "msg": "start: 2.4.3 bootloader-commands (timeout 00:14:39) [common]"}
+- {"dt": "2022-09-19T23:34:03.420509", "lvl": "debug", "msg": "Setting prompt string to ['ZynqMP>']"}
+- {"dt": "2022-09-19T23:34:03.420770", "lvl": "debug", "msg": "bootloader-commands: Wait for prompt ['ZynqMP>'] (timeout 00:14:39)"}
+- {"dt": "2022-09-19T23:34:03.421249", "lvl": "target", "msg": "  2 "}
+- {"dt": "2022-09-19T23:34:03.434702", "lvl": "target", "msg": "\b\b\b 0 "}
+- {"dt": "2022-09-19T23:34:03.434989", "lvl": "target", "msg": "ZynqMP> "}
+- {"dt": "2022-09-19T23:34:03.435543", "lvl": "debug", "msg": "Setting prompt string to ['ZynqMP>', 'Resetting CPU', 'Must RESET board to recover', 'TIMEOUT', 'Retry count exceeded', 'Retry time exceeded; starting again', 'ERROR: The remote end did not respond in time.', 'File not found', 'Bad Linux ARM64 Image magic!', 'Wrong Ramdisk Image Format', 'Ramdisk image is corrupt or invalid', 'ERROR: Failed to allocate', 'TFTP error: trying to overwrite reserved memory', 'Bad Linux RISCV Image magic!', 'Wrong Image Format for boot', 'ERROR: Did not find a cmdline Flattened Device Tree', 'ERROR: RD image overlaps OS image']"}
+- {"dt": "2022-09-19T23:34:03.435816", "lvl": "input", "msg": "ls mmc 1:1 /\n"}
+- {"dt": "2022-09-19T23:34:03.536718", "lvl": "target", "msg": "ZynqMP> ls mmc 1:1 /"}
+- {"dt": "2022-09-19T23:34:03.537047", "lvl": "debug", "msg": "bootloader-commands: Wait for prompt ['ZynqMP>', 'Resetting CPU', 'Must RESET board to recover', 'TIMEOUT', 'Retry count exceeded', 'Retry time exceeded; starting again', 'ERROR: The remote end did not respond in time.', 'File not found', 'Bad Linux ARM64 Image magic!', 'Wrong Ramdisk Image Format', 'Ramdisk image is corrupt or invalid', 'ERROR: Failed to allocate', 'TFTP error: trying to overwrite reserved memory', 'Bad Linux RISCV Image magic!', 'Wrong Image Format for boot', 'ERROR: Did not find a cmdline Flattened Device Tree', 'ERROR: RD image overlaps OS image'] (timeout 00:14:39)"}
+- {"dt": "2022-09-19T23:34:03.540012", "lvl": "input", "msg": "ls mmc 1:2 /\n"}
+- {"dt": "2022-09-19T23:34:03.640951", "lvl": "target", "msg": "ls mmc 1:2 /"}
+- {"dt": "2022-09-19T23:34:03.641299", "lvl": "debug", "msg": "bootloader-commands: Wait for prompt ['ZynqMP>', 'Resetting CPU', 'Must RESET board to recover', 'TIMEOUT', 'Retry count exceeded', 'Retry time exceeded; starting again', 'ERROR: The remote end did not respond in time.', 'File not found', 'Bad Linux ARM64 Image magic!', 'Wrong Ramdisk Image Format', 'Ramdisk image is corrupt or invalid', 'ERROR: Failed to allocate', 'TFTP error: trying to overwrite reserved memory', 'Bad Linux RISCV Image magic!', 'Wrong Image Format for boot', 'ERROR: Did not find a cmdline Flattened Device Tree', 'ERROR: RD image overlaps OS image'] (timeout 00:14:39)"}
+- {"dt": "2022-09-19T23:34:03.641752", "lvl": "target", "msg": "ls mmc 1:1 /"}
+- {"dt": "2022-09-19T23:34:03.641986", "lvl": "target", "msg": "ls mmc 1:1 /"}
+- {"dt": "2022-09-19T23:34:03.642207", "lvl": "target", "msg": "ls mmc 1:2 /"}
+- {"dt": "2022-09-19T23:34:04.346704", "lvl": "target", "msg": "            EFI/"}
+- {"dt": "2022-09-19T23:34:04.362712", "lvl": "target", "msg": " 34795536   Image"}
+- {"dt": "2022-09-19T23:34:04.363000", "lvl": "target", "msg": "            dtb/"}
+- {"dt": "2022-09-19T23:34:04.375601", "lvl": "target", "msg": " 25302315   ledge-initramfs.rootfs.cpio.gz"}
+- {"dt": "2022-09-19T23:34:04.375887", "lvl": "target", "msg": ""}
+- {"dt": "2022-09-19T23:34:04.378755", "lvl": "target", "msg": "2 file(s), 2 dir(s)"}
+- {"dt": "2022-09-19T23:34:04.379046", "lvl": "target", "msg": ""}
+- {"dt": "2022-09-19T23:34:04.394705", "lvl": "target", "msg": "ZynqMP> "}
+- {"dt": "2022-09-19T23:34:04.395204", "lvl": "input", "msg": "efidebug boot order\n"}
+- {"dt": "2022-09-19T23:34:04.496104", "lvl": "target", "msg": "efidebug boot order"}
+- {"dt": "2022-09-19T23:34:04.496435", "lvl": "debug", "msg": "bootloader-commands: Wait for prompt ['ZynqMP>', 'Resetting CPU', 'Must RESET board to recover', 'TIMEOUT', 'Retry count exceeded', 'Retry time exceeded; starting again', 'ERROR: The remote end did not respond in time.', 'File not found', 'Bad Linux ARM64 Image magic!', 'Wrong Ramdisk Image Format', 'Ramdisk image is corrupt or invalid', 'ERROR: Failed to allocate', 'TFTP error: trying to overwrite reserved memory', 'Bad Linux RISCV Image magic!', 'Wrong Image Format for boot', 'ERROR: Did not find a cmdline Flattened Device Tree', 'ERROR: RD image overlaps OS image'] (timeout 00:14:38)"}
+- {"dt": "2022-09-19T23:34:04.496890", "lvl": "target", "msg": "            EFI/"}
+- {"dt": "2022-09-19T23:34:04.497134", "lvl": "target", "msg": " 34795536   Image"}
+- {"dt": "2022-09-19T23:34:04.497378", "lvl": "target", "msg": "            dtb/"}
+- {"dt": "2022-09-19T23:34:04.497596", "lvl": "target", "msg": " 25302315   ledge-initramfs.rootfs.cpio.gz"}
+- {"dt": "2022-09-19T23:34:04.497811", "lvl": "target", "msg": ""}
+- {"dt": "2022-09-19T23:34:04.498024", "lvl": "target", "msg": "2 file(s), 2 dir(s)"}
+- {"dt": "2022-09-19T23:34:04.498238", "lvl": "target", "msg": ""}
+- {"dt": "2022-09-19T23:34:04.498450", "lvl": "target", "msg": "ZynqMP> ls mmc 1:2 /"}
+- {"dt": "2022-09-19T23:34:04.498655", "lvl": "target", "msg": "efidebug boot order<DIR>       4096 ."}
+- {"dt": "2022-09-19T23:34:04.498862", "lvl": "target", "msg": "<DIR>       4096 .."}
+- {"dt": "2022-09-19T23:34:04.499069", "lvl": "target", "msg": "<DIR>      16384 lost+found"}
+- {"dt": "2022-09-19T23:34:04.499275", "lvl": "target", "msg": "              25 .autorelabel"}
+- {"dt": "2022-09-19T23:34:04.499479", "lvl": "target", "msg": "<DIR>       4096 bin"}
+- {"dt": "2022-09-19T23:34:04.499683", "lvl": "target", "msg": "<DIR>       4096 boot"}
+- {"dt": "2022-09-19T23:34:04.499888", "lvl": "target", "msg": "<DIR>       4096 dev"}
+- {"dt": "2022-09-19T23:34:04.500092", "lvl": "target", "msg": "<DIR>       4096 etc"}
+- {"dt": "2022-09-19T23:34:04.500295", "lvl": "target", "msg": ""}
+- {"dt": "2022-09-19T23:34:04.500725", "lvl": "input", "msg": "printenv -e BootNext\n"}
+- {"dt": "2022-09-19T23:34:04.601583", "lvl": "target", "msg": "printenv -e BootNext"}
+- {"dt": "2022-09-19T23:34:04.601915", "lvl": "debug", "msg": "bootloader-commands: Wait for prompt ['ZynqMP>', 'Resetting CPU', 'Must RESET board to recover', 'TIMEOUT', 'Retry count exceeded', 'Retry time exceeded; starting again', 'ERROR: The remote end did not respond in time.', 'File not found', 'Bad Linux ARM64 Image magic!', 'Wrong Ramdisk Image Format', 'Ramdisk image is corrupt or invalid', 'ERROR: Failed to allocate', 'TFTP error: trying to overwrite reserved memory', 'Bad Linux RISCV Image magic!', 'Wrong Image Format for boot', 'ERROR: Did not find a cmdline Flattened Device Tree', 'ERROR: RD image overlaps OS image'] (timeout 00:14:38)"}
+- {"dt": "2022-09-19T23:34:04.602416", "lvl": "target", "msg": "<DIR>       4096 home"}
+- {"dt": "2022-09-19T23:34:04.602654", "lvl": "target", "msg": "<DIR>       4096 lib"}
+- {"dt": "2022-09-19T23:34:04.602878", "lvl": "target", "msg": "<DIR>       4096 media"}
+- {"dt": "2022-09-19T23:34:04.603097", "lvl": "target", "msg": "<DIR>       4096 mnt"}
+- {"dt": "2022-09-19T23:34:04.603312", "lvl": "target", "msg": "<DIR>       4096 opt"}
+- {"dt": "2022-09-19T23:34:04.603526", "lvl": "target", "msg": "<DIR>       4096 proc"}
+- {"dt": "2022-09-19T23:34:04.603737", "lvl": "target", "msg": "<DIR>       4096 run"}
+- {"dt": "2022-09-19T23:34:04.603948", "lvl": "target", "msg": "<DIR>       4096 sbin"}
+- {"dt": "2022-09-19T23:34:04.604156", "lvl": "target", "msg": "<DIR>       4096 srv"}
+- {"dt": "2022-09-19T23:34:04.604365", "lvl": "target", "msg": "<DIR>       4096 sys"}
+- {"dt": "2022-09-19T23:34:04.604571", "lvl": "target", "msg": "<DIR>       4096 tmp"}
+- {"dt": "2022-09-19T23:34:04.604777", "lvl": "target", "msg": "<DIR>       4096 usr"}
+- {"dt": "2022-09-19T23:34:04.604981", "lvl": "target", "msg": "<DIR>       4096 var"}
+- {"dt": "2022-09-19T23:34:04.605205", "lvl": "target", "msg": "printenv -e BootNextZynqMP> "}
+- {"dt": "2022-09-19T23:34:04.605411", "lvl": "target", "msg": "<DIR>       4096 ."}
+- {"dt": "2022-09-19T23:34:04.605617", "lvl": "target", "msg": "<DIR>       4096 .."}
+- {"dt": "2022-09-19T23:34:04.605820", "lvl": "target", "msg": "<DIR>      16384 lost+found"}
+- {"dt": "2022-09-19T23:34:04.606025", "lvl": "target", "msg": "              25 .autorelabel"}
+- {"dt": "2022-09-19T23:34:04.606226", "lvl": "target", "msg": "<DIR>       4096 bin"}
+- {"dt": "2022-09-19T23:34:04.606431", "lvl": "target", "msg": "<DIR>       4096 boot"}
+- {"dt": "2022-09-19T23:34:04.606633", "lvl": "target", "msg": "<DIR>       4096 dev"}
+- {"dt": "2022-09-19T23:34:04.606835", "lvl": "target", "msg": "<DIR>       4096 etc"}
+- {"dt": "2022-09-19T23:34:04.607035", "lvl": "target", "msg": "<DIR>       "}
+- {"dt": "2022-09-19T23:34:04.607239", "lvl": "target", "msg": "4096 home"}
+- {"dt": "2022-09-19T23:34:04.607445", "lvl": "target", "msg": "<DIR>       4096 lib"}
+- {"dt": "2022-09-19T23:34:04.607886", "lvl": "input", "msg": "efidebug boot dump\n"}
+- {"dt": "2022-09-19T23:34:04.708792", "lvl": "target", "msg": "efidebug boot dump"}
+- {"dt": "2022-09-19T23:34:04.709131", "lvl": "debug", "msg": "bootloader-commands: Wait for prompt ['ZynqMP>', 'Resetting CPU', 'Must RESET board to recover', 'TIMEOUT', 'Retry count exceeded', 'Retry time exceeded; starting again', 'ERROR: The remote end did not respond in time.', 'File not found', 'Bad Linux ARM64 Image magic!', 'Wrong Ramdisk Image Format', 'Ramdisk image is corrupt or invalid', 'ERROR: Failed to allocate', 'TFTP error: trying to overwrite reserved memory', 'Bad Linux RISCV Image magic!', 'Wrong Image Format for boot', 'ERROR: Did not find a cmdline Flattened Device Tree', 'ERROR: RD image overlaps OS image'] (timeout 00:14:38)"}
+- {"dt": "2022-09-19T23:34:04.709611", "lvl": "target", "msg": "<DIR>       4096 media"}
+- {"dt": "2022-09-19T23:34:04.709848", "lvl": "target", "msg": "<DIR>       4096 mnt"}
+- {"dt": "2022-09-19T23:34:04.710073", "lvl": "target", "msg": "<DIR>       4096 opt"}
+- {"dt": "2022-09-19T23:34:04.710293", "lvl": "target", "msg": "<DIR>       4096 proc"}
+- {"dt": "2022-09-19T23:34:04.710509", "lvl": "target", "msg": "<DIR>       4096 run"}
+- {"dt": "2022-09-19T23:34:04.710721", "lvl": "target", "msg": "<DIR>       4096 sbin"}
+- {"dt": "2022-09-19T23:34:04.710932", "lvl": "target", "msg": "<DIR>       4096 srv"}
+- {"dt": "2022-09-19T23:34:04.711142", "lvl": "target", "msg": "<DIR>       4096 sys"}
+- {"dt": "2022-09-19T23:34:04.711351", "lvl": "target", "msg": "<DIR>       4096 tmp"}
+- {"dt": "2022-09-19T23:34:04.711556", "lvl": "target", "msg": "<DIR>       4096 usr"}
+- {"dt": "2022-09-19T23:34:04.711763", "lvl": "target", "msg": "<DIR>       4096 var"}
+- {"dt": "2022-09-19T23:34:04.711967", "lvl": "target", "msg": "ZynqMP> efidebug boot order"}
+- {"dt": "2022-09-19T23:34:04.712169", "lvl": "target", "msg": "efidebug boot dump** Unable to read file ubootefi.var **"}
+- {"dt": "2022-09-19T23:34:04.712374", "lvl": "target", "msg": "Failed to load EFI variables"}
+- {"dt": "2022-09-19T23:34:04.712578", "lvl": "target", "msg": "tpm_tis_spi_probe: missing reset GPIO"}
+- {"dt": "2022-09-19T23:34:04.712784", "lvl": "target", "msg": ""}
+- {"dt": "2022-09-19T23:34:04.713213", "lvl": "input", "msg": "setenv -e -rt -bs BootNext\n"}
+- {"dt": "2022-09-19T23:34:04.814092", "lvl": "target", "msg": "setenv -e -rt -bs BootNext"}
+- {"dt": "2022-09-19T23:34:04.814422", "lvl": "debug", "msg": "bootloader-commands: Wait for prompt ['ZynqMP>', 'Resetting CPU', 'Must RESET board to recover', 'TIMEOUT', 'Retry count exceeded', 'Retry time exceeded; starting again', 'ERROR: The remote end did not respond in time.', 'File not found', 'Bad Linux ARM64 Image magic!', 'Wrong Ramdisk Image Format', 'Ramdisk image is corrupt or invalid', 'ERROR: Failed to allocate', 'TFTP error: trying to overwrite reserved memory', 'Bad Linux RISCV Image magic!', 'Wrong Image Format for boot', 'ERROR: Did not find a cmdline Flattened Device Tree', 'ERROR: RD image overlaps OS image'] (timeout 00:14:37)"}
+- {"dt": "2022-09-19T23:34:04.814873", "lvl": "target", "msg": "setenv -e -rt -bs BootNext"}
+- {"dt": "2022-09-19T23:34:05.594609", "lvl": "target", "msg": "BootOrder not defined"}
+- {"dt": "2022-09-19T23:34:05.594896", "lvl": "target", "msg": "ZynqMP> "}
+- {"dt": "2022-09-19T23:34:05.595129", "lvl": "target", "msg": "ZynqMP> printenv -e BootNext"}
+- {"dt": "2022-09-19T23:34:05.595566", "lvl": "input", "msg": "efidebug boot rm -b 1\n"}
+- {"dt": "2022-09-19T23:34:05.696474", "lvl": "target", "msg": "efidebug boot rm -b 1"}
+- {"dt": "2022-09-19T23:34:05.696806", "lvl": "debug", "msg": "bootloader-commands: Wait for prompt ['ZynqMP>', 'Resetting CPU', 'Must RESET board to recover', 'TIMEOUT', 'Retry count exceeded', 'Retry time exceeded; starting again', 'ERROR: The remote end did not respond in time.', 'File not found', 'Bad Linux ARM64 Image magic!', 'Wrong Ramdisk Image Format', 'Ramdisk image is corrupt or invalid', 'ERROR: Failed to allocate', 'TFTP error: trying to overwrite reserved memory', 'Bad Linux RISCV Image magic!', 'Wrong Image Format for boot', 'ERROR: Did not find a cmdline Flattened Device Tree', 'ERROR: RD image overlaps OS image'] (timeout 00:14:37)"}
+- {"dt": "2022-09-19T23:34:05.697254", "lvl": "input", "msg": "efidebug boot add -b 1 BootLedge mmc 1:1 efi/boot/bootaa64.efi -i mmc 1:1 ledge-initramfs.rootfs.cpio.gz -s 'console=ttyPS1,115200 console=tty0 root=UUID=6091b3a4-ce08-3020-93a6-f755a22ef03b rootwait panic=60'\n"}
+- {"dt": "2022-09-19T23:34:05.798184", "lvl": "target", "msg": "efidebug boot add -b 1 BootLedge mmc 1:1 efi/boot/bootaa64.efi -i mmc 1:1 ledge-initramfs.rootfs.cpio.gz -s 'console=ttyPS1,115200 console=tty0 root=UUID=6091b3a4-ce08-3020-93a6-f755a22ef03b rootwait panic=60'"}
+- {"dt": "2022-09-19T23:34:05.798522", "lvl": "debug", "msg": "bootloader-commands: Wait for prompt ['ZynqMP>', 'Resetting CPU', 'Must RESET board to recover', 'TIMEOUT', 'Retry count exceeded', 'Retry time exceeded; starting again', 'ERROR: The remote end did not respond in time.', 'File not found', 'Bad Linux ARM64 Image magic!', 'Wrong Ramdisk Image Format', 'Ramdisk image is corrupt or invalid', 'ERROR: Failed to allocate', 'TFTP error: trying to overwrite reserved memory', 'Bad Linux RISCV Image magic!', 'Wrong Image Format for boot', 'ERROR: Did not find a cmdline Flattened Device Tree', 'ERROR: RD image overlaps OS image'] (timeout 00:14:36)"}
+- {"dt": "2022-09-19T23:34:05.798991", "lvl": "target", "msg": "Error: \\\"BootNext\\\" not defined"}
+- {"dt": "2022-09-19T23:34:05.799228", "lvl": "target", "msg": "ZynqMP> "}
+- {"dt": "2022-09-19T23:34:05.799450", "lvl": "target", "msg": "Error: \\\"BootNext\\\" not defined"}
+- {"dt": "2022-09-19T23:34:05.799668", "lvl": "target", "msg": "ZynqMP> efidebug boot dump"}
+- {"dt": "2022-09-19T23:34:05.799881", "lvl": "target", "msg": "ZynqMP> "}
+- {"dt": "2022-09-19T23:34:05.800090", "lvl": "target", "msg": "ZynqMP> setenv -e -rt -bs Boo"}
+- {"dt": "2022-09-19T23:34:05.800300", "lvl": "target", "msg": "## Failed to set EFI variable (not found)"}
+- {"dt": "2022-09-19T23:34:05.800507", "lvl": "target", "msg": "ZynqMP> efidebug boot rm -b 1"}
+- {"dt": "2022-09-19T23:34:05.800713", "lvl": "target", "msg": "efidebug boot rm -b 1"}
+- {"dt": "2022-09-19T23:34:05.800917", "lvl": "target", "msg": "ZynqMP> "}
+- {"dt": "2022-09-19T23:34:05.801122", "lvl": "target", "msg": "ZynqMP> efidebug boot add -b 1 BootLedge mmc 1:1 efi/boot/bootaa64.efi -i mmc 1:1 ledge-initramfs.rootfs.cpio.gz -s 'console=ttyPS1,115200 console=tty0 root=UUID=6091b3a4-ce08-3020-93a6-f755a22ef03b rootwait panic=60'"}
+- {"dt": "2022-09-19T23:34:05.801583", "lvl": "input", "msg": "efidebug boot order 1\n"}
+- {"dt": "2022-09-19T23:34:05.902476", "lvl": "target", "msg": "efidebug boot order 1"}
+- {"dt": "2022-09-19T23:34:05.902807", "lvl": "debug", "msg": "bootloader-commands: Wait for prompt ['ZynqMP>', 'Resetting CPU', 'Must RESET board to recover', 'TIMEOUT', 'Retry count exceeded', 'Retry time exceeded; starting again', 'ERROR: The remote end did not respond in time.', 'File not found', 'Bad Linux ARM64 Image magic!', 'Wrong Ramdisk Image Format', 'Ramdisk image is corrupt or invalid', 'ERROR: Failed to allocate', 'TFTP error: trying to overwrite reserved memory', 'Bad Linux RISCV Image magic!', 'Wrong Image Format for boot', 'ERROR: Did not find a cmdline Flattened Device Tree', 'ERROR: RD image overlaps OS image'] (timeout 00:14:36)"}
+- {"dt": "2022-09-19T23:34:05.903230", "lvl": "input", "msg": "echo \"Starting kernel\"; bootefi bootmgr\n"}
+- {"dt": "2022-09-19T23:34:06.004153", "lvl": "target", "msg": "echo \\\"Starting kernel\\\"; bootefi bootmgr"}
+- {"dt": "2022-09-19T23:34:06.004479", "lvl": "debug", "msg": "Setting prompt string to ['Starting kernel']"}
+- {"dt": "2022-09-19T23:34:06.004781", "lvl": "debug", "msg": "bootloader-commands: Wait for prompt ['Starting kernel'] (timeout 00:14:36)"}
+- {"dt": "2022-09-19T23:34:06.005275", "lvl": "target", "msg": "efidebug boot add -b 1 BootLedge mmc 1:1 efi/boot/bootaa64.efi -i mmc 1:1 ledge-initramfs.rootfs.cpio.gz -s 'console=ttyPS1,115200 console=tty0 root=UUID=6091b3a4-ce08-3020-93a6-f755a22ef03b rootwait panic=60'"}
+- {"dt": "2022-09-19T23:34:06.005523", "lvl": "target", "msg": "efidebug boot order 1"}
+- {"dt": "2022-09-19T23:34:06.005746", "lvl": "target", "msg": "echo \\\"Starting kernel\\\"; bootefi bootmgr"}
+- {"dt": "2022-09-19T23:34:06.006245", "lvl": "debug", "msg": "end: 2.4.3 bootloader-commands (duration 00:00:03) [common]"}
+- {"dt": "2022-09-19T23:34:06.006542", "lvl": "debug", "msg": "end: 2.4 uboot-commands (duration 00:00:24) [common]"}
+- {"dt": "2022-09-19T23:34:06.006837", "lvl": "info", "msg": "end: 2 uboot-action (duration 00:00:24) [common]"}
+- {"dt": "2022-09-19T23:34:06.007142", "lvl": "info", "msg": "start: 3 minimal-boot (timeout 00:15:00) [common]"}
+- {"dt": "2022-09-19T23:34:06.007446", "lvl": "debug", "msg": "start: 3.1 connect-device (timeout 00:15:00) [common]"}
+- {"dt": "2022-09-19T23:34:06.007682", "lvl": "debug", "msg": "Already connected"}
+- {"dt": "2022-09-19T23:34:06.007956", "lvl": "debug", "msg": "end: 3.1 connect-device (duration 00:00:00) [common]"}
+- {"dt": "2022-09-19T23:34:06.008240", "lvl": "debug", "msg": "start: 3.2 auto-login-action (timeout 00:15:00) [common]"}
+- {"dt": "2022-09-19T23:34:06.008475", "lvl": "debug", "msg": "Setting prompt string to ['Linux version [0-9]']"}
+- {"dt": "2022-09-19T23:34:06.008708", "lvl": "debug", "msg": "auto-login-action: Wait for prompt ['Linux version [0-9]'] (timeout 00:15:00)"}
+- {"dt": "2022-09-19T23:34:06.058589", "lvl": "target", "msg": "ZynqMP> "}
+- {"dt": "2022-09-19T23:34:06.058878", "lvl": "target", "msg": "ZynqMP> efidebug boot order 1"}
+- {"dt": "2022-09-19T23:34:06.090618", "lvl": "target", "msg": "ZynqMP> "}
+- {"dt": "2022-09-19T23:34:06.106626", "lvl": "target", "msg": "ZynqMP> echo \\\"Starting kernel\\\"; bootefi bootmgr"}
+- {"dt": "2022-09-19T23:34:06.106916", "lvl": "target", "msg": "Starting kernel"}
+- {"dt": "2022-09-19T23:34:10.122435", "lvl": "target", "msg": "Booting: BootLedge"}
+- {"dt": "2022-09-19T23:34:10.519365", "lvl": "target", "msg": "EFI stub: Booting Linux Kernel..."}
+- {"dt": "2022-09-19T23:34:10.522486", "lvl": "target", "msg": "EFI stub: EFI_RNG_PROTOCOL unavailable"}
+- {"dt": "2022-09-19T23:34:10.538408", "lvl": "target", "msg": "EFI stub: UEFI Secure Boot is enabled."}
+- {"dt": "2022-09-19T23:34:10.538698", "lvl": "target", "msg": "EFI stub: Using DTB from configuration table"}
+- {"dt": "2022-09-19T23:34:12.714388", "lvl": "target", "msg": "EFI stub: Loaded initrd from LINUX_EFI_INITRD_MEDIA_GUID device path"}
+- {"dt": "2022-09-19T23:34:12.714774", "lvl": "target", "msg": "EFI stub: Exiting boot services..."}
+- {"dt": "2022-09-19T23:34:14.263192", "lvl": "target", "msg": "[    0.000000] Booting Linux on physical CPU 0x0000000000 [0x410fd034]"}
+- {"dt": "2022-09-19T23:34:14.263808", "lvl": "debug", "msg": "start: 3.2.1 login-action (timeout 00:14:52) [common]"}
+- {"dt": "2022-09-19T23:34:14.265054", "lvl": "debug", "msg": "Setting prompt string to ['-+\\\\[ cut here \\\\]-+\\\\s+(.*\\\\s+-+\\\\[ end trace (\\\\w*) \\\\]-+)', '(Unhandled fault.*)\\\\r\\\\n', 'Kernel panic - (.*) end Kernel panic', 'Stack:\\\\s+(.*\\\\s+-+\\\\[ end trace (\\\\w*) \\\\]-+)', '^[^\\\\n]+WARNING:.*?$', '^[^\\\\n]+Oops(?: -|:).*?$', '^[^\\\\n]+BUG:.*?$']"}
+- {"dt": "2022-09-19T23:34:14.265346", "lvl": "debug", "msg": "Using line separator: #'\\n'#"}
+- {"dt": "2022-09-19T23:34:14.265585", "lvl": "info", "msg": "Waiting for the login prompt"}
+- {"dt": "2022-09-19T23:34:14.265823", "lvl": "info", "msg": "Parsing kernel messages"}
+- {"dt": "2022-09-19T23:34:14.266045", "lvl": "debug", "msg": ["-+\\[ cut here \\]-+\\s+(.*\\s+-+\\[ end trace (\\w*) \\]-+)", "(Unhandled fault.*)\\r\\n", "Kernel panic - (.*) end Kernel panic", "Stack:\\s+(.*\\s+-+\\[ end trace (\\w*) \\]-+)", "^[^\\n]+WARNING:.*?$", "^[^\\n]+Oops(?: -|:).*?$", "^[^\\n]+BUG:.*?$", "ledge-qemuarm64:", "login:", "Login incorrect"]}
+- {"dt": "2022-09-19T23:34:14.266458", "lvl": "debug", "msg": "[login-action] Waiting for messages, (timeout 00:14:52)"}
+- {"dt": "2022-09-19T23:34:14.279193", "lvl": "target", "msg": "[    0.000000] Linux version 5.15.34 (oe-user@oe-host) (aarch64-linaro-linux-gcc (GCC) 10.2.1 20201103, GNU ld (GNU Binutils) 2.36.1.20210209) #1 SMP PREEMPT Fri May 6 05:56:02 UTC 2022"}
+- {"dt": "2022-09-19T23:34:14.279498", "lvl": "target", "msg": "[    0.000000] Machine model: ZynqMP SM-K26 Rev1/B/A"}
+- {"dt": "2022-09-19T23:34:14.282358", "lvl": "target", "msg": "[    0.000000] efi: EFI v2.90 by Das U-Boot"}
+- {"dt": "2022-09-19T23:34:14.295187", "lvl": "target", "msg": "[    0.000000] efi: ESRT=0x778d8040 TPMFinalLog=0x778dc040 RTPROP=0x778da040 SMBIOS=0x778d6000 TPMEventLog=0x778cf040 MEMRESERVE=0x778cd040 "}
+- {"dt": "2022-09-19T23:34:14.311192", "lvl": "target", "msg": "[    0.000000] esrt: Reserving ESRT space from 0x00000000778d8040 to 0x00000000778d80a0."}
+- {"dt": "2022-09-19T23:34:14.311483", "lvl": "target", "msg": "[    0.000000] NUMA: No NUMA configuration found"}
+- {"dt": "2022-09-19T23:34:14.314359", "lvl": "target", "msg": "[    0.000000] NUMA: Faking a node at [mem 0x0000000000000000-0x000000087fffffff]"}
+- {"dt": "2022-09-19T23:34:14.327204", "lvl": "target", "msg": "[    0.000000] NUMA: NODE_DATA [mem 0x87f7cdc00-0x87f7cffff]"}
+- {"dt": "2022-09-19T23:34:14.327494", "lvl": "target", "msg": "[    0.000000] Zone ranges:"}
+- {"dt": "2022-09-19T23:34:14.327730", "lvl": "target", "msg": "[    0.000000]   DMA      [mem 0x0000000000000000-0x00000000ffffffff]"}
+- {"dt": "2022-09-19T23:34:14.330358", "lvl": "target", "msg": "[    0.000000]   DMA32    empty"}
+- {"dt": "2022-09-19T23:34:14.343211", "lvl": "target", "msg": "[    0.000000]   Normal   [mem 0x0000000100000000-0x000000087fffffff]"}
+- {"dt": "2022-09-19T23:34:14.343502", "lvl": "target", "msg": "[    0.000000] Movable zone start for each node"}
+- {"dt": "2022-09-19T23:34:14.343738", "lvl": "target", "msg": "[    0.000000] Early memory node ranges"}
+- {"dt": "2022-09-19T23:34:14.359210", "lvl": "target", "msg": "[    0.000000]   node   0: [mem 0x0000000000000000-0x00000000778d5fff]"}
+- {"dt": "2022-09-19T23:34:14.359510", "lvl": "target", "msg": "[    0.000000]   node   0: [mem 0x00000000778d6000-0x00000000778d6fff]"}
+- {"dt": "2022-09-19T23:34:14.362367", "lvl": "target", "msg": "[    0.000000]   node   0: [mem 0x00000000778d7000-0x00000000778d9fff]"}
+- {"dt": "2022-09-19T23:34:14.375208", "lvl": "target", "msg": "[    0.000000]   node   0: [mem 0x00000000778da000-0x00000000778dafff]"}
+- {"dt": "2022-09-19T23:34:14.375498", "lvl": "target", "msg": "[    0.000000]   node   0: [mem 0x00000000778db000-0x00000000778dbfff]"}
+- {"dt": "2022-09-19T23:34:14.391207", "lvl": "target", "msg": "[    0.000000]   node   0: [mem 0x00000000778dc000-0x00000000778ecfff]"}
+- {"dt": "2022-09-19T23:34:14.391497", "lvl": "target", "msg": "[    0.000000]   node   0: [mem 0x00000000778ed000-0x00000000778fffff]"}
+- {"dt": "2022-09-19T23:34:14.394366", "lvl": "target", "msg": "[    0.000000]   node   0: [mem 0x0000000077900000-0x0000000077901fff]"}
+- {"dt": "2022-09-19T23:34:14.407217", "lvl": "target", "msg": "[    0.000000]   node   0: [mem 0x0000000077902000-0x0000000077902fff]"}
+- {"dt": "2022-09-19T23:34:14.407506", "lvl": "target", "msg": "[    0.000000]   node   0: [mem 0x0000000077903000-0x0000000077906fff]"}
+- {"dt": "2022-09-19T23:34:14.410360", "lvl": "target", "msg": "[    0.000000]   node   0: [mem 0x0000000077907000-0x000000007f98ffff]"}
+- {"dt": "2022-09-19T23:34:14.423209", "lvl": "target", "msg": "[    0.000000]   node   0: [mem 0x000000007f990000-0x000000007f99ffff]"}
+- {"dt": "2022-09-19T23:34:14.426367", "lvl": "target", "msg": "[    0.000000]   node   0: [mem 0x000000007f9a0000-0x000000007fffffff]"}
+- {"dt": "2022-09-19T23:34:14.439206", "lvl": "target", "msg": "[    0.000000]   node   0: [mem 0x0000000800000000-0x000000087fffffff]"}
+- {"dt": "2022-09-19T23:34:14.439497", "lvl": "target", "msg": "[    0.000000] Initmem setup node 0 [mem 0x0000000000000000-0x000000087fffffff]"}
+- {"dt": "2022-09-19T23:34:14.442366", "lvl": "target", "msg": "[    0.000000] cma: Reserved 64 MiB at 0x000000007b800000"}
+- {"dt": "2022-09-19T23:34:14.455211", "lvl": "target", "msg": "[    0.000000] psci: probing for conduit method from DT."}
+- {"dt": "2022-09-19T23:34:14.455500", "lvl": "target", "msg": "[    0.000000] psci: PSCIv1.1 detected in firmware."}
+- {"dt": "2022-09-19T23:34:14.458367", "lvl": "target", "msg": "[    0.000000] psci: Using standard PSCI v0.2 function IDs"}
+- {"dt": "2022-09-19T23:34:14.471209", "lvl": "target", "msg": "[    0.000000] psci: MIGRATE_INFO_TYPE not supported."}
+- {"dt": "2022-09-19T23:34:14.471498", "lvl": "target", "msg": "[    0.000000] psci: SMC Calling Convention v1.2"}
+- {"dt": "2022-09-19T23:34:14.474360", "lvl": "target", "msg": "[    0.000000] percpu: Embedded 20 pages/cpu s42712 r8192 d31016 u81920"}
+- {"dt": "2022-09-19T23:34:14.487211", "lvl": "target", "msg": "[    0.000000] Detected VIPT I-cache on CPU0"}
+- {"dt": "2022-09-19T23:34:14.487499", "lvl": "target", "msg": "[    0.000000] CPU features: kernel page table isolation forced ON by KASLR"}
+- {"dt": "2022-09-19T23:34:14.490369", "lvl": "target", "msg": "[    0.000000] CPU features: detected: Kernel page table isolation (KPTI)"}
+- {"dt": "2022-09-19T23:34:14.503208", "lvl": "target", "msg": "[    0.000000] CPU features: detected: ARM erratum 845719"}
+- {"dt": "2022-09-19T23:34:14.503497", "lvl": "target", "msg": "[    0.000000] Built 1 zonelists, mobility grouping on.  Total pages: 1032192"}
+- {"dt": "2022-09-19T23:34:14.506369", "lvl": "target", "msg": "[    0.000000] Policy zone: Normal"}
+- {"dt": "2022-09-19T23:34:14.519200", "lvl": "target", "msg": "[    0.000000] Kernel command line: console=ttyPS1,115200 console=tty0 root=UUID=6091b3a4-ce08-3020-93a6-f755a22ef03b rootwait panic=60"}
+- {"dt": "2022-09-19T23:34:14.535212", "lvl": "target", "msg": "[    0.000000] Dentry cache hash table entries: 524288 (order: 10, 4194304 bytes, linear)"}
+- {"dt": "2022-09-19T23:34:14.535502", "lvl": "target", "msg": "[    0.000000] Inode-cache hash table entries: 262144 (order: 9, 2097152 bytes, linear)"}
+- {"dt": "2022-09-19T23:34:14.538359", "lvl": "target", "msg": "[    0.000000] mem auto-init: stack:off, heap alloc:off, heap free:off"}
+- {"dt": "2022-09-19T23:34:14.551210", "lvl": "target", "msg": "[    0.000000] software IO TLB: mapped [mem 0x000000006f5c0000-0x00000000735c0000] (64MB)"}
+- {"dt": "2022-09-19T23:34:14.567202", "lvl": "target", "msg": "[    0.000000] Memory: 3922328K/4194304K available (17536K kernel code, 3002K rwdata, 8136K rodata, 5184K init, 747K bss, 206440K reserved, 65536K cma-reserved)"}
+- {"dt": "2022-09-19T23:34:14.570361", "lvl": "target", "msg": "[    0.000000] SLUB: HWalign=64, Order=0-3, MinObjects=0, CPUs=4, Nodes=1"}
+- {"dt": "2022-09-19T23:34:14.583210", "lvl": "target", "msg": "[    0.000000] rcu: Preemptible hierarchical RCU implementation."}
+- {"dt": "2022-09-19T23:34:14.583499", "lvl": "target", "msg": "[    0.000000] rcu: \tRCU event tracing is enabled."}
+- {"dt": "2022-09-19T23:34:14.586369", "lvl": "target", "msg": "[    0.000000] rcu: \tRCU restricting CPUs from NR_CPUS=256 to nr_cpu_ids=4."}
+- {"dt": "2022-09-19T23:34:14.599212", "lvl": "target", "msg": "[    0.000000] \tTrampoline variant of Tasks RCU enabled."}
+- {"dt": "2022-09-19T23:34:14.599502", "lvl": "target", "msg": "[    0.000000] \tTracing variant of Tasks RCU enabled."}
+- {"dt": "2022-09-19T23:34:14.602370", "lvl": "target", "msg": "[    0.000000] rcu: RCU calculated value of scheduler-enlistment delay is 25 jiffies."}
+- {"dt": "2022-09-19T23:34:14.615212", "lvl": "target", "msg": "[    0.000000] rcu: Adjusting geometry for rcu_fanout_leaf=16, nr_cpu_ids=4"}
+- {"dt": "2022-09-19T23:34:14.615503", "lvl": "target", "msg": "[    0.000000] NR_IRQS: 64, nr_irqs: 64, preallocated irqs: 0"}
+- {"dt": "2022-09-19T23:34:14.631156", "lvl": "target", "msg": "[    0.000000] GIC: Adjusting CPU interface base to 0x00000000f902f000"}
+- {"dt": "2022-09-19T23:34:14.631446", "lvl": "target", "msg": "[    0.000000] Root IRQ handler: gic_handle_irq"}
+- {"dt": "2022-09-19T23:34:14.631683", "lvl": "target", "msg": "[    0.000000] GIC: Using split EOI/Deactivate mode"}
+- {"dt": "2022-09-19T23:34:14.647126", "lvl": "target", "msg": "[    0.000000] random: get_random_bytes called from start_kernel+0x478/0x670 with crng_init=0"}
+- {"dt": "2022-09-19T23:34:14.647416", "lvl": "target", "msg": "[    0.000000] arch_timer: cp15 timer(s) running at 99.99MHz (phys)."}
+- {"dt": "2022-09-19T23:34:14.663191", "lvl": "target", "msg": "[    0.000000] clocksource: arch_sys_counter: mask: 0xffffffffffffff max_cycles: 0x171015c90f, max_idle_ns: 440795203080 ns"}
+- {"dt": "2022-09-19T23:34:14.663484", "lvl": "target", "msg": "[    0.000000] sched_clock: 56 bits at 99MHz, resolution 10ns, wraps every 4398046511101ns"}
+- {"dt": "2022-09-19T23:34:14.666343", "lvl": "target", "msg": "[    0.000436] Console: colour dummy device 80x25"}
+- {"dt": "2022-09-19T23:34:14.679189", "lvl": "target", "msg": "[    0.000872] printk: console [tty0] enabled"}
+- {"dt": "2022-09-19T23:34:14.682342", "lvl": "target", "msg": "[    0.000944] Calibrating delay loop (skipped), value calculated using timer frequency.. 199.99 BogoMIPS (lpj=399996)"}
+- {"dt": "2022-09-19T23:34:14.695193", "lvl": "target", "msg": "[    0.000965] pid_max: default: 32768 minimum: 301"}
+- {"dt": "2022-09-19T23:34:14.695484", "lvl": "target", "msg": "[    0.001018] LSM: Security Framework initializing"}
+- {"dt": "2022-09-19T23:34:14.695720", "lvl": "target", "msg": "[    0.001053] SELinux:  Initializing."}
+- {"dt": "2022-09-19T23:34:14.711187", "lvl": "target", "msg": "[    0.001149] Mount-cache hash table entries: 8192 (order: 4, 65536 bytes, linear)"}
+- {"dt": "2022-09-19T23:34:14.711487", "lvl": "target", "msg": "[    0.001175] Mountpoint-cache hash table entries: 8192 (order: 4, 65536 bytes, linear)"}
+- {"dt": "2022-09-19T23:34:14.714337", "lvl": "target", "msg": "[    0.002475] rcu: Hierarchical SRCU implementation."}
+- {"dt": "2022-09-19T23:34:14.727194", "lvl": "target", "msg": "[    0.003539] Remapping and enabling EFI services."}
+- {"dt": "2022-09-19T23:34:14.727484", "lvl": "target", "msg": "[    0.003712] smp: Bringing up secondary CPUs ..."}
+- {"dt": "2022-09-19T23:34:14.730335", "lvl": "target", "msg": "[    0.004131] Detected VIPT I-cache on CPU1"}
+- {"dt": "2022-09-19T23:34:14.743199", "lvl": "target", "msg": "[    0.004177] CPU1: Booted secondary processor 0x0000000001 [0x410fd034]"}
+- {"dt": "2022-09-19T23:34:14.743488", "lvl": "target", "msg": "[    0.004561] Detected VIPT I-cache on CPU2"}
+- {"dt": "2022-09-19T23:34:14.746340", "lvl": "target", "msg": "[    0.004584] CPU2: Booted secondary processor 0x0000000002 [0x410fd034]"}
+- {"dt": "2022-09-19T23:34:14.759195", "lvl": "target", "msg": "[    0.004944] Detected VIPT I-cache on CPU3"}
+- {"dt": "2022-09-19T23:34:14.759484", "lvl": "target", "msg": "[    0.004967] CPU3: Booted secondary processor 0x0000000003 [0x410fd034]"}
+- {"dt": "2022-09-19T23:34:14.759724", "lvl": "target", "msg": "[    0.005015] smp: Brought up 1 node, 4 CPUs"}
+- {"dt": "2022-09-19T23:34:14.762344", "lvl": "target", "msg": "[    0.005063] SMP: Total of 4 processors activated."}
+- {"dt": "2022-09-19T23:34:14.775187", "lvl": "target", "msg": "[    0.005073] CPU features: detected: 32-bit EL0 Support"}
+- {"dt": "2022-09-19T23:34:14.775477", "lvl": "target", "msg": "[    0.005081] CPU features: detected: 32-bit EL1 Support"}
+- {"dt": "2022-09-19T23:34:14.778347", "lvl": "target", "msg": "[    0.005091] CPU features: detected: CRC32 instructions"}
+- {"dt": "2022-09-19T23:34:14.791186", "lvl": "target", "msg": "[    0.011673] CPU: All CPU(s) started at EL2"}
+- {"dt": "2022-09-19T23:34:14.791475", "lvl": "target", "msg": "[    0.011702] alternatives: patching kernel code"}
+- {"dt": "2022-09-19T23:34:14.791710", "lvl": "target", "msg": "[    0.013020] devtmpfs: initialized"}
+- {"dt": "2022-09-19T23:34:14.794337", "lvl": "target", "msg": "[    0.017785] Registered cp15_barrier emulation handler"}
+- {"dt": "2022-09-19T23:34:14.807193", "lvl": "target", "msg": "[    0.017802] Registered setend emulation handler"}
+- {"dt": "2022-09-19T23:34:14.807482", "lvl": "target", "msg": "[    0.017815] KASLR disabled due to lack of seed"}
+- {"dt": "2022-09-19T23:34:14.823195", "lvl": "target", "msg": "[    0.017948] clocksource: jiffies: mask: 0xffffffff max_cycles: 0xffffffff, max_idle_ns: 7645041785100000 ns"}
+- {"dt": "2022-09-19T23:34:14.823488", "lvl": "target", "msg": "[    0.017973] futex hash table entries: 1024 (order: 4, 65536 bytes, linear)"}
+- {"dt": "2022-09-19T23:34:14.826335", "lvl": "target", "msg": "[    0.020426] pinctrl core: initialized pinctrl subsystem"}
+- {"dt": "2022-09-19T23:34:14.839161", "lvl": "target", "msg": "[    0.021201] SMBIOS 3.0 present."}
+- {"dt": "2022-09-19T23:34:14.839450", "lvl": "target", "msg": "[    0.021223] DMI: Unknown Unknown Product/Unknown Product, BIOS 2022.07-rc3 07/01/2022"}
+- {"dt": "2022-09-19T23:34:14.842346", "lvl": "target", "msg": "[    0.021573] NET: Registered PF_NETLINK/PF_ROUTE protocol family"}
+- {"dt": "2022-09-19T23:34:14.855185", "lvl": "target", "msg": "[    0.022646] DMA: preallocated 512 KiB GFP_KERNEL pool for atomic allocations"}
+- {"dt": "2022-09-19T23:34:14.858346", "lvl": "target", "msg": "[    0.022746] DMA: preallocated 512 KiB GFP_KERNEL|GFP_DMA pool for atomic allocations"}
+- {"dt": "2022-09-19T23:34:14.871193", "lvl": "target", "msg": "[    0.022890] DMA: preallocated 512 KiB GFP_KERNEL|GFP_DMA32 pool for atomic allocations"}
+- {"dt": "2022-09-19T23:34:14.874347", "lvl": "target", "msg": "[    0.022959] audit: initializing netlink subsys (disabled)"}
+- {"dt": "2022-09-19T23:34:14.887185", "lvl": "target", "msg": "[    0.023067] audit: type=2000 audit(0.020:1): state=initialized audit_enabled=0 res=1"}
+- {"dt": "2022-09-19T23:34:14.887476", "lvl": "target", "msg": "[    0.023873] thermal_sys: Registered thermal governor 'step_wise'"}
+- {"dt": "2022-09-19T23:34:14.890336", "lvl": "target", "msg": "[    0.023877] thermal_sys: Registered thermal governor 'power_allocator'"}
+- {"dt": "2022-09-19T23:34:14.903163", "lvl": "target", "msg": "[    0.023984] cpuidle: using governor menu"}
+- {"dt": "2022-09-19T23:34:14.903451", "lvl": "target", "msg": "[    0.024068] NET: Registered PF_QIPCRTR protocol family"}
+- {"dt": "2022-09-19T23:34:14.906340", "lvl": "target", "msg": "[    0.024212] hw-breakpoint: found 6 breakpoint and 4 watchpoint registers."}
+- {"dt": "2022-09-19T23:34:14.919189", "lvl": "target", "msg": "[    0.024289] ASID allocator initialised with 32768 entries"}
+- {"dt": "2022-09-19T23:34:14.919479", "lvl": "target", "msg": "[    0.025082] Serial: AMBA PL011 UART driver"}
+- {"dt": "2022-09-19T23:34:14.922314", "lvl": "target", "msg": "[    0.047484] HugeTLB registered 1.00 GiB page size, pre-allocated 0 pages"}
+- {"dt": "2022-09-19T23:34:14.935187", "lvl": "target", "msg": "[    0.047513] HugeTLB registered 32.0 MiB page size, pre-allocated 0 pages"}
+- {"dt": "2022-09-19T23:34:14.938346", "lvl": "target", "msg": "[    0.047525] HugeTLB registered 2.00 MiB page size, pre-allocated 0 pages"}
+- {"dt": "2022-09-19T23:34:14.951203", "lvl": "target", "msg": "[    0.047536] HugeTLB registered 64.0 KiB page size, pre-allocated 0 pages"}
+- {"dt": "2022-09-19T23:34:14.951493", "lvl": "target", "msg": "[    0.048586] cryptd: max_cpu_qlen set to 1000"}
+- {"dt": "2022-09-19T23:34:14.954342", "lvl": "target", "msg": "[    0.051197] ACPI: Interpreter disabled."}
+- {"dt": "2022-09-19T23:34:14.967197", "lvl": "target", "msg": "[    0.052275] iommu: Default domain type: Translated "}
+- {"dt": "2022-09-19T23:34:14.967487", "lvl": "target", "msg": "[    0.052287] iommu: DMA domain TLB invalidation policy: strict mode "}
+- {"dt": "2022-09-19T23:34:14.967726", "lvl": "target", "msg": "[    0.052499] vgaarb: loaded"}
+- {"dt": "2022-09-19T23:34:14.970347", "lvl": "target", "msg": "[    0.052751] SCSI subsystem initialized"}
+- {"dt": "2022-09-19T23:34:14.983197", "lvl": "target", "msg": "[    0.053008] usbcore: registered new interface driver usbfs"}
+- {"dt": "2022-09-19T23:34:14.983487", "lvl": "target", "msg": "[    0.053046] usbcore: registered new interface driver hub"}
+- {"dt": "2022-09-19T23:34:14.986347", "lvl": "target", "msg": "[    0.053075] usbcore: registered new device driver usb"}
+- {"dt": "2022-09-19T23:34:14.999188", "lvl": "target", "msg": "[    0.053393] mc: Linux media interface: v0.10"}
+- {"dt": "2022-09-19T23:34:14.999476", "lvl": "target", "msg": "[    0.053419] videodev: Linux video capture interface: v2.00"}
+- {"dt": "2022-09-19T23:34:15.002338", "lvl": "target", "msg": "[    0.053451] pps_core: LinuxPPS API ver. 1 registered"}
+- {"dt": "2022-09-19T23:34:15.015188", "lvl": "target", "msg": "[    0.053461] pps_core: Software ver. 5.3.6 - Copyright 2005-2007 Rodolfo Giometti <giometti@linux.it>"}
+- {"dt": "2022-09-19T23:34:15.015481", "lvl": "target", "msg": "[    0.053481] PTP clock support registered"}
+- {"dt": "2022-09-19T23:34:15.018340", "lvl": "target", "msg": "[    0.053575] EDAC MC: Ver: 3.0.0"}
+- {"dt": "2022-09-19T23:34:15.031189", "lvl": "target", "msg": "[    0.054158] Registered efivars operations"}
+- {"dt": "2022-09-19T23:34:15.031479", "lvl": "target", "msg": "[    0.054416] zynqmp-ipi-mbox mailbox@ff990400: Registered ZynqMP IPI mbox with TX/RX channels."}
+- {"dt": "2022-09-19T23:34:15.034340", "lvl": "target", "msg": "[    0.054852] FPGA manager framework"}
+- {"dt": "2022-09-19T23:34:15.047161", "lvl": "target", "msg": "[    0.054915] Advanced Linux Sound Architecture Driver Initialized."}
+- {"dt": "2022-09-19T23:34:15.047451", "lvl": "target", "msg": "[    0.055376] Bluetooth: Core ver 2.22"}
+- {"dt": "2022-09-19T23:34:15.047687", "lvl": "target", "msg": "[    0.055404] NET: Registered PF_BLUETOOTH protocol family"}
+- {"dt": "2022-09-19T23:34:15.063160", "lvl": "target", "msg": "[    0.055415] Bluetooth: HCI device and connection manager initialized"}
+- {"dt": "2022-09-19T23:34:15.063452", "lvl": "target", "msg": "[    0.055429] Bluetooth: HCI socket layer initialized"}
+- {"dt": "2022-09-19T23:34:15.063690", "lvl": "target", "msg": "[    0.055440] Bluetooth: L2CAP socket layer initialized"}
+- {"dt": "2022-09-19T23:34:15.066309", "lvl": "target", "msg": "[    0.055458] Bluetooth: SCO socket layer initialized"}
+- {"dt": "2022-09-19T23:34:15.079188", "lvl": "target", "msg": "[    0.055841] clocksource: Switched to clocksource arch_sys_counter"}
+- {"dt": "2022-09-19T23:34:15.079478", "lvl": "target", "msg": "[    0.055965] VFS: Disk quotas dquot_6.6.0"}
+- {"dt": "2022-09-19T23:34:15.095196", "lvl": "target", "msg": "[    0.056009] VFS: Dquot-cache hash table entries: 512 (order 0, 4096 bytes)"}
+- {"dt": "2022-09-19T23:34:15.095487", "lvl": "target", "msg": "[    0.056232] pnp: PnP ACPI: disabled"}
+- {"dt": "2022-09-19T23:34:15.095724", "lvl": "target", "msg": "[    0.060997] NET: Registered PF_INET protocol family"}
+- {"dt": "2022-09-19T23:34:15.111188", "lvl": "target", "msg": "[    0.061129] IP idents hash table entries: 65536 (order: 7, 524288 bytes, linear)"}
+- {"dt": "2022-09-19T23:34:15.111481", "lvl": "target", "msg": "[    0.062541] tcp_listen_portaddr_hash hash table entries: 2048 (order: 3, 32768 bytes, linear)"}
+- {"dt": "2022-09-19T23:34:15.127187", "lvl": "target", "msg": "[    0.062594] TCP established hash table entries: 32768 (order: 6, 262144 bytes, linear)"}
+- {"dt": "2022-09-19T23:34:15.127490", "lvl": "target", "msg": "[    0.062794] TCP bind hash table entries: 32768 (order: 7, 524288 bytes, linear)"}
+- {"dt": "2022-09-19T23:34:15.130334", "lvl": "target", "msg": "[    0.063161] TCP: Hash tables configured (established 32768 bind 32768)"}
+- {"dt": "2022-09-19T23:34:15.143136", "lvl": "target", "msg": "[    0.063246] UDP hash table entries: 2048 (order: 4, 65536 bytes, linear)"}
+- {"dt": "2022-09-19T23:34:15.146280", "lvl": "target", "msg": "[    0.063324] UDP-Lite hash table entries: 2048 (order: 4, 65536 bytes, linear)"}
+- {"dt": "2022-09-19T23:34:15.159128", "lvl": "target", "msg": "[    0.063491] NET: Registered PF_UNIX/PF_LOCAL protocol family"}
+- {"dt": "2022-09-19T23:34:15.159435", "lvl": "target", "msg": "[    0.063782] RPC: Registered named UNIX socket transport module."}
+- {"dt": "2022-09-19T23:34:15.162273", "lvl": "target", "msg": "[    0.063795] RPC: Registered udp transport module."}
+- {"dt": "2022-09-19T23:34:15.175232", "lvl": "target", "msg": "[    0.063804] RPC: Registered tcp transport module."}
+- {"dt": "2022-09-19T23:34:15.175550", "lvl": "target", "msg": "[    0.063812] RPC: Registered tcp NFSv4.1 backchannel transport module."}
+- {"dt": "2022-09-19T23:34:15.178381", "lvl": "target", "msg": "[    0.064479] PCI: CLS 0 bytes, default 64"}
+- {"dt": "2022-09-19T23:34:15.178674", "lvl": "target", "msg": "[    0.064667] Unpacking initramfs..."}
+- {"dt": "2022-09-19T23:34:15.191222", "lvl": "target", "msg": "[    0.076099] armv8-pmu pmu: hw perfevents: no interrupt-affinity property, guessing."}
+- {"dt": "2022-09-19T23:34:15.194391", "lvl": "target", "msg": "[    0.076318] hw perfevents: enabled with armv8_pmuv3 PMU driver, 7 counters available"}
+- {"dt": "2022-09-19T23:34:15.207150", "lvl": "target", "msg": "[    0.076639] kvm [1]: IPA Size Limit: 40 bits"}
+- {"dt": "2022-09-19T23:34:15.207442", "lvl": "target", "msg": "[    0.077900] kvm [1]: vgic interrupt IRQ9"}
+- {"dt": "2022-09-19T23:34:15.210322", "lvl": "target", "msg": "[    0.078011] kvm [1]: Hyp mode initialized successfully"}
+- {"dt": "2022-09-19T23:34:15.223151", "lvl": "target", "msg": "[    0.081298] Initialise system trusted keyrings"}
+- {"dt": "2022-09-19T23:34:15.223442", "lvl": "target", "msg": "[    0.081406] workingset: timestamp_bits=42 max_order=20 bucket_order=0"}
+- {"dt": "2022-09-19T23:34:15.226320", "lvl": "target", "msg": "[    0.087152] squashfs: version 4.0 (2009/01/31) Phillip Lougher"}
+- {"dt": "2022-09-19T23:34:15.239159", "lvl": "target", "msg": "[    0.087657] NFS: Registering the id_resolver key type"}
+- {"dt": "2022-09-19T23:34:15.239451", "lvl": "target", "msg": "[    0.087687] Key type id_resolver registered"}
+- {"dt": "2022-09-19T23:34:15.239689", "lvl": "target", "msg": "[    0.087696] Key type id_legacy registered"}
+- {"dt": "2022-09-19T23:34:15.255149", "lvl": "target", "msg": "[    0.087765] nfs4filelayout_init: NFSv4 File Layout Driver Registering..."}
+- {"dt": "2022-09-19T23:34:15.255441", "lvl": "target", "msg": "[    0.087778] nfs4flexfilelayout_init: NFSv4 Flexfile Layout Driver Registering..."}
+- {"dt": "2022-09-19T23:34:15.258319", "lvl": "target", "msg": "[    0.088010] 9p: Installing v9fs 9p2000 file system support"}
+- {"dt": "2022-09-19T23:34:15.271148", "lvl": "target", "msg": "[    0.120956] NET: Registered PF_ALG protocol family"}
+- {"dt": "2022-09-19T23:34:15.271440", "lvl": "target", "msg": "[    0.120999] Key type asymmetric registered"}
+- {"dt": "2022-09-19T23:34:15.271677", "lvl": "target", "msg": "[    0.121008] Asymmetric key parser 'x509' registered"}
+- {"dt": "2022-09-19T23:34:15.287149", "lvl": "target", "msg": "[    0.121104] Block layer SCSI generic (bsg) driver version 0.4 loaded (major 244)"}
+- {"dt": "2022-09-19T23:34:15.287442", "lvl": "target", "msg": "[    0.121208] io scheduler mq-deadline registered"}
+- {"dt": "2022-09-19T23:34:15.287679", "lvl": "target", "msg": "[    0.121220] io scheduler kyber registered"}
+- {"dt": "2022-09-19T23:34:15.290316", "lvl": "target", "msg": "[    0.128007] EINJ: ACPI disabled."}
+- {"dt": "2022-09-19T23:34:15.303148", "lvl": "target", "msg": "[    0.136887] Serial: 8250/16550 driver, 4 ports, IRQ sharing enabled"}
+- {"dt": "2022-09-19T23:34:15.303440", "lvl": "target", "msg": "[    0.138843] msm_serial: driver initialized"}
+- {"dt": "2022-09-19T23:34:15.306314", "lvl": "target", "msg": "[    0.139872] cacheinfo: Unable to detect cache hierarchy for CPU 0"}
+- {"dt": "2022-09-19T23:34:15.319146", "lvl": "target", "msg": "[    0.144409] loop: module loaded"}
+- {"dt": "2022-09-19T23:34:15.319437", "lvl": "target", "msg": "[    0.145329] megasas: 07.717.02.00-rc1"}
+- {"dt": "2022-09-19T23:34:15.319676", "lvl": "target", "msg": "[    0.150683] thunder_xcv, ver 1.0"}
+- {"dt": "2022-09-19T23:34:15.322318", "lvl": "target", "msg": "[    0.150734] thunder_bgx, ver 1.0"}
+- {"dt": "2022-09-19T23:34:15.322610", "lvl": "target", "msg": "[    0.150767] nicpf, ver 1.0"}
+- {"dt": "2022-09-19T23:34:15.335145", "lvl": "target", "msg": "[    0.151719] hclge is initializing"}
+- {"dt": "2022-09-19T23:34:15.335436", "lvl": "target", "msg": "[    0.151743] hns3: Hisilicon Ethernet Network Driver for Hip08 Family - version"}
+- {"dt": "2022-09-19T23:34:15.338316", "lvl": "target", "msg": "[    0.151756] hns3: Copyright (c) 2017 Huawei Corporation."}
+- {"dt": "2022-09-19T23:34:15.351101", "lvl": "target", "msg": "[    0.151801] e1000: Intel(R) PRO/1000 Network Driver"}
+- {"dt": "2022-09-19T23:34:15.351391", "lvl": "target", "msg": "[    0.151812] e1000: Copyright (c) 1999-2006 Intel Corporation."}
+- {"dt": "2022-09-19T23:34:15.354305", "lvl": "target", "msg": "[    0.151875] e1000e: Intel(R) PRO/1000 Network Driver"}
+- {"dt": "2022-09-19T23:34:15.367116", "lvl": "target", "msg": "[    0.151884] e1000e: Copyright(c) 1999 - 2015 Intel Corporation."}
+- {"dt": "2022-09-19T23:34:15.367408", "lvl": "target", "msg": "[    0.151925] igb: Intel(R) Gigabit Ethernet Network Driver"}
+- {"dt": "2022-09-19T23:34:15.370246", "lvl": "target", "msg": "[    0.151935] igb: Copyright (c) 2007-2014 Intel Corporation."}
+- {"dt": "2022-09-19T23:34:15.383114", "lvl": "target", "msg": "[    0.151966] igbvf: Intel(R) Gigabit Virtual Function Network Driver"}
+- {"dt": "2022-09-19T23:34:15.383406", "lvl": "target", "msg": "[    0.151977] igbvf: Copyright (c) 2009 - 2012 Intel Corporation."}
+- {"dt": "2022-09-19T23:34:15.386277", "lvl": "target", "msg": "[    0.152078] sky2: driver version 1.30"}
+- {"dt": "2022-09-19T23:34:15.399111", "lvl": "target", "msg": "[    0.152659] VFIO - User Level meta-driver version: 0.3"}
+- {"dt": "2022-09-19T23:34:15.399402", "lvl": "target", "msg": "[    0.153891] ehci_hcd: USB 2.0 'Enhanced' Host Controller (EHCI) Driver"}
+- {"dt": "2022-09-19T23:34:15.402274", "lvl": "target", "msg": "[    0.153930] ehci-pci: EHCI PCI platform driver"}
+- {"dt": "2022-09-19T23:34:15.415088", "lvl": "target", "msg": "[    0.153967] ehci-platform: EHCI generic platform driver"}
+- {"dt": "2022-09-19T23:34:15.415377", "lvl": "target", "msg": "[    0.154064] ohci_hcd: USB 1.1 'Open' Host Controller (OHCI) Driver"}
+- {"dt": "2022-09-19T23:34:15.418275", "lvl": "target", "msg": "[    0.154082] ohci-pci: OHCI PCI platform driver"}
+- {"dt": "2022-09-19T23:34:15.431085", "lvl": "target", "msg": "[    0.154114] ohci-platform: OHCI generic platform driver"}
+- {"dt": "2022-09-19T23:34:15.431375", "lvl": "target", "msg": "[    0.154506] usbcore: registered new interface driver uas"}
+- {"dt": "2022-09-19T23:34:15.434274", "lvl": "target", "msg": "[    0.154547] usbcore: registered new interface driver usb-storage"}
+- {"dt": "2022-09-19T23:34:15.447117", "lvl": "target", "msg": "[    0.154611] usbcore: registered new interface driver usbserial_generic"}
+- {"dt": "2022-09-19T23:34:15.450266", "lvl": "target", "msg": "[    0.154634] usbserial: USB Serial support registered for generic"}
+- {"dt": "2022-09-19T23:34:15.450559", "lvl": "target", "msg": "[    0.156370] i2c_dev: i2c /dev entries driver"}
+- {"dt": "2022-09-19T23:34:15.463103", "lvl": "target", "msg": "[    0.159611] sdhci: Secure Digital Host Controller Interface driver"}
+- {"dt": "2022-09-19T23:34:15.463396", "lvl": "target", "msg": "[    0.159628] sdhci: Copyright(c) Pierre Ossman"}
+- {"dt": "2022-09-19T23:34:15.479134", "lvl": "target", "msg": "[    0.160064] Synopsys Designware Multimedia Card Interface Driver"}
+- {"dt": "2022-09-19T23:34:15.479426", "lvl": "target", "msg": "[    0.160708] sdhci-pltfm: SDHCI platform and OF driver helper"}
+- {"dt": "2022-09-19T23:34:15.482280", "lvl": "target", "msg": "[    0.161946] ledtrig-cpu: registered to indicate activity on CPUs"}
+- {"dt": "2022-09-19T23:34:15.495133", "lvl": "target", "msg": "[    0.162828] SMCCC: SOC_ID: ARCH_SOC_ID not implemented, skipping ...."}
+- {"dt": "2022-09-19T23:34:15.495424", "lvl": "target", "msg": "[    0.162890] zynqmp_firmware_probe Platform Management API v1.1"}
+- {"dt": "2022-09-19T23:34:15.498278", "lvl": "target", "msg": "[    0.162904] zynqmp_firmware_probe Trustzone version v1.0"}
+- {"dt": "2022-09-19T23:34:15.511121", "lvl": "target", "msg": "[    0.195072] usbcore: registered new interface driver usbhid"}
+- {"dt": "2022-09-19T23:34:15.511414", "lvl": "target", "msg": "[    0.195100] usbhid: USB HID core driver"}
+- {"dt": "2022-09-19T23:34:15.514283", "lvl": "target", "msg": "[    0.198103] usbcore: registered new interface driver snd-usb-audio"}
+- {"dt": "2022-09-19T23:34:15.527122", "lvl": "target", "msg": "[    0.198815] NET: Registered PF_PACKET protocol family"}
+- {"dt": "2022-09-19T23:34:15.527414", "lvl": "target", "msg": "[    0.199144] 9pnet: Installing 9P2000 support"}
+- {"dt": "2022-09-19T23:34:15.527653", "lvl": "target", "msg": "[    0.199196] Key type dns_resolver registered"}
+- {"dt": "2022-09-19T23:34:15.530279", "lvl": "target", "msg": "[    0.199749] registered taskstats version 1"}
+- {"dt": "2022-09-19T23:34:15.543128", "lvl": "target", "msg": "[    0.199766] Loading compiled-in X.509 certificates"}
+- {"dt": "2022-09-19T23:34:15.543418", "lvl": "target", "msg": "[    1.107511] Freeing initrd memory: 24708K"}
+- {"dt": "2022-09-19T23:34:15.559116", "lvl": "target", "msg": "[    1.116669] Loaded X.509 cert 'Build time autogenerated kernel key: 9397255a5113921745af46953c49bc895ac535aa'"}
+- {"dt": "2022-09-19T23:34:15.559410", "lvl": "target", "msg": "[    1.128763] ff010000.serial: ttyPS1 at MMIO 0xff010000 (irq = 50, base_baud = 6249999) is a xuartps"}
+- {"dt": "2022-09-19T23:34:15.562257", "lvl": "target", "msg": "[    2.437937] printk: console [ttyPS1] enabled"}
+- {"dt": "2022-09-19T23:34:15.575111", "lvl": "target", "msg": "[    2.446327] mdio_bus ff0e0000.ethernet-ffffffff: mdio has invalid PHY address"}
+- {"dt": "2022-09-19T23:34:15.591116", "lvl": "target", "msg": "[    2.453478] mdio_bus ff0e0000.ethernet-ffffffff: scan phy mdio at address 0"}
+- {"dt": "2022-09-19T23:34:15.591407", "lvl": "target", "msg": "[    2.460531] mdio_bus ff0e0000.ethernet-ffffffff: scan phy mdio at address 1"}
+- {"dt": "2022-09-19T23:34:15.594247", "lvl": "target", "msg": "[    2.467573] mdio_bus ff0e0000.ethernet-ffffffff: scan phy mdio at address 2"}
+- {"dt": "2022-09-19T23:34:15.607112", "lvl": "target", "msg": "[    2.474614] mdio_bus ff0e0000.ethernet-ffffffff: scan phy mdio at address 3"}
+- {"dt": "2022-09-19T23:34:15.610260", "lvl": "target", "msg": "[    2.481663] mdio_bus ff0e0000.ethernet-ffffffff: scan phy mdio at address 4"}
+- {"dt": "2022-09-19T23:34:15.623103", "lvl": "target", "msg": "[    2.488709] mdio_bus ff0e0000.ethernet-ffffffff: scan phy mdio at address 5"}
+- {"dt": "2022-09-19T23:34:15.623395", "lvl": "target", "msg": "[    2.495748] mdio_bus ff0e0000.ethernet-ffffffff: scan phy mdio at address 6"}
+- {"dt": "2022-09-19T23:34:15.639104", "lvl": "target", "msg": "[    2.502787] mdio_bus ff0e0000.ethernet-ffffffff: scan phy mdio at address 7"}
+- {"dt": "2022-09-19T23:34:15.639397", "lvl": "target", "msg": "[    2.509827] mdio_bus ff0e0000.ethernet-ffffffff: scan phy mdio at address 8"}
+- {"dt": "2022-09-19T23:34:15.655114", "lvl": "target", "msg": "[    2.516871] mdio_bus ff0e0000.ethernet-ffffffff: scan phy mdio at address 9"}
+- {"dt": "2022-09-19T23:34:15.655407", "lvl": "target", "msg": "[    2.523918] mdio_bus ff0e0000.ethernet-ffffffff: scan phy mdio at address 10"}
+- {"dt": "2022-09-19T23:34:15.658267", "lvl": "target", "msg": "[    2.531050] mdio_bus ff0e0000.ethernet-ffffffff: scan phy mdio at address 11"}
+- {"dt": "2022-09-19T23:34:15.671109", "lvl": "target", "msg": "[    2.538176] mdio_bus ff0e0000.ethernet-ffffffff: scan phy mdio at address 12"}
+- {"dt": "2022-09-19T23:34:15.674266", "lvl": "target", "msg": "[    2.545302] mdio_bus ff0e0000.ethernet-ffffffff: scan phy mdio at address 13"}
+- {"dt": "2022-09-19T23:34:15.687111", "lvl": "target", "msg": "[    2.552430] mdio_bus ff0e0000.ethernet-ffffffff: scan phy mdio at address 14"}
+- {"dt": "2022-09-19T23:34:15.687403", "lvl": "target", "msg": "[    2.559563] mdio_bus ff0e0000.ethernet-ffffffff: scan phy mdio at address 15"}
+- {"dt": "2022-09-19T23:34:15.703102", "lvl": "target", "msg": "[    2.566690] mdio_bus ff0e0000.ethernet-ffffffff: scan phy mdio at address 16"}
+- {"dt": "2022-09-19T23:34:15.703395", "lvl": "target", "msg": "[    2.573816] mdio_bus ff0e0000.ethernet-ffffffff: scan phy mdio at address 17"}
+- {"dt": "2022-09-19T23:34:15.719102", "lvl": "target", "msg": "[    2.580945] mdio_bus ff0e0000.ethernet-ffffffff: scan phy mdio at address 18"}
+- {"dt": "2022-09-19T23:34:15.719394", "lvl": "target", "msg": "[    2.588079] mdio_bus ff0e0000.ethernet-ffffffff: scan phy mdio at address 19"}
+- {"dt": "2022-09-19T23:34:15.722264", "lvl": "target", "msg": "[    2.595212] mdio_bus ff0e0000.ethernet-ffffffff: scan phy mdio at address 20"}
+- {"dt": "2022-09-19T23:34:15.735099", "lvl": "target", "msg": "[    2.602339] mdio_bus ff0e0000.ethernet-ffffffff: scan phy mdio at address 21"}
+- {"dt": "2022-09-19T23:34:15.738254", "lvl": "target", "msg": "[    2.609465] mdio_bus ff0e0000.ethernet-ffffffff: scan phy mdio at address 22"}
+- {"dt": "2022-09-19T23:34:15.751115", "lvl": "target", "msg": "[    2.616592] mdio_bus ff0e0000.ethernet-ffffffff: scan phy mdio at address 23"}
+- {"dt": "2022-09-19T23:34:15.751407", "lvl": "target", "msg": "[    2.623718] mdio_bus ff0e0000.ethernet-ffffffff: scan phy mdio at address 24"}
+- {"dt": "2022-09-19T23:34:15.767109", "lvl": "target", "msg": "[    2.630843] mdio_bus ff0e0000.ethernet-ffffffff: scan phy mdio at address 25"}
+- {"dt": "2022-09-19T23:34:15.767401", "lvl": "target", "msg": "[    2.637971] mdio_bus ff0e0000.ethernet-ffffffff: scan phy mdio at address 26"}
+- {"dt": "2022-09-19T23:34:15.783094", "lvl": "target", "msg": "[    2.645100] mdio_bus ff0e0000.ethernet-ffffffff: scan phy mdio at address 27"}
+- {"dt": "2022-09-19T23:34:15.783386", "lvl": "target", "msg": "[    2.652232] mdio_bus ff0e0000.ethernet-ffffffff: scan phy mdio at address 28"}
+- {"dt": "2022-09-19T23:34:15.786251", "lvl": "target", "msg": "[    2.659359] mdio_bus ff0e0000.ethernet-ffffffff: scan phy mdio at address 29"}
+- {"dt": "2022-09-19T23:34:15.799110", "lvl": "target", "msg": "[    2.666486] mdio_bus ff0e0000.ethernet-ffffffff: scan phy mdio at address 30"}
+- {"dt": "2022-09-19T23:34:15.802255", "lvl": "target", "msg": "[    2.673620] mdio_bus ff0e0000.ethernet-ffffffff: scan phy mdio at address 31"}
+- {"dt": "2022-09-19T23:34:15.818242", "lvl": "target", "msg": "[    2.681089] macb ff0e0000.ethernet eth0: Cadence GEM rev 0x50070106 at 0xff0e0000 irq 37 (00:0a:35:0e:88:50)"}
+- {"dt": "2022-09-19T23:34:15.831101", "lvl": "target", "msg": "[    2.696406] clk: couldn't set sdio0_ref clk rate to 187498123 (-16), current rate: 199999998"}
+- {"dt": "2022-09-19T23:34:15.834256", "lvl": "target", "msg": "[    2.697586] clk: couldn't set sdio1_ref clk rate to 187498123 (-16), current rate: 199999998"}
+- {"dt": "2022-09-19T23:34:15.847101", "lvl": "target", "msg": "[    2.700461] cfg80211: Loading compiled-in X.509 certificates for regulatory database"}
+- {"dt": "2022-09-19T23:34:15.850263", "lvl": "target", "msg": "[    2.701206] cfg80211: Loaded X.509 cert 'sforshee: 00b28ddf47aef9cea7'"}
+- {"dt": "2022-09-19T23:34:15.863104", "lvl": "target", "msg": "[    2.701424] zynqmp_pll_disable() clock disable failed for dpll_int, ret = -13"}
+- {"dt": "2022-09-19T23:34:15.863396", "lvl": "target", "msg": "[    2.703056] ALSA device list:"}
+- {"dt": "2022-09-19T23:34:15.863633", "lvl": "target", "msg": "[    2.703061]   No soundcards found."}
+- {"dt": "2022-09-19T23:34:15.879112", "lvl": "target", "msg": "[    2.703238] platform regulatory.0: Direct firmware load for regulatory.db failed with error -2"}
+- {"dt": "2022-09-19T23:34:15.879405", "lvl": "target", "msg": "[    2.703248] cfg80211: failed to load regulatory.db"}
+- {"dt": "2022-09-19T23:34:15.882231", "lvl": "target", "msg": "[    2.705367] clk: couldn't set sdio0_ref clk rate to 187498123 (-16), current rate: 199999998"}
+- {"dt": "2022-09-19T23:34:15.898242", "lvl": "target", "msg": "[    2.713788] clk: couldn't set sdio1_ref clk rate to 187498123 (-16), current rate: 199999998"}
+- {"dt": "2022-09-19T23:34:15.943106", "lvl": "target", "msg": "[    2.805158] mmc0: SDHCI controller on ff160000.mmc [ff160000.mmc] using ADMA 64-bit"}
+- {"dt": "2022-09-19T23:34:15.943398", "lvl": "target", "msg": "[    2.805623] mmc1: SDHCI controller on ff170000.mmc [ff170000.mmc] using ADMA 64-bit"}
+- {"dt": "2022-09-19T23:34:15.962214", "lvl": "target", "msg": "[    2.823274] Freeing unused kernel memory: 5184K"}
+- {"dt": "2022-09-19T23:34:15.962505", "lvl": "target", "msg": "[    2.827960] Run /init as init process"}
+- {"dt": "2022-09-19T23:34:15.978204", "lvl": "target", "msg": "[    2.854183] mmc1: new SDHC card at address 0001"}
+- {"dt": "2022-09-19T23:34:15.994197", "lvl": "target", "msg": "[    2.859546] mmcblk1: mmc1:0001 SD16G 14.6 GiB "}
+- {"dt": "2022-09-19T23:34:16.007110", "lvl": "target", "msg": "[    2.877291] GPT:Primary header thinks Alt. header is not at the end of the disk."}
+- {"dt": "2022-09-19T23:34:16.007402", "lvl": "target", "msg": "[    2.884735] GPT:4456521 != 30547967"}
+- {"dt": "2022-09-19T23:34:16.023109", "lvl": "target", "msg": "[    2.888249] GPT:Alternate GPT header not at the end of the disk."}
+- {"dt": "2022-09-19T23:34:16.023399", "lvl": "target", "msg": "[    2.894286] GPT:4456521 != 30547967"}
+- {"dt": "2022-09-19T23:34:16.026271", "lvl": "target", "msg": "[    2.894297] GPT: Use GNU Parted to correct GPT errors."}
+- {"dt": "2022-09-19T23:34:16.026562", "lvl": "target", "msg": "[    2.894321]  mmcblk1: p1 p2"}
+- {"dt": "2022-09-19T23:34:16.039116", "lvl": "target", "msg": "[    2.898327] mmc0: new HS200 MMC card at address 0001"}
+- {"dt": "2022-09-19T23:34:16.039407", "lvl": "target", "msg": "[    2.911197] mmcblk0: mmc0:0001 S0J56X 14.8 GiB "}
+- {"dt": "2022-09-19T23:34:16.042269", "lvl": "target", "msg": "[    2.917357] mmcblk0boot0: mmc0:0001 S0J56X 31.5 MiB "}
+- {"dt": "2022-09-19T23:34:16.055080", "lvl": "target", "msg": "[    2.923679] mmcblk0boot1: mmc0:0001 S0J56X 31.5 MiB "}
+- {"dt": "2022-09-19T23:34:16.058271", "lvl": "target", "msg": "[    2.924515] tpm_tis_core: module verification failed: signature and/or required key missing - tainting kernel"}
+- {"dt": "2022-09-19T23:34:16.074210", "lvl": "target", "msg": "[    2.929595] mmcblk0rpmb: mmc0:0001 S0J56X 4.00 MiB, chardev (235:0)"}
+- {"dt": "2022-09-19T23:34:16.442225", "lvl": "target", "msg": "[    3.311939] EXT4-fs (mmcblk1p2): mounted filesystem with ordered data mode. Opts: (null). Quota mode: none."}
+- {"dt": "2022-09-19T23:34:16.474177", "lvl": "target", "msg": "[    3.345342] random: fast init done"}
+- {"dt": "2022-09-19T23:34:18.183017", "lvl": "target", "msg": "[    5.054479] SELinux:  Class mctp_socket not defined in policy."}
+- {"dt": "2022-09-19T23:34:18.186200", "lvl": "target", "msg": "[    5.060419] SELinux:  Class anon_inode not defined in policy."}
+- {"dt": "2022-09-19T23:34:18.202163", "lvl": "target", "msg": "[    5.066173] SELinux: the above unknown classes and permissions will be allowed"}
+- {"dt": "2022-09-19T23:34:18.215013", "lvl": "target", "msg": "[    5.081880] SELinux:  policy capability network_peer_controls=1"}
+- {"dt": "2022-09-19T23:34:18.215305", "lvl": "target", "msg": "[    5.087942] SELinux:  policy capability open_perms=1"}
+- {"dt": "2022-09-19T23:34:18.218182", "lvl": "target", "msg": "[    5.092910] SELinux:  policy capability extended_socket_class=1"}
+- {"dt": "2022-09-19T23:34:18.230978", "lvl": "target", "msg": "[    5.098846] SELinux:  policy capability always_check_network=0"}
+- {"dt": "2022-09-19T23:34:18.231269", "lvl": "target", "msg": "[    5.104680] SELinux:  policy capability cgroup_seclabel=1"}
+- {"dt": "2022-09-19T23:34:18.247012", "lvl": "target", "msg": "[    5.110106] SELinux:  policy capability nnp_nosuid_transition=1"}
+- {"dt": "2022-09-19T23:34:18.247304", "lvl": "target", "msg": "[    5.116030] SELinux:  policy capability genfs_seclabel_symlinks=0"}
+- {"dt": "2022-09-19T23:34:18.250182", "lvl": "target", "msg": "[    5.122134] SELinux:  policy capability ioctl_skip_cloexec=0"}
+- {"dt": "2022-09-19T23:34:18.314148", "lvl": "target", "msg": "[    5.180010] audit: type=1403 audit(5.176:2): auid=4294967295 ses=4294967295 lsm=selinux res=1"}
+- {"dt": "2022-09-19T23:34:18.346109", "lvl": "target", "msg": "[    5.208324] systemd[1]: Successfully loaded SELinux policy in 628.039ms."}
+- {"dt": "2022-09-19T23:34:18.634138", "lvl": "target", "msg": "[    5.507279] systemd[1]: System time before build time, advancing clock."}
+- {"dt": "2022-09-19T23:34:18.778130", "lvl": "target", "msg": "[    5.622395] audit: type=1400 audit(1616485768.112:3): avc:  denied  { module_load } for  pid=1 comm=\\\"systemd\\\" path=\\\"/lib/modules/5.15.34/kernel/net/ipv6/ipv6.ko\\\" dev=\\\"mmcblk1p2\\\" ino=2289 scontext=system_u:system_r:kernel_t:s15:c0.c1023 tcontext=system_u:object_r:unlabeled_t:s0 tclass=system permissive=1"}
+- {"dt": "2022-09-19T23:34:18.902995", "lvl": "target", "msg": "[    5.750725] audit: type=1400 audit(1616485768.240:4): avc:  denied  { integrity } for  pid=1 comm=\\\"systemd\\\" lockdown_reason=\\\"unsigned module loading\\\" scontext=system_u:system_r:kernel_t:s15:c0.c1023 tcontext=system_u:system_r:kernel_t:s15:c0.c1023 tclass=lockdown permissive=1"}
+- {"dt": "2022-09-19T23:34:18.906143", "lvl": "target", "msg": "[    5.777334] NET: Registered PF_INET6 protocol family"}
+- {"dt": "2022-09-19T23:34:18.966994", "lvl": "target", "msg": "[    5.835781] Segment Routing with IPv6"}
+- {"dt": "2022-09-19T23:34:18.970141", "lvl": "target", "msg": "[    5.839513] In-situ OAM (IOAM) with IPv6"}
+- {"dt": "2022-09-19T23:34:19.018132", "lvl": "target", "msg": "[    5.891243] systemd[1]: Relabelled /dev, /dev/shm, /run, /sys/fs/cgroup in 36.014ms."}
+- {"dt": "2022-09-19T23:34:19.158994", "lvl": "target", "msg": "[    6.010235] systemd[1]: systemd 247.6+ running in system mode. (+PAM +AUDIT +SELINUX +IMA -APPARMOR -SMACK +SYSVINIT +UTMP -LIBCRYPTSETUP -GCRYPT -GNUTLS +ACL +XZ -LZ4 -ZSTD -SECCOMP +BLKID -ELFUTILS +KMOD -IDN2 -IDN -PCRE2 default-hierarchy=hybrid)"}
+- {"dt": "2022-09-19T23:34:19.162121", "lvl": "target", "msg": "[    6.033128] systemd[1]: Detected architecture arm64."}
+- {"dt": "2022-09-19T23:34:19.210091", "lvl": "target", "msg": "[    6.081206] systemd[1]: Set hostname to <ledge-qemuarm64>."}
+- {"dt": "2022-09-19T23:34:19.258118", "lvl": "target", "msg": "[    6.131234] random: systemd: uninitialized urandom read (16 bytes read)"}
+- {"dt": "2022-09-19T23:34:19.274083", "lvl": "target", "msg": "[    6.138018] systemd[1]: Initializing machine ID from random generator."}
+- {"dt": "2022-09-19T23:34:19.370152", "lvl": "target", "msg": "[    6.225463] audit: type=1400 audit(1616485768.716:5): avc:  denied  { bpf } for  pid=1 comm=\\\"systemd\\\" capability=39  scontext=system_u:system_r:kernel_t:s15:c0.c1023 tcontext=system_u:system_r:kernel_t:s15:c0.c1023 tclass=capability2 permissive=1"}
+- {"dt": "2022-09-19T23:34:19.402097", "lvl": "target", "msg": "[    6.247359] audit: type=1400 audit(1616485768.716:6): avc:  denied  { perfmon } for  pid=1 comm=\\\"systemd\\\" capability=38  scontext=system_u:system_r:kernel_t:s15:c0.c1023 tcontext=system_u:system_r:kernel_t:s15:c0.c1023 tclass=capability2 permissive=1"}
+- {"dt": "2022-09-19T23:34:19.543001", "lvl": "target", "msg": "[    6.387271] systemd-sysv-generator[253]: SysV service '/etc/init.d/conntrack-failover' lacks a native systemd unit file. Automatically generating a unit file for compatibility. Please update package to include a native systemd unit file, in order to make it more safe and robust."}
+- {"dt": "2022-09-19T23:34:19.562139", "lvl": "target", "msg": "[    6.412323] systemd-sysv-generator[253]: SysV service '/etc/init.d/conntrackd' lacks a native systemd unit file. Automatically generating a unit file for compatibility. Please update package to include a native systemd unit file, in order to make it more safe and robust."}
+- {"dt": "2022-09-19T23:34:21.306058", "lvl": "target", "msg": "[    8.175777] systemd[1]: Queued start job for default target Multi-User System."}
+- {"dt": "2022-09-19T23:34:21.321854", "lvl": "target", "msg": "[    8.184098] random: systemd: uninitialized urandom read (16 bytes read)"}
+- {"dt": "2022-09-19T23:34:21.350948", "lvl": "target", "msg": "[    8.227815] systemd[1]: Created slice system-getty.slice."}
+- {"dt": "2022-09-19T23:34:21.366871", "lvl": "target", "msg": "[    8.234220] random: systemd: uninitialized urandom read (16 bytes read)"}
+- {"dt": "2022-09-19T23:34:21.367172", "lvl": "target", "msg": "[    8.243084] systemd[1]: Created slice system-modprobe.slice."}
+- {"dt": "2022-09-19T23:34:21.382844", "lvl": "target", "msg": "[    8.248955] random: systemd: uninitialized urandom read (16 bytes read)"}
+- {"dt": "2022-09-19T23:34:21.383135", "lvl": "target", "msg": "[    8.257560] systemd[1]: Created slice system-serial\\x2dgetty.slice."}
+- {"dt": "2022-09-19T23:34:21.398869", "lvl": "target", "msg": "[    8.265953] systemd[1]: Created slice User and Session Slice."}
+- {"dt": "2022-09-19T23:34:21.402046", "lvl": "target", "msg": "[    8.272524] systemd[1]: Started Dispatch Password Requests to Console Directory Watch."}
+- {"dt": "2022-09-19T23:34:21.414871", "lvl": "target", "msg": "[    8.281046] systemd[1]: Started Forward Password Requests to Wall Directory Watch."}
+- {"dt": "2022-09-19T23:34:21.415164", "lvl": "target", "msg": "[    8.289088] systemd[1]: Reached target Remote File Systems."}
+- {"dt": "2022-09-19T23:34:21.418029", "lvl": "target", "msg": "[    8.294845] systemd[1]: Reached target Slices."}
+- {"dt": "2022-09-19T23:34:21.430857", "lvl": "target", "msg": "[    8.299537] systemd[1]: Reached target System Time Set."}
+- {"dt": "2022-09-19T23:34:21.434041", "lvl": "target", "msg": "[    8.304918] systemd[1]: Reached target System Time Synchronized."}
+- {"dt": "2022-09-19T23:34:21.465994", "lvl": "target", "msg": "[    8.339426] systemd[1]: Listening on RPCbind Server Activation Socket."}
+- {"dt": "2022-09-19T23:34:21.478858", "lvl": "target", "msg": "[    8.346555] systemd[1]: Reached target RPC Port Mapper."}
+- {"dt": "2022-09-19T23:34:21.494893", "lvl": "target", "msg": "[    8.359055] systemd[1]: Listening on Syslog Socket."}
+- {"dt": "2022-09-19T23:34:21.495184", "lvl": "target", "msg": "[    8.365317] systemd[1]: Listening on initctl Compatibility Named Pipe."}
+- {"dt": "2022-09-19T23:34:21.526896", "lvl": "target", "msg": "[    8.373692] audit: type=1400 audit(1616485770.864:7): avc:  denied  { audit_read } for  pid=1 comm=\\\"systemd\\\" capability=37  scontext=system_u:system_r:kernel_t:s15:c0.c1023 tcontext=system_u:system_r:kernel_t:s15:c0.c1023 tclass=capability2 permissive=1"}
+- {"dt": "2022-09-19T23:34:21.527196", "lvl": "target", "msg": "[    8.373716] systemd[1]: Listening on Journal Audit Socket."}
+- {"dt": "2022-09-19T23:34:21.530023", "lvl": "target", "msg": "[    8.402549] systemd[1]: Listening on Journal Socket (/dev/log)."}
+- {"dt": "2022-09-19T23:34:21.542885", "lvl": "target", "msg": "[    8.409579] systemd[1]: Listening on Journal Socket."}
+- {"dt": "2022-09-19T23:34:21.543176", "lvl": "target", "msg": "[    8.415507] systemd[1]: Listening on Network Service Netlink Socket."}
+- {"dt": "2022-09-19T23:34:21.558900", "lvl": "target", "msg": "[    8.424342] systemd[1]: Listening on udev Control Socket."}
+- {"dt": "2022-09-19T23:34:21.559192", "lvl": "target", "msg": "[    8.430692] systemd[1]: Listening on udev Kernel Socket."}
+- {"dt": "2022-09-19T23:34:21.574881", "lvl": "target", "msg": "[    8.437376] systemd[1]: Listening on User Database Manager Socket."}
+- {"dt": "2022-09-19T23:34:21.578004", "lvl": "target", "msg": "[    8.448935] systemd[1]: Mounting Huge Pages File System..."}
+- {"dt": "2022-09-19T23:34:21.593982", "lvl": "target", "msg": "[    8.459591] systemd[1]: Mounting POSIX Message Queue File System..."}
+- {"dt": "2022-09-19T23:34:21.606895", "lvl": "target", "msg": "[    8.471081] systemd[1]: Mounting Kernel Debug File System..."}
+- {"dt": "2022-09-19T23:34:21.610020", "lvl": "target", "msg": "[    8.477430] systemd[1]: Condition check resulted in Kernel Trace File System being skipped."}
+- {"dt": "2022-09-19T23:34:21.622900", "lvl": "target", "msg": "[    8.491150] systemd[1]: Starting Create list of static device nodes for the current kernel..."}
+- {"dt": "2022-09-19T23:34:21.638876", "lvl": "target", "msg": "[    8.504318] systemd[1]: Starting Load Kernel Module configfs..."}
+- {"dt": "2022-09-19T23:34:21.642011", "lvl": "target", "msg": "[    8.514346] systemd[1]: Starting Load Kernel Module drm..."}
+- {"dt": "2022-09-19T23:34:21.654877", "lvl": "target", "msg": "[    8.524102] systemd[1]: Starting Load Kernel Module fuse..."}
+- {"dt": "2022-09-19T23:34:21.689971", "lvl": "target", "msg": "[    8.562867] systemd[1]: Starting RPC Bind..."}
+- {"dt": "2022-09-19T23:34:21.706009", "lvl": "target", "msg": "[    8.574895] systemd[1]: Starting SELinux autorelabel service loading..."}
+- {"dt": "2022-09-19T23:34:21.718881", "lvl": "target", "msg": "[    8.586267] systemd[1]: Starting SELinux init for /dev service loading..."}
+- {"dt": "2022-09-19T23:34:21.722026", "lvl": "target", "msg": "[    8.593693] systemd[1]: Condition check resulted in File System Check on Root Device being skipped."}
+- {"dt": "2022-09-19T23:34:21.737967", "lvl": "target", "msg": "[    8.609307] systemd[1]: Starting Journal Service..."}
+- {"dt": "2022-09-19T23:34:21.830864", "lvl": "target", "msg": "[    8.701512] systemd[1]: Starting Load Kernel Modules..."}
+- {"dt": "2022-09-19T23:34:21.834007", "lvl": "target", "msg": "[    8.709720] fuse: init (API version 7.34)"}
+- {"dt": "2022-09-19T23:34:21.846867", "lvl": "target", "msg": "[    8.711936] systemd[1]: Starting Remount Root and Kernel File Systems..."}
+- {"dt": "2022-09-19T23:34:21.862864", "lvl": "target", "msg": "[    8.725830] systemd[1]: Starting Coldplug All udev Devices..."}
+- {"dt": "2022-09-19T23:34:21.865938", "lvl": "target", "msg": "[    8.736615] systemd[1]: Starting Create compressed swap in memory using zram..."}
+- {"dt": "2022-09-19T23:34:21.878887", "lvl": "target", "msg": "[    8.751364] systemd[1]: Mounted Huge Pages File System."}
+- {"dt": "2022-09-19T23:34:21.894865", "lvl": "target", "msg": "[    8.757366] systemd[1]: Mounted POSIX Message Queue File System."}
+- {"dt": "2022-09-19T23:34:21.895157", "lvl": "target", "msg": "[    8.764405] systemd[1]: Mounted Kernel Debug File System."}
+- {"dt": "2022-09-19T23:34:21.910887", "lvl": "target", "msg": "[    8.773450] systemd[1]: Finished Create list of static device nodes for the current kernel."}
+- {"dt": "2022-09-19T23:34:21.911179", "lvl": "target", "msg": "[    8.777667] EXT4-fs (mmcblk1p2): re-mounted. Opts: (null). Quota mode: none."}
+- {"dt": "2022-09-19T23:34:21.926897", "lvl": "target", "msg": "[    8.792808] systemd[1]: modprobe@configfs.service: Succeeded."}
+- {"dt": "2022-09-19T23:34:21.927188", "lvl": "target", "msg": "[    8.800809] systemd[1]: Finished Load Kernel Module configfs."}
+- {"dt": "2022-09-19T23:34:21.942896", "lvl": "target", "msg": "[    8.808393] systemd[1]: modprobe@drm.service: Succeeded."}
+- {"dt": "2022-09-19T23:34:21.943188", "lvl": "target", "msg": "[    8.815548] systemd[1]: Finished Load Kernel Module drm."}
+- {"dt": "2022-09-19T23:34:21.958884", "lvl": "target", "msg": "[    8.822247] systemd[1]: modprobe@fuse.service: Succeeded."}
+- {"dt": "2022-09-19T23:34:21.962027", "lvl": "target", "msg": "[    8.829734] systemd[1]: Finished Load Kernel Module fuse."}
+- {"dt": "2022-09-19T23:34:21.974887", "lvl": "target", "msg": "[    8.840819] systemd[1]: Finished Load Kernel Modules."}
+- {"dt": "2022-09-19T23:34:21.978019", "lvl": "target", "msg": "[    8.849105] systemd[1]: Finished Remount Root and Kernel File Systems."}
+- {"dt": "2022-09-19T23:34:21.994035", "lvl": "target", "msg": "[    8.861936] systemd[1]: Mounting FUSE Control File System..."}
+- {"dt": "2022-09-19T23:34:22.006905", "lvl": "target", "msg": "[    8.873290] systemd[1]: Mounting Kernel Configuration File System..."}
+- {"dt": "2022-09-19T23:34:22.010056", "lvl": "target", "msg": "[    8.880105] systemd[1]: Condition check resulted in OSTree Remount OS/ Bind Mounts being skipped."}
+- {"dt": "2022-09-19T23:34:22.134897", "lvl": "target", "msg": "[    9.006565] systemd[1]: Condition check resulted in Rebuild Hardware Database being skipped."}
+- {"dt": "2022-09-19T23:34:22.150894", "lvl": "target", "msg": "[    9.015317] systemd[1]: Condition check resulted in Platform Persistent Storage Archival being skipped."}
+- {"dt": "2022-09-19T23:34:22.154001", "lvl": "target", "msg": "[    9.029323] systemd[1]: Starting Apply Kernel Variables..."}
+- {"dt": "2022-09-19T23:34:22.166903", "lvl": "target", "msg": "[    9.039772] systemd[1]: Starting Create System Users..."}
+- {"dt": "2022-09-19T23:34:22.182907", "lvl": "target", "msg": "[    9.048521] systemd[1]: Started Journal Service."}
+- {"dt": "2022-09-19T23:34:22.202040", "lvl": "target", "msg": "[    9.053693] audit: type=1130 audit(1616485771.544:8): pid=1 uid=0 auid=4294967295 ses=4294967295 subj=system_u:system_r:kernel_t:s15:c0.c1023 msg='unit=systemd-journald comm=\\\"systemd\\\" exe=\\\"/lib/systemd/systemd\\\" hostname=? addr=? terminal=? res=success'"}
+- {"dt": "2022-09-19T23:34:22.298048", "lvl": "target", "msg": "[    9.153133] audit: type=1130 audit(1616485771.644:9): pid=1 uid=0 auid=4294967295 ses=4294967295 subj=system_u:system_r:kernel_t:s15:c0.c1023 msg='unit=rpcbind comm=\\\"systemd\\\" exe=\\\"/lib/systemd/systemd\\\" hostname=? addr=? terminal=? res=success'"}
+- {"dt": "2022-09-19T23:34:22.394028", "lvl": "target", "msg": "[    9.262789] systemd-journald[269]: Received client request to flush runtime journal."}
+- {"dt": "2022-09-19T23:34:22.442068", "lvl": "target", "msg": "[    9.299339] audit: type=1130 audit(1616485771.788:10): pid=1 uid=0 auid=4294967295 ses=4294967295 subj=system_u:system_r:kernel_t:s15:c0.c1023 msg='unit=systemd-journal-flush comm=\\\"systemd\\\" exe=\\\"/lib/systemd/systemd\\\" hostname=? addr=? terminal=? res=success'"}
+- {"dt": "2022-09-19T23:36:17.269466", "lvl": "target", "msg": "[  124.138781] reboot: Restarting system"}
+- {"dt": "2022-09-19T23:36:18.437468", "lvl": "target", "msg": ""}
+- {"dt": "2022-09-19T23:36:18.437878", "lvl": "target", "msg": "<debug_uart>"}
+- {"dt": "2022-09-19T23:36:18.869416", "lvl": "target", "msg": ""}
+- {"dt": "2022-09-19T23:36:18.882326", "lvl": "target", "msg": "U-Boot SPL 2022.07-rc3 (May 27 2022 - 12:50:42 +0000)"}
+- {"dt": "2022-09-19T23:36:18.882619", "lvl": "target", "msg": "PMUFW:\tv1.1"}
+- {"dt": "2022-09-19T23:36:18.882855", "lvl": "target", "msg": "Loading new PMUFW cfg obj (2032 bytes)"}
+- {"dt": "2022-09-19T23:36:18.883080", "lvl": "target", "msg": "Silicon version:\t3"}
+- {"dt": "2022-09-19T23:36:18.883301", "lvl": "target", "msg": "EL Level:\tEL3"}
+- {"dt": "2022-09-19T23:36:18.883516", "lvl": "target", "msg": "Chip ID:\txck26"}
+- {"dt": "2022-09-19T23:36:18.886337", "lvl": "target", "msg": "Secure Boot:\tnot authenticated, not encrypted"}
+- {"dt": "2022-09-19T23:36:18.886598", "lvl": "target", "msg": "Multiboot:\t64"}
+- {"dt": "2022-09-19T23:36:18.901423", "lvl": "target", "msg": "Trying to boot from SPI"}
+- {"dt": "2022-09-19T23:36:19.337111", "lvl": "target", "msg": "NOTICE:  BL31: v2.6(release):v2.6-879-gc3bdd3d3cf-dirty"}
+- {"dt": "2022-09-19T23:36:20.155315", "lvl": "target", "msg": "NOTICE:  BL31: Built : 09:30:50, May  9 2022\uFFFDC!OYY\uFFFD]\uFFFDU\uFFFD\uFFFD\uFFFD\uFFFD5R\uFFFD"}
+- {"dt": "2022-09-19T23:36:20.155617", "lvl": "target", "msg": ""}
+- {"dt": "2022-09-19T23:36:20.168201", "lvl": "target", "msg": "U-Boot 2022.07-rc3 (May 27 2022 - 12:50:42 +0000)"}
+- {"dt": "2022-09-19T23:36:20.168490", "lvl": "target", "msg": ""}
+- {"dt": "2022-09-19T23:36:20.171579", "lvl": "target", "msg": "CPU:   ZynqMP"}
+- {"dt": "2022-09-19T23:36:20.171834", "lvl": "target", "msg": "Silicon: v3"}
+- {"dt": "2022-09-19T23:36:20.680271", "lvl": "target", "msg": "Detected name: zynqmp-sm-k26-xcl2gc-rev1 -sck-kv-g-rev1"}
+- {"dt": "2022-09-19T23:36:20.699275", "lvl": "target", "msg": "Model: ZynqMP SM-K26 Rev1/B/A"}
+- {"dt": "2022-09-19T23:36:20.699566", "lvl": "target", "msg": "Board: Xilinx ZynqMP"}
+- {"dt": "2022-09-19T23:36:20.955287", "lvl": "target", "msg": "DRAM:  4 GiB"}
+- {"dt": "2022-09-19T23:36:21.051283", "lvl": "target", "msg": "PMUFW:\tv1.1"}
+- {"dt": "2022-09-19T23:36:21.288179", "lvl": "target", "msg": "Xilinx I2C FRU format at nvmem0:"}
+- {"dt": "2022-09-19T23:36:21.288469", "lvl": "target", "msg": " Manufacturer Name: XILINX"}
+- {"dt": "2022-09-19T23:36:21.288703", "lvl": "target", "msg": " Product Name: SM-K26-XCL2GC"}
+- {"dt": "2022-09-19T23:36:21.288930", "lvl": "target", "msg": " Serial No: XFL1OTRUW0NW"}
+- {"dt": "2022-09-19T23:36:21.292030", "lvl": "target", "msg": " Part Number: 5057-02  "}
+- {"dt": "2022-09-19T23:36:21.307289", "lvl": "target", "msg": " File ID: 0x0"}
+- {"dt": "2022-09-19T23:36:21.307578", "lvl": "target", "msg": " Revision Number: 1 "}
+- {"dt": "2022-09-19T23:36:21.512192", "lvl": "target", "msg": "Xilinx I2C FRU format at nvmem1:"}
+- {"dt": "2022-09-19T23:36:21.512481", "lvl": "target", "msg": " Manufacturer Name: XILINX"}
+- {"dt": "2022-09-19T23:36:21.528187", "lvl": "target", "msg": " Product Name: SCK-KV-G        "}
+- {"dt": "2022-09-19T23:36:21.528479", "lvl": "target", "msg": " Serial No: XFL1EMYMAA30"}
+- {"dt": "2022-09-19T23:36:21.528717", "lvl": "target", "msg": " Part Number: 5066-01  "}
+- {"dt": "2022-09-19T23:36:21.528944", "lvl": "target", "msg": " File ID: 0x0"}
+- {"dt": "2022-09-19T23:36:21.529190", "lvl": "target", "msg": " Revision Number: 1"}
+- {"dt": "2022-09-19T23:36:21.529413", "lvl": "target", "msg": "EL Level:\tEL2"}
+- {"dt": "2022-09-19T23:36:21.532508", "lvl": "target", "msg": "Chip ID:\txck26"}
+- {"dt": "2022-09-19T23:36:21.544194", "lvl": "target", "msg": "Secure Boot:\tnot authenticated, not encrypted"}
+- {"dt": "2022-09-19T23:36:21.544486", "lvl": "target", "msg": "Core:  127 devices, 33 uclasses, devicetree: fit"}
+- {"dt": "2022-09-19T23:36:21.643274", "lvl": "target", "msg": "7[r[999;999H[6n8NAND:  0 MiB"}
+- {"dt": "2022-09-19T23:36:22.680108", "lvl": "target", "msg": "MMC:   mmc@ff160000: 0, mmc@ff170000: 1"}
+- {"dt": "2022-09-19T23:36:22.696008", "lvl": "target", "msg": "Loading Environment from nowhere... OK"}
+- {"dt": "2022-09-19T23:36:22.696470", "lvl": "target", "msg": "In:    serial"}
+- {"dt": "2022-09-19T23:36:22.696736", "lvl": "target", "msg": "Out:   serial"}
+- {"dt": "2022-09-19T23:36:22.696885", "lvl": "target", "msg": "Err:   serial"}
+- {"dt": "2022-09-19T23:36:22.700047", "lvl": "target", "msg": "Bootmode: QSPI_MODE"}
+- {"dt": "2022-09-19T23:36:22.700426", "lvl": "target", "msg": "Reset reason:\tSOFT "}
+- {"dt": "2022-09-19T23:36:23.224121", "lvl": "target", "msg": "Net:   PHY reset timed out"}
+- {"dt": "2022-09-19T23:36:23.224524", "lvl": "target", "msg": ""}
+- {"dt": "2022-09-19T23:36:23.224721", "lvl": "target", "msg": "ZYNQ GEM: ff0e0000, mdio bus ff0e0000, phyaddr 1, interface rgmii-id"}
+- {"dt": "2022-09-19T23:36:23.224924", "lvl": "target", "msg": "eth0: ethernet@ff0e0000"}
+- {"dt": "2022-09-19T23:36:25.239973", "lvl": "target", "msg": "Hit any key to stop autoboot:  2 \b\b\b 1 \b\b\b 0 "}
+- {"dt": "2022-09-19T23:36:25.240372", "lvl": "target", "msg": "SF: Detected mt25qu512a with page size 256 Bytes, erase size 64 KiB, total 64 MiB"}
+- {"dt": "2022-09-19T23:36:25.243512", "lvl": "target", "msg": "device 0 offset 0x3e80000, size 0x80000"}
+- {"dt": "2022-09-19T23:36:25.319959", "lvl": "target", "msg": "SF: 524288 bytes @ 0x3e80000 Read: OK"}
+- {"dt": "2022-09-19T23:36:25.320251", "lvl": "target", "msg": "QSPI: Trying to boot script at 20000000"}
+- {"dt": "2022-09-19T23:36:25.320490", "lvl": "target", "msg": "## Executing script at 20000000"}
+- {"dt": "2022-09-19T23:36:25.323623", "lvl": "target", "msg": "Wrong image format for \\\"source\\\" command"}
+- {"dt": "2022-09-19T23:36:25.335953", "lvl": "target", "msg": "QSPI: SCRIPT FAILED: continuing..."}
+- {"dt": "2022-09-19T23:36:25.336244", "lvl": "target", "msg": "JTAG: Trying to boot script at 20000000"}
+- {"dt": "2022-09-19T23:36:25.336483", "lvl": "target", "msg": "## Executing script at 20000000"}
+- {"dt": "2022-09-19T23:36:25.339626", "lvl": "target", "msg": "Wrong image format for \\\"source\\\" command"}
+- {"dt": "2022-09-19T23:36:25.339876", "lvl": "target", "msg": "JTAG: SCRIPT FAILED: continuing..."}
+- {"dt": "2022-09-19T23:36:25.563056", "lvl": "target", "msg": "switch to partitions #0, OK"}
+- {"dt": "2022-09-19T23:36:25.563347", "lvl": "target", "msg": "mmc0(part 0) is current device"}
+- {"dt": "2022-09-19T23:36:25.575939", "lvl": "target", "msg": "** No partition table - mmc 0 **"}
+- {"dt": "2022-09-19T23:36:25.579190", "lvl": "target", "msg": "Couldn't find partition mmc 0:1"}
+- {"dt": "2022-09-19T23:36:26.331070", "lvl": "target", "msg": "switch to partitions #0, OK"}
+- {"dt": "2022-09-19T23:36:26.331362", "lvl": "target", "msg": "mmc1 is current device"}
+- {"dt": "2022-09-19T23:36:26.987193", "lvl": "target", "msg": "Scanning mmc 1:1..."}
+- {"dt": "2022-09-19T23:36:27.227149", "lvl": "target", "msg": "tpm_tis_spi_probe: missing reset GPIO"}
+- {"dt": "2022-09-19T23:36:32.154932", "lvl": "target", "msg": "Booting: BootLedge"}
+- {"dt": "2022-09-19T23:36:32.551851", "lvl": "target", "msg": "EFI stub: Booting Linux Kernel..."}
+- {"dt": "2022-09-19T23:36:32.555203", "lvl": "target", "msg": "EFI stub: EFI_RNG_PROTOCOL unavailable"}
+- {"dt": "2022-09-19T23:36:32.570911", "lvl": "target", "msg": "EFI stub: UEFI Secure Boot is enabled."}
+- {"dt": "2022-09-19T23:36:32.571203", "lvl": "target", "msg": "EFI stub: Using DTB from configuration table"}
+- {"dt": "2022-09-19T23:36:34.746775", "lvl": "target", "msg": "EFI stub: Loaded initrd from LINUX_EFI_INITRD_MEDIA_GUID device path"}
+- {"dt": "2022-09-19T23:36:34.762840", "lvl": "target", "msg": "EFI stub: Exiting boot services..."}
+- {"dt": "2022-09-19T23:36:36.327627", "lvl": "target", "msg": "[    0.000000] Booting Linux on physical CPU 0x0000000000 [0x410fd034]"}
+- {"dt": "2022-09-19T23:36:36.343526", "lvl": "target", "msg": "[    0.000000] Linux version 5.15.34 (oe-user@oe-host) (aarch64-linaro-linux-gcc (GCC) 10.2.1 20201103, GNU ld (GNU Binutils) 2.36.1.20210209) #1 SMP PREEMPT Fri May 6 05:56:02 UTC 2022"}
+- {"dt": "2022-09-19T23:36:36.346826", "lvl": "target", "msg": "[    0.000000] Machine model: ZynqMP SM-K26 Rev1/B/A"}
+- {"dt": "2022-09-19T23:36:36.359528", "lvl": "target", "msg": "[    0.000000] efi: EFI v2.90 by Das U-Boot"}
+- {"dt": "2022-09-19T23:36:36.362882", "lvl": "target", "msg": "[    0.000000] efi: ESRT=0x778d6040 TPMFinalLog=0x778da040 RTPROP=0x778d8040 SMBIOS=0x778d4000 TPMEventLog=0x778cd040 MEMRESERVE=0x778cb040 "}
+- {"dt": "2022-09-19T23:36:36.375528", "lvl": "target", "msg": "[    0.000000] esrt: Reserving ESRT space from 0x00000000778d6040 to 0x00000000778d60a0."}
+- {"dt": "2022-09-19T23:36:36.375820", "lvl": "target", "msg": "[    0.000000] NUMA: No NUMA configuration found"}
+- {"dt": "2022-09-19T23:36:36.391529", "lvl": "target", "msg": "[    0.000000] NUMA: Faking a node at [mem 0x0000000000000000-0x000000087fffffff]"}
+- {"dt": "2022-09-19T23:36:36.391819", "lvl": "target", "msg": "[    0.000000] NUMA: NODE_DATA [mem 0x87f7cdc00-0x87f7cffff]"}
+- {"dt": "2022-09-19T23:36:36.392057", "lvl": "target", "msg": "[    0.000000] Zone ranges:"}
+- {"dt": "2022-09-19T23:36:36.395325", "lvl": "target", "msg": "[    0.000000]   DMA      [mem 0x0000000000000000-0x00000000ffffffff]"}
+- {"dt": "2022-09-19T23:36:36.407582", "lvl": "target", "msg": "[    0.000000]   DMA32    empty"}
+- {"dt": "2022-09-19T23:36:36.407871", "lvl": "target", "msg": "[    0.000000]   Normal   [mem 0x0000000100000000-0x000000087fffffff]"}
+- {"dt": "2022-09-19T23:36:36.411167", "lvl": "target", "msg": "[    0.000000] Movable zone start for each node"}
+- {"dt": "2022-09-19T23:36:36.423572", "lvl": "target", "msg": "[    0.000000] Early memory node ranges"}
+- {"dt": "2022-09-19T23:36:36.423862", "lvl": "target", "msg": "[    0.000000]   node   0: [mem 0x0000000000000000-0x00000000778d3fff]"}
+- {"dt": "2022-09-19T23:36:36.427175", "lvl": "target", "msg": "[    0.000000]   node   0: [mem 0x00000000778d4000-0x00000000778d4fff]"}
+- {"dt": "2022-09-19T23:36:36.439572", "lvl": "target", "msg": "[    0.000000]   node   0: [mem 0x00000000778d5000-0x00000000778d7fff]"}
+- {"dt": "2022-09-19T23:36:36.439864", "lvl": "target", "msg": "[    0.000000]   node   0: [mem 0x00000000778d8000-0x00000000778d8fff]"}
+- {"dt": "2022-09-19T23:36:36.443190", "lvl": "target", "msg": "[    0.000000]   node   0: [mem 0x00000000778d9000-0x00000000778d9fff]"}
+- {"dt": "2022-09-19T23:36:36.455581", "lvl": "target", "msg": "[    0.000000]   node   0: [mem 0x00000000778da000-0x00000000778eafff]"}
+- {"dt": "2022-09-19T23:36:36.458966", "lvl": "target", "msg": "[    0.000000]   node   0: [mem 0x00000000778eb000-0x00000000778fdfff]"}
+- {"dt": "2022-09-19T23:36:36.471575", "lvl": "target", "msg": "[    0.000000]   node   0: [mem 0x00000000778fe000-0x00000000778fffff]"}
+- {"dt": "2022-09-19T23:36:36.471868", "lvl": "target", "msg": "[    0.000000]   node   0: [mem 0x0000000077900000-0x0000000077900fff]"}
+- {"dt": "2022-09-19T23:36:36.475234", "lvl": "target", "msg": "[    0.000000]   node   0: [mem 0x0000000077901000-0x0000000077904fff]"}
+- {"dt": "2022-09-19T23:36:36.487577", "lvl": "target", "msg": "[    0.000000]   node   0: [mem 0x0000000077905000-0x000000007f98ffff]"}
+- {"dt": "2022-09-19T23:36:36.487868", "lvl": "target", "msg": "[    0.000000]   node   0: [mem 0x000000007f990000-0x000000007f99ffff]"}
+- {"dt": "2022-09-19T23:36:36.503577", "lvl": "target", "msg": "[    0.000000]   node   0: [mem 0x000000007f9a0000-0x000000007fffffff]"}
+- {"dt": "2022-09-19T23:36:36.503866", "lvl": "target", "msg": "[    0.000000]   node   0: [mem 0x0000000800000000-0x000000087fffffff]"}
+- {"dt": "2022-09-19T23:36:36.507254", "lvl": "target", "msg": "[    0.000000] Initmem setup node 0 [mem 0x0000000000000000-0x000000087fffffff]"}
+- {"dt": "2022-09-19T23:36:36.519574", "lvl": "target", "msg": "[    0.000000] cma: Reserved 64 MiB at 0x000000007b800000"}
+- {"dt": "2022-09-19T23:36:36.519865", "lvl": "target", "msg": "[    0.000000] psci: probing for conduit method from DT."}
+- {"dt": "2022-09-19T23:36:36.523275", "lvl": "target", "msg": "[    0.000000] psci: PSCIv1.1 detected in firmware."}
+- {"dt": "2022-09-19T23:36:36.535571", "lvl": "target", "msg": "[    0.000000] psci: Using standard PSCI v0.2 function IDs"}
+- {"dt": "2022-09-19T23:36:36.535861", "lvl": "target", "msg": "[    0.000000] psci: MIGRATE_INFO_TYPE not supported."}
+- {"dt": "2022-09-19T23:36:36.539280", "lvl": "target", "msg": "[    0.000000] psci: SMC Calling Convention v1.2"}
+- {"dt": "2022-09-19T23:36:36.551567", "lvl": "target", "msg": "[    0.000000] percpu: Embedded 20 pages/cpu s42712 r8192 d31016 u81920"}
+- {"dt": "2022-09-19T23:36:36.551858", "lvl": "target", "msg": "[    0.000000] Detected VIPT I-cache on CPU0"}
+- {"dt": "2022-09-19T23:36:36.555295", "lvl": "target", "msg": "[    0.000000] CPU features: kernel page table isolation forced ON by KASLR"}
+- {"dt": "2022-09-19T23:36:36.567567", "lvl": "target", "msg": "[    0.000000] CPU features: detected: Kernel page table isolation (KPTI)"}
+- {"dt": "2022-09-19T23:36:36.567860", "lvl": "target", "msg": "[    0.000000] CPU features: detected: ARM erratum 845719"}
+- {"dt": "2022-09-19T23:36:36.571321", "lvl": "target", "msg": "[    0.000000] Built 1 zonelists, mobility grouping on.  Total pages: 1032192"}
+- {"dt": "2022-09-19T23:36:36.583564", "lvl": "target", "msg": "[    0.000000] Policy zone: Normal"}
+- {"dt": "2022-09-19T23:36:36.587082", "lvl": "target", "msg": "[    0.000000] Kernel command line: console=ttyPS1,115200 console=tty0 root=UUID=6091b3a4-ce08-3020-93a6-f755a22ef03b rootwait panic=60"}
+- {"dt": "2022-09-19T23:36:36.599564", "lvl": "target", "msg": "[    0.000000] Dentry cache hash table entries: 524288 (order: 10, 4194304 bytes, linear)"}
+- {"dt": "2022-09-19T23:36:36.603180", "lvl": "target", "msg": "[    0.000000] Inode-cache hash table entries: 262144 (order: 9, 2097152 bytes, linear)"}
+- {"dt": "2022-09-19T23:36:36.615564", "lvl": "target", "msg": "[    0.000000] mem auto-init: stack:off, heap alloc:off, heap free:off"}
+- {"dt": "2022-09-19T23:36:36.619114", "lvl": "target", "msg": "[    0.000000] software IO TLB: mapped [mem 0x000000006f5b0000-0x00000000735b0000] (64MB)"}
+- {"dt": "2022-09-19T23:36:36.631567", "lvl": "target", "msg": "[    0.000000] Memory: 3922328K/4194304K available (17536K kernel code, 3002K rwdata, 8136K rodata, 5184K init, 747K bss, 206440K reserved, 65536K cma-reserved)"}
+- {"dt": "2022-09-19T23:36:36.647560", "lvl": "target", "msg": "[    0.000000] SLUB: HWalign=64, Order=0-3, MinObjects=0, CPUs=4, Nodes=1"}
+- {"dt": "2022-09-19T23:36:36.647851", "lvl": "target", "msg": "[    0.000000] rcu: Preemptible hierarchical RCU implementation."}
+- {"dt": "2022-09-19T23:36:36.648088", "lvl": "target", "msg": "[    0.000000] rcu: \tRCU event tracing is enabled."}
+- {"dt": "2022-09-19T23:36:36.663565", "lvl": "target", "msg": "[    0.000000] rcu: \tRCU restricting CPUs from NR_CPUS=256 to nr_cpu_ids=4."}
+- {"dt": "2022-09-19T23:36:36.663858", "lvl": "target", "msg": "[    0.000000] \tTrampoline variant of Tasks RCU enabled."}
+- {"dt": "2022-09-19T23:36:36.667407", "lvl": "target", "msg": "[    0.000000] \tTracing variant of Tasks RCU enabled."}
+- {"dt": "2022-09-19T23:36:36.679566", "lvl": "target", "msg": "[    0.000000] rcu: RCU calculated value of scheduler-enlistment delay is 25 jiffies."}
+- {"dt": "2022-09-19T23:36:36.679857", "lvl": "target", "msg": "[    0.000000] rcu: Adjusting geometry for rcu_fanout_leaf=16, nr_cpu_ids=4"}
+- {"dt": "2022-09-19T23:36:36.683420", "lvl": "target", "msg": "[    0.000000] NR_IRQS: 64, nr_irqs: 64, preallocated irqs: 0"}
+- {"dt": "2022-09-19T23:36:36.695567", "lvl": "target", "msg": "[    0.000000] GIC: Adjusting CPU interface base to 0x00000000f902f000"}
+- {"dt": "2022-09-19T23:36:36.695858", "lvl": "target", "msg": "[    0.000000] Root IRQ handler: gic_handle_irq"}
+- {"dt": "2022-09-19T23:36:36.699437", "lvl": "target", "msg": "[    0.000000] GIC: Using split EOI/Deactivate mode"}
+- {"dt": "2022-09-19T23:36:36.711565", "lvl": "target", "msg": "[    0.000000] random: get_random_bytes called from start_kernel+0x478/0x670 with crng_init=0"}
+- {"dt": "2022-09-19T23:36:36.715221", "lvl": "target", "msg": "[    0.000000] arch_timer: cp15 timer(s) running at 99.99MHz (phys)."}
+- {"dt": "2022-09-19T23:36:36.727565", "lvl": "target", "msg": "[    0.000000] clocksource: arch_sys_counter: mask: 0xffffffffffffff max_cycles: 0x171015c90f, max_idle_ns: 440795203080 ns"}
+- {"dt": "2022-09-19T23:36:36.731232", "lvl": "target", "msg": "[    0.000000] sched_clock: 56 bits at 99MHz, resolution 10ns, wraps every 4398046511101ns"}
+- {"dt": "2022-09-19T23:36:36.743527", "lvl": "target", "msg": "[    0.000436] Console: colour dummy device 80x25"}
+- {"dt": "2022-09-19T23:36:36.743817", "lvl": "target", "msg": "[    0.000872] printk: console [tty0] enabled"}
+- {"dt": "2022-09-19T23:36:36.759564", "lvl": "target", "msg": "[    0.000942] Calibrating delay loop (skipped), value calculated using timer frequency.. 199.99 BogoMIPS (lpj=399996)"}
+- {"dt": "2022-09-19T23:36:36.759856", "lvl": "target", "msg": "[    0.000962] pid_max: default: 32768 minimum: 301"}
+- {"dt": "2022-09-19T23:36:36.763517", "lvl": "target", "msg": "[    0.001015] LSM: Security Framework initializing"}
+- {"dt": "2022-09-19T23:36:36.763768", "lvl": "target", "msg": "[    0.001051] SELinux:  Initializing."}
+- {"dt": "2022-09-19T23:36:36.775577", "lvl": "target", "msg": "[    0.001147] Mount-cache hash table entries: 8192 (order: 4, 65536 bytes, linear)"}
+- {"dt": "2022-09-19T23:36:36.779298", "lvl": "target", "msg": "[    0.001173] Mountpoint-cache hash table entries: 8192 (order: 4, 65536 bytes, linear)"}
+- {"dt": "2022-09-19T23:36:36.791568", "lvl": "target", "msg": "[    0.002475] rcu: Hierarchical SRCU implementation."}
+- {"dt": "2022-09-19T23:36:36.791858", "lvl": "target", "msg": "[    0.003552] Remapping and enabling EFI services."}
+- {"dt": "2022-09-19T23:36:36.795544", "lvl": "target", "msg": "[    0.003724] smp: Bringing up secondary CPUs ..."}
+- {"dt": "2022-09-19T23:36:36.807555", "lvl": "target", "msg": "[    0.004142] Detected VIPT I-cache on CPU1"}
+- {"dt": "2022-09-19T23:36:36.807843", "lvl": "target", "msg": "[    0.004188] CPU1: Booted secondary processor 0x0000000001 [0x410fd034]"}
+- {"dt": "2022-09-19T23:36:36.808082", "lvl": "target", "msg": "[    0.004571] Detected VIPT I-cache on CPU2"}
+- {"dt": "2022-09-19T23:36:36.823568", "lvl": "target", "msg": "[    0.004594] CPU2: Booted secondary processor 0x0000000002 [0x410fd034]"}
+- {"dt": "2022-09-19T23:36:36.823860", "lvl": "target", "msg": "[    0.004953] Detected VIPT I-cache on CPU3"}
+- {"dt": "2022-09-19T23:36:36.827567", "lvl": "target", "msg": "[    0.004975] CPU3: Booted secondary processor 0x0000000003 [0x410fd034]"}
+- {"dt": "2022-09-19T23:36:36.827819", "lvl": "target", "msg": "[    0.005024] smp: Brought up 1 node, 4 CPUs"}
+- {"dt": "2022-09-19T23:36:36.839567", "lvl": "target", "msg": "[    0.005072] SMP: Total of 4 processors activated."}
+- {"dt": "2022-09-19T23:36:36.839856", "lvl": "target", "msg": "[    0.005081] CPU features: detected: 32-bit EL0 Support"}
+- {"dt": "2022-09-19T23:36:36.843576", "lvl": "target", "msg": "[    0.005090] CPU features: detected: 32-bit EL1 Support"}
+- {"dt": "2022-09-19T23:36:36.855568", "lvl": "target", "msg": "[    0.005100] CPU features: detected: CRC32 instructions"}
+- {"dt": "2022-09-19T23:36:36.855858", "lvl": "target", "msg": "[    0.011692] CPU: All CPU(s) started at EL2"}
+- {"dt": "2022-09-19T23:36:36.859595", "lvl": "target", "msg": "[    0.011722] alternatives: patching kernel code"}
+- {"dt": "2022-09-19T23:36:36.859844", "lvl": "target", "msg": "[    0.013033] devtmpfs: initialized"}
+- {"dt": "2022-09-19T23:36:36.871576", "lvl": "target", "msg": "[    0.017778] Registered cp15_barrier emulation handler"}
+- {"dt": "2022-09-19T23:36:36.871866", "lvl": "target", "msg": "[    0.017795] Registered setend emulation handler"}
+- {"dt": "2022-09-19T23:36:36.875620", "lvl": "target", "msg": "[    0.017809] KASLR disabled due to lack of seed"}
+- {"dt": "2022-09-19T23:36:36.887578", "lvl": "target", "msg": "[    0.017942] clocksource: jiffies: mask: 0xffffffff max_cycles: 0xffffffff, max_idle_ns: 7645041785100000 ns"}
+- {"dt": "2022-09-19T23:36:36.891399", "lvl": "target", "msg": "[    0.017967] futex hash table entries: 1024 (order: 4, 65536 bytes, linear)"}
+- {"dt": "2022-09-19T23:36:36.903570", "lvl": "target", "msg": "[    0.020416] pinctrl core: initialized pinctrl subsystem"}
+- {"dt": "2022-09-19T23:36:36.903859", "lvl": "target", "msg": "[    0.021196] SMBIOS 3.0 present."}
+- {"dt": "2022-09-19T23:36:36.907640", "lvl": "target", "msg": "[    0.021218] DMI: Unknown Unknown Product/Unknown Product, BIOS 2022.07-rc3 07/01/2022"}
+- {"dt": "2022-09-19T23:36:36.919567", "lvl": "target", "msg": "[    0.021562] NET: Registered PF_NETLINK/PF_ROUTE protocol family"}
+- {"dt": "2022-09-19T23:36:36.923419", "lvl": "target", "msg": "[    0.022630] DMA: preallocated 512 KiB GFP_KERNEL pool for atomic allocations"}
+- {"dt": "2022-09-19T23:36:36.935571", "lvl": "target", "msg": "[    0.022730] DMA: preallocated 512 KiB GFP_KERNEL|GFP_DMA pool for atomic allocations"}
+- {"dt": "2022-09-19T23:36:36.939442", "lvl": "target", "msg": "[    0.022874] DMA: preallocated 512 KiB GFP_KERNEL|GFP_DMA32 pool for atomic allocations"}
+- {"dt": "2022-09-19T23:36:36.951579", "lvl": "target", "msg": "[    0.022943] audit: initializing netlink subsys (disabled)"}
+- {"dt": "2022-09-19T23:36:36.951870", "lvl": "target", "msg": "[    0.023050] audit: type=2000 audit(0.020:1): state=initialized audit_enabled=0 res=1"}
+- {"dt": "2022-09-19T23:36:36.955704", "lvl": "target", "msg": "[    0.023859] thermal_sys: Registered thermal governor 'step_wise'"}
+- {"dt": "2022-09-19T23:36:36.967568", "lvl": "target", "msg": "[    0.023864] thermal_sys: Registered thermal governor 'power_allocator'"}
+- {"dt": "2022-09-19T23:36:36.967860", "lvl": "target", "msg": "[    0.023971] cpuidle: using governor menu"}
+- {"dt": "2022-09-19T23:36:36.971705", "lvl": "target", "msg": "[    0.024053] NET: Registered PF_QIPCRTR protocol family"}
+- {"dt": "2022-09-19T23:36:36.983570", "lvl": "target", "msg": "[    0.024197] hw-breakpoint: found 6 breakpoint and 4 watchpoint registers."}
+- {"dt": "2022-09-19T23:36:36.983860", "lvl": "target", "msg": "[    0.024273] ASID allocator initialised with 32768 entries"}
+- {"dt": "2022-09-19T23:36:36.987724", "lvl": "target", "msg": "[    0.025066] Serial: AMBA PL011 UART driver"}
+- {"dt": "2022-09-19T23:36:36.999569", "lvl": "target", "msg": "[    0.047472] HugeTLB registered 1.00 GiB page size, pre-allocated 0 pages"}
+- {"dt": "2022-09-19T23:36:37.003512", "lvl": "target", "msg": "[    0.047502] HugeTLB registered 32.0 MiB page size, pre-allocated 0 pages"}
+- {"dt": "2022-09-19T23:36:37.015573", "lvl": "target", "msg": "[    0.047514] HugeTLB registered 2.00 MiB page size, pre-allocated 0 pages"}
+- {"dt": "2022-09-19T23:36:37.015865", "lvl": "target", "msg": "[    0.047526] HugeTLB registered 64.0 KiB page size, pre-allocated 0 pages"}
+- {"dt": "2022-09-19T23:36:37.019764", "lvl": "target", "msg": "[    0.048541] cryptd: max_cpu_qlen set to 1000"}
+- {"dt": "2022-09-19T23:36:37.031572", "lvl": "target", "msg": "[    0.051172] ACPI: Interpreter disabled."}
+- {"dt": "2022-09-19T23:36:37.031861", "lvl": "target", "msg": "[    0.052259] iommu: Default domain type: Translated "}
+- {"dt": "2022-09-19T23:36:37.035774", "lvl": "target", "msg": "[    0.052271] iommu: DMA domain TLB invalidation policy: strict mode "}
+- {"dt": "2022-09-19T23:36:37.036024", "lvl": "target", "msg": "[    0.052486] vgaarb: loaded"}
+- {"dt": "2022-09-19T23:36:37.047570", "lvl": "target", "msg": "[    0.052716] SCSI subsystem initialized"}
+- {"dt": "2022-09-19T23:36:37.047859", "lvl": "target", "msg": "[    0.052974] usbcore: registered new interface driver usbfs"}
+- {"dt": "2022-09-19T23:36:37.051798", "lvl": "target", "msg": "[    0.053012] usbcore: registered new interface driver hub"}
+- {"dt": "2022-09-19T23:36:37.063571", "lvl": "target", "msg": "[    0.053041] usbcore: registered new device driver usb"}
+- {"dt": "2022-09-19T23:36:37.063862", "lvl": "target", "msg": "[    0.053360] mc: Linux media interface: v0.10"}
+- {"dt": "2022-09-19T23:36:37.067807", "lvl": "target", "msg": "[    0.053385] videodev: Linux video capture interface: v2.00"}
+- {"dt": "2022-09-19T23:36:37.079580", "lvl": "target", "msg": "[    0.053418] pps_core: LinuxPPS API ver. 1 registered"}
+- {"dt": "2022-09-19T23:36:37.079869", "lvl": "target", "msg": "[    0.053427] pps_core: Software ver. 5.3.6 - Copyright 2005-2007 Rodolfo Giometti <giometti@linux.it>"}
+- {"dt": "2022-09-19T23:36:37.083833", "lvl": "target", "msg": "[    0.053448] PTP clock support registered"}
+- {"dt": "2022-09-19T23:36:37.095563", "lvl": "target", "msg": "[    0.053542] EDAC MC: Ver: 3.0.0"}
+- {"dt": "2022-09-19T23:36:37.095854", "lvl": "target", "msg": "[    0.054126] Registered efivars operations"}
+- {"dt": "2022-09-19T23:36:37.099830", "lvl": "target", "msg": "[    0.054382] zynqmp-ipi-mbox mailbox@ff990400: Registered ZynqMP IPI mbox with TX/RX channels."}
+- {"dt": "2022-09-19T23:36:37.111564", "lvl": "target", "msg": "[    0.054813] FPGA manager framework"}
+- {"dt": "2022-09-19T23:36:37.111854", "lvl": "target", "msg": "[    0.054876] Advanced Linux Sound Architecture Driver Initialized."}
+- {"dt": "2022-09-19T23:36:37.112094", "lvl": "target", "msg": "[    0.055338] Bluetooth: Core ver 2.22"}
+- {"dt": "2022-09-19T23:36:37.116072", "lvl": "target", "msg": "[    0.055366] NET: Registered PF_BLUETOOTH protocol family"}
+- {"dt": "2022-09-19T23:36:37.127572", "lvl": "target", "msg": "[    0.055377] Bluetooth: HCI device and connection manager initialized"}
+- {"dt": "2022-09-19T23:36:37.127860", "lvl": "target", "msg": "[    0.055391] Bluetooth: HCI socket layer initialized"}
+- {"dt": "2022-09-19T23:36:37.143565", "lvl": "target", "msg": "[    0.055403] Bluetooth: L2CAP socket layer initialized"}
+- {"dt": "2022-09-19T23:36:37.143854", "lvl": "target", "msg": "[    0.055420] Bluetooth: SCO socket layer initialized"}
+- {"dt": "2022-09-19T23:36:37.144094", "lvl": "target", "msg": "[    0.055820] clocksource: Switched to clocksource arch_sys_counter"}
+- {"dt": "2022-09-19T23:36:37.148107", "lvl": "target", "msg": "[    0.055944] VFS: Disk quotas dquot_6.6.0"}
+- {"dt": "2022-09-19T23:36:37.159566", "lvl": "target", "msg": "[    0.055989] VFS: Dquot-cache hash table entries: 512 (order 0, 4096 bytes)"}
+- {"dt": "2022-09-19T23:36:37.159859", "lvl": "target", "msg": "[    0.056211] pnp: PnP ACPI: disabled"}
+- {"dt": "2022-09-19T23:36:37.163899", "lvl": "target", "msg": "[    0.061059] NET: Registered PF_INET protocol family"}
+- {"dt": "2022-09-19T23:36:37.175453", "lvl": "target", "msg": "[    0.061191] IP idents hash table entries: 65536 (order: 7, 524288 bytes, linear)"}
+- {"dt": "2022-09-19T23:36:37.179029", "lvl": "target", "msg": "[    0.062586] tcp_listen_portaddr_hash hash table entries: 2048 (order: 3, 32768 bytes, linear)"}
+- {"dt": "2022-09-19T23:36:37.191527", "lvl": "target", "msg": "[    0.062664] TCP established hash table entries: 32768 (order: 6, 262144 bytes, linear)"}
+- {"dt": "2022-09-19T23:36:37.198849", "lvl": "target", "msg": "[    0.062861] TCP bind hash table entries: 32768 (order: 7, 524288 bytes, linear)"}
+- {"dt": "2022-09-19T23:36:37.207560", "lvl": "target", "msg": "[    0.063229] TCP: Hash tables configured (established 32768 bind 32768)"}
+- {"dt": "2022-09-19T23:36:37.207874", "lvl": "target", "msg": "[    0.063313] UDP hash table entries: 2048 (order: 4, 65536 bytes, linear)"}
+- {"dt": "2022-09-19T23:36:37.223559", "lvl": "target", "msg": "[    0.063391] UDP-Lite hash table entries: 2048 (order: 4, 65536 bytes, linear)"}
+- {"dt": "2022-09-19T23:36:37.223848", "lvl": "target", "msg": "[    0.063557] NET: Registered PF_UNIX/PF_LOCAL protocol family"}
+- {"dt": "2022-09-19T23:36:37.227961", "lvl": "target", "msg": "[    0.063860] RPC: Registered named UNIX socket transport module."}
+- {"dt": "2022-09-19T23:36:37.239538", "lvl": "target", "msg": "[    0.063872] RPC: Registered udp transport module."}
+- {"dt": "2022-09-19T23:36:37.239823", "lvl": "target", "msg": "[    0.063881] RPC: Registered tcp transport module."}
+- {"dt": "2022-09-19T23:36:37.243959", "lvl": "target", "msg": "[    0.063890] RPC: Registered tcp NFSv4.1 backchannel transport module."}
+- {"dt": "2022-09-19T23:36:37.255559", "lvl": "target", "msg": "[    0.064547] PCI: CLS 0 bytes, default 64"}
+- {"dt": "2022-09-19T23:36:37.255845", "lvl": "target", "msg": "[    0.064735] Unpacking initramfs..."}
+- {"dt": "2022-09-19T23:36:37.259977", "lvl": "target", "msg": "[    0.076073] armv8-pmu pmu: hw perfevents: no interrupt-affinity property, guessing."}
+- {"dt": "2022-09-19T23:36:37.271545", "lvl": "target", "msg": "[    0.079886] hw perfevents: enabled with armv8_pmuv3 PMU driver, 7 counters available"}
+- {"dt": "2022-09-19T23:36:37.271832", "lvl": "target", "msg": "[    0.080222] kvm [1]: IPA Size Limit: 40 bits"}
+- {"dt": "2022-09-19T23:36:37.275980", "lvl": "target", "msg": "[    0.081504] kvm [1]: vgic interrupt IRQ9"}
+- {"dt": "2022-09-19T23:36:37.287551", "lvl": "target", "msg": "[    0.081614] kvm [1]: Hyp mode initialized successfully"}
+- {"dt": "2022-09-19T23:36:37.287859", "lvl": "target", "msg": "[    0.084916] Initialise system trusted keyrings"}
+- {"dt": "2022-09-19T23:36:37.292030", "lvl": "target", "msg": "[    0.085031] workingset: timestamp_bits=42 max_order=20 bucket_order=0"}
+- {"dt": "2022-09-19T23:36:37.303582", "lvl": "target", "msg": "[    0.090770] squashfs: version 4.0 (2009/01/31) Phillip Lougher"}
+- {"dt": "2022-09-19T23:36:37.303868", "lvl": "target", "msg": "[    0.091215] NFS: Registering the id_resolver key type"}
+- {"dt": "2022-09-19T23:36:37.304103", "lvl": "target", "msg": "[    0.091244] Key type id_resolver registered"}
+- {"dt": "2022-09-19T23:36:37.308325", "lvl": "target", "msg": "[    0.091253] Key type id_legacy registered"}
+- {"dt": "2022-09-19T23:36:37.319573", "lvl": "target", "msg": "[    0.091332] nfs4filelayout_init: NFSv4 File Layout Driver Registering..."}
+- {"dt": "2022-09-19T23:36:37.323877", "lvl": "target", "msg": "[    0.091345] nfs4flexfilelayout_init: NFSv4 Flexfile Layout Driver Registering..."}
+- {"dt": "2022-09-19T23:36:37.335591", "lvl": "target", "msg": "[    0.091537] 9p: Installing v9fs 9p2000 file system support"}
+- {"dt": "2022-09-19T23:36:37.335878", "lvl": "target", "msg": "[    0.124522] NET: Registered PF_ALG protocol family"}
+- {"dt": "2022-09-19T23:36:37.340143", "lvl": "target", "msg": "[    0.124565] Key type asymmetric registered"}
+- {"dt": "2022-09-19T23:36:37.351596", "lvl": "target", "msg": "[    0.124575] Asymmetric key parser 'x509' registered"}
+- {"dt": "2022-09-19T23:36:37.351881", "lvl": "target", "msg": "[    0.124664] Block layer SCSI generic (bsg) driver version 0.4 loaded (major 244)"}
+- {"dt": "2022-09-19T23:36:37.356165", "lvl": "target", "msg": "[    0.124754] io scheduler mq-deadline registered"}
+- {"dt": "2022-09-19T23:36:37.356416", "lvl": "target", "msg": "[    0.124765] io scheduler kyber registered"}
+- {"dt": "2022-09-19T23:36:37.367595", "lvl": "target", "msg": "[    0.131489] EINJ: ACPI disabled."}
+- {"dt": "2022-09-19T23:36:37.367880", "lvl": "target", "msg": "[    0.140384] Serial: 8250/16550 driver, 4 ports, IRQ sharing enabled"}
+- {"dt": "2022-09-19T23:36:37.372178", "lvl": "target", "msg": "[    0.142362] msm_serial: driver initialized"}
+- {"dt": "2022-09-19T23:36:37.383594", "lvl": "target", "msg": "[    0.143374] cacheinfo: Unable to detect cache hierarchy for CPU 0"}
+- {"dt": "2022-09-19T23:36:37.383882", "lvl": "target", "msg": "[    0.147918] loop: module loaded"}
+- {"dt": "2022-09-19T23:36:37.384116", "lvl": "target", "msg": "[    0.148872] megasas: 07.717.02.00-rc1"}
+- {"dt": "2022-09-19T23:36:37.388416", "lvl": "target", "msg": "[    0.154253] thunder_xcv, ver 1.0"}
+- {"dt": "2022-09-19T23:36:37.399617", "lvl": "target", "msg": "[    0.154300] thunder_bgx, ver 1.0"}
+- {"dt": "2022-09-19T23:36:37.399903", "lvl": "target", "msg": "[    0.154332] nicpf, ver 1.0"}
+- {"dt": "2022-09-19T23:36:37.400137", "lvl": "target", "msg": "[    0.155285] hclge is initializing"}
+- {"dt": "2022-09-19T23:36:37.404454", "lvl": "target", "msg": "[    0.155308] hns3: Hisilicon Ethernet Network Driver for Hip08 Family - version"}
+- {"dt": "2022-09-19T23:36:37.415618", "lvl": "target", "msg": "[    0.155322] hns3: Copyright (c) 2017 Huawei Corporation."}
+- {"dt": "2022-09-19T23:36:37.415904", "lvl": "target", "msg": "[    0.155366] e1000: Intel(R) PRO/1000 Network Driver"}
+- {"dt": "2022-09-19T23:36:37.420251", "lvl": "target", "msg": "[    0.155376] e1000: Copyright (c) 1999-2006 Intel Corporation."}
+- {"dt": "2022-09-19T23:36:37.431595", "lvl": "target", "msg": "[    0.155413] e1000e: Intel(R) PRO/1000 Network Driver"}
+- {"dt": "2022-09-19T23:36:37.431881", "lvl": "target", "msg": "[    0.155422] e1000e: Copyright(c) 1999 - 2015 Intel Corporation."}
+- {"dt": "2022-09-19T23:36:37.436246", "lvl": "target", "msg": "[    0.155461] igb: Intel(R) Gigabit Ethernet Network Driver"}
+- {"dt": "2022-09-19T23:36:37.447613", "lvl": "target", "msg": "[    0.155472] igb: Copyright (c) 2007-2014 Intel Corporation."}
+- {"dt": "2022-09-19T23:36:37.447899", "lvl": "target", "msg": "[    0.155502] igbvf: Intel(R) Gigabit Virtual Function Network Driver"}
+- {"dt": "2022-09-19T23:36:37.452278", "lvl": "target", "msg": "[    0.155512] igbvf: Copyright (c) 2009 - 2012 Intel Corporation."}
+- {"dt": "2022-09-19T23:36:37.463614", "lvl": "target", "msg": "[    0.155611] sky2: driver version 1.30"}
+- {"dt": "2022-09-19T23:36:37.463899", "lvl": "target", "msg": "[    0.156213] VFIO - User Level meta-driver version: 0.3"}
+- {"dt": "2022-09-19T23:36:37.468315", "lvl": "target", "msg": "[    0.157450] ehci_hcd: USB 2.0 'Enhanced' Host Controller (EHCI) Driver"}
+- {"dt": "2022-09-19T23:36:37.479620", "lvl": "target", "msg": "[    0.157473] ehci-pci: EHCI PCI platform driver"}
+- {"dt": "2022-09-19T23:36:37.479904", "lvl": "target", "msg": "[    0.157508] ehci-platform: EHCI generic platform driver"}
+- {"dt": "2022-09-19T23:36:37.484322", "lvl": "target", "msg": "[    0.157605] ohci_hcd: USB 1.1 'Open' Host Controller (OHCI) Driver"}
+- {"dt": "2022-09-19T23:36:37.495617", "lvl": "target", "msg": "[    0.157623] ohci-pci: OHCI PCI platform driver"}
+- {"dt": "2022-09-19T23:36:37.495902", "lvl": "target", "msg": "[    0.157658] ohci-platform: OHCI generic platform driver"}
+- {"dt": "2022-09-19T23:36:37.500326", "lvl": "target", "msg": "[    0.158044] usbcore: registered new interface driver uas"}
+- {"dt": "2022-09-19T23:36:37.511613", "lvl": "target", "msg": "[    0.158084] usbcore: registered new interface driver usb-storage"}
+- {"dt": "2022-09-19T23:36:37.511899", "lvl": "target", "msg": "[    0.158156] usbcore: registered new interface driver usbserial_generic"}
+- {"dt": "2022-09-19T23:36:37.527593", "lvl": "target", "msg": "[    0.158180] usbserial: USB Serial support registered for generic"}
+- {"dt": "2022-09-19T23:36:37.527879", "lvl": "target", "msg": "[    0.159922] i2c_dev: i2c /dev entries driver"}
+- {"dt": "2022-09-19T23:36:37.528114", "lvl": "target", "msg": "[    0.163152] sdhci: Secure Digital Host Controller Interface driver"}
+- {"dt": "2022-09-19T23:36:37.532568", "lvl": "target", "msg": "[    0.163169] sdhci: Copyright(c) Pierre Ossman"}
+- {"dt": "2022-09-19T23:36:37.543611", "lvl": "target", "msg": "[    0.163576] Synopsys Designware Multimedia Card Interface Driver"}
+- {"dt": "2022-09-19T23:36:37.543897", "lvl": "target", "msg": "[    0.164239] sdhci-pltfm: SDHCI platform and OF driver helper"}
+- {"dt": "2022-09-19T23:36:37.559610", "lvl": "target", "msg": "[    0.165483] ledtrig-cpu: registered to indicate activity on CPUs"}
+- {"dt": "2022-09-19T23:36:37.559896", "lvl": "target", "msg": "[    0.166340] SMCCC: SOC_ID: ARCH_SOC_ID not implemented, skipping ...."}
+- {"dt": "2022-09-19T23:36:37.564384", "lvl": "target", "msg": "[    0.166400] zynqmp_firmware_probe Platform Management API v1.1"}
+- {"dt": "2022-09-19T23:36:37.575611", "lvl": "target", "msg": "[    0.166414] zynqmp_firmware_probe Trustzone version v1.0"}
+- {"dt": "2022-09-19T23:36:37.575898", "lvl": "target", "msg": "[    0.198490] usbcore: registered new interface driver usbhid"}
+- {"dt": "2022-09-19T23:36:37.580415", "lvl": "target", "msg": "[    0.198520] usbhid: USB HID core driver"}
+- {"dt": "2022-09-19T23:36:37.591617", "lvl": "target", "msg": "[    0.201512] usbcore: registered new interface driver snd-usb-audio"}
+- {"dt": "2022-09-19T23:36:37.591904", "lvl": "target", "msg": "[    0.202247] NET: Registered PF_PACKET protocol family"}
+- {"dt": "2022-09-19T23:36:37.596430", "lvl": "target", "msg": "[    0.202534] 9pnet: Installing 9P2000 support"}
+- {"dt": "2022-09-19T23:36:37.596682", "lvl": "target", "msg": "[    0.202588] Key type dns_resolver registered"}
+- {"dt": "2022-09-19T23:36:37.607620", "lvl": "target", "msg": "[    0.203126] registered taskstats version 1"}
+- {"dt": "2022-09-19T23:36:37.607906", "lvl": "target", "msg": "[    0.203143] Loading compiled-in X.509 certificates"}
+- {"dt": "2022-09-19T23:36:37.612442", "lvl": "target", "msg": "[    1.107657] Freeing initrd memory: 24708K"}
+- {"dt": "2022-09-19T23:36:37.623620", "lvl": "target", "msg": "[    1.116907] Loaded X.509 cert 'Build time autogenerated kernel key: 9397255a5113921745af46953c49bc895ac535aa'"}
+- {"dt": "2022-09-19T23:36:37.628225", "lvl": "target", "msg": "[    1.129027] ff010000.serial: ttyPS1 at MMIO 0xff010000 (irq = 50, base_baud = 6249999) is a xuartps"}
+- {"dt": "2022-09-19T23:36:37.639617", "lvl": "target", "msg": "[    2.438045] printk: console [ttyPS1] enabled"}
+- {"dt": "2022-09-19T23:36:37.639903", "lvl": "target", "msg": "[    2.446526] mdio_bus ff0e0000.ethernet-ffffffff: mdio has invalid PHY address"}
+- {"dt": "2022-09-19T23:36:37.655617", "lvl": "target", "msg": "[    2.453682] mdio_bus ff0e0000.ethernet-ffffffff: scan phy mdio at address 0"}
+- {"dt": "2022-09-19T23:36:37.660249", "lvl": "target", "msg": "[    2.460726] mdio_bus ff0e0000.ethernet-ffffffff: scan phy mdio at address 1"}
+- {"dt": "2022-09-19T23:36:37.671626", "lvl": "target", "msg": "[    2.467770] mdio_bus ff0e0000.ethernet-ffffffff: scan phy mdio at address 2"}
+- {"dt": "2022-09-19T23:36:37.671912", "lvl": "target", "msg": "[    2.474818] mdio_bus ff0e0000.ethernet-ffffffff: scan phy mdio at address 3"}
+- {"dt": "2022-09-19T23:36:37.687618", "lvl": "target", "msg": "[    2.481867] mdio_bus ff0e0000.ethernet-ffffffff: scan phy mdio at address 4"}
+- {"dt": "2022-09-19T23:36:37.687906", "lvl": "target", "msg": "[    2.488913] mdio_bus ff0e0000.ethernet-ffffffff: scan phy mdio at address 5"}
+- {"dt": "2022-09-19T23:36:37.703624", "lvl": "target", "msg": "[    2.495955] mdio_bus ff0e0000.ethernet-ffffffff: scan phy mdio at address 6"}
+- {"dt": "2022-09-19T23:36:37.703912", "lvl": "target", "msg": "[    2.502999] mdio_bus ff0e0000.ethernet-ffffffff: scan phy mdio at address 7"}
+- {"dt": "2022-09-19T23:36:37.708537", "lvl": "target", "msg": "[    2.510040] mdio_bus ff0e0000.ethernet-ffffffff: scan phy mdio at address 8"}
+- {"dt": "2022-09-19T23:36:37.719591", "lvl": "target", "msg": "[    2.517082] mdio_bus ff0e0000.ethernet-ffffffff: scan phy mdio at address 9"}
+- {"dt": "2022-09-19T23:36:37.724291", "lvl": "target", "msg": "[    2.524128] mdio_bus ff0e0000.ethernet-ffffffff: scan phy mdio at address 10"}
+- {"dt": "2022-09-19T23:36:37.735621", "lvl": "target", "msg": "[    2.531255] mdio_bus ff0e0000.ethernet-ffffffff: scan phy mdio at address 11"}
+- {"dt": "2022-09-19T23:36:37.735909", "lvl": "target", "msg": "[    2.538389] mdio_bus ff0e0000.ethernet-ffffffff: scan phy mdio at address 12"}
+- {"dt": "2022-09-19T23:36:37.751623", "lvl": "target", "msg": "[    2.545516] mdio_bus ff0e0000.ethernet-ffffffff: scan phy mdio at address 13"}
+- {"dt": "2022-09-19T23:36:37.751910", "lvl": "target", "msg": "[    2.552652] mdio_bus ff0e0000.ethernet-ffffffff: scan phy mdio at address 14"}
+- {"dt": "2022-09-19T23:36:37.767623", "lvl": "target", "msg": "[    2.559785] mdio_bus ff0e0000.ethernet-ffffffff: scan phy mdio at address 15"}
+- {"dt": "2022-09-19T23:36:37.767911", "lvl": "target", "msg": "[    2.566912] mdio_bus ff0e0000.ethernet-ffffffff: scan phy mdio at address 16"}
+- {"dt": "2022-09-19T23:36:37.772609", "lvl": "target", "msg": "[    2.574047] mdio_bus ff0e0000.ethernet-ffffffff: scan phy mdio at address 17"}
+- {"dt": "2022-09-19T23:36:37.783618", "lvl": "target", "msg": "[    2.581174] mdio_bus ff0e0000.ethernet-ffffffff: scan phy mdio at address 18"}
+- {"dt": "2022-09-19T23:36:37.788371", "lvl": "target", "msg": "[    2.588301] mdio_bus ff0e0000.ethernet-ffffffff: scan phy mdio at address 19"}
+- {"dt": "2022-09-19T23:36:37.799632", "lvl": "target", "msg": "[    2.595434] mdio_bus ff0e0000.ethernet-ffffffff: scan phy mdio at address 20"}
+- {"dt": "2022-09-19T23:36:37.799917", "lvl": "target", "msg": "[    2.602561] mdio_bus ff0e0000.ethernet-ffffffff: scan phy mdio at address 21"}
+- {"dt": "2022-09-19T23:36:37.815584", "lvl": "target", "msg": "[    2.609687] mdio_bus ff0e0000.ethernet-ffffffff: scan phy mdio at address 22"}
+- {"dt": "2022-09-19T23:36:37.815871", "lvl": "target", "msg": "[    2.616814] mdio_bus ff0e0000.ethernet-ffffffff: scan phy mdio at address 23"}
+- {"dt": "2022-09-19T23:36:37.831622", "lvl": "target", "msg": "[    2.623945] mdio_bus ff0e0000.ethernet-ffffffff: scan phy mdio at address 24"}
+- {"dt": "2022-09-19T23:36:37.831909", "lvl": "target", "msg": "[    2.631073] mdio_bus ff0e0000.ethernet-ffffffff: scan phy mdio at address 25"}
+- {"dt": "2022-09-19T23:36:37.836659", "lvl": "target", "msg": "[    2.638202] mdio_bus ff0e0000.ethernet-ffffffff: scan phy mdio at address 26"}
+- {"dt": "2022-09-19T23:36:37.847622", "lvl": "target", "msg": "[    2.645328] mdio_bus ff0e0000.ethernet-ffffffff: scan phy mdio at address 27"}
+- {"dt": "2022-09-19T23:36:37.852438", "lvl": "target", "msg": "[    2.652453] mdio_bus ff0e0000.ethernet-ffffffff: scan phy mdio at address 28"}
+- {"dt": "2022-09-19T23:36:37.863623", "lvl": "target", "msg": "[    2.659581] mdio_bus ff0e0000.ethernet-ffffffff: scan phy mdio at address 29"}
+- {"dt": "2022-09-19T23:36:37.863911", "lvl": "target", "msg": "[    2.666709] mdio_bus ff0e0000.ethernet-ffffffff: scan phy mdio at address 30"}
+- {"dt": "2022-09-19T23:36:37.879617", "lvl": "target", "msg": "[    2.673842] mdio_bus ff0e0000.ethernet-ffffffff: scan phy mdio at address 31"}
+- {"dt": "2022-09-19T23:36:37.884465", "lvl": "target", "msg": "[    2.681302] macb ff0e0000.ethernet eth0: Cadence GEM rev 0x50070106 at 0xff0e0000 irq 37 (00:0a:35:0e:88:50)"}
+- {"dt": "2022-09-19T23:36:37.895620", "lvl": "target", "msg": "[    2.696565] clk: couldn't set sdio0_ref clk rate to 187498123 (-16), current rate: 199999998"}
+- {"dt": "2022-09-19T23:36:37.911624", "lvl": "target", "msg": "[    2.697816] clk: couldn't set sdio1_ref clk rate to 187498123 (-16), current rate: 199999998"}
+- {"dt": "2022-09-19T23:36:37.911912", "lvl": "target", "msg": "[    2.700587] cfg80211: Loading compiled-in X.509 certificates for regulatory database"}
+- {"dt": "2022-09-19T23:36:37.927488", "lvl": "target", "msg": "[    2.701327] cfg80211: Loaded X.509 cert 'sforshee: 00b28ddf47aef9cea7'"}
+- {"dt": "2022-09-19T23:36:37.927775", "lvl": "target", "msg": "[    2.701545] zynqmp_pll_disable() clock disable failed for dpll_int, ret = -13"}
+- {"dt": "2022-09-19T23:36:37.928012", "lvl": "target", "msg": "[    2.703177] ALSA device list:"}
+- {"dt": "2022-09-19T23:36:37.932838", "lvl": "target", "msg": "[    2.703182]   No soundcards found."}
+- {"dt": "2022-09-19T23:36:37.943482", "lvl": "target", "msg": "[    2.703361] platform regulatory.0: Direct firmware load for regulatory.db failed with error -2"}
+- {"dt": "2022-09-19T23:36:37.948389", "lvl": "target", "msg": "[    2.703370] cfg80211: failed to load regulatory.db"}
+- {"dt": "2022-09-19T23:36:37.959486", "lvl": "target", "msg": "[    2.705513] clk: couldn't set sdio0_ref clk rate to 187498123 (-16), current rate: 199999998"}
+- {"dt": "2022-09-19T23:36:37.964419", "lvl": "target", "msg": "[    2.713947] clk: couldn't set sdio1_ref clk rate to 187498123 (-16), current rate: 199999998"}
+- {"dt": "2022-09-19T23:36:38.007486", "lvl": "target", "msg": "[    2.805564] mmc1: SDHCI controller on ff170000.mmc [ff170000.mmc] using ADMA 64-bit"}
+- {"dt": "2022-09-19T23:36:38.012425", "lvl": "target", "msg": "[    2.805744] mmc0: SDHCI controller on ff160000.mmc [ff160000.mmc] using ADMA 64-bit"}
+- {"dt": "2022-09-19T23:36:38.023483", "lvl": "target", "msg": "[    2.822431] Freeing unused kernel memory: 5184K"}
+- {"dt": "2022-09-19T23:36:38.028425", "lvl": "target", "msg": "[    2.827068] Run /init as init process"}
+- {"dt": "2022-09-19T23:36:38.039496", "lvl": "target", "msg": "[    2.845876] mmc1: new SDHC card at address 0001"}
+- {"dt": "2022-09-19T23:36:38.058609", "lvl": "target", "msg": "[    2.851213] mmcblk1: mmc1:0001 SD16G 14.6 GiB "}
+- {"dt": "2022-09-19T23:36:38.071501", "lvl": "target", "msg": "[    2.870319] GPT:Primary header thinks Alt. header is not at the end of the disk."}
+- {"dt": "2022-09-19T23:36:38.071790", "lvl": "target", "msg": "[    2.877778] GPT:4456521 != 30547967"}
+- {"dt": "2022-09-19T23:36:38.087504", "lvl": "target", "msg": "[    2.881294] GPT:Alternate GPT header not at the end of the disk."}
+- {"dt": "2022-09-19T23:36:38.087792", "lvl": "target", "msg": "[    2.887329] GPT:4456521 != 30547967"}
+- {"dt": "2022-09-19T23:36:38.088026", "lvl": "target", "msg": "[    2.887342] GPT: Use GNU Parted to correct GPT errors."}
+- {"dt": "2022-09-19T23:36:38.092952", "lvl": "target", "msg": "[    2.887367]  mmcblk1: p1 p2"}
+- {"dt": "2022-09-19T23:36:38.119511", "lvl": "target", "msg": "[    2.910770] tpm_tis_core: module verification failed: signature and/or required key missing - tainting kernel"}
+- {"dt": "2022-09-19T23:36:38.119799", "lvl": "target", "msg": "[    2.922852] mmc0: new HS200 MMC card at address 0001"}
+- {"dt": "2022-09-19T23:36:38.124749", "lvl": "target", "msg": "[    2.928466] mmcblk0: mmc0:0001 S0J56X 14.8 GiB "}
+- {"dt": "2022-09-19T23:36:38.135496", "lvl": "target", "msg": "[    2.934827] mmcblk0boot0: mmc0:0001 S0J56X 31.5 MiB "}
+- {"dt": "2022-09-19T23:36:38.140505", "lvl": "target", "msg": "[    2.941123] mmcblk0boot1: mmc0:0001 S0J56X 31.5 MiB "}
+- {"dt": "2022-09-19T23:36:38.170617", "lvl": "target", "msg": "[    2.963849] mmcblk0rpmb: mmc0:0001 S0J56X 4.00 MiB, chardev (235:0)"}
+- {"dt": "2022-09-19T23:36:38.506584", "lvl": "target", "msg": "[    3.314740] random: fast init done"}
+- {"dt": "2022-09-19T23:36:38.538587", "lvl": "target", "msg": "[    3.327919] EXT4-fs (mmcblk1p2): mounted filesystem with ordered data mode. Opts: (null). Quota mode: none."}
+- {"dt": "2022-09-19T23:36:40.252357", "lvl": "target", "msg": "[    5.055082] SELinux:  Class mctp_socket not defined in policy."}
+- {"dt": "2022-09-19T23:36:40.263516", "lvl": "target", "msg": "[    5.061022] SELinux:  Class anon_inode not defined in policy."}
+- {"dt": "2022-09-19T23:36:40.268574", "lvl": "target", "msg": "[    5.066770] SELinux: the above unknown classes and permissions will be allowed"}
+- {"dt": "2022-09-19T23:36:40.279512", "lvl": "target", "msg": "[    5.082309] SELinux:  policy capability network_peer_controls=1"}
+- {"dt": "2022-09-19T23:36:40.279800", "lvl": "target", "msg": "[    5.088365] SELinux:  policy capability open_perms=1"}
+- {"dt": "2022-09-19T23:36:40.295510", "lvl": "target", "msg": "[    5.093346] SELinux:  policy capability extended_socket_class=1"}
+- {"dt": "2022-09-19T23:36:40.295797", "lvl": "target", "msg": "[    5.099277] SELinux:  policy capability always_check_network=0"}
+- {"dt": "2022-09-19T23:36:40.300831", "lvl": "target", "msg": "[    5.105119] SELinux:  policy capability cgroup_seclabel=1"}
+- {"dt": "2022-09-19T23:36:40.311509", "lvl": "target", "msg": "[    5.110545] SELinux:  policy capability nnp_nosuid_transition=1"}
+- {"dt": "2022-09-19T23:36:40.316606", "lvl": "target", "msg": "[    5.116469] SELinux:  policy capability genfs_seclabel_symlinks=0"}
+- {"dt": "2022-09-19T23:36:40.330645", "lvl": "target", "msg": "[    5.122574] SELinux:  policy capability ioctl_skip_cloexec=0"}
+- {"dt": "2022-09-19T23:36:40.380326", "lvl": "target", "msg": "[    5.179988] audit: type=1403 audit(5.176:2): auid=4294967295 ses=4294967295 lsm=selinux res=1"}
+- {"dt": "2022-09-19T23:36:40.412353", "lvl": "target", "msg": "[    5.209240] systemd[1]: Successfully loaded SELinux policy in 625.950ms."}
+- {"dt": "2022-09-19T23:36:40.716219", "lvl": "target", "msg": "[    5.510021] systemd[1]: System time before build time, advancing clock."}
+- {"dt": "2022-09-19T23:36:40.972225", "lvl": "target", "msg": "[    5.756537] audit: type=1400 audit(1616485768.244:3): avc:  denied  { integrity } for  pid=1 comm=\\\"systemd\\\" lockdown_reason=\\\"unsigned module loading\\\" scontext=system_u:system_r:init_t:s0-s15:c0.c1023 tcontext=system_u:system_r:init_t:s0-s15:c0.c1023 tclass=lockdown permissive=1"}
+- {"dt": "2022-09-19T23:36:40.986485", "lvl": "target", "msg": "[    5.783313] NET: Registered PF_INET6 protocol family"}
+- {"dt": "2022-09-19T23:36:41.047363", "lvl": "target", "msg": "[    5.845247] Segment Routing with IPv6"}
+- {"dt": "2022-09-19T23:36:41.052521", "lvl": "target", "msg": "[    5.849010] In-situ OAM (IOAM) with IPv6"}
+- {"dt": "2022-09-19T23:36:41.114478", "lvl": "target", "msg": "[    5.907779] systemd[1]: Relabelled /dev, /dev/shm, /run, /sys/fs/cgroup in 35.974ms."}
+- {"dt": "2022-09-19T23:36:41.239367", "lvl": "target", "msg": "[    6.026950] systemd[1]: systemd 247.6+ running in system mode. (+PAM +AUDIT +SELINUX +IMA -APPARMOR -SMACK +SYSVINIT +UTMP -LIBCRYPTSETUP -GCRYPT -GNUTLS +ACL +XZ -LZ4 -ZSTD -SECCOMP +BLKID -ELFUTILS +KMOD -IDN2 -IDN -PCRE2 default-hierarchy=hybrid)"}
+- {"dt": "2022-09-19T23:36:41.258502", "lvl": "target", "msg": "[    6.049970] systemd[1]: Detected architecture arm64."}
+- {"dt": "2022-09-19T23:36:41.322482", "lvl": "target", "msg": "[    6.114050] systemd[1]: Set hostname to <ledge-qemuarm64>."}
+- {"dt": "2022-09-19T23:36:41.463350", "lvl": "target", "msg": "[    6.244590] audit: type=1400 audit(1616485768.732:4): avc:  denied  { read } for  pid=246 comm=\\\"systemd-gpt-aut\\\" name=\\\"mmcblk1\\\" dev=\\\"devtmpfs\\\" ino=143 scontext=system_u:system_r:systemd_generator_t:s0-s15:c0.c1023 tcontext=system_u:object_r:removable_device_t:s0 tclass=blk_file permissive=1"}
+- {"dt": "2022-09-19T23:36:41.495351", "lvl": "target", "msg": "[    6.270369] audit: type=1400 audit(1616485768.732:5): avc:  denied  { open } for  pid=246 comm=\\\"systemd-gpt-aut\\\" path=\\\"/dev/mmcblk1\\\" dev=\\\"devtmpfs\\\" ino=143 scontext=system_u:system_r:systemd_generator_t:s0-s15:c0.c1023 tcontext=system_u:object_r:removable_device_t:s0 tclass=blk_file permissive=1"}
+- {"dt": "2022-09-19T23:36:41.516335", "lvl": "target", "msg": "[    6.296579] audit: type=1400 audit(1616485768.732:6): avc:  denied  { getattr } for  pid=246 comm=\\\"systemd-gpt-aut\\\" path=\\\"/dev/mmcblk1\\\" dev=\\\"devtmpfs\\\" ino=143 scontext=system_u:system_r:systemd_generator_t:s0-s15:c0.c1023 tcontext=system_u:object_r:removable_device_t:s0 tclass=blk_file permissive=1"}
+- {"dt": "2022-09-19T23:36:41.548354", "lvl": "target", "msg": "[    6.323061] audit: type=1400 audit(1616485768.764:7): avc:  denied  { ioctl } for  pid=246 comm=\\\"systemd-gpt-aut\\\" path=\\\"/dev/mmcblk1\\\" dev=\\\"devtmpfs\\\" ino=143 ioctlcmd=0x1272 scontext=system_u:system_r:systemd_generator_t:s0-s15:c0.c1023 tcontext=system_u:object_r:removable_device_t:s0 tclass=blk_file permissive=1"}
+- {"dt": "2022-09-19T23:36:41.575355", "lvl": "target", "msg": "[    6.359293] systemd-sysv-generator[251]: SysV service '/etc/init.d/conntrack-failover' lacks a native systemd unit file. Automatically generating a unit file for compatibility. Please update package to include a native systemd unit file, in order to make it more safe and robust."}
+- {"dt": "2022-09-19T23:36:41.610464", "lvl": "target", "msg": "[    6.384220] systemd-sysv-generator[251]: SysV service '/etc/init.d/conntrackd' lacks a native systemd unit file. Automatically generating a unit file for compatibility. Please update package to include a native systemd unit file, in order to make it more safe and robust."}
+- {"dt": "2022-09-19T23:36:43.356438", "lvl": "target", "msg": "[    8.159091] systemd[1]: Queued start job for default target Multi-User System."}
+- {"dt": "2022-09-19T23:36:43.371048", "lvl": "target", "msg": "[    8.167403] random: systemd: uninitialized urandom read (16 bytes read)"}
+- {"dt": "2022-09-19T23:36:43.415260", "lvl": "target", "msg": "[    8.211196] systemd[1]: Created slice system-getty.slice."}
+- {"dt": "2022-09-19T23:36:43.415635", "lvl": "target", "msg": "[    8.217757] random: systemd: uninitialized urandom read (16 bytes read)"}
+- {"dt": "2022-09-19T23:36:43.431263", "lvl": "target", "msg": "[    8.226534] systemd[1]: Created slice system-modprobe.slice."}
+- {"dt": "2022-09-19T23:36:43.431548", "lvl": "target", "msg": "[    8.232383] random: systemd: uninitialized urandom read (16 bytes read)"}
+- {"dt": "2022-09-19T23:36:43.447263", "lvl": "target", "msg": "[    8.240926] systemd[1]: Created slice system-serial\\x2dgetty.slice."}
+- {"dt": "2022-09-19T23:36:43.447550", "lvl": "target", "msg": "[    8.249229] systemd[1]: Created slice User and Session Slice."}
+- {"dt": "2022-09-19T23:36:43.463268", "lvl": "target", "msg": "[    8.255783] systemd[1]: Started Dispatch Password Requests to Console Directory Watch."}
+- {"dt": "2022-09-19T23:36:43.463554", "lvl": "target", "msg": "[    8.264331] systemd[1]: Started Forward Password Requests to Wall Directory Watch."}
+- {"dt": "2022-09-19T23:36:43.468867", "lvl": "target", "msg": "[    8.272372] systemd[1]: Reached target Remote File Systems."}
+- {"dt": "2022-09-19T23:36:43.479271", "lvl": "target", "msg": "[    8.278124] systemd[1]: Reached target Slices."}
+- {"dt": "2022-09-19T23:36:43.479563", "lvl": "target", "msg": "[    8.282793] systemd[1]: Reached target System Time Set."}
+- {"dt": "2022-09-19T23:36:43.484893", "lvl": "target", "msg": "[    8.288197] systemd[1]: Reached target System Time Synchronized."}
+- {"dt": "2022-09-19T23:36:43.527263", "lvl": "target", "msg": "[    8.324361] systemd[1]: Listening on RPCbind Server Activation Socket."}
+- {"dt": "2022-09-19T23:36:43.532664", "lvl": "target", "msg": "[    8.331524] systemd[1]: Reached target RPC Port Mapper."}
+- {"dt": "2022-09-19T23:36:43.543265", "lvl": "target", "msg": "[    8.343957] systemd[1]: Listening on Syslog Socket."}
+- {"dt": "2022-09-19T23:36:43.548670", "lvl": "target", "msg": "[    8.349955] systemd[1]: Listening on initctl Compatibility Named Pipe."}
+- {"dt": "2022-09-19T23:36:43.559264", "lvl": "target", "msg": "[    8.358862] systemd[1]: Listening on Journal Audit Socket."}
+- {"dt": "2022-09-19T23:36:43.564678", "lvl": "target", "msg": "[    8.365276] systemd[1]: Listening on Journal Socket (/dev/log)."}
+- {"dt": "2022-09-19T23:36:43.575266", "lvl": "target", "msg": "[    8.372761] systemd[1]: Listening on Journal Socket."}
+- {"dt": "2022-09-19T23:36:43.580687", "lvl": "target", "msg": "[    8.379269] systemd[1]: Listening on Network Service Netlink Socket."}
+- {"dt": "2022-09-19T23:36:43.591267", "lvl": "target", "msg": "[    8.389356] systemd[1]: Listening on udev Control Socket."}
+- {"dt": "2022-09-19T23:36:43.591555", "lvl": "target", "msg": "[    8.396648] systemd[1]: Listening on udev Kernel Socket."}
+- {"dt": "2022-09-19T23:36:43.607260", "lvl": "target", "msg": "[    8.404453] systemd[1]: Listening on User Database Manager Socket."}
+- {"dt": "2022-09-19T23:36:43.612706", "lvl": "target", "msg": "[    8.415750] systemd[1]: Mounting Huge Pages File System..."}
+- {"dt": "2022-09-19T23:36:43.628425", "lvl": "target", "msg": "[    8.426546] systemd[1]: Mounting POSIX Message Queue File System..."}
+- {"dt": "2022-09-19T23:36:43.639265", "lvl": "target", "msg": "[    8.437693] systemd[1]: Mounting Kernel Debug File System..."}
+- {"dt": "2022-09-19T23:36:43.644734", "lvl": "target", "msg": "[    8.444023] systemd[1]: Condition check resulted in Kernel Trace File System being skipped."}
+- {"dt": "2022-09-19T23:36:43.660447", "lvl": "target", "msg": "[    8.457501] systemd[1]: Starting Create list of static device nodes for the current kernel..."}
+- {"dt": "2022-09-19T23:36:43.671288", "lvl": "target", "msg": "[    8.470582] systemd[1]: Starting Load Kernel Module configfs..."}
+- {"dt": "2022-09-19T23:36:43.676775", "lvl": "target", "msg": "[    8.480574] systemd[1]: Starting Load Kernel Module drm..."}
+- {"dt": "2022-09-19T23:36:43.687267", "lvl": "target", "msg": "[    8.490348] systemd[1]: Starting Load Kernel Module fuse..."}
+- {"dt": "2022-09-19T23:36:43.735281", "lvl": "target", "msg": "[    8.530410] systemd[1]: Starting RPC Bind..."}
+- {"dt": "2022-09-19T23:36:43.740786", "lvl": "target", "msg": "[    8.542491] systemd[1]: Starting SELinux autorelabel service loading..."}
+- {"dt": "2022-09-19T23:36:43.751277", "lvl": "target", "msg": "[    8.553811] systemd[1]: Starting SELinux init for /dev service loading..."}
+- {"dt": "2022-09-19T23:36:43.767280", "lvl": "target", "msg": "[    8.561216] systemd[1]: Condition check resulted in File System Check on Root Device being skipped."}
+- {"dt": "2022-09-19T23:36:43.772820", "lvl": "target", "msg": "[    8.576817] systemd[1]: Starting Journal Service..."}
+- {"dt": "2022-09-19T23:36:43.834399", "lvl": "target", "msg": "[    8.610208] audit: type=1400 audit(1616485771.096:8): avc:  denied  { integrity } for  pid=261 comm=\\\"modprobe\\\" lockdown_reason=\\\"unsigned module loading\\\" scontext=system_u:system_r:kmod_t:s0-s15:c0.c1023 tcontext=system_u:system_r:kmod_t:s0-s15:c0.c1023 tclass=lockdown permissive=1"}
+- {"dt": "2022-09-19T23:36:43.850393", "lvl": "target", "msg": "[    8.654238] systemd[1]: Starting Load Kernel Modules..."}
+- {"dt": "2022-09-19T23:36:43.868559", "lvl": "target", "msg": "[    8.664417] systemd[1]: Starting Remount Root and Kernel File Systems..."}
+- {"dt": "2022-09-19T23:36:43.879270", "lvl": "target", "msg": "[    8.676160] systemd[1]: Starting Coldplug All udev Devices..."}
+- {"dt": "2022-09-19T23:36:43.884840", "lvl": "target", "msg": "[    8.686811] systemd[1]: Starting Create compressed swap in memory using zram..."}
+- {"dt": "2022-09-19T23:36:43.895274", "lvl": "target", "msg": "[    8.701330] systemd[1]: Mounted Huge Pages File System."}
+- {"dt": "2022-09-19T23:36:43.911288", "lvl": "target", "msg": "[    8.707439] systemd[1]: Mounted POSIX Message Queue File System."}
+- {"dt": "2022-09-19T23:36:43.911574", "lvl": "target", "msg": "[    8.714210] systemd[1]: Mounted Kernel Debug File System."}
+- {"dt": "2022-09-19T23:36:43.917116", "lvl": "target", "msg": "[    8.720220] fuse: init (API version 7.34)"}
+- {"dt": "2022-09-19T23:36:43.927271", "lvl": "target", "msg": "[    8.723212] systemd[1]: Finished Create list of static device nodes for the current kernel."}
+- {"dt": "2022-09-19T23:36:43.932884", "lvl": "target", "msg": "[    8.734521] systemd[1]: modprobe@configfs.service: Succeeded."}
+- {"dt": "2022-09-19T23:36:43.943277", "lvl": "target", "msg": "[    8.742023] systemd[1]: Finished Load Kernel Module configfs."}
+- {"dt": "2022-09-19T23:36:43.943564", "lvl": "target", "msg": "[    8.749067] systemd[1]: modprobe@drm.service: Succeeded."}
+- {"dt": "2022-09-19T23:36:43.959276", "lvl": "target", "msg": "[    8.756402] systemd[1]: Finished Load Kernel Module drm."}
+- {"dt": "2022-09-19T23:36:43.959562", "lvl": "target", "msg": "[    8.763346] systemd[1]: modprobe@fuse.service: Succeeded."}
+- {"dt": "2022-09-19T23:36:43.975271", "lvl": "target", "msg": "[    8.770693] systemd[1]: Finished Load Kernel Module fuse."}
+- {"dt": "2022-09-19T23:36:43.980911", "lvl": "target", "msg": "[    8.780110] systemd[1]: Finished Load Kernel Modules."}
+- {"dt": "2022-09-19T23:36:43.991275", "lvl": "target", "msg": "[    8.793533] systemd[1]: Mounting FUSE Control File System..."}
+- {"dt": "2022-09-19T23:36:43.996927", "lvl": "target", "msg": "[    8.795244] EXT4-fs (mmcblk1p2): re-mounted. Opts: (null). Quota mode: none."}
+- {"dt": "2022-09-19T23:36:44.012635", "lvl": "target", "msg": "[    8.811687] systemd[1]: Mounting Kernel Configuration File System..."}
+- {"dt": "2022-09-19T23:36:44.023267", "lvl": "target", "msg": "[    8.824131] systemd[1]: Starting Apply Kernel Variables..."}
+- {"dt": "2022-09-19T23:36:44.039268", "lvl": "target", "msg": "[    8.837962] systemd[1]: Finished Remount Root and Kernel File Systems."}
+- {"dt": "2022-09-19T23:36:44.044946", "lvl": "target", "msg": "[    8.845391] systemd[1]: Mounted FUSE Control File System."}
+- {"dt": "2022-09-19T23:36:44.055266", "lvl": "target", "msg": "[    8.852004] systemd[1]: Mounted Kernel Configuration File System."}
+- {"dt": "2022-09-19T23:36:44.060970", "lvl": "target", "msg": "[    8.859238] systemd[1]: Condition check resulted in OSTree Remount OS/ Bind Mounts being skipped."}
+- {"dt": "2022-09-19T23:36:44.199283", "lvl": "target", "msg": "[    8.998635] systemd[1]: Condition check resulted in Rebuild Hardware Database being skipped."}
+- {"dt": "2022-09-19T23:36:44.215272", "lvl": "target", "msg": "[    9.007443] systemd[1]: Condition check resulted in Platform Persistent Storage Archival being skipped."}
+- {"dt": "2022-09-19T23:36:44.220988", "lvl": "target", "msg": "[    9.017050] systemd[1]: Condition check resulted in Create System Users being skipped."}
+- {"dt": "2022-09-19T23:36:44.231276", "lvl": "target", "msg": "[    9.029725] systemd[1]: Starting Create Static Device Nodes in /dev..."}
+- {"dt": "2022-09-19T23:36:44.231562", "lvl": "target", "msg": "[    9.037960] systemd[1]: Started Journal Service."}
+- {"dt": "2022-09-19T23:36:44.266379", "lvl": "target", "msg": "[    9.043090] audit: type=1130 audit(1616485771.528:9): pid=1 uid=0 auid=4294967295 ses=4294967295 subj=system_u:system_r:init_t:s0-s15:c0.c1023 msg='unit=systemd-journald comm=\\\"systemd\\\" exe=\\\"/lib/systemd/systemd\\\" hostname=? addr=? terminal=? res=success'"}
+- {"dt": "2022-09-19T23:36:44.332756", "lvl": "target", "msg": "[    9.115651] audit: type=1130 audit(1616485771.600:10): pid=1 uid=0 auid=4294967295 ses=4294967295 subj=system_u:system_r:init_t:s0-s15:c0.c1023 msg='unit=rpcbind comm=\\\"systemd\\\" exe=\\\"/lib/systemd/systemd\\\" hostname=? addr=? terminal=? res=success'"}
+- {"dt": "2022-09-19T23:36:44.455288", "lvl": "target", "msg": "[    9.238296] audit: type=1400 audit(1616485771.672:11): avc:  denied  { integrity } for  pid=281 comm=\\\"modprobe\\\" lockdown_reason=\\\"unsigned module loading\\\" scontext=system_u:system_r:kmod_t:s15:c0.c1023 tcontext=system_u:system_r:kmod_t:s15:c0.c1023 tclass=lockdown permissive=1"}
+- {"dt": "2022-09-19T23:36:44.473641", "lvl": "target", "msg": "[    9.241592] systemd-journald[266]: Received client request to flush runtime journal."}
+- {"dt": "2022-09-19T23:36:54.634055", "lvl": "target", "msg": ""}
+- {"dt": "2022-09-19T23:36:54.646749", "lvl": "target", "msg": "Reference-Platform-Build-X11 3.0+linaro ledge-qemuarm64 ttyPS1"}
+- {"dt": "2022-09-19T23:36:54.647067", "lvl": "target", "msg": ""}
+- {"dt": "2022-09-19T23:36:54.656249", "lvl": "debug", "msg": "Matched prompt #8: login:"}
+- {"dt": "2022-09-19T23:36:54.656609", "lvl": "results", "msg": {"case": "kernel-messages", "definition": "lava", "duration": "160.39", "extra": {"extra": [{"success": "login:"}]}, "level": "3.2.1", "namespace": "common", "result": "pass"}}
+- {"dt": "2022-09-19T23:36:54.657085", "lvl": "debug", "msg": "Sending username ledge"}
+- {"dt": "2022-09-19T23:36:54.657362", "lvl": "input", "msg": "ledge\n"}
+- {"dt": "2022-09-19T23:36:54.758283", "lvl": "target", "msg": "ledge-qemuarm64 login: ledge"}
+- {"dt": "2022-09-19T23:36:54.758612", "lvl": "debug", "msg": "Setting prompt string to ['ledge-qemuarm64:']"}
+- {"dt": "2022-09-19T23:36:54.758851", "lvl": "info", "msg": "Waiting for password prompt"}
+- {"dt": "2022-09-19T23:36:54.759093", "lvl": "debug", "msg": "login-action: Wait for prompt ['ledge-qemuarm64:', 'Password:', 'Login timed out'] (timeout 00:12:11)"}
+- {"dt": "2022-09-19T23:36:54.759701", "lvl": "target", "msg": "ledge"}
+- {"dt": "2022-09-19T23:36:54.777979", "lvl": "target", "msg": "ledge"}
+- {"dt": "2022-09-19T23:36:55.402159", "lvl": "debug", "msg": "Matched prompt #1: Password:"}
+- {"dt": "2022-09-19T23:36:55.402445", "lvl": "debug", "msg": "Sending password ledge"}
+- {"dt": "2022-09-19T23:36:55.402681", "lvl": "input", "msg": "ledge\n"}
+- {"dt": "2022-09-19T23:36:55.503569", "lvl": "target", "msg": "Password: ledge"}
+- {"dt": "2022-09-19T23:36:55.503892", "lvl": "debug", "msg": "Setting prompt string to ['ledge-qemuarm64:']"}
+- {"dt": "2022-09-19T23:36:55.504144", "lvl": "debug", "msg": "login-action: Wait for prompt ['ledge-qemuarm64:', 'Login incorrect', 'Login timed out'] (timeout 00:12:11)"}
+- {"dt": "2022-09-19T23:36:55.504467", "lvl": "target", "msg": "ledge"}
+- {"dt": "2022-09-19T23:36:55.513963", "lvl": "target", "msg": ""}
+- {"dt": "2022-09-19T23:36:57.130033", "lvl": "debug", "msg": "Setting prompt string to ['ledge-qemuarm64:']"}
+- {"dt": "2022-09-19T23:36:57.130388", "lvl": "debug", "msg": "end: 3.2.1 login-action (duration 00:02:43) [common]"}
+- {"dt": "2022-09-19T23:36:57.130641", "lvl": "results", "msg": {"case": "login-action", "definition": "lava", "duration": "162.87", "extra": {"success": "login:"}, "level": "3.2.1", "namespace": "common", "result": "pass"}}
+- {"dt": "2022-09-19T23:36:57.131109", "lvl": "debug", "msg": "end: 3.2 auto-login-action (duration 00:02:51) [common]"}
+- {"dt": "2022-09-19T23:36:57.131396", "lvl": "info", "msg": "end: 3 minimal-boot (duration 00:02:51) [common]"}
+- {"dt": "2022-09-19T23:36:57.131694", "lvl": "info", "msg": "start: 4 finalize (timeout 00:20:00) [common]"}
+- {"dt": "2022-09-19T23:36:57.131997", "lvl": "debug", "msg": "start: 4.1 power-off (timeout 00:00:10) [common]"}
+- {"dt": "2022-09-19T23:36:57.132388", "lvl": "debug", "msg": "Calling: 'nice' '/usr/local/bin/relayctl' 'relay3' '1' 'off'"}
+- {"dt": "2022-09-19T23:36:57.186827", "lvl": "debug", "msg": "Returned 0 in 0 seconds"}
+- {"dt": "2022-09-19T23:36:57.288120", "lvl": "debug", "msg": "Calling: 'nice' '/usr/local/bin/relayctl' 'relay3' '2' 'off'"}
+- {"dt": "2022-09-19T23:36:57.339504", "lvl": "debug", "msg": "Returned 0 in 0 seconds"}
+- {"dt": "2022-09-19T23:36:57.440762", "lvl": "debug", "msg": "end: 4.1 power-off (duration 00:00:00) [common]"}
+- {"dt": "2022-09-19T23:36:57.441097", "lvl": "results", "msg": {"case": "power-off", "definition": "lava", "duration": "0.31", "extra": {"status": "success"}, "level": "4.1", "namespace": "common", "result": "pass"}}
+- {"dt": "2022-09-19T23:36:57.441666", "lvl": "debug", "msg": "start: 4.2 read-feedback (timeout 00:20:00) [common]"}
+- {"dt": "2022-09-19T23:36:57.442297", "lvl": "debug", "msg": "Listened to connection for namespace 'common' for up to 1s"}
+- {"dt": "2022-09-19T23:36:58.447218", "lvl": "info", "msg": "Finalising connection for namespace 'common'"}
+- {"dt": "2022-09-19T23:36:58.447686", "lvl": "info", "msg": "Disconnecting from telnet: Finalise"}
+- {"dt": "2022-09-19T23:36:58.447936", "lvl": "input", "msg": "]"}
+- {"dt": "2022-09-19T23:36:58.448283", "lvl": "input", "msg": "quit\n"}
+- {"dt": "2022-09-19T23:36:58.549217", "lvl": "target", "msg": "7[r[999;999H[6n8ledge-qemuarm64:~$ \x1Dquit"}
+- {"dt": "2022-09-19T23:36:58.650348", "lvl": "debug", "msg": "end: 4.2 read-feedback (duration 00:00:01) [common]"}
+- {"dt": "2022-09-19T23:36:58.650712", "lvl": "info", "msg": "end: 4 finalize (duration 00:00:02) [common]"}
+- {"dt": "2022-09-19T23:36:58.651050", "lvl": "info", "msg": "Cleaning after the job"}
+- {"dt": "2022-09-19T23:36:58.651351", "lvl": "debug", "msg": "Cleaning up download directory: /var/lib/lava/dispatcher/tmp/282/deploy-flasher-heoech0y/ImageA"}
+- {"dt": "2022-09-19T23:36:58.652025", "lvl": "debug", "msg": "Cleaning up download directory: /var/lib/lava/dispatcher/tmp/282/deploy-flasher-heoech0y/ImageB"}
+- {"dt": "2022-09-19T23:36:58.652850", "lvl": "debug", "msg": "Cleaning up download directory: /var/lib/lava/dispatcher/tmp/282/deploy-flasher-heoech0y/sd"}
+- {"dt": "2022-09-19T23:36:58.920025", "lvl": "info", "msg": "Root tmp directory removed at /var/lib/lava/dispatcher/tmp/282"}
+- {"dt": "2022-09-19T23:36:58.920446", "lvl": "info", "msg": "Job finished correctly"}
+- {"dt": "2022-09-19T23:36:58.920553", "lvl": "results", "msg": {"case": "job", "definition": "lava", "result": "pass"}}

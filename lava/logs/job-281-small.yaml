@@ -1,0 +1,66 @@
+# Example of a small system
+#
+# Uses boot.bin and a small SD card image.
+#
+# For convenance, this uses the recovery assets as the the system.
+# This is OK because:
+# * The recovery filesystem has no special powers
+#   * It just boots and waits to be told what to do
+# * recovery-boot.bin is only special when in the recovery slot
+#   * This firmware always loads the recovery script from QSPI and runs it
+#   * The recovery script only does recovery if the board was booted for the
+#     recovery slot (it knows by looking at multiboot u-boot var)
+#   * Otherwise it goes on to do normal distro boot and will see boot.scr on
+#     the sd card
+#
+
+device_type: kv260
+
+job_name: Boot recovery as small system example system
+
+timeouts:
+  job:
+    minutes: 60
+  action:
+    minutes: 10
+  connection:
+    minutes: 2
+
+priority: medium
+
+visibility: public
+
+context:
+  test_character_delay: 30
+
+actions:
+
+- deploy:
+    timeout:
+      minutes: 20
+    to: flasher
+    images:
+      boot:
+        url: https://github.com/wmamills/xilinx-lab-stuff/raw/master/recovery/recovery-boot.bin
+      sd:
+        url: https://github.com/wmamills/xilinx-lab-stuff/raw/master/recovery/recovery-boot-sdcard.img.bz2
+        compression: bz2
+    os: oe
+
+- boot:
+    timeout:
+      minutes: 2
+    method: minimal
+    prompts:
+      - 'kira-recovery:'
+    auto_login:
+      login_prompt: 'login:'
+      username: "root"
+      password_prompt: 'Password:'
+      password: "root"
+
+metadata:
+  machine: kv260
+  git: https://github.com/wmamills/xilinx-lab-stuff
+  git branch: master
+
