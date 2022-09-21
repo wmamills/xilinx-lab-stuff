@@ -235,14 +235,18 @@ do_host_big_file() {
 do_on_host() {
     DEV_IP=$1
     WHERE=$2
-    shift 2
 
     ANY=false
     ANY_MTD=false
     DEF_SEL_REG=${ME_DIR}/sel-reg-ImageA.bin
 
-    if [ -n "$WHERE" ]; then
+    if [ -n "$WHERE" -a -d "$WHERE" ]; then
         cd $WHERE
+        shift 2
+    else
+        echo "Error: 2nd argument should be a directory where the assets are"
+        echo "       if you want to use the current directory use . "
+        exit 2
     fi
 
     # look for directories (from LAVA deploy images: for example)
@@ -267,6 +271,7 @@ do_on_host() {
         done
         if [ -n "$FOUND" ]; then
             ln -s $FOUND $i.bin
+            echo "Created symlink: $(ls -l $i.bin)"
         else
             echo "WARNING: no %i.bin found/used"
         fi
@@ -283,7 +288,7 @@ do_on_host() {
         for f in $i/*.img $i/*.wic; do
             # ignore non matching wild cars
             if [ ! -e $f ]; then continue; fi
-            echo "f=$f FOUND=|$FOUND|"
+            #echo "f=$f FOUND=|$FOUND|"
             if [ -n "$FOUND" ]; then
                 echo "There were too many disk image files in $i"
                 echo "Found at least $FOUND and $f"
@@ -294,6 +299,7 @@ do_on_host() {
         done
         if [ -n "$FOUND" ]; then
             ln -s $FOUND $i.img
+            echo "Created symlink: $(ls -l $i.img)"
         else
             echo "WARNING: no $i.img found/used"
         fi
@@ -363,7 +369,7 @@ do_on_host() {
 
 do_help() {
     echo "kria-deploy: update software for testing of a given Xilinx Kria board"
-    echo "kria-depoly device-ip [asset-dir]"
+    echo "kria-depoly device-ip asset-dir"
     echo "handles:"
     echo "    ImageA.bin and/or ImageB.bin, updates specific boot image in QSPI"
     echo "        if neither of these if found:"
@@ -383,7 +389,7 @@ do_help() {
     echo "        then a default image is used that sets A as the active image"
     echo "    both mtd2 and mtd3 are written"
     echo "lava deploy to flasher support"
-    echo "    the deploy section can contains an images: list"
+    echo "    the deploy section can contain the list images:"
     echo "    each image goes into a directory of the same name"
     echo "    use image names of:"
     echo "       ImageA ImageB boot sel-reg u-boot-vars u-boot-vars2"
