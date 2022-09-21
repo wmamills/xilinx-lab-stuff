@@ -2,8 +2,7 @@
 # This runs on host and on target so needs to use /bin/sh NOT /bin/bash
 # Target side runs in busybox ash so avoid bash'isums
 
-# Deploy assets to a Xilinx Kira board
-# Also acts as kira-update-recovery if used with that name
+# Deploy assets to a Xilinx Kria board
 
 ME_DIR=$(dirname $(readlink -f $0))
 ME_BASE=$(basename $0)
@@ -363,8 +362,8 @@ do_on_host() {
 
 
 do_help() {
-    echo "kira-deploy: update software for testing of a given Xilinx Kira board"
-    echo "kira-depoly device-ip [asset-dir]"
+    echo "kria-deploy: update software for testing of a given Xilinx Kria board"
+    echo "kria-depoly device-ip [asset-dir]"
     echo "handles:"
     echo "    ImageA.bin and/or ImageB.bin, updates specific boot image in QSPI"
     echo "        if neither of these if found:"

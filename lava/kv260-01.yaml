@@ -21,13 +21,13 @@
 {% set connection_tags = {'uart0': ['primary', 'telnet']} %}
 {% set power_on_command = '/usr/local/bin/relayctl relay3 1 on' %}
 {% set flasher_deploy_commands = [
-'bash -c \'echo KIRA FLASHER UID=$UID PWD=$PWD PATH=$PATH\'',
+'bash -c \'echo KRIA FLASHER UID=$UID PWD=$PWD PATH=$PATH\'',
 '/usr/local/bin/relayctl relay3 1 off',
 '/usr/local/bin/relayctl relay3 2 on',
 'sleep 10',
 '/usr/local/bin/relayctl relay3 1 on',
 'sleep 20',
-'/usr/local/bin/kira-deploy.sh 192.168.2.199 .',
+'/usr/local/bin/kria-deploy.sh 192.168.2.199 .',
 '/usr/local/bin/relayctl relay3 1 off',
 '/usr/local/bin/relayctl relay3 2 off' ] %}
 {# set sync_to_lava = {'device_type': 'kv260', 'worker': 'labhost1.home', 'tags': [], 'aliases': []} #}

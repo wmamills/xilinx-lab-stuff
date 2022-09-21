@@ -6,7 +6,7 @@ else
 fi
 
 if test x"${multiboot}" = x"${multiboot_recovery}"; then
-    echo "****** KIRA RECOVERY MODE ******"
+    echo "****** KRIA RECOVERY MODE ******"
     sf probe 0 0 0
     sf read 0x10000000 0x02280000 0x01c00000
     setenv bootargs ${bootargs} recovery_mode=1

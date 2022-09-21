@@ -1,7 +1,7 @@
-From dbdfd45f33c02757907340213f4856aa64557cae Mon Sep 17 00:00:00 2001
+From 1532ca767d3c5c37b07a9789359eddef02434be2 Mon Sep 17 00:00:00 2001
 From: Bill Mills <bill.mills@linaro.org>
 Date: Sun, 18 Sep 2022 00:14:07 +0000
-Subject: [PATCH 6/6] u-boot: custom autoboot stop key
+Subject: [PATCH 5/5] u-boot: custom autoboot stop key
 
 To avoid stray characters from stopping recovery,
 Use a specific stop string and flush input before the countdown.

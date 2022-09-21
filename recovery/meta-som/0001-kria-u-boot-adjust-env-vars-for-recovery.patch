@@ -1,7 +1,7 @@
-From f03159fd5c688b4b4c1f15b5449f698ae5d0fc66 Mon Sep 17 00:00:00 2001
+From 16d6fcd964eeea729789b7299ee5c2ef4ba30174 Mon Sep 17 00:00:00 2001
 From: OpenAMP CI <builder@openampproject.org>
 Date: Sat, 3 Sep 2022 21:50:08 +0000
-Subject: [PATCH] kira u-boot: adjust env vars for recovery
+Subject: [PATCH 1/5] kria u-boot: adjust env vars for recovery
 
 Adjust the default env vars for recovery version.
 
@@ -11,7 +11,7 @@ Signed-off-by: Bill Mills <bill.mills@linaro.org>
  1 file changed, 9 insertions(+), 1 deletion(-)
 
 diff --git a/recipes-bsp/u-boot/files/vars b/recipes-bsp/u-boot/files/vars
-index c5f9025..c564292 100755
+index c5f9025..2f272a8 100755
 --- a/recipes-bsp/u-boot/files/vars
 +++ b/recipes-bsp/u-boot/files/vars
 @@ -48,7 +48,7 @@ som_cc_boot=if test ${card1_name} = SCK-KV-G; then setenv boot_targets mmc1 usb0
@@ -19,7 +19,7 @@ index c5f9025..c564292 100755
  
  starter=SMK-K26-XCL2G
 -bootcmd=setenv model $board_name && if setexpr model gsub .*$starter* $starter; then run som_cc_boot; else run som_mmc_boot; run som_cc_boot; fi
-+kira-stock-bootcmd=setenv model $board_name && if setexpr model gsub .*$starter* $starter; then run som_cc_boot; else run som_mmc_boot; run som_cc_boot; fi
++kria-stock-bootcmd=setenv model $board_name && if setexpr model gsub .*$starter* $starter; then run som_cc_boot; else run som_mmc_boot; run som_cc_boot; fi
  
  usb_init=mw 0xFF180208 2020; run usb-kr260
  
@@ -33,7 +33,7 @@ index c5f9025..c564292 100755
 +# multiboot: 3c0 for real, 1f0 for testing with ImageB
 +set-multiboot=setenv model $board_name && if setexpr model gsub .*$starter* $starter; then setenv multiboot_recovery 1f0; else setenv multiboot_recovery 3c0; fi
 +recovery-bootcmd=sf probe 0 0 0; sf read ${scriptaddr} ${recovery_script_offset} 0x10000; source ${scriptaddr}
-+cond_recovery_bootcmd=run set-multiboot; if test ${multiboot} = ${multiboot_recovery}; then run recovery-bootcmd; else run kira-stock-bootcmd; fi
++cond_recovery_bootcmd=run set-multiboot; if test ${multiboot} = ${multiboot_recovery}; then run recovery-bootcmd; else run kria-stock-bootcmd; fi
 +bootcmd=run cond_recovery_bootcmd
 -- 
 2.25.1

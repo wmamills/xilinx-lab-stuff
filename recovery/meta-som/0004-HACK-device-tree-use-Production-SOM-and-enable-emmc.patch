@@ -1,4 +1,4 @@
-From 02be6bb6789d9cde38d8a582089e5393f4af64d2 Mon Sep 17 00:00:00 2001
+From 6a2231a8394cad46e2338315d87b2be3fb9d1d13 Mon Sep 17 00:00:00 2001
 From: Bill Mills <bill.mills@linaro.org>
 Date: Sun, 11 Sep 2022 13:14:57 +0000
 Subject: [PATCH 4/5] HACK: device-tree: use Production SOM and enable emmc

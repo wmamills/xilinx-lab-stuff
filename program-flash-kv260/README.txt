@@ -1,7 +1,7 @@
 == program-flash-kv260 ==
 
 This is a set of binaries and scripts that can be used to program a 
-Kira Production SOM to make it work similar to a starter SOM.
+Kria Production SOM to make it work similar to a starter SOM.
 
 * safe-test-kv260
 ** Safe to test on kv260 w/ starter SOM
@@ -13,7 +13,7 @@ Kira Production SOM to make it work similar to a starter SOM.
 
 == program_flash ==
 
-This set of scripts to program a Kira SOM.
+This set of scripts to program a Kria SOM.
 
 These scripts use the program_flash program from the Xilinx tools.
 At the time of writing this was using 2021.2 versions.

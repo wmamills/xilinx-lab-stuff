@@ -13,7 +13,7 @@ ${ULB}relayctl relay3 1 on
 sleep 30
 if ping -c 1 $IP; then
     echo "WORKS"
-    ${ULB}kira-deploy.sh $IP $MY_DIR
+    ${ULB}kria-deploy.sh $IP $MY_DIR
 else
     echo "BROKEN"
 fi

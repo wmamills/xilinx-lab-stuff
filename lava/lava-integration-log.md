@@ -24,7 +24,7 @@
         $ boardctl kv260 bootmode recovery; boardctl kv260 run
 * terminal 3 (after board gets booted and terminal 1 is pinging)
 
-        $ /usr/local/bin/kira-deploy.sh 192.168.2.199 .
+        $ /usr/local/bin/kria-deploy.sh 192.168.2.199 .
 * Note: board name in boardctl is kv260 not kv260-01
 * Note: works with or without the ping terminal
 * Note: boardctl always attaches a screen session to the tty

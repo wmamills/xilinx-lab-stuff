@@ -29,7 +29,7 @@ actions:
       minutes: 15
     method: minimal
     prompts:
-      - 'kira-recovery:'
+      - 'kria-recovery:'
     auto_login:
       login_prompt: 'login:'
       username: "root"

@@ -1,7 +1,7 @@
-From 1a5824df977aa1736d67908afd9da659a33553dc Mon Sep 17 00:00:00 2001
+From 25dedd400b8b9c2a307176fbc2f9764c276d6f4c Mon Sep 17 00:00:00 2001
 From: OpenAMP CI <builder@openampproject.org>
 Date: Sat, 10 Sep 2022 16:14:30 +0000
-Subject: [PATCH 2/3] HACK: u-boot device tree add production som for KV260
+Subject: [PATCH 2/5] HACK: u-boot device tree add production som for KV260
 
 This is what I tried but it did not work.
 

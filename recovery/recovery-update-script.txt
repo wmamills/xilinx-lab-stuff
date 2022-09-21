@@ -1,6 +1,6 @@
 # U-boot script to update the recovery mode files.
 
-echo "*** KIRA RECOVERY UPDATE ***"
+echo "*** KRIA RECOVERY UPDATE ***"
 setenv bootdev mmc
 setenv bootpart 1:1
 setenv loadaddr 0x10000000

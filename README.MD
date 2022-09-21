@@ -1,7 +1,7 @@
 # Program-flash-kv260
-Scripts to program a kira platform via JTAG
+Scripts to program a Kria platform via JTAG
 # recovery
-Assets and scripts to support Linux ssh based recovery mode for Kira
+Assets and scripts to support Linux ssh based recovery mode for Kria
 # lava
 Lava integration notes, files and example jobs
 # Google Docs

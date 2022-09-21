@@ -1,7 +1,7 @@
-From 00bf7ec45e5f28f13b7b702972cf06c8eeb5c93c Mon Sep 17 00:00:00 2001
+From 9a470d7b59f2f12c92beeaea2ceee495d8c6d294 Mon Sep 17 00:00:00 2001
 From: Bill Mills <bill.mills@linaro.org>
 Date: Sat, 10 Sep 2022 16:18:24 +0000
-Subject: [PATCH 3/3] HACK: device-tree: use KV260 Rev1 as default DTB
+Subject: [PATCH 3/5] HACK: device-tree: use KV260 Rev1 as default DTB
 
 The first attempt at DT matching did not work.
 This patch changes the default DTB to be KV260 Rev1 (w/ Starter SOM)

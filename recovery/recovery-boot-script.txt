@@ -1,4 +1,4 @@
-echo "*** KIRA: Boot recovery.fit as normal test payload ***"
+echo "*** KRIA: Boot recovery.fit as normal test payload ***"
 setenv bootdev mmc
 setenv bootpart 1:1
 setenv loadaddr 0x10000000
