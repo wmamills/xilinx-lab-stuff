@@ -1,7 +1,7 @@
 # Just boot the existing firmware and OS image
 # You should get logs no matter what
 # To get the a job complete the board needs to be running
-#     a ledge RP quemuarm46 build
+#     a ledge RP quemuarm64 build
 
 device_type: kv260
 
