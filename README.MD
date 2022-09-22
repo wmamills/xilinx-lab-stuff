@@ -20,6 +20,7 @@ Lava integration notes, files and example jobs
 # Todo
 * fix emmc for production SOM
   * hacking DTB in u-boot DID NOT fix this.  Needs investigation.
+* Isolate boot failure: firmware, board, or test setup
 * Better document OE build process for recorded assets (recovery-boot.bin cpio etc)
   * Some of this is now done
   * add OE builds to mk-recovery-assets.sh??

@@ -1,0 +1,1315 @@
+2022-09-22T07:18:50 lava-dispatcher, installed at version: 2022.08
+2022-09-22T07:18:50 start: 0 validate
+2022-09-22T07:18:50 Start time: 2022-09-22 07:18:50.761921+00:00 (UTC)
+2022-09-22T07:18:50 Validating that https://snapshots.linaro.org/components/ledge/ts/264/zynqmp-starter/ImageA.bin exists
+2022-09-22T07:18:51 Validating that https://snapshots.linaro.org/components/ledge/ts/264/zynqmp-starter/ImageB.bin exists
+2022-09-22T07:18:52 Validating that http://snapshots.linaro.org/components/ledge/oe/ledge-multi-armv8/1472/rpb/ledge-qemuarm64/ledge-iot-lava-ledge-qemuarm64-20220912232805.rootfs.wic.gz exists
+2022-09-22T07:18:53 WARNING: Using boot commands supplied in the job definition, NOT the LAVA device configuration
+2022-09-22T07:18:53 validate duration: 2.39
+2022-09-22T07:18:53 {'case': 'validate', 'definition': 'lava', 'result': 'pass'}
+2022-09-22T07:18:53 start: 1 deploy-flasher-retry (timeout 01:00:00) [common]
+2022-09-22T07:18:53 start: 1.1 deploy-flasher (timeout 01:00:00) [common]
+2022-09-22T07:18:53 start: 1.1.1 download-retry (timeout 01:00:00) [common]
+2022-09-22T07:18:53 start: 1.1.1.1 http-download (timeout 01:00:00) [common]
+2022-09-22T07:18:53 downloading https://snapshots.linaro.org/components/ledge/ts/264/zynqmp-starter/ImageA.bin
+2022-09-22T07:18:53 saving as /var/lib/lava/dispatcher/tmp/388/deploy-flasher-02ezhtg9/ImageA/ImageA.bin
+2022-09-22T07:18:53 total size: 283348 (0MB)
+2022-09-22T07:18:53 No compression specified
+2022-09-22T07:18:54 progress  11% (0MB)
+2022-09-22T07:18:54 progress  23% (0MB)
+2022-09-22T07:18:54 progress  34% (0MB)
+2022-09-22T07:18:54 progress  46% (0MB)
+2022-09-22T07:18:54 progress  57% (0MB)
+2022-09-22T07:18:54 progress  69% (0MB)
+2022-09-22T07:18:54 progress  80% (0MB)
+2022-09-22T07:18:54 progress  92% (0MB)
+2022-09-22T07:18:54 progress 100% (0MB)
+2022-09-22T07:18:54 0MB downloaded in 1.45s (0.19MB/s)
+2022-09-22T07:18:54 end: 1.1.1.1 http-download (duration 00:00:01) [common]
+2022-09-22T07:18:54 {'case': 'http-download', 'definition': 'lava', 'duration': '1.46', 'extra': {'label': 'ImageA', 'md5sum': 'd95954aa37da036d6ce3fb42097aea8f', 'sha256sum': '2e8433c60382bacc1acc659a74b6b389d176b09b0cf0bf3fb2fcd334f60b7df4', 'sha512sum': 'a454dbef840a1cf6c2f0f28221e5b8a5e3fc2ed2415560f66cf8a2a3a8a2b1d462de469c879eb9ffca031c2edcbee1d274f1ed00f641922aecd1dac9fcc1ab81', 'size': 283348}, 'level': '1.1.1.1', 'namespace': 'common', 'result': 'pass'}
+2022-09-22T07:18:54 end: 1.1.1 download-retry (duration 00:00:01) [common]
+2022-09-22T07:18:54 start: 1.1.2 download-retry (timeout 00:59:59) [common]
+2022-09-22T07:18:54 start: 1.1.2.1 http-download (timeout 00:59:59) [common]
+2022-09-22T07:18:54 downloading https://snapshots.linaro.org/components/ledge/ts/264/zynqmp-starter/ImageB.bin
+2022-09-22T07:18:54 saving as /var/lib/lava/dispatcher/tmp/388/deploy-flasher-02ezhtg9/ImageB/ImageB.bin
+2022-09-22T07:18:54 total size: 1606416 (1MB)
+2022-09-22T07:18:54 No compression specified
+2022-09-22T07:18:55 progress   2% (0MB)
+2022-09-22T07:18:55 progress   8% (0MB)
+2022-09-22T07:18:55 progress  14% (0MB)
+2022-09-22T07:18:55 progress  20% (0MB)
+2022-09-22T07:18:56 progress  26% (0MB)
+2022-09-22T07:18:56 progress  32% (0MB)
+2022-09-22T07:18:56 progress  38% (0MB)
+2022-09-22T07:18:56 progress  44% (0MB)
+2022-09-22T07:18:56 progress  50% (0MB)
+2022-09-22T07:18:56 progress  55% (0MB)
+2022-09-22T07:18:57 progress  61% (0MB)
+2022-09-22T07:18:57 progress  67% (1MB)
+2022-09-22T07:18:57 progress  73% (1MB)
+2022-09-22T07:18:57 progress  79% (1MB)
+2022-09-22T07:18:57 progress  85% (1MB)
+2022-09-22T07:18:57 progress  91% (1MB)
+2022-09-22T07:18:58 progress  97% (1MB)
+2022-09-22T07:18:58 1MB downloaded in 3.64s (0.42MB/s)
+2022-09-22T07:18:58 end: 1.1.2.1 http-download (duration 00:00:04) [common]
+2022-09-22T07:18:58 {'case': 'http-download', 'definition': 'lava', 'duration': '3.65', 'extra': {'label': 'ImageB', 'md5sum': 'da413d768acf8942cd8336262a514f2c', 'sha256sum': 'd862ee63b1fc68c0524b34f1a232c556741ec096e2ca74fb8f762c4404294ba3', 'sha512sum': '5a41f787db8bae85366e868c1c6e239246597e1c95e86f1558b896747a789743c986ae1db38342b187268dd940ed268d4395c849559f52f88e9b975c97ba50af', 'size': 1606416}, 'level': '1.1.2.1', 'namespace': 'common', 'result': 'pass'}
+2022-09-22T07:18:58 end: 1.1.2 download-retry (duration 00:00:04) [common]
+2022-09-22T07:18:58 start: 1.1.3 download-retry (timeout 00:59:55) [common]
+2022-09-22T07:18:58 start: 1.1.3.1 http-download (timeout 00:59:55) [common]
+2022-09-22T07:18:58 downloading http://snapshots.linaro.org/components/ledge/oe/ledge-multi-armv8/1472/rpb/ledge-qemuarm64/ledge-iot-lava-ledge-qemuarm64-20220912232805.rootfs.wic.gz
+2022-09-22T07:18:58 saving as /var/lib/lava/dispatcher/tmp/388/deploy-flasher-02ezhtg9/sd/ledge-iot-lava-ledge-qemuarm64-20220912232805.rootfs.wic
+2022-09-22T07:18:58 total size: 379332541 (361MB)
+2022-09-22T07:18:58 Using gunzip to decompress gz
+2022-09-22T07:18:58 progress   0% (0MB)
+2022-09-22T07:19:15 progress   5% (18MB)
+2022-09-22T07:19:26 progress  10% (36MB)
+2022-09-22T07:19:38 progress  15% (54MB)
+2022-09-22T07:19:50 progress  20% (72MB)
+2022-09-22T07:19:57 progress  25% (90MB)
+2022-09-22T07:20:05 progress  30% (108MB)
+2022-09-22T07:20:13 progress  35% (126MB)
+2022-09-22T07:20:22 progress  40% (144MB)
+2022-09-22T07:20:32 progress  45% (162MB)
+2022-09-22T07:20:44 progress  50% (180MB)
+2022-09-22T07:20:55 progress  55% (198MB)
+2022-09-22T07:21:04 progress  60% (217MB)
+2022-09-22T07:21:14 progress  65% (235MB)
+2022-09-22T07:21:28 progress  70% (253MB)
+2022-09-22T07:21:38 progress  75% (271MB)
+2022-09-22T07:21:51 progress  80% (289MB)
+2022-09-22T07:22:10 progress  85% (307MB)
+2022-09-22T07:22:18 progress  90% (325MB)
+2022-09-22T07:22:27 progress  95% (343MB)
+2022-09-22T07:22:41 progress 100% (361MB)
+2022-09-22T07:22:41 361MB downloaded in 223.46s (1.62MB/s)
+2022-09-22T07:22:41 end: 1.1.3.1 http-download (duration 00:03:43) [common]
+2022-09-22T07:22:41 {'case': 'http-download', 'definition': 'lava', 'duration': '223.46', 'extra': {'label': 'sd', 'md5sum': 'a4db67c9e3412be630c6f16c9b1eb22b', 'sha256sum': '8ef1a7eb4d0208344b23ac9db8819266d04b4a1480d0f58ca99381712bae9ebc', 'sha512sum': 'e03544ec4a874506ed87f7dc86fc48674cbd748c635b37264f8e1468494f6c416837d9a8ef2184d169f93358b664193afcfb33aef124ac7e3126447f142f8ac1', 'size': 379332541}, 'level': '1.1.3.1', 'namespace': 'common', 'result': 'pass'}
+2022-09-22T07:22:41 end: 1.1.3 download-retry (duration 00:03:43) [common]
+2022-09-22T07:22:41 Calling: 'nice' 'bash' '-c' 'echo KRIA FLASHER UID=$UID PWD=$PWD PATH=$PATH'
+2022-09-22T07:22:41 >> KRIA FLASHER UID=0 PWD=/var/lib/lava/dispatcher/tmp/388/deploy-flasher-02ezhtg9 PATH=/usr/local/bin:/usr/local/sbin:/bin:/usr/bin:/usr/sbin:/sbin
+2022-09-22T07:22:41 Returned 0 in 0 seconds
+2022-09-22T07:22:41 Calling: 'nice' '/usr/local/bin/relayctl' 'relay3' '1' 'off'
+2022-09-22T07:22:41 Returned 0 in 0 seconds
+2022-09-22T07:22:41 Calling: 'nice' '/usr/local/bin/relayctl' 'relay3' '2' 'on'
+2022-09-22T07:22:42 Returned 0 in 0 seconds
+2022-09-22T07:22:42 Calling: 'nice' 'sleep' '10'
+2022-09-22T07:22:52 Returned 0 in 10 seconds
+2022-09-22T07:22:52 Calling: 'nice' '/usr/local/bin/relayctl' 'relay3' '1' 'on'
+2022-09-22T07:22:52 Returned 0 in 0 seconds
+2022-09-22T07:22:52 Calling: 'nice' 'sleep' '20'
+2022-09-22T07:23:12 Returned 0 in 20 seconds
+2022-09-22T07:23:12 Calling: 'nice' '/usr/local/bin/kria-deploy.sh' '192.168.2.199' '.'
+2022-09-22T07:23:12 >> Created symlink: lrwxrwxrwx 1 root root 17 Sep 22 03:23 ImageA.bin -> ImageA/ImageA.bin
+2022-09-22T07:23:12 >> Created symlink: lrwxrwxrwx 1 root root 17 Sep 22 03:23 ImageB.bin -> ImageB/ImageB.bin
+2022-09-22T07:23:12 >> Created symlink: lrwxrwxrwx 1 root root 59 Sep 22 03:23 sd.img -> sd/ledge-iot-lava-ledge-qemuarm64-20220912232805.rootfs.wic
+2022-09-22T07:23:12 >> Check that board at 192.168.2.199 is alive
+2022-09-22T07:23:23 >> .Board at 192.168.2.199 is alive
+2022-09-22T07:23:23 >> # Host 192.168.2.199 found: line 4
+2022-09-22T07:23:23 >> /root/.ssh/known_hosts updated.
+2022-09-22T07:23:23 >> Original contents retained as /root/.ssh/known_hosts.old
+2022-09-22T07:23:23 >> Board at 192.168.2.199 ready
+2022-09-22T07:23:23 >> ImageA.bin                                      0%    0     0.0KB/s   --:-- ETAImageA.bin                                    100%  277KB  35.9MB/s   00:00    
+2022-09-22T07:23:23 >> ImageB.bin                                      0%    0     0.0KB/s   --:-- ETAImageB.bin                                    100% 1569KB  40.5MB/s   00:00    
+2022-09-22T07:23:23 >> sel-reg-ImageA.bin                              0%    0     0.0KB/s   --:-- ETAsel-reg-ImageA.bin                            100%  256   537.0KB/s   00:00    
+2022-09-22T07:23:24 >> kria-deploy.sh                                  0%    0     0.0KB/s   --:-- ETAkria-deploy.sh                                100%   11KB  14.3MB/s   00:00    
+2022-09-22T07:23:24 >> Update Boot Image A
+2022-09-22T07:23:28 >> Erasing 13312 Kibyte @ 0 --  0 % complete Erasing 13312 Kibyte @ 0 -- 100 % complete 
+2022-09-22T07:23:28 >> 4+1 records in
+2022-09-22T07:23:28 >> 4+1 records out
+2022-09-22T07:23:28 >> Update Boot Image B
+2022-09-22T07:23:33 >> Erasing 13312 Kibyte @ 0 --  0 % complete Erasing 13312 Kibyte @ 0 -- 100 % complete 
+2022-09-22T07:23:36 >> 24+1 records in
+2022-09-22T07:23:36 >> 24+1 records out
+2022-09-22T07:23:36 >> Update IMGSEL variables
+2022-09-22T07:23:36 >> Erasing 128 Kibyte @ 0 --  0 % complete Erasing 128 Kibyte @ 0 -- 100 % complete 
+2022-09-22T07:23:36 >> 0+1 records in
+2022-09-22T07:23:36 >> 0+1 records out
+2022-09-22T07:23:36 >> Update 2nd copy
+2022-09-22T07:23:36 >> Erasing 128 Kibyte @ 0 --  0 % complete Erasing 128 Kibyte @ 0 -- 100 % complete 
+2022-09-22T07:23:36 >> 0+1 records in
+2022-09-22T07:23:36 >> 0+1 records out
+2022-09-22T07:23:36 >> TEMPDIR=/tmp/tmp.M9sEb6hLfy DEV=mmcblk1 FILE=sd.img BLOCK_SIZE=64M
+2022-09-22T07:23:36 >> splitting sd.img into 64M chunks
+2022-09-22T07:23:51 >> processing chunks:
+2022-09-22T07:33:10 >> ****.............***..........*.*..
+2022-09-22T07:33:10 >> DONE sd.img
+2022-09-22T07:33:10 Returned 0 in 598 seconds
+2022-09-22T07:33:10 Calling: 'nice' '/usr/local/bin/relayctl' 'relay3' '1' 'off'
+2022-09-22T07:33:10 Returned 0 in 0 seconds
+2022-09-22T07:33:10 Calling: 'nice' '/usr/local/bin/relayctl' 'relay3' '2' 'off'
+2022-09-22T07:33:10 Returned 0 in 0 seconds
+2022-09-22T07:33:11 end: 1.1 deploy-flasher (duration 00:14:18) [common]
+2022-09-22T07:33:11 end: 1 deploy-flasher-retry (duration 00:14:18) [common]
+2022-09-22T07:33:11 start: 2 uboot-action (timeout 00:15:00) [common]
+2022-09-22T07:33:11 start: 2.1 uboot-from-media (timeout 00:15:00) [common]
+2022-09-22T07:33:11 end: 2.1 uboot-from-media (duration 00:00:00) [common]
+2022-09-22T07:33:11 start: 2.2 bootloader-overlay (timeout 00:15:00) [common]
+2022-09-22T07:33:11 substitutions:
+2022-09-22T07:33:11 - {DTB}: None
+2022-09-22T07:33:11 - {INITRD}: None
+2022-09-22T07:33:11 - {KERNEL}: None
+2022-09-22T07:33:11 - {LAVA_MAC}: None
+2022-09-22T07:33:11 - {PRESEED_CONFIG}: None
+2022-09-22T07:33:11 - {PRESEED_LOCAL}: None
+2022-09-22T07:33:11 - {RAMDISK}: None
+2022-09-22T07:33:11 - {ROOT_PART}: None
+2022-09-22T07:33:11 - {ROOT}: None
+2022-09-22T07:33:11 - {SERVER_IP}: 192.168.2.5
+2022-09-22T07:33:11 - {TEE}: None
+2022-09-22T07:33:11 Parsed boot commands:
+2022-09-22T07:33:11 - ls mmc 1:1 /
+2022-09-22T07:33:11 - ls mmc 1:2 /
+2022-09-22T07:33:11 - efidebug boot order
+2022-09-22T07:33:11 - printenv -e BootNext
+2022-09-22T07:33:11 - efidebug boot dump
+2022-09-22T07:33:11 - setenv -e -rt -bs BootNext
+2022-09-22T07:33:11 - efidebug boot rm -b 1
+2022-09-22T07:33:11 - efidebug boot add -b 1 BootLedge mmc 1:1 efi/boot/bootaa64.efi -i mmc 1:1 ledge-initramfs.rootfs.cpio.gz -s 'console=ttyPS1,115200 console=tty0 root=UUID=6091b3a4-ce08-3020-93a6-f755a22ef03b rootwait panic=60'
+2022-09-22T07:33:11 - efidebug boot order 1
+2022-09-22T07:33:11 - echo "Starting kernel"; bootefi bootmgr
+2022-09-22T07:33:11 end: 2.2 bootloader-overlay (duration 00:00:00) [common]
+2022-09-22T07:33:11 start: 2.3 connect-device (timeout 00:15:00) [common]
+2022-09-22T07:33:11 [common] connect-device Connecting to device using 'telnet localhost 7001'
+2022-09-22T07:33:11 Setting prompt string to ['lava-test: # ']
+2022-09-22T07:33:11 end: 2.3 connect-device (duration 00:00:00) [common]
+2022-09-22T07:33:11 start: 2.4 uboot-commands (timeout 00:15:00) [common]
+2022-09-22T07:33:11 start: 2.4.1 reset-device (timeout 00:15:00) [common]
+2022-09-22T07:33:11 start: 2.4.1.1 pdu-reboot (timeout 00:15:00) [common]
+2022-09-22T07:33:11 Calling: 'nice' '/usr/local/bin/relayctl' 'relay3' '1' 'cycle' '15'
+2022-09-22T07:33:26 Returned 0 in 15 seconds
+2022-09-22T07:33:26 end: 2.4.1.1 pdu-reboot (duration 00:00:15) [common]
+2022-09-22T07:33:26 {'case': 'pdu-reboot', 'definition': 'lava', 'duration': '15.19', 'extra': {'status': 'success'}, 'level': '2.4.1.1', 'namespace': 'common', 'result': 'pass'}
+2022-09-22T07:33:26 end: 2.4.1 reset-device (duration 00:00:15) [common]
+2022-09-22T07:33:26 start: 2.4.2 bootloader-interrupt (timeout 00:14:45) [common]
+2022-09-22T07:33:26 Setting prompt string to ['Hit any key to stop autoboot']
+2022-09-22T07:33:26 bootloader-interrupt: Wait for prompt ['Hit any key to stop autoboot'] (timeout 00:15:00)
+2022-09-22T07:33:26 Trying ::1...
+2022-09-22T07:33:26 Connected to localhost.
+2022-09-22T07:33:26 Escape character is '^]'.
+2022-09-22T07:33:26  
+2022-09-22T07:33:27  
+2022-09-22T07:33:27 <debug_uart>
+2022-09-22T07:33:27 
+2022-09-22T07:33:27 U-Boot SPL 2022.07-rc3 (May 27 2022 - 12:50:42 +0000)
+2022-09-22T07:33:27 PMUFW:	v1.1
+2022-09-22T07:33:27 Loading new PMUFW cfg obj (2032 bytes)
+2022-09-22T07:33:27 Silicon version:	3
+2022-09-22T07:33:27 EL Level:	EL3
+2022-09-22T07:33:27 Chip ID:	xck26
+2022-09-22T07:33:27 Secure Boot:	not authenticated, not encrypted
+2022-09-22T07:33:27 Multiboot:	64
+2022-09-22T07:33:27 Trying to boot from SPI
+2022-09-22T07:33:28 NOTICE:  BL31: v2.6(release):v2.6-879-gc3bdd3d3cf-dirty
+2022-09-22T07:33:29 NOTICE:  BL31: Built : 09:30:50, May  9 2022�H�\"��՝}Յ���jR�
+2022-09-22T07:33:29 
+2022-09-22T07:33:29 U-Boot 2022.07-rc3 (May 27 2022 - 12:50:42 +0000)
+2022-09-22T07:33:29 
+2022-09-22T07:33:29 CPU:   ZynqMP
+2022-09-22T07:33:29 Silicon: v3
+2022-09-22T07:33:29 Detected name: zynqmp-sm-k26-xcl2gc-rev1 -sck-kv-g-rev1
+2022-09-22T07:33:29 Model: ZynqMP SM-K26 Rev1/B/A
+2022-09-22T07:33:29 Board: Xilinx ZynqMP
+2022-09-22T07:33:29 DRAM:  4 GiB
+2022-09-22T07:33:29 PMUFW:	v1.1
+2022-09-22T07:33:30 Xilinx I2C FRU format at nvmem0:
+2022-09-22T07:33:30  Manufacturer Name: XILINX
+2022-09-22T07:33:30  Product Name: SM-K26-XCL2GC
+2022-09-22T07:33:30  Serial No: XFL1OTRUW0NW
+2022-09-22T07:33:30  Part Number: 5057-02  
+2022-09-22T07:33:30  File ID: 0x0
+2022-09-22T07:33:30  Revision Number: 1 
+2022-09-22T07:33:30 Xilinx I2C FRU format at nvmem1:
+2022-09-22T07:33:30  Manufacturer Name: XILINX
+2022-09-22T07:33:30  Product Name: SCK-KV-G        
+2022-09-22T07:33:30  Serial No: XFL1EMYMAA30
+2022-09-22T07:33:30  Part Number: 5066-01  
+2022-09-22T07:33:30  File ID: 0x0
+2022-09-22T07:33:30  Revision Number: 1
+2022-09-22T07:33:30 EL Level:	EL2
+2022-09-22T07:33:30 Chip ID:	xck26
+2022-09-22T07:33:30 Secure Boot:	not authenticated, not encrypted
+2022-09-22T07:33:30 Core:  127 devices, 33 uclasses, devicetree: fit
+2022-09-22T07:33:30 7[r[999;999H[6n8NAND:  0 MiB
+2022-09-22T07:33:31 MMC:   mmc@ff160000: 0, mmc@ff170000: 1
+2022-09-22T07:33:31 Loading Environment from nowhere... OK
+2022-09-22T07:33:31 In:    serial
+2022-09-22T07:33:31 Out:   serial
+2022-09-22T07:33:31 Err:   serial
+2022-09-22T07:33:31 Bootmode: QSPI_MODE
+2022-09-22T07:33:31 Reset reason:	SOFT 
+2022-09-22T07:33:32 Net:   PHY reset timed out
+2022-09-22T07:33:32 
+2022-09-22T07:33:32 ZYNQ GEM: ff0e0000, mdio bus ff0e0000, phyaddr 1, interface rgmii-id
+2022-09-22T07:33:32 eth0: ethernet@ff0e0000
+2022-09-22T07:33:32 
+2022-09-22T07:33:32 Hit any key to stop autoboot:  2 
+2022-09-22T07:33:32 end: 2.4.2 bootloader-interrupt (duration 00:00:06) [common]
+2022-09-22T07:33:32 start: 2.4.3 bootloader-commands (timeout 00:14:39) [common]
+2022-09-22T07:33:32 Setting prompt string to ['ZynqMP>']
+2022-09-22T07:33:32 bootloader-commands: Wait for prompt ['ZynqMP>'] (timeout 00:14:39)
+2022-09-22T07:33:32 
+2022-09-22T07:33:32  0 
+2022-09-22T07:33:32 ZynqMP> 
+2022-09-22T07:33:32 Setting prompt string to ['ZynqMP>', 'Resetting CPU', 'Must RESET board to recover', 'TIMEOUT', 'Retry count exceeded', 'Retry time exceeded; starting again', 'ERROR: The remote end did not respond in time.', 'File not found', 'Bad Linux ARM64 Image magic!', 'Wrong Ramdisk Image Format', 'Ramdisk image is corrupt or invalid', 'ERROR: Failed to allocate', 'TFTP error: trying to overwrite reserved memory', 'Bad Linux RISCV Image magic!', 'Wrong Image Format for boot', 'ERROR: Did not find a cmdline Flattened Device Tree', 'ERROR: RD image overlaps OS image']
+2022-09-22T07:33:32 ls mmc 1:1 /
+2022-09-22T07:33:32 ZynqMP> ls mmc 1:1 /
+2022-09-22T07:33:32 bootloader-commands: Wait for prompt ['ZynqMP>', 'Resetting CPU', 'Must RESET board to recover', 'TIMEOUT', 'Retry count exceeded', 'Retry time exceeded; starting again', 'ERROR: The remote end did not respond in time.', 'File not found', 'Bad Linux ARM64 Image magic!', 'Wrong Ramdisk Image Format', 'Ramdisk image is corrupt or invalid', 'ERROR: Failed to allocate', 'TFTP error: trying to overwrite reserved memory', 'Bad Linux RISCV Image magic!', 'Wrong Image Format for boot', 'ERROR: Did not find a cmdline Flattened Device Tree', 'ERROR: RD image overlaps OS image'] (timeout 00:14:39)
+2022-09-22T07:33:32 ls mmc 1:2 /
+2022-09-22T07:33:32 ls mmc 1:2 /
+2022-09-22T07:33:32 bootloader-commands: Wait for prompt ['ZynqMP>', 'Resetting CPU', 'Must RESET board to recover', 'TIMEOUT', 'Retry count exceeded', 'Retry time exceeded; starting again', 'ERROR: The remote end did not respond in time.', 'File not found', 'Bad Linux ARM64 Image magic!', 'Wrong Ramdisk Image Format', 'Ramdisk image is corrupt or invalid', 'ERROR: Failed to allocate', 'TFTP error: trying to overwrite reserved memory', 'Bad Linux RISCV Image magic!', 'Wrong Image Format for boot', 'ERROR: Did not find a cmdline Flattened Device Tree', 'ERROR: RD image overlaps OS image'] (timeout 00:14:39)
+2022-09-22T07:33:32 ls mmc 1:1 /
+2022-09-22T07:33:32 ls mmc 1:1 /
+2022-09-22T07:33:32 ls mmc 1:2 /
+2022-09-22T07:33:33             EFI/
+2022-09-22T07:33:33  34795536   Image
+2022-09-22T07:33:33             dtb/
+2022-09-22T07:33:33  25302315   ledge-initramfs.rootfs.cpio.gz
+2022-09-22T07:33:33 
+2022-09-22T07:33:33 2 file(s), 2 dir(s)
+2022-09-22T07:33:33 
+2022-09-22T07:33:33 ZynqMP> 
+2022-09-22T07:33:33 efidebug boot order
+2022-09-22T07:33:33 efidebug boot order
+2022-09-22T07:33:33 bootloader-commands: Wait for prompt ['ZynqMP>', 'Resetting CPU', 'Must RESET board to recover', 'TIMEOUT', 'Retry count exceeded', 'Retry time exceeded; starting again', 'ERROR: The remote end did not respond in time.', 'File not found', 'Bad Linux ARM64 Image magic!', 'Wrong Ramdisk Image Format', 'Ramdisk image is corrupt or invalid', 'ERROR: Failed to allocate', 'TFTP error: trying to overwrite reserved memory', 'Bad Linux RISCV Image magic!', 'Wrong Image Format for boot', 'ERROR: Did not find a cmdline Flattened Device Tree', 'ERROR: RD image overlaps OS image'] (timeout 00:14:38)
+2022-09-22T07:33:33             EFI/
+2022-09-22T07:33:33  34795536   Image
+2022-09-22T07:33:33             dtb/
+2022-09-22T07:33:33  25302315   ledge-initramfs.rootfs.cpio.gz
+2022-09-22T07:33:33 efidebug boot order
+2022-09-22T07:33:33 2 file(s), 2 dir(s)
+2022-09-22T07:33:33 
+2022-09-22T07:33:33 ZynqMP> ls mmc 1:2 /
+2022-09-22T07:33:33 <DIR>       4096 .
+2022-09-22T07:33:33 <DIR>       4096 ..
+2022-09-22T07:33:33 <DIR>      16384 lost+found
+2022-09-22T07:33:33               25 .autorelabel
+2022-09-22T07:33:33 <DIR>       4096 bi
+2022-09-22T07:33:33 printenv -e BootNext
+2022-09-22T07:33:33 printenv -e BootNext
+2022-09-22T07:33:33 bootloader-commands: Wait for prompt ['ZynqMP>', 'Resetting CPU', 'Must RESET board to recover', 'TIMEOUT', 'Retry count exceeded', 'Retry time exceeded; starting again', 'ERROR: The remote end did not respond in time.', 'File not found', 'Bad Linux ARM64 Image magic!', 'Wrong Ramdisk Image Format', 'Ramdisk image is corrupt or invalid', 'ERROR: Failed to allocate', 'TFTP error: trying to overwrite reserved memory', 'Bad Linux RISCV Image magic!', 'Wrong Image Format for boot', 'ERROR: Did not find a cmdline Flattened Device Tree', 'ERROR: RD image overlaps OS image'] (timeout 00:14:38)
+2022-09-22T07:33:33 n
+2022-09-22T07:33:33 <DIR>       4096 boot
+2022-09-22T07:33:33 <DIR>       4096 dev
+2022-09-22T07:33:33 <DIR>       4096 etc
+2022-09-22T07:33:33 <DIR>       4096 home
+2022-09-22T07:33:33 <DIR>       4096 lib
+2022-09-22T07:33:33 <DIR>       4096 media
+2022-09-22T07:33:33 <DIR>       4096 mnt
+2022-09-22T07:33:33 <DIR>       4096 opt
+2022-09-22T07:33:33 <DIR>       4096 proc
+2022-09-22T07:33:33 <DIR>       4096 run
+2022-09-22T07:33:33 <DIR>       4096 sbin
+2022-09-22T07:33:33 <DIR>       4096 srv
+2022-09-22T07:33:33 <DIR>       4096 sys
+2022-09-22T07:33:33 printenv -e BootNext<DIR>       4096 tmp
+2022-09-22T07:33:33 <DIR>       4096 usr
+2022-09-22T07:33:33 <DIR>       4096 var
+2022-09-22T07:33:33 ZynqMP> 
+2022-09-22T07:33:33 <DIR>       4096 .
+2022-09-22T07:33:33 <DIR>       4096 ..
+2022-09-22T07:33:33 <DIR>      16384 lost+found
+2022-09-22T07:33:33               25 .autorelabel
+2022-09-22T07:33:33 <DIR>       4096 bin
+2022-09-22T07:33:33 
+2022-09-22T07:33:33 <DIR>       4096 boot
+2022-09-22T07:33:33 efidebug boot dump
+2022-09-22T07:33:33 <DIR>      efidebug boot dump
+2022-09-22T07:33:33 bootloader-commands: Wait for prompt ['ZynqMP>', 'Resetting CPU', 'Must RESET board to recover', 'TIMEOUT', 'Retry count exceeded', 'Retry time exceeded; starting again', 'ERROR: The remote end did not respond in time.', 'File not found', 'Bad Linux ARM64 Image magic!', 'Wrong Ramdisk Image Format', 'Ramdisk image is corrupt or invalid', 'ERROR: Failed to allocate', 'TFTP error: trying to overwrite reserved memory', 'Bad Linux RISCV Image magic!', 'Wrong Image Format for boot', 'ERROR: Did not find a cmdline Flattened Device Tree', 'ERROR: RD image overlaps OS image'] (timeout 00:14:38)
+2022-09-22T07:33:33  4096 dev
+2022-09-22T07:33:33 <DIR>       4096 etc
+2022-09-22T07:33:33 <DIR>       4096 home
+2022-09-22T07:33:33 <DIR>       4096 lib
+2022-09-22T07:33:33 <DIR>       4096 media
+2022-09-22T07:33:33 <DIR>       4096 mnt
+2022-09-22T07:33:33 <DIR>       4096 opt
+2022-09-22T07:33:33 <DIR>       4096 proc
+2022-09-22T07:33:33 <DIR>       4096 run
+2022-09-22T07:33:33 <DIR>       4096 sbin
+2022-09-22T07:33:33 <DIR>       4096 srv
+2022-09-22T07:33:33 <DIR>       4096 sys
+2022-09-22T07:33:33 <DIR>       4096 tmp
+2022-09-22T07:33:33 <DIR>       4096 usr
+2022-09-22T07:33:33 efidebug boot dump<DIR>       4096 var
+2022-09-22T07:33:33 ZynqMP> efidebug boot order
+2022-09-22T07:33:33 ** Unable to read file ubootefi.var **
+2022-09-22T07:33:33 Failed to load EFI variables
+2022-09-22T07:33:33 tpm_tis_spi_probe: missing reset GPIO
+2022-09-22T07:33:33 
+2022-09-22T07:33:33 setenv -e -rt -bs BootNext
+2022-09-22T07:33:33 setenv -e -rt -bs BootNext
+2022-09-22T07:33:33 bootloader-commands: Wait for prompt ['ZynqMP>', 'Resetting CPU', 'Must RESET board to recover', 'TIMEOUT', 'Retry count exceeded', 'Retry time exceeded; starting again', 'ERROR: The remote end did not respond in time.', 'File not found', 'Bad Linux ARM64 Image magic!', 'Wrong Ramdisk Image Format', 'Ramdisk image is corrupt or invalid', 'ERROR: Failed to allocate', 'TFTP error: trying to overwrite reserved memory', 'Bad Linux RISCV Image magic!', 'Wrong Image Format for boot', 'ERROR: Did not find a cmdline Flattened Device Tree', 'ERROR: RD image overlaps OS image'] (timeout 00:14:37)
+2022-09-22T07:33:33 setenv -e -rt -bs BootNext
+2022-09-22T07:33:34 BootOrder not defined
+2022-09-22T07:33:34 ZynqMP> 
+2022-09-22T07:33:34 ZynqMP> printenv -e BootNext
+2022-09-22T07:33:34 Error: \"BootNext\" not defined
+2022-09-22T07:33:34 ZynqMP> 
+2022-09-22T07:33:34 efidebug boot rm -b 1
+2022-09-22T07:33:34 Error: \"BootNext\" not deefidebug boot rm -b 1
+2022-09-22T07:33:34 bootloader-commands: Wait for prompt ['ZynqMP>', 'Resetting CPU', 'Must RESET board to recover', 'TIMEOUT', 'Retry count exceeded', 'Retry time exceeded; starting again', 'ERROR: The remote end did not respond in time.', 'File not found', 'Bad Linux ARM64 Image magic!', 'Wrong Ramdisk Image Format', 'Ramdisk image is corrupt or invalid', 'ERROR: Failed to allocate', 'TFTP error: trying to overwrite reserved memory', 'Bad Linux RISCV Image magic!', 'Wrong Image Format for boot', 'ERROR: Did not find a cmdline Flattened Device Tree', 'ERROR: RD image overlaps OS image'] (timeout 00:14:37)
+2022-09-22T07:33:34 efidebug boot add -b 1 BootLedge mmc 1:1 efi/boot/bootaa64.efi -i mmc 1:1 ledge-initramfs.rootfs.cpio.gz -s 'console=ttyPS1,115200 console=tty0 root=UUID=6091b3a4-ce08-3020-93a6-f755a22ef03b rootwait panic=60'
+2022-09-22T07:33:34 efidebug boot add -b 1 BootLedge mmc 1:1 efi/boot/bootaa64.efi -i mmc 1:1 ledge-initramfs.rootfs.cpio.gz -s 'console=ttyPS1,115200 console=tty0 root=UUID=6091b3a4-ce08-3020-93a6-f755a22ef03b rootwait panic=60'
+2022-09-22T07:33:34 bootloader-commands: Wait for prompt ['ZynqMP>', 'Resetting CPU', 'Must RESET board to recover', 'TIMEOUT', 'Retry count exceeded', 'Retry time exceeded; starting again', 'ERROR: The remote end did not respond in time.', 'File not found', 'Bad Linux ARM64 Image magic!', 'Wrong Ramdisk Image Format', 'Ramdisk image is corrupt or invalid', 'ERROR: Failed to allocate', 'TFTP error: trying to overwrite reserved memory', 'Bad Linux RISCV Image magic!', 'Wrong Image Format for boot', 'ERROR: Did not find a cmdline Flattened Device Tree', 'ERROR: RD image overlaps OS image'] (timeout 00:14:36)
+2022-09-22T07:33:34 efidebug boot order 1
+2022-09-22T07:33:34 efidebug boot order 1
+2022-09-22T07:33:34 bootloader-commands: Wait for prompt ['ZynqMP>', 'Resetting CPU', 'Must RESET board to recover', 'TIMEOUT', 'Retry count exceeded', 'Retry time exceeded; starting again', 'ERROR: The remote end did not respond in time.', 'File not found', 'Bad Linux ARM64 Image magic!', 'Wrong Ramdisk Image Format', 'Ramdisk image is corrupt or invalid', 'ERROR: Failed to allocate', 'TFTP error: trying to overwrite reserved memory', 'Bad Linux RISCV Image magic!', 'Wrong Image Format for boot', 'ERROR: Did not find a cmdline Flattened Device Tree', 'ERROR: RD image overlaps OS image'] (timeout 00:14:36)
+2022-09-22T07:33:34 fined
+2022-09-22T07:33:34 ZynqMP> efidebug boot dump
+2022-09-22T07:33:34 ZynqMP> 
+2022-09-22T07:33:34 ZynqMP> setenv -e -rt -bs Boo
+2022-09-22T07:33:34 ## Failed to set EFI variable (not found)
+2022-09-22T07:33:34 ZynqMP> efidebug boot rm -b 1
+2022-09-22T07:33:34 efidebug boot rm -b 1
+2022-09-22T07:33:34 ZynqMP> 
+2022-09-22T07:33:34 ZynqMP> efidebug boot add -b 1 BootLedge mmc 1:1 efi/boot/bootaa64.efi -i mmc 1:1 ledge-initramfs.rootfs.cpio.gz -s 'console=ttyPS1,115200 console=tty0 root=UUID=6091b3a4-ce08-3020-93a6-f755a22ef03b rootwait panic=60'
+2022-09-22T07:33:34 efidebug boot add -b 1 BootLedge mmc 1:1 efi/boot/bootaa64.efi -i mmc 1:1 ledge-initramfs.rootfs.cpio.gz -s 'console=ttyPS1,115200 console=tty0 root=UUID=6091b3a4-ce08-3020-93a6-f755a22ef03b rootwait panic=60'
+2022-09-22T07:33:34 efidebug boot order 1
+2022-09-22T07:33:34 echo "Starting kernel"; bootefi bootmgr
+2022-09-22T07:33:34 echo \"Starting kernel\"; bootefi bootmgr
+2022-09-22T07:33:34 Setting prompt string to ['Starting kernel']
+2022-09-22T07:33:34 bootloader-commands: Wait for prompt ['Starting kernel'] (timeout 00:14:36)
+2022-09-22T07:33:34 echo \"Starting kernel\"; bootefi bootmgr
+2022-09-22T07:33:34 end: 2.4.3 bootloader-commands (duration 00:00:03) [common]
+2022-09-22T07:33:34 end: 2.4 uboot-commands (duration 00:00:24) [common]
+2022-09-22T07:33:34 end: 2 uboot-action (duration 00:00:24) [common]
+2022-09-22T07:33:34 start: 3 minimal-boot (timeout 00:15:00) [common]
+2022-09-22T07:33:34 start: 3.1 connect-device (timeout 00:15:00) [common]
+2022-09-22T07:33:34 Already connected
+2022-09-22T07:33:34 end: 3.1 connect-device (duration 00:00:00) [common]
+2022-09-22T07:33:34 start: 3.2 auto-login-action (timeout 00:15:00) [common]
+2022-09-22T07:33:34 Setting prompt string to ['Linux version [0-9]']
+2022-09-22T07:33:34 auto-login-action: Wait for prompt ['Linux version [0-9]'] (timeout 00:15:00)
+2022-09-22T07:33:34 ZynqMP> 
+2022-09-22T07:33:34 ZynqMP> efidebug boot order 1
+2022-09-22T07:33:34 ZynqMP> 
+2022-09-22T07:33:34 ZynqMP> echo \"Starting kernel\"; bootefi bootmgr
+2022-09-22T07:33:34 Starting kernel
+2022-09-22T07:33:38 Booting: BootLedge
+2022-09-22T07:33:39 EFI stub: Booting Linux Kernel...
+2022-09-22T07:33:39 EFI stub: EFI_RNG_PROTOCOL unavailable
+2022-09-22T07:33:39 EFI stub: UEFI Secure Boot is enabled.
+2022-09-22T07:33:39 EFI stub: Using DTB from configuration table
+2022-09-22T07:33:41 EFI stub: Loaded initrd from LINUX_EFI_INITRD_MEDIA_GUID device path
+2022-09-22T07:33:41 EFI stub: Exiting boot services...
+2022-09-22T07:33:43 [    0.000000] Booting Linux on physical CPU 0x0000000000 [0x410fd034]
+2022-09-22T07:33:43 start: 3.2.1 login-action (timeout 00:14:52) [common]
+2022-09-22T07:33:43 Setting prompt string to ['-+\\[ cut here \\]-+\\s+(.*\\s+-+\\[ end trace (\\w*) \\]-+)', '(Unhandled fault.*)\\r\\n', 'Kernel panic - (.*) end Kernel panic', 'Stack:\\s+(.*\\s+-+\\[ end trace (\\w*) \\]-+)', '^[^\\n]+WARNING:.*?$', '^[^\\n]+Oops(?: -|:).*?$', '^[^\\n]+BUG:.*?$']
+2022-09-22T07:33:43 Using line separator: #'\n'#
+2022-09-22T07:33:43 Waiting for the login prompt
+2022-09-22T07:33:43 Parsing kernel messages
+2022-09-22T07:33:43 ['-+\\[ cut here \\]-+\\s+(.*\\s+-+\\[ end trace (\\w*) \\]-+)', '(Unhandled fault.*)\\r\\n', 'Kernel panic - (.*) end Kernel panic', 'Stack:\\s+(.*\\s+-+\\[ end trace (\\w*) \\]-+)', '^[^\\n]+WARNING:.*?$', '^[^\\n]+Oops(?: -|:).*?$', '^[^\\n]+BUG:.*?$', 'ledge-qemuarm64:', 'login:', 'Login incorrect']
+2022-09-22T07:33:43 [login-action] Waiting for messages, (timeout 00:14:52)
+2022-09-22T07:33:43 [    0.000000] Linux version 5.15.34 (oe-user@oe-host) (aarch64-linaro-linux-gcc (GCC) 10.2.1 20201103, GNU ld (GNU Binutils) 2.36.1.20210209) #1 SMP PREEMPT Fri May 6 05:56:02 UTC 2022
+2022-09-22T07:33:43 [    0.000000] Machine model: ZynqMP SM-K26 Rev1/B/A
+2022-09-22T07:33:43 [    0.000000] efi: EFI v2.90 by Das U-Boot
+2022-09-22T07:33:43 [    0.000000] efi: ESRT=0x778d8040 TPMFinalLog=0x778dc040 RTPROP=0x778da040 SMBIOS=0x778d6000 TPMEventLog=0x778cf040 MEMRESERVE=0x778cd040 
+2022-09-22T07:33:43 [    0.000000] esrt: Reserving ESRT space from 0x00000000778d8040 to 0x00000000778d80a0.
+2022-09-22T07:33:43 [    0.000000] NUMA: No NUMA configuration found
+2022-09-22T07:33:43 [    0.000000] NUMA: Faking a node at [mem 0x0000000000000000-0x000000087fffffff]
+2022-09-22T07:33:43 [    0.000000] NUMA: NODE_DATA [mem 0x87f7cdc00-0x87f7cffff]
+2022-09-22T07:33:43 [    0.000000] Zone ranges:
+2022-09-22T07:33:43 [    0.000000]   DMA      [mem 0x0000000000000000-0x00000000ffffffff]
+2022-09-22T07:33:43 [    0.000000]   DMA32    empty
+2022-09-22T07:33:43 [    0.000000]   Normal   [mem 0x0000000100000000-0x000000087fffffff]
+2022-09-22T07:33:43 [    0.000000] Movable zone start for each node
+2022-09-22T07:33:43 [    0.000000] Early memory node ranges
+2022-09-22T07:33:43 [    0.000000]   node   0: [mem 0x0000000000000000-0x00000000778d5fff]
+2022-09-22T07:33:43 [    0.000000]   node   0: [mem 0x00000000778d6000-0x00000000778d6fff]
+2022-09-22T07:33:43 [    0.000000]   node   0: [mem 0x00000000778d7000-0x00000000778d9fff]
+2022-09-22T07:33:43 [    0.000000]   node   0: [mem 0x00000000778da000-0x00000000778dafff]
+2022-09-22T07:33:43 [    0.000000]   node   0: [mem 0x00000000778db000-0x00000000778dbfff]
+2022-09-22T07:33:43 [    0.000000]   node   0: [mem 0x00000000778dc000-0x00000000778ecfff]
+2022-09-22T07:33:43 [    0.000000]   node   0: [mem 0x00000000778ed000-0x00000000778fffff]
+2022-09-22T07:33:43 [    0.000000]   node   0: [mem 0x0000000077900000-0x0000000077901fff]
+2022-09-22T07:33:43 [    0.000000]   node   0: [mem 0x0000000077902000-0x0000000077902fff]
+2022-09-22T07:33:43 [    0.000000]   node   0: [mem 0x0000000077903000-0x0000000077906fff]
+2022-09-22T07:33:43 [    0.000000]   node   0: [mem 0x0000000077907000-0x000000007f98ffff]
+2022-09-22T07:33:43 [    0.000000]   node   0: [mem 0x000000007f990000-0x000000007f99ffff]
+2022-09-22T07:33:43 [    0.000000]   node   0: [mem 0x000000007f9a0000-0x000000007fffffff]
+2022-09-22T07:33:43 [    0.000000]   node   0: [mem 0x0000000800000000-0x000000087fffffff]
+2022-09-22T07:33:43 [    0.000000] Initmem setup node 0 [mem 0x0000000000000000-0x000000087fffffff]
+2022-09-22T07:33:43 [    0.000000] cma: Reserved 64 MiB at 0x000000007b800000
+2022-09-22T07:33:43 [    0.000000] psci: probing for conduit method from DT.
+2022-09-22T07:33:43 [    0.000000] psci: PSCIv1.1 detected in firmware.
+2022-09-22T07:33:43 [    0.000000] psci: Using standard PSCI v0.2 function IDs
+2022-09-22T07:33:43 [    0.000000] psci: MIGRATE_INFO_TYPE not supported.
+2022-09-22T07:33:43 [    0.000000] psci: SMC Calling Convention v1.2
+2022-09-22T07:33:43 [    0.000000] percpu: Embedded 20 pages/cpu s42712 r8192 d31016 u81920
+2022-09-22T07:33:43 [    0.000000] Detected VIPT I-cache on CPU0
+2022-09-22T07:33:43 [    0.000000] CPU features: kernel page table isolation forced ON by KASLR
+2022-09-22T07:33:43 [    0.000000] CPU features: detected: Kernel page table isolation (KPTI)
+2022-09-22T07:33:43 [    0.000000] CPU features: detected: ARM erratum 845719
+2022-09-22T07:33:43 [    0.000000] Built 1 zonelists, mobility grouping on.  Total pages: 1032192
+2022-09-22T07:33:43 [    0.000000] Policy zone: Normal
+2022-09-22T07:33:43 [    0.000000] Kernel command line: console=ttyPS1,115200 console=tty0 root=UUID=6091b3a4-ce08-3020-93a6-f755a22ef03b rootwait panic=60
+2022-09-22T07:33:43 [    0.000000] Dentry cache hash table entries: 524288 (order: 10, 4194304 bytes, linear)
+2022-09-22T07:33:43 [    0.000000] Inode-cache hash table entries: 262144 (order: 9, 2097152 bytes, linear)
+2022-09-22T07:33:43 [    0.000000] mem auto-init: stack:off, heap alloc:off, heap free:off
+2022-09-22T07:33:43 [    0.000000] software IO TLB: mapped [mem 0x000000006f5c0000-0x00000000735c0000] (64MB)
+2022-09-22T07:33:43 [    0.000000] Memory: 3922328K/4194304K available (17536K kernel code, 3002K rwdata, 8136K rodata, 5184K init, 747K bss, 206440K reserved, 65536K cma-reserved)
+2022-09-22T07:33:43 [    0.000000] SLUB: HWalign=64, Order=0-3, MinObjects=0, CPUs=4, Nodes=1
+2022-09-22T07:33:43 [    0.000000] rcu: Preemptible hierarchical RCU implementation.
+2022-09-22T07:33:43 [    0.000000] rcu: 	RCU event tracing is enabled.
+2022-09-22T07:33:43 [    0.000000] rcu: 	RCU restricting CPUs from NR_CPUS=256 to nr_cpu_ids=4.
+2022-09-22T07:33:43 [    0.000000] 	Trampoline variant of Tasks RCU enabled.
+2022-09-22T07:33:43 [    0.000000] 	Tracing variant of Tasks RCU enabled.
+2022-09-22T07:33:43 [    0.000000] rcu: RCU calculated value of scheduler-enlistment delay is 25 jiffies.
+2022-09-22T07:33:43 [    0.000000] rcu: Adjusting geometry for rcu_fanout_leaf=16, nr_cpu_ids=4
+2022-09-22T07:33:43 [    0.000000] NR_IRQS: 64, nr_irqs: 64, preallocated irqs: 0
+2022-09-22T07:33:43 [    0.000000] GIC: Adjusting CPU interface base to 0x00000000f902f000
+2022-09-22T07:33:43 [    0.000000] Root IRQ handler: gic_handle_irq
+2022-09-22T07:33:43 [    0.000000] GIC: Using split EOI/Deactivate mode
+2022-09-22T07:33:43 [    0.000000] random: get_random_bytes called from start_kernel+0x478/0x670 with crng_init=0
+2022-09-22T07:33:43 [    0.000000] arch_timer: cp15 timer(s) running at 99.99MHz (phys).
+2022-09-22T07:33:43 [    0.000000] clocksource: arch_sys_counter: mask: 0xffffffffffffff max_cycles: 0x171015c90f, max_idle_ns: 440795203080 ns
+2022-09-22T07:33:43 [    0.000000] sched_clock: 56 bits at 99MHz, resolution 10ns, wraps every 4398046511101ns
+2022-09-22T07:33:43 [    0.000437] Console: colour dummy device 80x25
+2022-09-22T07:33:43 [    0.000873] printk: console [tty0] enabled
+2022-09-22T07:33:43 [    0.000945] Calibrating delay loop (skipped), value calculated using timer frequency.. 199.99 BogoMIPS (lpj=399996)
+2022-09-22T07:33:43 [    0.000966] pid_max: default: 32768 minimum: 301
+2022-09-22T07:33:43 [    0.001019] LSM: Security Framework initializing
+2022-09-22T07:33:43 [    0.001055] SELinux:  Initializing.
+2022-09-22T07:33:43 [    0.001150] Mount-cache hash table entries: 8192 (order: 4, 65536 bytes, linear)
+2022-09-22T07:33:43 [    0.001176] Mountpoint-cache hash table entries: 8192 (order: 4, 65536 bytes, linear)
+2022-09-22T07:33:43 [    0.002475] rcu: Hierarchical SRCU implementation.
+2022-09-22T07:33:43 [    0.003541] Remapping and enabling EFI services.
+2022-09-22T07:33:43 [    0.003713] smp: Bringing up secondary CPUs ...
+2022-09-22T07:33:43 [    0.004130] Detected VIPT I-cache on CPU1
+2022-09-22T07:33:43 [    0.004175] CPU1: Booted secondary processor 0x0000000001 [0x410fd034]
+2022-09-22T07:33:43 [    0.004559] Detected VIPT I-cache on CPU2
+2022-09-22T07:33:43 [    0.004583] CPU2: Booted secondary processor 0x0000000002 [0x410fd034]
+2022-09-22T07:33:43 [    0.004945] Detected VIPT I-cache on CPU3
+2022-09-22T07:33:43 [    0.004969] CPU3: Booted secondary processor 0x0000000003 [0x410fd034]
+2022-09-22T07:33:43 [    0.005017] smp: Brought up 1 node, 4 CPUs
+2022-09-22T07:33:43 [    0.005066] SMP: Total of 4 processors activated.
+2022-09-22T07:33:43 [    0.005075] CPU features: detected: 32-bit EL0 Support
+2022-09-22T07:33:43 [    0.005083] CPU features: detected: 32-bit EL1 Support
+2022-09-22T07:33:43 [    0.005093] CPU features: detected: CRC32 instructions
+2022-09-22T07:33:43 [    0.011686] CPU: All CPU(s) started at EL2
+2022-09-22T07:33:43 [    0.011715] alternatives: patching kernel code
+2022-09-22T07:33:43 [    0.013024] devtmpfs: initialized
+2022-09-22T07:33:43 [    0.017787] Registered cp15_barrier emulation handler
+2022-09-22T07:33:43 [    0.017805] Registered setend emulation handler
+2022-09-22T07:33:43 [    0.017819] KASLR disabled due to lack of seed
+2022-09-22T07:33:43 [    0.017952] clocksource: jiffies: mask: 0xffffffff max_cycles: 0xffffffff, max_idle_ns: 7645041785100000 ns
+2022-09-22T07:33:43 [    0.017977] futex hash table entries: 1024 (order: 4, 65536 bytes, linear)
+2022-09-22T07:33:43 [    0.020424] pinctrl core: initialized pinctrl subsystem
+2022-09-22T07:33:43 [    0.021204] SMBIOS 3.0 present.
+2022-09-22T07:33:43 [    0.021226] DMI: Unknown Unknown Product/Unknown Product, BIOS 2022.07-rc3 07/01/2022
+2022-09-22T07:33:43 [    0.021576] NET: Registered PF_NETLINK/PF_ROUTE protocol family
+2022-09-22T07:33:43 [    0.022686] DMA: preallocated 512 KiB GFP_KERNEL pool for atomic allocations
+2022-09-22T07:33:43 [    0.022785] DMA: preallocated 512 KiB GFP_KERNEL|GFP_DMA pool for atomic allocations
+2022-09-22T07:33:43 [    0.022929] DMA: preallocated 512 KiB GFP_KERNEL|GFP_DMA32 pool for atomic allocations
+2022-09-22T07:33:43 [    0.022999] audit: initializing netlink subsys (disabled)
+2022-09-22T07:33:43 [    0.023105] audit: type=2000 audit(0.020:1): state=initialized audit_enabled=0 res=1
+2022-09-22T07:33:43 [    0.023922] thermal_sys: Registered thermal governor 'step_wise'
+2022-09-22T07:33:43 [    0.023927] thermal_sys: Registered thermal governor 'power_allocator'
+2022-09-22T07:33:43 [    0.024035] cpuidle: using governor menu
+2022-09-22T07:33:43 [    0.024120] NET: Registered PF_QIPCRTR protocol family
+2022-09-22T07:33:43 [    0.024279] hw-breakpoint: found 6 breakpoint and 4 watchpoint registers.
+2022-09-22T07:33:43 [    0.024356] ASID allocator initialised with 32768 entries
+2022-09-22T07:33:43 [    0.025136] Serial: AMBA PL011 UART driver
+2022-09-22T07:33:43 [    0.047495] HugeTLB registered 1.00 GiB page size, pre-allocated 0 pages
+2022-09-22T07:33:43 [    0.047524] HugeTLB registered 32.0 MiB page size, pre-allocated 0 pages
+2022-09-22T07:33:43 [    0.047537] HugeTLB registered 2.00 MiB page size, pre-allocated 0 pages
+2022-09-22T07:33:43 [    0.047548] HugeTLB registered 64.0 KiB page size, pre-allocated 0 pages
+2022-09-22T07:33:43 [    0.048582] cryptd: max_cpu_qlen set to 1000
+2022-09-22T07:33:43 [    0.051177] ACPI: Interpreter disabled.
+2022-09-22T07:33:43 [    0.052291] iommu: Default domain type: Translated 
+2022-09-22T07:33:43 [    0.052304] iommu: DMA domain TLB invalidation policy: strict mode 
+2022-09-22T07:33:43 [    0.052504] vgaarb: loaded
+2022-09-22T07:33:43 [    0.052739] SCSI subsystem initialized
+2022-09-22T07:33:43 [    0.052994] usbcore: registered new interface driver usbfs
+2022-09-22T07:33:43 [    0.053031] usbcore: registered new interface driver hub
+2022-09-22T07:33:43 [    0.053060] usbcore: registered new device driver usb
+2022-09-22T07:33:43 [    0.053378] mc: Linux media interface: v0.10
+2022-09-22T07:33:43 [    0.053404] videodev: Linux video capture interface: v2.00
+2022-09-22T07:33:43 [    0.053436] pps_core: LinuxPPS API ver. 1 registered
+2022-09-22T07:33:43 [    0.053446] pps_core: Software ver. 5.3.6 - Copyright 2005-2007 Rodolfo Giometti <giometti@linux.it>
+2022-09-22T07:33:43 [    0.053470] PTP clock support registered
+2022-09-22T07:33:43 [    0.053566] EDAC MC: Ver: 3.0.0
+2022-09-22T07:33:43 [    0.054147] Registered efivars operations
+2022-09-22T07:33:43 [    0.054392] zynqmp-ipi-mbox mailbox@ff990400: Registered ZynqMP IPI mbox with TX/RX channels.
+2022-09-22T07:33:43 [    0.054828] FPGA manager framework
+2022-09-22T07:33:43 [    0.054895] Advanced Linux Sound Architecture Driver Initialized.
+2022-09-22T07:33:43 [    0.055358] Bluetooth: Core ver 2.22
+2022-09-22T07:33:43 [    0.055386] NET: Registered PF_BLUETOOTH protocol family
+2022-09-22T07:33:43 [    0.055396] Bluetooth: HCI device and connection manager initialized
+2022-09-22T07:33:43 [    0.055410] Bluetooth: HCI socket layer initialized
+2022-09-22T07:33:43 [    0.055421] Bluetooth: L2CAP socket layer initialized
+2022-09-22T07:33:43 [    0.055439] Bluetooth: SCO socket layer initialized
+2022-09-22T07:33:43 [    0.055817] clocksource: Switched to clocksource arch_sys_counter
+2022-09-22T07:33:43 [    0.055944] VFS: Disk quotas dquot_6.6.0
+2022-09-22T07:33:43 [    0.055988] VFS: Dquot-cache hash table entries: 512 (order 0, 4096 bytes)
+2022-09-22T07:33:43 [    0.056253] pnp: PnP ACPI: disabled
+2022-09-22T07:33:43 [    0.061064] NET: Registered PF_INET protocol family
+2022-09-22T07:33:43 [    0.061195] IP idents hash table entries: 65536 (order: 7, 524288 bytes, linear)
+2022-09-22T07:33:43 [    0.062585] tcp_listen_portaddr_hash hash table entries: 2048 (order: 3, 32768 bytes, linear)
+2022-09-22T07:33:43 [    0.062664] TCP established hash table entries: 32768 (order: 6, 262144 bytes, linear)
+2022-09-22T07:33:43 [    0.062862] TCP bind hash table entries: 32768 (order: 7, 524288 bytes, linear)
+2022-09-22T07:33:43 [    0.063230] TCP: Hash tables configured (established 32768 bind 32768)
+2022-09-22T07:33:43 [    0.063313] UDP hash table entries: 2048 (order: 4, 65536 bytes, linear)
+2022-09-22T07:33:43 [    0.063391] UDP-Lite hash table entries: 2048 (order: 4, 65536 bytes, linear)
+2022-09-22T07:33:43 [    0.063559] NET: Registered PF_UNIX/PF_LOCAL protocol family
+2022-09-22T07:33:43 [    0.063860] RPC: Registered named UNIX socket transport module.
+2022-09-22T07:33:43 [    0.063872] RPC: Registered udp transport module.
+2022-09-22T07:33:43 [    0.063881] RPC: Registered tcp transport module.
+2022-09-22T07:33:43 [    0.063890] RPC: Registered tcp NFSv4.1 backchannel transport module.
+2022-09-22T07:33:43 [    0.064545] PCI: CLS 0 bytes, default 64
+2022-09-22T07:33:43 [    0.064717] Unpacking initramfs...
+2022-09-22T07:33:43 [    0.072276] armv8-pmu pmu: hw perfevents: no interrupt-affinity property, guessing.
+2022-09-22T07:33:43 [    0.072470] hw perfevents: enabled with armv8_pmuv3 PMU driver, 7 counters available
+2022-09-22T07:33:44 [    0.072781] kvm [1]: IPA Size Limit: 40 bits
+2022-09-22T07:33:44 [    0.074096] kvm [1]: vgic interrupt IRQ9
+2022-09-22T07:33:44 [    0.074205] kvm [1]: Hyp mode initialized successfully
+2022-09-22T07:33:44 [    0.077446] Initialise system trusted keyrings
+2022-09-22T07:33:44 [    0.077556] workingset: timestamp_bits=42 max_order=20 bucket_order=0
+2022-09-22T07:33:44 [    0.083270] squashfs: version 4.0 (2009/01/31) Phillip Lougher
+2022-09-22T07:33:44 [    0.083761] NFS: Registering the id_resolver key type
+2022-09-22T07:33:44 [    0.083792] Key type id_resolver registered
+2022-09-22T07:33:44 [    0.083801] Key type id_legacy registered
+2022-09-22T07:33:44 [    0.083893] nfs4filelayout_init: NFSv4 File Layout Driver Registering...
+2022-09-22T07:33:44 [    0.083906] nfs4flexfilelayout_init: NFSv4 Flexfile Layout Driver Registering...
+2022-09-22T07:33:44 [    0.084105] 9p: Installing v9fs 9p2000 file system support
+2022-09-22T07:33:44 [    0.116337] NET: Registered PF_ALG protocol family
+2022-09-22T07:33:44 [    0.116381] Key type asymmetric registered
+2022-09-22T07:33:44 [    0.116390] Asymmetric key parser 'x509' registered
+2022-09-22T07:33:44 [    0.116486] Block layer SCSI generic (bsg) driver version 0.4 loaded (major 244)
+2022-09-22T07:33:44 [    0.116590] io scheduler mq-deadline registered
+2022-09-22T07:33:44 [    0.116602] io scheduler kyber registered
+2022-09-22T07:33:44 [    0.123336] EINJ: ACPI disabled.
+2022-09-22T07:33:44 [    0.132254] Serial: 8250/16550 driver, 4 ports, IRQ sharing enabled
+2022-09-22T07:33:44 [    0.134215] msm_serial: driver initialized
+2022-09-22T07:33:44 [    0.135221] cacheinfo: Unable to detect cache hierarchy for CPU 0
+2022-09-22T07:33:44 [    0.139720] loop: module loaded
+2022-09-22T07:33:44 [    0.140697] megasas: 07.717.02.00-rc1
+2022-09-22T07:33:44 [    0.146072] thunder_xcv, ver 1.0
+2022-09-22T07:33:44 [    0.146121] thunder_bgx, ver 1.0
+2022-09-22T07:33:44 [    0.146154] nicpf, ver 1.0
+2022-09-22T07:33:44 [    0.147107] hclge is initializing
+2022-09-22T07:33:44 [    0.147133] hns3: Hisilicon Ethernet Network Driver for Hip08 Family - version
+2022-09-22T07:33:44 [    0.147146] hns3: Copyright (c) 2017 Huawei Corporation.
+2022-09-22T07:33:44 [    0.147190] e1000: Intel(R) PRO/1000 Network Driver
+2022-09-22T07:33:44 [    0.147201] e1000: Copyright (c) 1999-2006 Intel Corporation.
+2022-09-22T07:33:44 [    0.147237] e1000e: Intel(R) PRO/1000 Network Driver
+2022-09-22T07:33:44 [    0.147246] e1000e: Copyright(c) 1999 - 2015 Intel Corporation.
+2022-09-22T07:33:44 [    0.147282] igb: Intel(R) Gigabit Ethernet Network Driver
+2022-09-22T07:33:44 [    0.147292] igb: Copyright (c) 2007-2014 Intel Corporation.
+2022-09-22T07:33:44 [    0.147328] igbvf: Intel(R) Gigabit Virtual Function Network Driver
+2022-09-22T07:33:44 [    0.147339] igbvf: Copyright (c) 2009 - 2012 Intel Corporation.
+2022-09-22T07:33:44 [    0.147438] sky2: driver version 1.30
+2022-09-22T07:33:44 [    0.148036] VFIO - User Level meta-driver version: 0.3
+2022-09-22T07:33:44 [    0.149274] ehci_hcd: USB 2.0 'Enhanced' Host Controller (EHCI) Driver
+2022-09-22T07:33:44 [    0.149296] ehci-pci: EHCI PCI platform driver
+2022-09-22T07:33:44 [    0.149328] ehci-platform: EHCI generic platform driver
+2022-09-22T07:33:44 [    0.149425] ohci_hcd: USB 1.1 'Open' Host Controller (OHCI) Driver
+2022-09-22T07:33:44 [    0.149442] ohci-pci: OHCI PCI platform driver
+2022-09-22T07:33:44 [    0.149479] ohci-platform: OHCI generic platform driver
+2022-09-22T07:33:44 [    0.149866] usbcore: registered new interface driver uas
+2022-09-22T07:33:44 [    0.149910] usbcore: registered new interface driver usb-storage
+2022-09-22T07:33:44 [    0.149980] usbcore: registered new interface driver usbserial_generic
+2022-09-22T07:33:44 [    0.150003] usbserial: USB Serial support registered for generic
+2022-09-22T07:33:44 [    0.151729] i2c_dev: i2c /dev entries driver
+2022-09-22T07:33:44 [    0.154979] sdhci: Secure Digital Host Controller Interface driver
+2022-09-22T07:33:44 [    0.154998] sdhci: Copyright(c) Pierre Ossman
+2022-09-22T07:33:44 [    0.155408] Synopsys Designware Multimedia Card Interface Driver
+2022-09-22T07:33:44 [    0.156073] sdhci-pltfm: SDHCI platform and OF driver helper
+2022-09-22T07:33:44 [    0.157301] ledtrig-cpu: registered to indicate activity on CPUs
+2022-09-22T07:33:44 [    0.158167] SMCCC: SOC_ID: ARCH_SOC_ID not implemented, skipping ....
+2022-09-22T07:33:44 [    0.158227] zynqmp_firmware_probe Platform Management API v1.1
+2022-09-22T07:33:44 [    0.158241] zynqmp_firmware_probe Trustzone version v1.0
+2022-09-22T07:33:44 [    0.190646] usbcore: registered new interface driver usbhid
+2022-09-22T07:33:44 [    0.190676] usbhid: USB HID core driver
+2022-09-22T07:33:44 [    0.193749] usbcore: registered new interface driver snd-usb-audio
+2022-09-22T07:33:44 [    0.194473] NET: Registered PF_PACKET protocol family
+2022-09-22T07:33:44 [    0.194751] 9pnet: Installing 9P2000 support
+2022-09-22T07:33:44 [    0.194803] Key type dns_resolver registered
+2022-09-22T07:33:44 [    0.195336] registered taskstats version 1
+2022-09-22T07:33:44 [    0.195355] Loading compiled-in X.509 certificates
+2022-09-22T07:33:44 [    1.108030] Freeing initrd memory: 24708K
+2022-09-22T07:33:44 [    1.117198] Loaded X.509 cert 'Build time autogenerated kernel key: 9397255a5113921745af46953c49bc895ac535aa'
+2022-09-22T07:33:44 [    1.129250] ff010000.serial: ttyPS1 at MMIO 0xff010000 (irq = 50, base_baud = 6249999) is a xuartps
+2022-09-22T07:33:44 [    2.438329] printk: console [ttyPS1] enabled
+2022-09-22T07:33:44 [    2.446777] mdio_bus ff0e0000.ethernet-ffffffff: mdio has invalid PHY address
+2022-09-22T07:33:44 [    2.453926] mdio_bus ff0e0000.ethernet-ffffffff: scan phy mdio at address 0
+2022-09-22T07:33:44 [    2.460977] mdio_bus ff0e0000.ethernet-ffffffff: scan phy mdio at address 1
+2022-09-22T07:33:44 [    2.468018] mdio_bus ff0e0000.ethernet-ffffffff: scan phy mdio at address 2
+2022-09-22T07:33:44 [    2.475057] mdio_bus ff0e0000.ethernet-ffffffff: scan phy mdio at address 3
+2022-09-22T07:33:44 [    2.482100] mdio_bus ff0e0000.ethernet-ffffffff: scan phy mdio at address 4
+2022-09-22T07:33:44 [    2.489145] mdio_bus ff0e0000.ethernet-ffffffff: scan phy mdio at address 5
+2022-09-22T07:33:44 [    2.496186] mdio_bus ff0e0000.ethernet-ffffffff: scan phy mdio at address 6
+2022-09-22T07:33:44 [    2.503225] mdio_bus ff0e0000.ethernet-ffffffff: scan phy mdio at address 7
+2022-09-22T07:33:44 [    2.510267] mdio_bus ff0e0000.ethernet-ffffffff: scan phy mdio at address 8
+2022-09-22T07:33:44 [    2.517314] mdio_bus ff0e0000.ethernet-ffffffff: scan phy mdio at address 9
+2022-09-22T07:33:44 [    2.524361] mdio_bus ff0e0000.ethernet-ffffffff: scan phy mdio at address 10
+2022-09-22T07:33:44 [    2.531487] mdio_bus ff0e0000.ethernet-ffffffff: scan phy mdio at address 11
+2022-09-22T07:33:44 [    2.538613] mdio_bus ff0e0000.ethernet-ffffffff: scan phy mdio at address 12
+2022-09-22T07:33:44 [    2.545739] mdio_bus ff0e0000.ethernet-ffffffff: scan phy mdio at address 13
+2022-09-22T07:33:44 [    2.552867] mdio_bus ff0e0000.ethernet-ffffffff: scan phy mdio at address 14
+2022-09-22T07:33:44 [    2.560001] mdio_bus ff0e0000.ethernet-ffffffff: scan phy mdio at address 15
+2022-09-22T07:33:44 [    2.567127] mdio_bus ff0e0000.ethernet-ffffffff: scan phy mdio at address 16
+2022-09-22T07:33:44 [    2.574254] mdio_bus ff0e0000.ethernet-ffffffff: scan phy mdio at address 17
+2022-09-22T07:33:44 [    2.581380] mdio_bus ff0e0000.ethernet-ffffffff: scan phy mdio at address 18
+2022-09-22T07:33:44 [    2.588507] mdio_bus ff0e0000.ethernet-ffffffff: scan phy mdio at address 19
+2022-09-22T07:33:44 [    2.595641] mdio_bus ff0e0000.ethernet-ffffffff: scan phy mdio at address 20
+2022-09-22T07:33:44 [    2.602767] mdio_bus ff0e0000.ethernet-ffffffff: scan phy mdio at address 21
+2022-09-22T07:33:44 [    2.609893] mdio_bus ff0e0000.ethernet-ffffffff: scan phy mdio at address 22
+2022-09-22T07:33:44 [    2.617020] mdio_bus ff0e0000.ethernet-ffffffff: scan phy mdio at address 23
+2022-09-22T07:33:44 [    2.624148] mdio_bus ff0e0000.ethernet-ffffffff: scan phy mdio at address 24
+2022-09-22T07:33:44 [    2.631280] mdio_bus ff0e0000.ethernet-ffffffff: scan phy mdio at address 25
+2022-09-22T07:33:44 [    2.638411] mdio_bus ff0e0000.ethernet-ffffffff: scan phy mdio at address 26
+2022-09-22T07:33:44 [    2.645544] mdio_bus ff0e0000.ethernet-ffffffff: scan phy mdio at address 27
+2022-09-22T07:33:44 [    2.652669] mdio_bus ff0e0000.ethernet-ffffffff: scan phy mdio at address 28
+2022-09-22T07:33:44 [    2.659795] mdio_bus ff0e0000.ethernet-ffffffff: scan phy mdio at address 29
+2022-09-22T07:33:44 [    2.666923] mdio_bus ff0e0000.ethernet-ffffffff: scan phy mdio at address 30
+2022-09-22T07:33:44 [    2.674057] mdio_bus ff0e0000.ethernet-ffffffff: scan phy mdio at address 31
+2022-09-22T07:33:44 [    2.681518] macb ff0e0000.ethernet eth0: Cadence GEM rev 0x50070106 at 0xff0e0000 irq 37 (00:0a:35:0e:88:50)
+2022-09-22T07:33:44 [    2.696905] clk: couldn't set sdio0_ref clk rate to 187498123 (-16), current rate: 199999998
+2022-09-22T07:33:44 [    2.698065] clk: couldn't set sdio1_ref clk rate to 187498123 (-16), current rate: 199999998
+2022-09-22T07:33:44 [    2.700921] cfg80211: Loading compiled-in X.509 certificates for regulatory database
+2022-09-22T07:33:44 [    2.701659] cfg80211: Loaded X.509 cert 'sforshee: 00b28ddf47aef9cea7'
+2022-09-22T07:33:44 [    2.701752] platform regulatory.0: Direct firmware load for regulatory.db failed with error -2
+2022-09-22T07:33:44 [    2.701761] cfg80211: failed to load regulatory.db
+2022-09-22T07:33:44 [    2.702002] zynqmp_pll_disable() clock disable failed for dpll_int, ret = -13
+2022-09-22T07:33:44 [    2.703635] ALSA device list:
+2022-09-22T07:33:44 [    2.703640]   No soundcards found.
+2022-09-22T07:33:44 [    2.705853] clk: couldn't set sdio0_ref clk rate to 187498123 (-16), current rate: 199999998
+2022-09-22T07:33:44 [    2.714289] clk: couldn't set sdio1_ref clk rate to 187498123 (-16), current rate: 199999998
+2022-09-22T07:33:44 [    2.805187] mmc0: SDHCI controller on ff160000.mmc [ff160000.mmc] using ADMA 64-bit
+2022-09-22T07:33:44 [    2.805188] mmc1: SDHCI controller on ff170000.mmc [ff170000.mmc] using ADMA 64-bit
+2022-09-22T07:33:44 [    2.822048] Freeing unused kernel memory: 5184K
+2022-09-22T07:33:44 [    2.826713] Run /init as init process
+2022-09-22T07:33:44 [    2.841620] mmc1: new SDHC card at address 0001
+2022-09-22T07:33:44 [    2.846672] mmcblk1: mmc1:0001 SD16G 14.6 GiB 
+2022-09-22T07:33:44 [    2.864441] GPT:Primary header thinks Alt. header is not at the end of the disk.
+2022-09-22T07:33:44 [    2.871891] GPT:4456521 != 30547967
+2022-09-22T07:33:44 [    2.875396] GPT:Alternate GPT header not at the end of the disk.
+2022-09-22T07:33:44 [    2.881420] GPT:4456521 != 30547967
+2022-09-22T07:33:44 [    2.884926] GPT: Use GNU Parted to correct GPT errors.
+2022-09-22T07:33:44 [    2.890113]  mmcblk1: p1 p2
+2022-09-22T07:33:44 [    2.910543] mmc0: new HS200 MMC card at address 0001
+2022-09-22T07:33:44 [    2.911948] tpm_tis_core: module verification failed: signature and/or required key missing - tainting kernel
+2022-09-22T07:33:44 [    2.916066] mmcblk0: mmc0:0001 S0J56X 14.8 GiB 
+2022-09-22T07:33:44 [    2.944487] mmcblk0boot0: mmc0:0001 S0J56X 31.5 MiB 
+2022-09-22T07:33:44 [    2.950534] mmcblk0boot1: mmc0:0001 S0J56X 31.5 MiB 
+2022-09-22T07:33:44 [    2.968508] mmcblk0rpmb: mmc0:0001 S0J56X 4.00 MiB, chardev (235:0)
+2022-09-22T07:33:45 [    3.336672] random: fast init done
+2022-09-22T07:33:45 [    3.375927] EXT4-fs (mmcblk1p2): mounted filesystem with ordered data mode. Opts: (null). Quota mode: none.
+2022-09-22T07:33:47 [    5.118134] SELinux:  Class mctp_socket not defined in policy.
+2022-09-22T07:33:47 [    5.124088] SELinux:  Class anon_inode not defined in policy.
+2022-09-22T07:33:47 [    5.129837] SELinux: the above unknown classes and permissions will be allowed
+2022-09-22T07:33:47 [    5.145539] SELinux:  policy capability network_peer_controls=1
+2022-09-22T07:33:47 [    5.151567] SELinux:  policy capability open_perms=1
+2022-09-22T07:33:47 [    5.156536] SELinux:  policy capability extended_socket_class=1
+2022-09-22T07:33:47 [    5.162467] SELinux:  policy capability always_check_network=0
+2022-09-22T07:33:47 [    5.168309] SELinux:  policy capability cgroup_seclabel=1
+2022-09-22T07:33:47 [    5.173734] SELinux:  policy capability nnp_nosuid_transition=1
+2022-09-22T07:33:47 [    5.179659] SELinux:  policy capability genfs_seclabel_symlinks=0
+2022-09-22T07:33:47 [    5.185763] SELinux:  policy capability ioctl_skip_cloexec=0
+2022-09-22T07:33:47 [    5.244193] audit: type=1403 audit(5.240:2): auid=4294967295 ses=4294967295 lsm=selinux res=1
+2022-09-22T07:33:47 [    5.271052] systemd[1]: Successfully loaded SELinux policy in 627.496ms.
+2022-09-22T07:33:47 [    5.572917] systemd[1]: System time before build time, advancing clock.
+2022-09-22T07:33:47 [    5.690211] audit: type=1400 audit(1616485768.112:3): avc:  denied  { module_load } for  pid=1 comm=\"systemd\" path=\"/lib/modules/5.15.34/kernel/net/ipv6/ipv6.ko\" dev=\"mmcblk1p2\" ino=2289 scontext=system_u:system_r:kernel_t:s15:c0.c1023 tcontext=system_u:object_r:unlabeled_t:s0 tclass=system permissive=1
+2022-09-22T07:33:47 [    5.818956] audit: type=1400 audit(1616485768.240:4): avc:  denied  { integrity } for  pid=1 comm=\"systemd\" lockdown_reason=\"unsigned module loading\" scontext=system_u:system_r:kernel_t:s15:c0.c1023 tcontext=system_u:system_r:kernel_t:s15:c0.c1023 tclass=lockdown permissive=1
+2022-09-22T07:33:47 [    5.845497] NET: Registered PF_INET6 protocol family
+2022-09-22T07:33:47 [    5.903670] Segment Routing with IPv6
+2022-09-22T07:33:47 [    5.907482] In-situ OAM (IOAM) with IPv6
+2022-09-22T07:33:47 [    5.962165] systemd[1]: Relabelled /dev, /dev/shm, /run, /sys/fs/cgroup in 35.647ms.
+2022-09-22T07:33:48 [    6.081276] systemd[1]: systemd 247.6+ running in system mode. (+PAM +AUDIT +SELINUX +IMA -APPARMOR -SMACK +SYSVINIT +UTMP -LIBCRYPTSETUP -GCRYPT -GNUTLS +ACL +XZ -LZ4 -ZSTD -SECCOMP +BLKID -ELFUTILS +KMOD -IDN2 -IDN -PCRE2 default-hierarchy=hybrid)
+2022-09-22T07:33:48 [    6.104301] systemd[1]: Detected architecture arm64.
+2022-09-22T07:33:48 [    6.160334] systemd[1]: Set hostname to <ledge-qemuarm64>.
+2022-09-22T07:33:48 [    6.209475] random: systemd: uninitialized urandom read (16 bytes read)
+2022-09-22T07:33:48 [    6.216196] systemd[1]: Initializing machine ID from random generator.
+2022-09-22T07:33:48 [    6.464484] audit: type=1400 audit(1616485768.888:5): avc:  denied  { bpf } for  pid=1 comm=\"systemd\" capability=39  scontext=system_u:system_r:kernel_t:s15:c0.c1023 tcontext=system_u:system_r:kernel_t:s15:c0.c1023 tclass=capability2 permissive=1
+2022-09-22T07:33:48 [    6.486381] audit: type=1400 audit(1616485768.888:6): avc:  denied  { perfmon } for  pid=1 comm=\"systemd\" capability=38  scontext=system_u:system_r:kernel_t:s15:c0.c1023 tcontext=system_u:system_r:kernel_t:s15:c0.c1023 tclass=capability2 permissive=1
+2022-09-22T07:33:48 [    6.649926] systemd-sysv-generator[252]: SysV service '/etc/init.d/conntrack-failover' lacks a native systemd unit file. Automatically generating a unit file for compatibility. Please update package to include a native systemd unit file, in order to make it more safe and robust.
+2022-09-22T07:33:48 [    6.674947] systemd-sysv-generator[252]: SysV service '/etc/init.d/conntrackd' lacks a native systemd unit file. Automatically generating a unit file for compatibility. Please update package to include a native systemd unit file, in order to make it more safe and robust.
+2022-09-22T07:33:50 [    8.397951] systemd[1]: Queued start job for default target Multi-User System.
+2022-09-22T07:33:50 [    8.406223] random: systemd: uninitialized urandom read (16 bytes read)
+2022-09-22T07:33:50 [    8.450671] systemd[1]: Created slice system-getty.slice.
+2022-09-22T07:33:50 [    8.457184] random: systemd: uninitialized urandom read (16 bytes read)
+2022-09-22T07:33:50 [    8.465993] systemd[1]: Created slice system-modprobe.slice.
+2022-09-22T07:33:50 [    8.471985] random: systemd: uninitialized urandom read (16 bytes read)
+2022-09-22T07:33:50 [    8.480668] systemd[1]: Created slice system-serial\x2dgetty.slice.
+2022-09-22T07:33:50 [    8.489182] systemd[1]: Created slice User and Session Slice.
+2022-09-22T07:33:50 [    8.495700] systemd[1]: Started Dispatch Password Requests to Console Directory Watch.
+2022-09-22T07:33:50 [    8.504276] systemd[1]: Started Forward Password Requests to Wall Directory Watch.
+2022-09-22T07:33:50 [    8.512358] systemd[1]: Reached target Remote File Systems.
+2022-09-22T07:33:50 [    8.518112] systemd[1]: Reached target Slices.
+2022-09-22T07:33:50 [    8.522761] systemd[1]: Reached target System Time Set.
+2022-09-22T07:33:50 [    8.528160] systemd[1]: Reached target System Time Synchronized.
+2022-09-22T07:33:50 [    8.568003] systemd[1]: Listening on RPCbind Server Activation Socket.
+2022-09-22T07:33:50 [    8.575133] systemd[1]: Reached target RPC Port Mapper.
+2022-09-22T07:33:50 [    8.587636] systemd[1]: Listening on Syslog Socket.
+2022-09-22T07:33:50 [    8.593955] systemd[1]: Listening on initctl Compatibility Named Pipe.
+2022-09-22T07:33:50 [    8.602402] systemd[1]: Listening on Journal Audit Socket.
+2022-09-22T07:33:50 [    8.602535] audit: type=1400 audit(1616485771.024:7): avc:  denied  { audit_read } for  pid=1 comm=\"systemd\" capability=37  scontext=system_u:system_r:kernel_t:s15:c0.c1023 tcontext=system_u:system_r:kernel_t:s15:c0.c1023 tclass=capability2 permissive=1
+2022-09-22T07:33:50 [    8.631180] systemd[1]: Listening on Journal Socket (/dev/log).
+2022-09-22T07:33:50 [    8.638230] systemd[1]: Listening on Journal Socket.
+2022-09-22T07:33:50 [    8.644162] systemd[1]: Listening on Network Service Netlink Socket.
+2022-09-22T07:33:50 [    8.652926] systemd[1]: Listening on udev Control Socket.
+2022-09-22T07:33:50 [    8.659259] systemd[1]: Listening on udev Kernel Socket.
+2022-09-22T07:33:50 [    8.665873] systemd[1]: Listening on User Database Manager Socket.
+2022-09-22T07:33:50 [    8.677314] systemd[1]: Mounting Huge Pages File System...
+2022-09-22T07:33:50 [    8.687896] systemd[1]: Mounting POSIX Message Queue File System...
+2022-09-22T07:33:50 [    8.699083] systemd[1]: Mounting Kernel Debug File System...
+2022-09-22T07:33:50 [    8.705436] systemd[1]: Condition check resulted in Kernel Trace File System being skipped.
+2022-09-22T07:33:50 [    8.718961] systemd[1]: Starting Create list of static device nodes for the current kernel...
+2022-09-22T07:33:50 [    8.732106] systemd[1]: Starting Load Kernel Module configfs...
+2022-09-22T07:33:50 [    8.742176] systemd[1]: Starting Load Kernel Module drm...
+2022-09-22T07:33:50 [    8.751977] systemd[1]: Starting Load Kernel Module fuse...
+2022-09-22T07:33:50 [    8.791044] systemd[1]: Starting RPC Bind...
+2022-09-22T07:33:50 [    8.803057] systemd[1]: Starting SELinux autorelabel service loading...
+2022-09-22T07:33:50 [    8.814474] systemd[1]: Starting SELinux init for /dev service loading...
+2022-09-22T07:33:50 [    8.821878] systemd[1]: Condition check resulted in File System Check on Root Device being skipped.
+2022-09-22T07:33:50 [    8.837603] systemd[1]: Starting Journal Service...
+2022-09-22T07:33:50 [    8.924766] systemd[1]: Starting Load Kernel Modules...
+2022-09-22T07:33:50 [    8.935089] systemd[1]: Starting Remount Root and Kernel File Systems...
+2022-09-22T07:33:50 [    8.942379] fuse: init (API version 7.34)
+2022-09-22T07:33:50 [    8.946940] systemd[1]: Starting Coldplug All udev Devices...
+2022-09-22T07:33:50 [    8.957776] systemd[1]: Starting Create compressed swap in memory using zram...
+2022-09-22T07:33:50 [    8.972274] systemd[1]: Mounted Huge Pages File System.
+2022-09-22T07:33:50 [    8.978439] systemd[1]: Mounted POSIX Message Queue File System.
+2022-09-22T07:33:50 [    8.985345] systemd[1]: Mounted Kernel Debug File System.
+2022-09-22T07:33:50 [    8.989773] EXT4-fs (mmcblk1p2): re-mounted. Opts: (null). Quota mode: none.
+2022-09-22T07:33:50 [    9.003961] systemd[1]: Finished Create list of static device nodes for the current kernel.
+2022-09-22T07:33:50 [    9.014732] systemd[1]: modprobe@configfs.service: Succeeded.
+2022-09-22T07:33:50 [    9.022147] systemd[1]: Finished Load Kernel Module configfs.
+2022-09-22T07:33:50 [    9.029070] systemd[1]: modprobe@drm.service: Succeeded.
+2022-09-22T07:33:50 [    9.036156] systemd[1]: Finished Load Kernel Module drm.
+2022-09-22T07:33:50 [    9.043198] systemd[1]: modprobe@fuse.service: Succeeded.
+2022-09-22T07:33:50 [    9.050454] systemd[1]: Finished Load Kernel Module fuse.
+2022-09-22T07:33:50 [    9.058989] systemd[1]: Finished Load Kernel Modules.
+2022-09-22T07:33:50 [    9.067524] systemd[1]: Finished Remount Root and Kernel File Systems.
+2022-09-22T07:33:51 [    9.074449] audit: type=1130 audit(1616485771.496:8): pid=1 uid=0 auid=4294967295 ses=4294967295 subj=system_u:system_r:kernel_t:s15:c0.c1023 msg='unit=systemd-remount-fs comm=\"systemd\" exe=\"/lib/systemd/systemd\" hostname=? addr=? terminal=? res=success'
+2022-09-22T07:33:51 [    9.080291] systemd[1]: Mounting FUSE Control File System...
+2022-09-22T07:33:51 [    9.108338] systemd[1]: Mounting Kernel Configuration File System...
+2022-09-22T07:33:51 [    9.115193] systemd[1]: Condition check resulted in OSTree Remount OS/ Bind Mounts being skipped.
+2022-09-22T07:33:51 [    9.245687] systemd[1]: Condition check resulted in Rebuild Hardware Database being skipped.
+2022-09-22T07:33:51 [    9.254795] systemd[1]: Condition check resulted in Platform Persistent Storage Archival being skipped.
+2022-09-22T07:33:51 [    9.268930] systemd[1]: Starting Apply Kernel Variables...
+2022-09-22T07:33:51 [    9.279443] systemd[1]: Starting Create System Users...
+2022-09-22T07:33:51 [    9.288286] systemd[1]: Started Journal Service.
+2022-09-22T07:33:51 [    9.293515] audit: type=1130 audit(1616485771.720:9): pid=1 uid=0 auid=4294967295 ses=4294967295 subj=system_u:system_r:kernel_t:s15:c0.c1023 msg='unit=systemd-journald comm=\"systemd\" exe=\"/lib/systemd/systemd\" hostname=? addr=? terminal=? res=success'
+2022-09-22T07:33:51 [    9.371435] audit: type=1130 audit(1616485771.792:10): pid=1 uid=0 auid=4294967295 ses=4294967295 subj=system_u:system_r:kernel_t:s15:c0.c1023 msg='unit=rpcbind comm=\"systemd\" exe=\"/lib/systemd/systemd\" hostname=? addr=? terminal=? res=success'
+2022-09-22T07:33:51 [    9.497869] systemd-journald[269]: Received client request to flush runtime journal.
+2022-09-22T07:33:51 [    9.534256] audit: type=1130 audit(1616485771.956:11): pid=1 uid=0 auid=4294967295 ses=4294967295 subj=system_u:system_r:kernel_t:s15:c0.c1023 msg='unit=systemd-journal-flush comm=\"systemd\" exe=\"/lib/systemd/systemd\" hostname=? addr=? terminal=? res=success'
+2022-09-22T07:35:47 [  125.212357] reboot: Restarting system
+2022-09-22T07:35:48 
+2022-09-22T07:35:48 <debug_uart>
+2022-09-22T07:35:48 
+2022-09-22T07:35:48 U-Boot SPL 2022.07-rc3 (May 27 2022 - 12:50:42 +0000)
+2022-09-22T07:35:48 PMUFW:	v1.1
+2022-09-22T07:35:48 Loading new PMUFW cfg obj (2032 bytes)
+2022-09-22T07:35:48 Silicon version:	3
+2022-09-22T07:35:48 EL Level:	EL3
+2022-09-22T07:35:48 Chip ID:	xck26
+2022-09-22T07:35:48 Secure Boot:	not authenticated, not encrypted
+2022-09-22T07:35:48 Multiboot:	64
+2022-09-22T07:35:48 Trying to boot from SPI
+2022-09-22T07:35:49 NOTICE:  BL31: v2.6(release):v2.6-879-gc3bdd3d3cf-dirty
+2022-09-22T07:35:50 NOTICE:  BL31: Built : 09:30:50, May  9 2022�H�\"��՝}Յ���2R�
+2022-09-22T07:35:50 
+2022-09-22T07:35:50 U-Boot 2022.07-rc3 (May 27 2022 - 12:50:42 +0000)
+2022-09-22T07:35:50 
+2022-09-22T07:35:50 CPU:   ZynqMP
+2022-09-22T07:35:50 Silicon: v3
+2022-09-22T07:35:50 Detected name: zynqmp-sm-k26-xcl2gc-rev1 -sck-kv-g-rev1
+2022-09-22T07:35:50 Model: ZynqMP SM-K26 Rev1/B/A
+2022-09-22T07:35:50 Board: Xilinx ZynqMP
+2022-09-22T07:35:50 DRAM:  4 GiB
+2022-09-22T07:35:50 PMUFW:	v1.1
+2022-09-22T07:35:51 Xilinx I2C FRU format at nvmem0:
+2022-09-22T07:35:51  Manufacturer Name: XILINX
+2022-09-22T07:35:51  Product Name: SM-K26-XCL2GC
+2022-09-22T07:35:51  Serial No: XFL1OTRUW0NW
+2022-09-22T07:35:51  Part Number: 5057-02  
+2022-09-22T07:35:51  File ID: 0x0
+2022-09-22T07:35:51  Revision Number: 1 
+2022-09-22T07:35:51 Xilinx I2C FRU format at nvmem1:
+2022-09-22T07:35:51  Manufacturer Name: XILINX
+2022-09-22T07:35:51  Product Name: SCK-KV-G        
+2022-09-22T07:35:51  Serial No: XFL1EMYMAA30
+2022-09-22T07:35:51  Part Number: 5066-01  
+2022-09-22T07:35:51  File ID: 0x0
+2022-09-22T07:35:51  Revision Number: 1
+2022-09-22T07:35:51 EL Level:	EL2
+2022-09-22T07:35:51 Chip ID:	xck26
+2022-09-22T07:35:51 Secure Boot:	not authenticated, not encrypted
+2022-09-22T07:35:51 Core:  127 devices, 33 uclasses, devicetree: fit
+2022-09-22T07:35:51 7[r[999;999H[6n8NAND:  0 MiB
+2022-09-22T07:35:52 MMC:   mmc@ff160000: 0, mmc@ff170000: 1
+2022-09-22T07:35:52 Loading Environment from nowhere... OK
+2022-09-22T07:35:52 In:    serial
+2022-09-22T07:35:52 Out:   serial
+2022-09-22T07:35:52 Err:   serial
+2022-09-22T07:35:52 Bootmode: QSPI_MODE
+2022-09-22T07:35:52 Reset reason:	SOFT 
+2022-09-22T07:35:53 Net:   PHY reset timed out
+2022-09-22T07:35:53 
+2022-09-22T07:35:53 ZYNQ GEM: ff0e0000, mdio bus ff0e0000, phyaddr 1, interface rgmii-id
+2022-09-22T07:35:53 eth0: ethernet@ff0e0000
+2022-09-22T07:35:55 Hit any key to stop autoboot:  2  1  0 
+2022-09-22T07:35:55 SF: Detected mt25qu512a with page size 256 Bytes, erase size 64 KiB, total 64 MiB
+2022-09-22T07:35:55 device 0 offset 0x3e80000, size 0x80000
+2022-09-22T07:35:55 SF: 524288 bytes @ 0x3e80000 Read: OK
+2022-09-22T07:35:55 QSPI: Trying to boot script at 20000000
+2022-09-22T07:35:55 ## Executing script at 20000000
+2022-09-22T07:35:55 Wrong image format for \"source\" command
+2022-09-22T07:35:55 QSPI: SCRIPT FAILED: continuing...
+2022-09-22T07:35:55 JTAG: Trying to boot script at 20000000
+2022-09-22T07:35:55 ## Executing script at 20000000
+2022-09-22T07:35:55 Wrong image format for \"source\" command
+2022-09-22T07:35:55 JTAG: SCRIPT FAILED: continuing...
+2022-09-22T07:35:55 switch to partitions #0, OK
+2022-09-22T07:35:55 mmc0(part 0) is current device
+2022-09-22T07:35:55 ** No partition table - mmc 0 **
+2022-09-22T07:35:55 Couldn't find partition mmc 0:1
+2022-09-22T07:35:56 switch to partitions #0, OK
+2022-09-22T07:35:56 mmc1 is current device
+2022-09-22T07:35:56 Scanning mmc 1:1...
+2022-09-22T07:35:57 tpm_tis_spi_probe: missing reset GPIO
+2022-09-22T07:36:01 Booting: BootLedge
+2022-09-22T07:36:02 EFI stub: Booting Linux Kernel...
+2022-09-22T07:36:02 EFI stub: EFI_RNG_PROTOCOL unavailable
+2022-09-22T07:36:02 EFI stub: UEFI Secure Boot is enabled.
+2022-09-22T07:36:02 EFI stub: Using DTB from configuration table
+2022-09-22T07:36:04 EFI stub: Loaded initrd from LINUX_EFI_INITRD_MEDIA_GUID device path
+2022-09-22T07:36:04 EFI stub: Exiting boot services...
+2022-09-22T07:36:06 [    0.000000] Booting Linux on physical CPU 0x0000000000 [0x410fd034]
+2022-09-22T07:36:06 [    0.000000] Linux version 5.15.34 (oe-user@oe-host) (aarch64-linaro-linux-gcc (GCC) 10.2.1 20201103, GNU ld (GNU Binutils) 2.36.1.20210209) #1 SMP PREEMPT Fri May 6 05:56:02 UTC 2022
+2022-09-22T07:36:06 [    0.000000] Machine model: ZynqMP SM-K26 Rev1/B/A
+2022-09-22T07:36:06 [    0.000000] efi: EFI v2.90 by Das U-Boot
+2022-09-22T07:36:06 [    0.000000] efi: ESRT=0x778d6040 TPMFinalLog=0x778da040 RTPROP=0x778d8040 SMBIOS=0x778d4000 TPMEventLog=0x778cd040 MEMRESERVE=0x778cb040 
+2022-09-22T07:36:06 [    0.000000] esrt: Reserving ESRT space from 0x00000000778d6040 to 0x00000000778d60a0.
+2022-09-22T07:36:06 [    0.000000] NUMA: No NUMA configuration found
+2022-09-22T07:36:06 [    0.000000] NUMA: Faking a node at [mem 0x0000000000000000-0x000000087fffffff]
+2022-09-22T07:36:06 [    0.000000] NUMA: NODE_DATA [mem 0x87f7cdc00-0x87f7cffff]
+2022-09-22T07:36:06 [    0.000000] Zone ranges:
+2022-09-22T07:36:06 [    0.000000]   DMA      [mem 0x0000000000000000-0x00000000ffffffff]
+2022-09-22T07:36:06 [    0.000000]   DMA32    empty
+2022-09-22T07:36:06 [    0.000000]   Normal   [mem 0x0000000100000000-0x000000087fffffff]
+2022-09-22T07:36:06 [    0.000000] Movable zone start for each node
+2022-09-22T07:36:06 [    0.000000] Early memory node ranges
+2022-09-22T07:36:06 [    0.000000]   node   0: [mem 0x0000000000000000-0x00000000778d3fff]
+2022-09-22T07:36:06 [    0.000000]   node   0: [mem 0x00000000778d4000-0x00000000778d4fff]
+2022-09-22T07:36:06 [    0.000000]   node   0: [mem 0x00000000778d5000-0x00000000778d7fff]
+2022-09-22T07:36:06 [    0.000000]   node   0: [mem 0x00000000778d8000-0x00000000778d8fff]
+2022-09-22T07:36:06 [    0.000000]   node   0: [mem 0x00000000778d9000-0x00000000778d9fff]
+2022-09-22T07:36:06 [    0.000000]   node   0: [mem 0x00000000778da000-0x00000000778eafff]
+2022-09-22T07:36:06 [    0.000000]   node   0: [mem 0x00000000778eb000-0x00000000778fdfff]
+2022-09-22T07:36:06 [    0.000000]   node   0: [mem 0x00000000778fe000-0x00000000778fffff]
+2022-09-22T07:36:06 [    0.000000]   node   0: [mem 0x0000000077900000-0x0000000077900fff]
+2022-09-22T07:36:06 [    0.000000]   node   0: [mem 0x0000000077901000-0x0000000077904fff]
+2022-09-22T07:36:06 [    0.000000]   node   0: [mem 0x0000000077905000-0x000000007f98ffff]
+2022-09-22T07:36:06 [    0.000000]   node   0: [mem 0x000000007f990000-0x000000007f99ffff]
+2022-09-22T07:36:06 [    0.000000]   node   0: [mem 0x000000007f9a0000-0x000000007fffffff]
+2022-09-22T07:36:06 [    0.000000]   node   0: [mem 0x0000000800000000-0x000000087fffffff]
+2022-09-22T07:36:06 [    0.000000] Initmem setup node 0 [mem 0x0000000000000000-0x000000087fffffff]
+2022-09-22T07:36:06 [    0.000000] cma: Reserved 64 MiB at 0x000000007b800000
+2022-09-22T07:36:06 [    0.000000] psci: probing for conduit method from DT.
+2022-09-22T07:36:06 [    0.000000] psci: PSCIv1.1 detected in firmware.
+2022-09-22T07:36:06 [    0.000000] psci: Using standard PSCI v0.2 function IDs
+2022-09-22T07:36:06 [    0.000000] psci: MIGRATE_INFO_TYPE not supported.
+2022-09-22T07:36:06 [    0.000000] psci: SMC Calling Convention v1.2
+2022-09-22T07:36:06 [    0.000000] percpu: Embedded 20 pages/cpu s42712 r8192 d31016 u81920
+2022-09-22T07:36:06 [    0.000000] Detected VIPT I-cache on CPU0
+2022-09-22T07:36:06 [    0.000000] CPU features: kernel page table isolation forced ON by KASLR
+2022-09-22T07:36:06 [    0.000000] CPU features: detected: Kernel page table isolation (KPTI)
+2022-09-22T07:36:06 [    0.000000] CPU features: detected: ARM erratum 845719
+2022-09-22T07:36:06 [    0.000000] Built 1 zonelists, mobility grouping on.  Total pages: 1032192
+2022-09-22T07:36:06 [    0.000000] Policy zone: Normal
+2022-09-22T07:36:06 [    0.000000] Kernel command line: console=ttyPS1,115200 console=tty0 root=UUID=6091b3a4-ce08-3020-93a6-f755a22ef03b rootwait panic=60
+2022-09-22T07:36:06 [    0.000000] Dentry cache hash table entries: 524288 (order: 10, 4194304 bytes, linear)
+2022-09-22T07:36:06 [    0.000000] Inode-cache hash table entries: 262144 (order: 9, 2097152 bytes, linear)
+2022-09-22T07:36:06 [    0.000000] mem auto-init: stack:off, heap alloc:off, heap free:off
+2022-09-22T07:36:06 [    0.000000] software IO TLB: mapped [mem 0x000000006f5b0000-0x00000000735b0000] (64MB)
+2022-09-22T07:36:06 [    0.000000] Memory: 3922328K/4194304K available (17536K kernel code, 3002K rwdata, 8136K rodata, 5184K init, 747K bss, 206440K reserved, 65536K cma-reserved)
+2022-09-22T07:36:06 [    0.000000] SLUB: HWalign=64, Order=0-3, MinObjects=0, CPUs=4, Nodes=1
+2022-09-22T07:36:06 [    0.000000] rcu: Preemptible hierarchical RCU implementation.
+2022-09-22T07:36:06 [    0.000000] rcu: 	RCU event tracing is enabled.
+2022-09-22T07:36:06 [    0.000000] rcu: 	RCU restricting CPUs from NR_CPUS=256 to nr_cpu_ids=4.
+2022-09-22T07:36:06 [    0.000000] 	Trampoline variant of Tasks RCU enabled.
+2022-09-22T07:36:06 [    0.000000] 	Tracing variant of Tasks RCU enabled.
+2022-09-22T07:36:06 [    0.000000] rcu: RCU calculated value of scheduler-enlistment delay is 25 jiffies.
+2022-09-22T07:36:06 [    0.000000] rcu: Adjusting geometry for rcu_fanout_leaf=16, nr_cpu_ids=4
+2022-09-22T07:36:06 [    0.000000] NR_IRQS: 64, nr_irqs: 64, preallocated irqs: 0
+2022-09-22T07:36:06 [    0.000000] GIC: Adjusting CPU interface base to 0x00000000f902f000
+2022-09-22T07:36:06 [    0.000000] Root IRQ handler: gic_handle_irq
+2022-09-22T07:36:06 [    0.000000] GIC: Using split EOI/Deactivate mode
+2022-09-22T07:36:06 [    0.000000] random: get_random_bytes called from start_kernel+0x478/0x670 with crng_init=0
+2022-09-22T07:36:06 [    0.000000] arch_timer: cp15 timer(s) running at 99.99MHz (phys).
+2022-09-22T07:36:06 [    0.000000] clocksource: arch_sys_counter: mask: 0xffffffffffffff max_cycles: 0x171015c90f, max_idle_ns: 440795203080 ns
+2022-09-22T07:36:06 [    0.000000] sched_clock: 56 bits at 99MHz, resolution 10ns, wraps every 4398046511101ns
+2022-09-22T07:36:06 [    0.000439] Console: colour dummy device 80x25
+2022-09-22T07:36:06 [    0.000875] printk: console [tty0] enabled
+2022-09-22T07:36:06 [    0.000947] Calibrating delay loop (skipped), value calculated using timer frequency.. 199.99 BogoMIPS (lpj=399996)
+2022-09-22T07:36:06 [    0.000967] pid_max: default: 32768 minimum: 301
+2022-09-22T07:36:06 [    0.001021] LSM: Security Framework initializing
+2022-09-22T07:36:06 [    0.001057] SELinux:  Initializing.
+2022-09-22T07:36:06 [    0.001153] Mount-cache hash table entries: 8192 (order: 4, 65536 bytes, linear)
+2022-09-22T07:36:06 [    0.001179] Mountpoint-cache hash table entries: 8192 (order: 4, 65536 bytes, linear)
+2022-09-22T07:36:06 [    0.002479] rcu: Hierarchical SRCU implementation.
+2022-09-22T07:36:06 [    0.003548] Remapping and enabling EFI services.
+2022-09-22T07:36:06 [    0.003721] smp: Bringing up secondary CPUs ...
+2022-09-22T07:36:06 [    0.004139] Detected VIPT I-cache on CPU1
+2022-09-22T07:36:06 [    0.004184] CPU1: Booted secondary processor 0x0000000001 [0x410fd034]
+2022-09-22T07:36:06 [    0.004566] Detected VIPT I-cache on CPU2
+2022-09-22T07:36:06 [    0.004589] CPU2: Booted secondary processor 0x0000000002 [0x410fd034]
+2022-09-22T07:36:06 [    0.004949] Detected VIPT I-cache on CPU3
+2022-09-22T07:36:06 [    0.004971] CPU3: Booted secondary processor 0x0000000003 [0x410fd034]
+2022-09-22T07:36:06 [    0.005019] smp: Brought up 1 node, 4 CPUs
+2022-09-22T07:36:06 [    0.005067] SMP: Total of 4 processors activated.
+2022-09-22T07:36:06 [    0.005077] CPU features: detected: 32-bit EL0 Support
+2022-09-22T07:36:06 [    0.005086] CPU features: detected: 32-bit EL1 Support
+2022-09-22T07:36:06 [    0.005096] CPU features: detected: CRC32 instructions
+2022-09-22T07:36:06 [    0.011685] CPU: All CPU(s) started at EL2
+2022-09-22T07:36:06 [    0.011714] alternatives: patching kernel code
+2022-09-22T07:36:06 [    0.013043] devtmpfs: initialized
+2022-09-22T07:36:06 [    0.017795] Registered cp15_barrier emulation handler
+2022-09-22T07:36:06 [    0.017813] Registered setend emulation handler
+2022-09-22T07:36:06 [    0.017827] KASLR disabled due to lack of seed
+2022-09-22T07:36:06 [    0.017960] clocksource: jiffies: mask: 0xffffffff max_cycles: 0xffffffff, max_idle_ns: 7645041785100000 ns
+2022-09-22T07:36:06 [    0.017985] futex hash table entries: 1024 (order: 4, 65536 bytes, linear)
+2022-09-22T07:36:06 [    0.020429] pinctrl core: initialized pinctrl subsystem
+2022-09-22T07:36:06 [    0.021205] SMBIOS 3.0 present.
+2022-09-22T07:36:06 [    0.021226] DMI: Unknown Unknown Product/Unknown Product, BIOS 2022.07-rc3 07/01/2022
+2022-09-22T07:36:06 [    0.021576] NET: Registered PF_NETLINK/PF_ROUTE protocol family
+2022-09-22T07:36:06 [    0.022642] DMA: preallocated 512 KiB GFP_KERNEL pool for atomic allocations
+2022-09-22T07:36:06 [    0.022742] DMA: preallocated 512 KiB GFP_KERNEL|GFP_DMA pool for atomic allocations
+2022-09-22T07:36:06 [    0.022886] DMA: preallocated 512 KiB GFP_KERNEL|GFP_DMA32 pool for atomic allocations
+2022-09-22T07:36:06 [    0.022956] audit: initializing netlink subsys (disabled)
+2022-09-22T07:36:06 [    0.023067] audit: type=2000 audit(0.020:1): state=initialized audit_enabled=0 res=1
+2022-09-22T07:36:06 [    0.023876] thermal_sys: Registered thermal governor 'step_wise'
+2022-09-22T07:36:06 [    0.023881] thermal_sys: Registered thermal governor 'power_allocator'
+2022-09-22T07:36:06 [    0.023988] cpuidle: using governor menu
+2022-09-22T07:36:06 [    0.024072] NET: Registered PF_QIPCRTR protocol family
+2022-09-22T07:36:06 [    0.024213] hw-breakpoint: found 6 breakpoint and 4 watchpoint registers.
+2022-09-22T07:36:06 [    0.024289] ASID allocator initialised with 32768 entries
+2022-09-22T07:36:06 [    0.025085] Serial: AMBA PL011 UART driver
+2022-09-22T07:36:06 [    0.047481] HugeTLB registered 1.00 GiB page size, pre-allocated 0 pages
+2022-09-22T07:36:06 [    0.047510] HugeTLB registered 32.0 MiB page size, pre-allocated 0 pages
+2022-09-22T07:36:06 [    0.047522] HugeTLB registered 2.00 MiB page size, pre-allocated 0 pages
+2022-09-22T07:36:06 [    0.047533] HugeTLB registered 64.0 KiB page size, pre-allocated 0 pages
+2022-09-22T07:36:06 [    0.048566] cryptd: max_cpu_qlen set to 1000
+2022-09-22T07:36:06 [    0.051172] ACPI: Interpreter disabled.
+2022-09-22T07:36:06 [    0.052251] iommu: Default domain type: Translated 
+2022-09-22T07:36:06 [    0.052263] iommu: DMA domain TLB invalidation policy: strict mode 
+2022-09-22T07:36:06 [    0.052474] vgaarb: loaded
+2022-09-22T07:36:06 [    0.052729] SCSI subsystem initialized
+2022-09-22T07:36:06 [    0.052989] usbcore: registered new interface driver usbfs
+2022-09-22T07:36:06 [    0.053026] usbcore: registered new interface driver hub
+2022-09-22T07:36:06 [    0.053056] usbcore: registered new device driver usb
+2022-09-22T07:36:06 [    0.053373] mc: Linux media interface: v0.10
+2022-09-22T07:36:06 [    0.053399] videodev: Linux video capture interface: v2.00
+2022-09-22T07:36:06 [    0.053431] pps_core: LinuxPPS API ver. 1 registered
+2022-09-22T07:36:06 [    0.053440] pps_core: Software ver. 5.3.6 - Copyright 2005-2007 Rodolfo Giometti <giometti@linux.it>
+2022-09-22T07:36:06 [    0.053461] PTP clock support registered
+2022-09-22T07:36:06 [    0.053554] EDAC MC: Ver: 3.0.0
+2022-09-22T07:36:06 [    0.054132] Registered efivars operations
+2022-09-22T07:36:06 [    0.054390] zynqmp-ipi-mbox mailbox@ff990400: Registered ZynqMP IPI mbox with TX/RX channels.
+2022-09-22T07:36:06 [    0.054819] FPGA manager framework
+2022-09-22T07:36:06 [    0.054883] Advanced Linux Sound Architecture Driver Initialized.
+2022-09-22T07:36:06 [    0.055342] Bluetooth: Core ver 2.22
+2022-09-22T07:36:06 [    0.055370] NET: Registered PF_BLUETOOTH protocol family
+2022-09-22T07:36:06 [    0.055381] Bluetooth: HCI device and connection manager initialized
+2022-09-22T07:36:06 [    0.055395] Bluetooth: HCI socket layer initialized
+2022-09-22T07:36:06 [    0.055406] Bluetooth: L2CAP socket layer initialized
+2022-09-22T07:36:06 [    0.055424] Bluetooth: SCO socket layer initialized
+2022-09-22T07:36:06 [    0.055809] clocksource: Switched to clocksource arch_sys_counter
+2022-09-22T07:36:06 [    0.055932] VFS: Disk quotas dquot_6.6.0
+2022-09-22T07:36:07 [    0.055976] VFS: Dquot-cache hash table entries: 512 (order 0, 4096 bytes)
+2022-09-22T07:36:07 [    0.056198] pnp: PnP ACPI: disabled
+2022-09-22T07:36:07 [    0.060937] NET: Registered PF_INET protocol family
+2022-09-22T07:36:07 [    0.061068] IP idents hash table entries: 65536 (order: 7, 524288 bytes, linear)
+2022-09-22T07:36:07 [    0.062483] tcp_listen_portaddr_hash hash table entries: 2048 (order: 3, 32768 bytes, linear)
+2022-09-22T07:36:07 [    0.062541] TCP established hash table entries: 32768 (order: 6, 262144 bytes, linear)
+2022-09-22T07:36:07 [    0.062737] TCP bind hash table entries: 32768 (order: 7, 524288 bytes, linear)
+2022-09-22T07:36:07 [    0.063105] TCP: Hash tables configured (established 32768 bind 32768)
+2022-09-22T07:36:07 [    0.063190] UDP hash table entries: 2048 (order: 4, 65536 bytes, linear)
+2022-09-22T07:36:07 [    0.063267] UDP-Lite hash table entries: 2048 (order: 4, 65536 bytes, linear)
+2022-09-22T07:36:07 [    0.063434] NET: Registered PF_UNIX/PF_LOCAL protocol family
+2022-09-22T07:36:07 [    0.063730] RPC: Registered named UNIX socket transport module.
+2022-09-22T07:36:07 [    0.063742] RPC: Registered udp transport module.
+2022-09-22T07:36:07 [    0.063751] RPC: Registered tcp transport module.
+2022-09-22T07:36:07 [    0.063760] RPC: Registered tcp NFSv4.1 backchannel transport module.
+2022-09-22T07:36:07 [    0.064425] PCI: CLS 0 bytes, default 64
+2022-09-22T07:36:07 [    0.064607] Unpacking initramfs...
+2022-09-22T07:36:07 [    0.072231] armv8-pmu pmu: hw perfevents: no interrupt-affinity property, guessing.
+2022-09-22T07:36:07 [    0.072431] hw perfevents: enabled with armv8_pmuv3 PMU driver, 7 counters available
+2022-09-22T07:36:07 [    0.072745] kvm [1]: IPA Size Limit: 40 bits
+2022-09-22T07:36:07 [    0.074045] kvm [1]: vgic interrupt IRQ9
+2022-09-22T07:36:07 [    0.074154] kvm [1]: Hyp mode initialized successfully
+2022-09-22T07:36:07 [    0.077431] Initialise system trusted keyrings
+2022-09-22T07:36:07 [    0.077547] workingset: timestamp_bits=42 max_order=20 bucket_order=0
+2022-09-22T07:36:07 [    0.083274] squashfs: version 4.0 (2009/01/31) Phillip Lougher
+2022-09-22T07:36:07 [    0.083756] NFS: Registering the id_resolver key type
+2022-09-22T07:36:07 [    0.083783] Key type id_resolver registered
+2022-09-22T07:36:07 [    0.083792] Key type id_legacy registered
+2022-09-22T07:36:07 [    0.083879] nfs4filelayout_init: NFSv4 File Layout Driver Registering...
+2022-09-22T07:36:07 [    0.083892] nfs4flexfilelayout_init: NFSv4 Flexfile Layout Driver Registering...
+2022-09-22T07:36:07 [    0.084094] 9p: Installing v9fs 9p2000 file system support
+2022-09-22T07:36:07 [    0.117988] NET: Registered PF_ALG protocol family
+2022-09-22T07:36:07 [    0.118030] Key type asymmetric registered
+2022-09-22T07:36:07 [    0.118039] Asymmetric key parser 'x509' registered
+2022-09-22T07:36:07 [    0.118134] Block layer SCSI generic (bsg) driver version 0.4 loaded (major 244)
+2022-09-22T07:36:07 [    0.118239] io scheduler mq-deadline registered
+2022-09-22T07:36:07 [    0.118251] io scheduler kyber registered
+2022-09-22T07:36:07 [    0.125006] EINJ: ACPI disabled.
+2022-09-22T07:36:07 [    0.133889] Serial: 8250/16550 driver, 4 ports, IRQ sharing enabled
+2022-09-22T07:36:07 [    0.135854] msm_serial: driver initialized
+2022-09-22T07:36:07 [    0.136864] cacheinfo: Unable to detect cache hierarchy for CPU 0
+2022-09-22T07:36:07 [    0.141411] loop: module loaded
+2022-09-22T07:36:07 [    0.142340] megasas: 07.717.02.00-rc1
+2022-09-22T07:36:07 [    0.147709] thunder_xcv, ver 1.0
+2022-09-22T07:36:07 [    0.147757] thunder_bgx, ver 1.0
+2022-09-22T07:36:07 [    0.147790] nicpf, ver 1.0
+2022-09-22T07:36:07 [    0.148758] hclge is initializing
+2022-09-22T07:36:07 [    0.148786] hns3: Hisilicon Ethernet Network Driver for Hip08 Family - version
+2022-09-22T07:36:07 [    0.148800] hns3: Copyright (c) 2017 Huawei Corporation.
+2022-09-22T07:36:07 [    0.148845] e1000: Intel(R) PRO/1000 Network Driver
+2022-09-22T07:36:07 [    0.148855] e1000: Copyright (c) 1999-2006 Intel Corporation.
+2022-09-22T07:36:07 [    0.148895] e1000e: Intel(R) PRO/1000 Network Driver
+2022-09-22T07:36:07 [    0.148904] e1000e: Copyright(c) 1999 - 2015 Intel Corporation.
+2022-09-22T07:36:07 [    0.148940] igb: Intel(R) Gigabit Ethernet Network Driver
+2022-09-22T07:36:07 [    0.148951] igb: Copyright (c) 2007-2014 Intel Corporation.
+2022-09-22T07:36:07 [    0.148981] igbvf: Intel(R) Gigabit Virtual Function Network Driver
+2022-09-22T07:36:07 [    0.148991] igbvf: Copyright (c) 2009 - 2012 Intel Corporation.
+2022-09-22T07:36:07 [    0.149090] sky2: driver version 1.30
+2022-09-22T07:36:07 [    0.149672] VFIO - User Level meta-driver version: 0.3
+2022-09-22T07:36:07 [    0.150909] ehci_hcd: USB 2.0 'Enhanced' Host Controller (EHCI) Driver
+2022-09-22T07:36:07 [    0.150932] ehci-pci: EHCI PCI platform driver
+2022-09-22T07:36:07 [    0.150965] ehci-platform: EHCI generic platform driver
+2022-09-22T07:36:07 [    0.151062] ohci_hcd: USB 1.1 'Open' Host Controller (OHCI) Driver
+2022-09-22T07:36:07 [    0.151079] ohci-pci: OHCI PCI platform driver
+2022-09-22T07:36:07 [    0.151111] ohci-platform: OHCI generic platform driver
+2022-09-22T07:36:07 [    0.151501] usbcore: registered new interface driver uas
+2022-09-22T07:36:07 [    0.151541] usbcore: registered new interface driver usb-storage
+2022-09-22T07:36:07 [    0.151610] usbcore: registered new interface driver usbserial_generic
+2022-09-22T07:36:07 [    0.151633] usbserial: USB Serial support registered for generic
+2022-09-22T07:36:07 [    0.153371] i2c_dev: i2c /dev entries driver
+2022-09-22T07:36:07 [    0.156625] sdhci: Secure Digital Host Controller Interface driver
+2022-09-22T07:36:07 [    0.156645] sdhci: Copyright(c) Pierre Ossman
+2022-09-22T07:36:07 [    0.157051] Synopsys Designware Multimedia Card Interface Driver
+2022-09-22T07:36:07 [    0.157694] sdhci-pltfm: SDHCI platform and OF driver helper
+2022-09-22T07:36:07 [    0.158916] ledtrig-cpu: registered to indicate activity on CPUs
+2022-09-22T07:36:07 [    0.159772] SMCCC: SOC_ID: ARCH_SOC_ID not implemented, skipping ....
+2022-09-22T07:36:07 [    0.159857] zynqmp_firmware_probe Platform Management API v1.1
+2022-09-22T07:36:07 [    0.159871] zynqmp_firmware_probe Trustzone version v1.0
+2022-09-22T07:36:07 [    0.192174] usbcore: registered new interface driver usbhid
+2022-09-22T07:36:07 [    0.192203] usbhid: USB HID core driver
+2022-09-22T07:36:07 [    0.195173] usbcore: registered new interface driver snd-usb-audio
+2022-09-22T07:36:07 [    0.195934] NET: Registered PF_PACKET protocol family
+2022-09-22T07:36:07 [    0.196276] 9pnet: Installing 9P2000 support
+2022-09-22T07:36:07 [    0.196327] Key type dns_resolver registered
+2022-09-22T07:36:07 [    0.196876] registered taskstats version 1
+2022-09-22T07:36:07 [    0.196893] Loading compiled-in X.509 certificates
+2022-09-22T07:36:07 [    1.107679] Freeing initrd memory: 24708K
+2022-09-22T07:36:07 [    1.116758] Loaded X.509 cert 'Build time autogenerated kernel key: 9397255a5113921745af46953c49bc895ac535aa'
+2022-09-22T07:36:07 [    1.128854] ff010000.serial: ttyPS1 at MMIO 0xff010000 (irq = 50, base_baud = 6249999) is a xuartps
+2022-09-22T07:36:07 [    2.438074] printk: console [ttyPS1] enabled
+2022-09-22T07:36:07 [    2.446488] mdio_bus ff0e0000.ethernet-ffffffff: mdio has invalid PHY address
+2022-09-22T07:36:07 [    2.453632] mdio_bus ff0e0000.ethernet-ffffffff: scan phy mdio at address 0
+2022-09-22T07:36:07 [    2.460682] mdio_bus ff0e0000.ethernet-ffffffff: scan phy mdio at address 1
+2022-09-22T07:36:07 [    2.467728] mdio_bus ff0e0000.ethernet-ffffffff: scan phy mdio at address 2
+2022-09-22T07:36:07 [    2.474774] mdio_bus ff0e0000.ethernet-ffffffff: scan phy mdio at address 3
+2022-09-22T07:36:07 [    2.481817] mdio_bus ff0e0000.ethernet-ffffffff: scan phy mdio at address 4
+2022-09-22T07:36:07 [    2.488862] mdio_bus ff0e0000.ethernet-ffffffff: scan phy mdio at address 5
+2022-09-22T07:36:07 [    2.495904] mdio_bus ff0e0000.ethernet-ffffffff: scan phy mdio at address 6
+2022-09-22T07:36:07 [    2.502948] mdio_bus ff0e0000.ethernet-ffffffff: scan phy mdio at address 7
+2022-09-22T07:36:07 [    2.509989] mdio_bus ff0e0000.ethernet-ffffffff: scan phy mdio at address 8
+2022-09-22T07:36:07 [    2.517030] mdio_bus ff0e0000.ethernet-ffffffff: scan phy mdio at address 9
+2022-09-22T07:36:07 [    2.524076] mdio_bus ff0e0000.ethernet-ffffffff: scan phy mdio at address 10
+2022-09-22T07:36:07 [    2.531203] mdio_bus ff0e0000.ethernet-ffffffff: scan phy mdio at address 11
+2022-09-22T07:36:07 [    2.538330] mdio_bus ff0e0000.ethernet-ffffffff: scan phy mdio at address 12
+2022-09-22T07:36:07 [    2.545456] mdio_bus ff0e0000.ethernet-ffffffff: scan phy mdio at address 13
+2022-09-22T07:36:07 [    2.552584] mdio_bus ff0e0000.ethernet-ffffffff: scan phy mdio at address 14
+2022-09-22T07:36:07 [    2.559717] mdio_bus ff0e0000.ethernet-ffffffff: scan phy mdio at address 15
+2022-09-22T07:36:07 [    2.566842] mdio_bus ff0e0000.ethernet-ffffffff: scan phy mdio at address 16
+2022-09-22T07:36:07 [    2.573969] mdio_bus ff0e0000.ethernet-ffffffff: scan phy mdio at address 17
+2022-09-22T07:36:07 [    2.581095] mdio_bus ff0e0000.ethernet-ffffffff: scan phy mdio at address 18
+2022-09-22T07:36:07 [    2.588224] mdio_bus ff0e0000.ethernet-ffffffff: scan phy mdio at address 19
+2022-09-22T07:36:07 [    2.595358] mdio_bus ff0e0000.ethernet-ffffffff: scan phy mdio at address 20
+2022-09-22T07:36:07 [    2.602483] mdio_bus ff0e0000.ethernet-ffffffff: scan phy mdio at address 21
+2022-09-22T07:36:07 [    2.609610] mdio_bus ff0e0000.ethernet-ffffffff: scan phy mdio at address 22
+2022-09-22T07:36:07 [    2.616736] mdio_bus ff0e0000.ethernet-ffffffff: scan phy mdio at address 23
+2022-09-22T07:36:07 [    2.623865] mdio_bus ff0e0000.ethernet-ffffffff: scan phy mdio at address 24
+2022-09-22T07:36:07 [    2.630997] mdio_bus ff0e0000.ethernet-ffffffff: scan phy mdio at address 25
+2022-09-22T07:36:07 [    2.638124] mdio_bus ff0e0000.ethernet-ffffffff: scan phy mdio at address 26
+2022-09-22T07:36:07 [    2.645251] mdio_bus ff0e0000.ethernet-ffffffff: scan phy mdio at address 27
+2022-09-22T07:36:07 [    2.652377] mdio_bus ff0e0000.ethernet-ffffffff: scan phy mdio at address 28
+2022-09-22T07:36:07 [    2.659504] mdio_bus ff0e0000.ethernet-ffffffff: scan phy mdio at address 29
+2022-09-22T07:36:07 [    2.666631] mdio_bus ff0e0000.ethernet-ffffffff: scan phy mdio at address 30
+2022-09-22T07:36:07 [    2.673764] mdio_bus ff0e0000.ethernet-ffffffff: scan phy mdio at address 31
+2022-09-22T07:36:07 [    2.681227] macb ff0e0000.ethernet eth0: Cadence GEM rev 0x50070106 at 0xff0e0000 irq 37 (00:0a:35:0e:88:50)
+2022-09-22T07:36:07 [    2.696520] clk: couldn't set sdio0_ref clk rate to 187498123 (-16), current rate: 199999998
+2022-09-22T07:36:07 [    2.697691] clk: couldn't set sdio1_ref clk rate to 187498123 (-16), current rate: 199999998
+2022-09-22T07:36:07 [    2.700376] cfg80211: Loading compiled-in X.509 certificates for regulatory database
+2022-09-22T07:36:07 [    2.701127] cfg80211: Loaded X.509 cert 'sforshee: 00b28ddf47aef9cea7'
+2022-09-22T07:36:07 [    2.701345] zynqmp_pll_disable() clock disable failed for dpll_int, ret = -13
+2022-09-22T07:36:07 [    2.702981] ALSA device list:
+2022-09-22T07:36:07 [    2.702986]   No soundcards found.
+2022-09-22T07:36:07 [    2.703163] platform regulatory.0: Direct firmware load for regulatory.db failed with error -2
+2022-09-22T07:36:07 [    2.703172] cfg80211: failed to load regulatory.db
+2022-09-22T07:36:07 [    2.705483] clk: couldn't set sdio0_ref clk rate to 187498123 (-16), current rate: 199999998
+2022-09-22T07:36:07 [    2.713919] clk: couldn't set sdio1_ref clk rate to 187498123 (-16), current rate: 199999998
+2022-09-22T07:36:07 [    2.805449] mmc1: SDHCI controller on ff170000.mmc [ff170000.mmc] using ADMA 64-bit
+2022-09-22T07:36:07 [    2.813357] mmc0: SDHCI controller on ff160000.mmc [ff160000.mmc] using ADMA 64-bit
+2022-09-22T07:36:07 [    2.822476] Freeing unused kernel memory: 5184K
+2022-09-22T07:36:07 [    2.827310] Run /init as init process
+2022-09-22T07:36:07 [    2.851337] mmc1: new SDHC card at address 0001
+2022-09-22T07:36:07 [    2.856708] mmcblk1: mmc1:0001 SD16G 14.6 GiB 
+2022-09-22T07:36:07 [    2.875199] GPT:Primary header thinks Alt. header is not at the end of the disk.
+2022-09-22T07:36:07 [    2.882653] GPT:4456521 != 30547967
+2022-09-22T07:36:07 [    2.886166] GPT:Alternate GPT header not at the end of the disk.
+2022-09-22T07:36:07 [    2.892195] GPT:4456521 != 30547967
+2022-09-22T07:36:07 [    2.895702] GPT: Use GNU Parted to correct GPT errors.
+2022-09-22T07:36:07 [    2.895728]  mmcblk1: p1 p2
+2022-09-22T07:36:07 [    2.912899] mmc0: new HS200 MMC card at address 0001
+2022-09-22T07:36:07 [    2.915917] tpm_tis_core: module verification failed: signature and/or required key missing - tainting kernel
+2022-09-22T07:36:07 [    2.918424] mmcblk0: mmc0:0001 S0J56X 14.8 GiB 
+2022-09-22T07:36:07 [    2.933878] mmcblk0boot0: mmc0:0001 S0J56X 31.5 MiB 
+2022-09-22T07:36:07 [    2.940266] mmcblk0boot1: mmc0:0001 S0J56X 31.5 MiB 
+2022-09-22T07:36:07 [    2.946443] mmcblk0rpmb: mmc0:0001 S0J56X 4.00 MiB, chardev (235:0)
+2022-09-22T07:36:08 [    3.249315] random: fast init done
+2022-09-22T07:36:08 [    3.291911] EXT4-fs (mmcblk1p2): mounted filesystem with ordered data mode. Opts: (null). Quota mode: none.
+2022-09-22T07:36:10 [    5.292225] SELinux:  Class mctp_socket not defined in policy.
+2022-09-22T07:36:10 [    5.298153] SELinux:  Class anon_inode not defined in policy.
+2022-09-22T07:36:10 [    5.303900] SELinux: the above unknown classes and permissions will be allowed
+2022-09-22T07:36:10 [    5.319626] SELinux:  policy capability network_peer_controls=1
+2022-09-22T07:36:10 [    5.325670] SELinux:  policy capability open_perms=1
+2022-09-22T07:36:10 [    5.330637] SELinux:  policy capability extended_socket_class=1
+2022-09-22T07:36:10 [    5.336575] SELinux:  policy capability always_check_network=0
+2022-09-22T07:36:10 [    5.342416] SELinux:  policy capability cgroup_seclabel=1
+2022-09-22T07:36:10 [    5.347842] SELinux:  policy capability nnp_nosuid_transition=1
+2022-09-22T07:36:10 [    5.353766] SELinux:  policy capability genfs_seclabel_symlinks=0
+2022-09-22T07:36:10 [    5.359871] SELinux:  policy capability ioctl_skip_cloexec=0
+2022-09-22T07:36:10 [    5.412136] audit: type=1403 audit(5.408:2): auid=4294967295 ses=4294967295 lsm=selinux res=1
+2022-09-22T07:36:10 [    5.445865] systemd[1]: Successfully loaded SELinux policy in 899.583ms.
+2022-09-22T07:36:10 [    5.750042] systemd[1]: System time before build time, advancing clock.
+2022-09-22T07:36:11 [    6.260391] audit: type=1400 audit(1616485768.508:3): avc:  denied  { integrity } for  pid=1 comm=\"systemd\" lockdown_reason=\"unsigned module loading\" scontext=system_u:system_r:init_t:s0-s15:c0.c1023 tcontext=system_u:system_r:init_t:s0-s15:c0.c1023 tclass=lockdown permissive=1
+2022-09-22T07:36:11 [    6.287241] NET: Registered PF_INET6 protocol family
+2022-09-22T07:36:11 [    6.349710] Segment Routing with IPv6
+2022-09-22T07:36:11 [    6.353477] In-situ OAM (IOAM) with IPv6
+2022-09-22T07:36:11 [    6.412398] systemd[1]: Relabelled /dev, /dev/shm, /run, /sys/fs/cgroup in 36.254ms.
+2022-09-22T07:36:11 [    6.533791] systemd[1]: systemd 247.6+ running in system mode. (+PAM +AUDIT +SELINUX +IMA -APPARMOR -SMACK +SYSVINIT +UTMP -LIBCRYPTSETUP -GCRYPT -GNUTLS +ACL +XZ -LZ4 -ZSTD -SECCOMP +BLKID -ELFUTILS +KMOD -IDN2 -IDN -PCRE2 default-hierarchy=hybrid)
+2022-09-22T07:36:11 [    6.556832] systemd[1]: Detected architecture arm64.
+2022-09-22T07:36:11 [    6.618821] systemd[1]: Set hostname to <ledge-qemuarm64>.
+2022-09-22T07:36:11 [    6.731888] audit: type=1400 audit(1616485768.976:4): avc:  denied  { read } for  pid=248 comm=\"systemd-gpt-aut\" name=\"mmcblk1\" dev=\"devtmpfs\" ino=143 scontext=system_u:system_r:systemd_generator_t:s0-s15:c0.c1023 tcontext=system_u:object_r:removable_device_t:s0 tclass=blk_file permissive=1
+2022-09-22T07:36:11 [    6.757674] audit: type=1400 audit(1616485768.980:5): avc:  denied  { open } for  pid=248 comm=\"systemd-gpt-aut\" path=\"/dev/mmcblk1\" dev=\"devtmpfs\" ino=143 scontext=system_u:system_r:systemd_generator_t:s0-s15:c0.c1023 tcontext=system_u:object_r:removable_device_t:s0 tclass=blk_file permissive=1
+2022-09-22T07:36:11 [    6.783868] audit: type=1400 audit(1616485768.980:6): avc:  denied  { getattr } for  pid=248 comm=\"systemd-gpt-aut\" path=\"/dev/mmcblk1\" dev=\"devtmpfs\" ino=143 scontext=system_u:system_r:systemd_generator_t:s0-s15:c0.c1023 tcontext=system_u:object_r:removable_device_t:s0 tclass=blk_file permissive=1
+2022-09-22T07:36:11 [    6.810348] audit: type=1400 audit(1616485769.040:7): avc:  denied  { ioctl } for  pid=248 comm=\"systemd-gpt-aut\" path=\"/dev/mmcblk1\" dev=\"devtmpfs\" ino=143 ioctlcmd=0x1272 scontext=system_u:system_r:systemd_generator_t:s0-s15:c0.c1023 tcontext=system_u:object_r:removable_device_t:s0 tclass=blk_file permissive=1
+2022-09-22T07:36:11 [    6.866245] systemd-sysv-generator[253]: SysV service '/etc/init.d/conntrack-failover' lacks a native systemd unit file. Automatically generating a unit file for compatibility. Please update package to include a native systemd unit file, in order to make it more safe and robust.
+2022-09-22T07:36:11 [    6.891288] systemd-sysv-generator[253]: SysV service '/etc/init.d/conntrackd' lacks a native systemd unit file. Automatically generating a unit file for compatibility. Please update package to include a native systemd unit file, in order to make it more safe and robust.
+2022-09-22T07:36:13 [    8.698406] systemd[1]: Queued start job for default target Multi-User System.
+2022-09-22T07:36:13 [    8.706676] random: systemd: uninitialized urandom read (16 bytes read)
+2022-09-22T07:36:13 [    8.750132] systemd[1]: Created slice system-getty.slice.
+2022-09-22T07:36:13 [    8.756608] random: systemd: uninitialized urandom read (16 bytes read)
+2022-09-22T07:36:13 [    8.765386] systemd[1]: Created slice system-modprobe.slice.
+2022-09-22T07:36:13 [    8.771259] random: systemd: uninitialized urandom read (16 bytes read)
+2022-09-22T07:36:13 [    8.779821] systemd[1]: Created slice system-serial\x2dgetty.slice.
+2022-09-22T07:36:13 [    8.788256] systemd[1]: Created slice User and Session Slice.
+2022-09-22T07:36:13 [    8.794754] systemd[1]: Started Dispatch Password Requests to Console Directory Watch.
+2022-09-22T07:36:13 [    8.803264] systemd[1]: Started Forward Password Requests to Wall Directory Watch.
+2022-09-22T07:36:13 [    8.811318] systemd[1]: Reached target Remote File Systems.
+2022-09-22T07:36:13 [    8.817066] systemd[1]: Reached target Slices.
+2022-09-22T07:36:13 [    8.821727] systemd[1]: Reached target System Time Set.
+2022-09-22T07:36:13 [    8.827132] systemd[1]: Reached target System Time Synchronized.
+2022-09-22T07:36:13 [    8.863239] systemd[1]: Listening on RPCbind Server Activation Socket.
+2022-09-22T07:36:13 [    8.870456] systemd[1]: Reached target RPC Port Mapper.
+2022-09-22T07:36:13 [    8.882734] systemd[1]: Listening on Syslog Socket.
+2022-09-22T07:36:13 [    8.888731] systemd[1]: Listening on initctl Compatibility Named Pipe.
+2022-09-22T07:36:13 [    8.897713] systemd[1]: Listening on Journal Audit Socket.
+2022-09-22T07:36:13 [    8.904133] systemd[1]: Listening on Journal Socket (/dev/log).
+2022-09-22T07:36:13 [    8.911541] systemd[1]: Listening on Journal Socket.
+2022-09-22T07:36:13 [    8.918015] systemd[1]: Listening on Network Service Netlink Socket.
+2022-09-22T07:36:13 [    8.928017] systemd[1]: Listening on udev Control Socket.
+2022-09-22T07:36:13 [    8.935310] systemd[1]: Listening on udev Kernel Socket.
+2022-09-22T07:36:13 [    8.943134] systemd[1]: Listening on User Database Manager Socket.
+2022-09-22T07:36:13 [    8.954458] systemd[1]: Mounting Huge Pages File System...
+2022-09-22T07:36:14 [    8.965074] systemd[1]: Mounting POSIX Message Queue File System...
+2022-09-22T07:36:14 [    8.976300] systemd[1]: Mounting Kernel Debug File System...
+2022-09-22T07:36:14 [    8.982602] systemd[1]: Condition check resulted in Kernel Trace File System being skipped.
+2022-09-22T07:36:14 [    8.996083] systemd[1]: Starting Create list of static device nodes for the current kernel...
+2022-09-22T07:36:14 [    9.009101] systemd[1]: Starting Load Kernel Module configfs...
+2022-09-22T07:36:14 [    9.019067] systemd[1]: Starting Load Kernel Module drm...
+2022-09-22T07:36:14 [    9.028898] systemd[1]: Starting Load Kernel Module fuse...
+2022-09-22T07:36:14 [    9.068348] systemd[1]: Starting RPC Bind...
+2022-09-22T07:36:14 [    9.081932] systemd[1]: Starting SELinux autorelabel service loading...
+2022-09-22T07:36:14 [    9.093287] systemd[1]: Starting SELinux init for /dev service loading...
+2022-09-22T07:36:14 [    9.100739] systemd[1]: Condition check resulted in File System Check on Root Device being skipped.
+2022-09-22T07:36:14 [    9.116361] systemd[1]: Starting Journal Service...
+2022-09-22T07:36:14 [    9.148800] audit: type=1400 audit(1616485771.396:8): avc:  denied  { integrity } for  pid=263 comm=\"modprobe\" lockdown_reason=\"unsigned module loading\" scontext=system_u:system_r:kmod_t:s0-s15:c0.c1023 tcontext=system_u:system_r:kmod_t:s0-s15:c0.c1023 tclass=lockdown permissive=1
+2022-09-22T07:36:14 [    9.202974] systemd[1]: Starting Load Kernel Modules...
+2022-09-22T07:36:14 [    9.213292] systemd[1]: Starting Remount Root and Kernel File Systems...
+2022-09-22T07:36:14 [    9.220574] fuse: init (API version 7.34)
+2022-09-22T07:36:14 [    9.225144] systemd[1]: Starting Coldplug All udev Devices...
+2022-09-22T07:36:14 [    9.235936] systemd[1]: Starting Create compressed swap in memory using zram...
+2022-09-22T07:36:14 [    9.250913] systemd[1]: Mounted Huge Pages File System.
+2022-09-22T07:36:14 [    9.257101] systemd[1]: Mounted POSIX Message Queue File System.
+2022-09-22T07:36:14 [    9.263930] systemd[1]: Mounted Kernel Debug File System.
+2022-09-22T07:36:14 [    9.273112] systemd[1]: Finished Create list of static device nodes for the current kernel.
+2022-09-22T07:36:14 [    9.282809] EXT4-fs (mmcblk1p2): re-mounted. Opts: (null). Quota mode: none.
+2022-09-22T07:36:14 [    9.287462] systemd[1]: modprobe@configfs.service: Succeeded.
+2022-09-22T07:36:14 [    9.297605] systemd[1]: Finished Load Kernel Module configfs.
+2022-09-22T07:36:14 [    9.306800] systemd[1]: modprobe@drm.service: Succeeded.
+2022-09-22T07:36:14 [    9.313909] systemd[1]: Finished Load Kernel Module drm.
+2022-09-22T07:36:14 [    9.320727] systemd[1]: modprobe@fuse.service: Succeeded.
+2022-09-22T07:36:14 [    9.328077] systemd[1]: Finished Load Kernel Module fuse.
+2022-09-22T07:36:14 [    9.334144] audit: type=1130 audit(1616485771.580:9): pid=1 uid=0 auid=4294967295 ses=4294967295 subj=system_u:system_r:init_t:s0-s15:c0.c1023 msg='unit=modprobe@fuse comm=\"systemd\" exe=\"/lib/systemd/systemd\" hostname=? addr=? terminal=? res=success'
+2022-09-22T07:36:14 [    9.337823] systemd[1]: Finished Load Kernel Modules.
+2022-09-22T07:36:14 [    9.356510] audit: type=1131 audit(1616485771.580:10): pid=1 uid=0 auid=4294967295 ses=4294967295 subj=system_u:system_r:init_t:s0-s15:c0.c1023 msg='unit=modprobe@fuse comm=\"systemd\" exe=\"/lib/systemd/systemd\" hostname=? addr=? terminal=? res=success'
+2022-09-22T07:36:14 [    9.384012] audit: type=1130 audit(1616485771.632:11): pid=1 uid=0 auid=4294967295 ses=4294967295 subj=system_u:system_r:init_t:s0-s15:c0.c1023 msg='unit=systemd-modules-load comm=\"systemd\" exe=\"/lib/systemd/systemd\" hostname=? addr=? terminal=? res=success'
+2022-09-22T07:36:14 [    9.385301] systemd[1]: Started Journal Service.
+2022-09-22T07:36:14 [    9.759893] systemd-journald[268]: Received client request to flush runtime journal.
+2022-09-22T07:36:25 
+2022-09-22T07:36:25 Reference-Platform-Build-X11 3.0+linaro ledge-qemuarm64 ttyPS1
+2022-09-22T07:36:25 
+2022-09-22T07:36:25 Matched prompt #8: login:
+2022-09-22T07:36:25 {'case': 'kernel-messages', 'definition': 'lava', 'duration': '162.38', 'extra': {'extra': [{'success': 'login:'}]}, 'level': '3.2.1', 'namespace': 'common', 'result': 'pass'}
+2022-09-22T07:36:25 Sending username ledge
+2022-09-22T07:36:25 ledge
+2022-09-22T07:36:25 ledge-qemuarm64 login: ledge
+2022-09-22T07:36:25 Setting prompt string to ['ledge-qemuarm64:']
+2022-09-22T07:36:25 Waiting for password prompt
+2022-09-22T07:36:25 login-action: Wait for prompt ['ledge-qemuarm64:', 'Password:', 'Login timed out'] (timeout 00:12:09)
+2022-09-22T07:36:25 ledge
+2022-09-22T07:36:25 ledge
+2022-09-22T07:36:26 Matched prompt #1: Password:
+2022-09-22T07:36:26 Sending password ledge
+2022-09-22T07:36:26 ledge
+2022-09-22T07:36:26 Password: ledge
+2022-09-22T07:36:26 Setting prompt string to ['ledge-qemuarm64:']
+2022-09-22T07:36:26 login-action: Wait for prompt ['ledge-qemuarm64:', 'Login incorrect', 'Login timed out'] (timeout 00:12:08)
+2022-09-22T07:36:26 ledge
+2022-09-22T07:36:26 
+2022-09-22T07:36:27 Setting prompt string to ['ledge-qemuarm64:']
+2022-09-22T07:36:27 end: 3.2.1 login-action (duration 00:02:45) [common]
+2022-09-22T07:36:27 {'case': 'login-action', 'definition': 'lava', 'duration': '164.76', 'extra': {'success': 'login:'}, 'level': '3.2.1', 'namespace': 'common', 'result': 'pass'}
+2022-09-22T07:36:27 end: 3.2 auto-login-action (duration 00:02:53) [common]
+2022-09-22T07:36:27 end: 3 minimal-boot (duration 00:02:53) [common]
+2022-09-22T07:36:27 start: 4 finalize (timeout 00:20:00) [common]
+2022-09-22T07:36:27 start: 4.1 power-off (timeout 00:00:10) [common]
+2022-09-22T07:36:27 Calling: 'nice' '/usr/local/bin/relayctl' 'relay3' '1' 'off'
+2022-09-22T07:36:27 Returned 0 in 0 seconds
+2022-09-22T07:36:27 Calling: 'nice' '/usr/local/bin/relayctl' 'relay3' '2' 'off'
+2022-09-22T07:36:28 Returned 0 in 0 seconds
+2022-09-22T07:36:28 end: 4.1 power-off (duration 00:00:00) [common]
+2022-09-22T07:36:28 {'case': 'power-off', 'definition': 'lava', 'duration': '0.31', 'extra': {'status': 'success'}, 'level': '4.1', 'namespace': 'common', 'result': 'pass'}
+2022-09-22T07:36:28 start: 4.2 read-feedback (timeout 00:20:00) [common]
+2022-09-22T07:36:28 Listened to connection for namespace 'common' for up to 1s
+2022-09-22T07:36:29 Finalising connection for namespace 'common'
+2022-09-22T07:36:29 Disconnecting from telnet: Finalise
+2022-09-22T07:36:29 ]
+2022-09-22T07:36:29 quit
+2022-09-22T07:36:29 7[r[999;999H[6n8ledge-qemuarm64:~$ quit
+2022-09-22T07:36:29 end: 4.2 read-feedback (duration 00:00:01) [common]
+2022-09-22T07:36:29 end: 4 finalize (duration 00:00:02) [common]
+2022-09-22T07:36:29 Cleaning after the job
+2022-09-22T07:36:29 Cleaning up download directory: /var/lib/lava/dispatcher/tmp/388/deploy-flasher-02ezhtg9/ImageA
+2022-09-22T07:36:29 Cleaning up download directory: /var/lib/lava/dispatcher/tmp/388/deploy-flasher-02ezhtg9/ImageB
+2022-09-22T07:36:29 Cleaning up download directory: /var/lib/lava/dispatcher/tmp/388/deploy-flasher-02ezhtg9/sd
+2022-09-22T07:36:29 Root tmp directory removed at /var/lib/lava/dispatcher/tmp/388
+2022-09-22T07:36:29 Job finished correctly
+2022-09-22T07:36:29 {'case': 'job', 'definition': 'lava', 'result': 'pass'}

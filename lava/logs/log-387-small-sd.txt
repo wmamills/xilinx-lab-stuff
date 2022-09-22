@@ -1,0 +1,793 @@
+2022-09-22T07:14:50 lava-dispatcher, installed at version: 2022.08
+2022-09-22T07:14:50 start: 0 validate
+2022-09-22T07:14:50 Start time: 2022-09-22 07:14:50.573653+00:00 (UTC)
+2022-09-22T07:14:50 Validating that https://github.com/wmamills/xilinx-lab-stuff/raw/master/recovery/recovery-boot.bin exists
+2022-09-22T07:14:51 Validating that https://github.com/wmamills/xilinx-lab-stuff/raw/master/recovery/recovery-boot-sdcard.img.bz2 exists
+2022-09-22T07:14:51 validate duration: 0.73
+2022-09-22T07:14:51 {'case': 'validate', 'definition': 'lava', 'result': 'pass'}
+2022-09-22T07:14:51 start: 1 deploy-flasher-retry (timeout 00:20:00) [common]
+2022-09-22T07:14:51 start: 1.1 deploy-flasher (timeout 00:20:00) [common]
+2022-09-22T07:14:51 start: 1.1.1 download-retry (timeout 00:20:00) [common]
+2022-09-22T07:14:51 start: 1.1.1.1 http-download (timeout 00:20:00) [common]
+2022-09-22T07:14:51 downloading https://github.com/wmamills/xilinx-lab-stuff/raw/master/recovery/recovery-boot.bin
+2022-09-22T07:14:51 saving as /var/lib/lava/dispatcher/tmp/386/deploy-flasher-6bydee2h/boot/recovery-boot.bin
+2022-09-22T07:14:51 total size: 1860740 (1MB)
+2022-09-22T07:14:51 No compression specified
+2022-09-22T07:14:51 progress   1% (0MB)
+2022-09-22T07:14:51 progress   7% (0MB)
+2022-09-22T07:14:51 progress  12% (0MB)
+2022-09-22T07:14:51 progress  17% (0MB)
+2022-09-22T07:14:51 progress  22% (0MB)
+2022-09-22T07:14:51 progress  28% (0MB)
+2022-09-22T07:14:51 progress  33% (0MB)
+2022-09-22T07:14:51 progress  38% (0MB)
+2022-09-22T07:14:51 progress  44% (0MB)
+2022-09-22T07:14:51 progress  49% (0MB)
+2022-09-22T07:14:51 progress  54% (0MB)
+2022-09-22T07:14:51 progress  59% (1MB)
+2022-09-22T07:14:51 progress  65% (1MB)
+2022-09-22T07:14:51 progress  70% (1MB)
+2022-09-22T07:14:51 progress  75% (1MB)
+2022-09-22T07:14:51 progress  81% (1MB)
+2022-09-22T07:14:51 progress  86% (1MB)
+2022-09-22T07:14:51 progress  91% (1MB)
+2022-09-22T07:14:51 progress  96% (1MB)
+2022-09-22T07:14:51 1MB downloaded in 0.29s (6.16MB/s)
+2022-09-22T07:14:51 end: 1.1.1.1 http-download (duration 00:00:00) [common]
+2022-09-22T07:14:51 {'case': 'http-download', 'definition': 'lava', 'duration': '0.29', 'extra': {'label': 'boot', 'md5sum': 'b8826dc807eb15b9fd5a50b107e35a51', 'sha256sum': 'd00d17b6fda04510ccb0a4787a79d61f167d302b5e4cdb22df5423306aea56ed', 'sha512sum': '0fab10ee8a2944fd9328b86baf205a7f86b702c141ab54ee05d6520786a060e267b63ed414321cd53174438580bfe855afcd7ed2d6b5d62ecd12b91ff5e8adec', 'size': 1860740}, 'level': '1.1.1.1', 'namespace': 'common', 'result': 'pass'}
+2022-09-22T07:14:51 end: 1.1.1 download-retry (duration 00:00:00) [common]
+2022-09-22T07:14:51 start: 1.1.2 download-retry (timeout 00:20:00) [common]
+2022-09-22T07:14:51 start: 1.1.2.1 http-download (timeout 00:20:00) [common]
+2022-09-22T07:14:51 downloading https://github.com/wmamills/xilinx-lab-stuff/raw/master/recovery/recovery-boot-sdcard.img.bz2
+2022-09-22T07:14:51 saving as /var/lib/lava/dispatcher/tmp/386/deploy-flasher-6bydee2h/sd/recovery-boot-sdcard.img
+2022-09-22T07:14:51 total size: 13409561 (12MB)
+2022-09-22T07:14:51 Using bunzip2 to decompress bz2
+2022-09-22T07:14:51 progress   0% (0MB)
+2022-09-22T07:14:51 progress   5% (0MB)
+2022-09-22T07:14:51 progress  10% (1MB)
+2022-09-22T07:14:51 progress  15% (1MB)
+2022-09-22T07:14:52 progress  20% (2MB)
+2022-09-22T07:14:52 progress  25% (3MB)
+2022-09-22T07:14:52 progress  30% (3MB)
+2022-09-22T07:14:52 progress  35% (4MB)
+2022-09-22T07:14:52 progress  40% (5MB)
+2022-09-22T07:14:52 progress  45% (5MB)
+2022-09-22T07:14:52 progress  50% (6MB)
+2022-09-22T07:14:52 progress  55% (7MB)
+2022-09-22T07:14:52 progress  60% (7MB)
+2022-09-22T07:14:52 progress  65% (8MB)
+2022-09-22T07:14:52 progress  70% (8MB)
+2022-09-22T07:14:52 progress  75% (9MB)
+2022-09-22T07:14:52 progress  80% (10MB)
+2022-09-22T07:14:53 progress  85% (10MB)
+2022-09-22T07:14:53 progress  90% (11MB)
+2022-09-22T07:14:53 progress  95% (12MB)
+2022-09-22T07:14:53 progress 100% (12MB)
+2022-09-22T07:14:53 12MB downloaded in 1.82s (7.02MB/s)
+2022-09-22T07:14:53 end: 1.1.2.1 http-download (duration 00:00:02) [common]
+2022-09-22T07:14:53 {'case': 'http-download', 'definition': 'lava', 'duration': '1.83', 'extra': {'label': 'sd', 'md5sum': '34adea57a16be2842dcad9db433fa353', 'sha256sum': '16e0e45aead8bbbe602a9aa8eca9c2a1363a167b1568b0f73894f64b4508a259', 'sha512sum': '0462d604f967d7db220de8b45fa250a6c045cfc8c4cfa02f126cd263245192a366e85337bb11fc68973afff5f3248ab21578ddb6c738157b77f6a90ef2ced4d0', 'size': 13409561}, 'level': '1.1.2.1', 'namespace': 'common', 'result': 'pass'}
+2022-09-22T07:14:53 end: 1.1.2 download-retry (duration 00:00:02) [common]
+2022-09-22T07:14:53 Calling: 'nice' 'bash' '-c' 'echo KRIA FLASHER UID=$UID PWD=$PWD PATH=$PATH'
+2022-09-22T07:14:53 >> KRIA FLASHER UID=0 PWD=/var/lib/lava/dispatcher/tmp/386/deploy-flasher-6bydee2h PATH=/usr/local/bin:/usr/local/sbin:/bin:/usr/bin:/usr/sbin:/sbin
+2022-09-22T07:14:53 Returned 0 in 0 seconds
+2022-09-22T07:14:53 Calling: 'nice' '/usr/local/bin/relayctl' 'relay3' '1' 'off'
+2022-09-22T07:14:53 Returned 0 in 0 seconds
+2022-09-22T07:14:53 Calling: 'nice' '/usr/local/bin/relayctl' 'relay3' '2' 'on'
+2022-09-22T07:14:53 Returned 0 in 0 seconds
+2022-09-22T07:14:53 Calling: 'nice' 'sleep' '10'
+2022-09-22T07:15:03 Returned 0 in 10 seconds
+2022-09-22T07:15:03 Calling: 'nice' '/usr/local/bin/relayctl' 'relay3' '1' 'on'
+2022-09-22T07:15:03 Returned 0 in 0 seconds
+2022-09-22T07:15:04 Calling: 'nice' 'sleep' '20'
+2022-09-22T07:15:24 Returned 0 in 20 seconds
+2022-09-22T07:15:24 Calling: 'nice' '/usr/local/bin/kria-deploy.sh' '192.168.2.199' '.'
+2022-09-22T07:15:24 >> Created symlink: lrwxrwxrwx 1 root root 22 Sep 22 03:15 boot.bin -> boot/recovery-boot.bin
+2022-09-22T07:15:24 >> Created symlink: lrwxrwxrwx 1 root root 27 Sep 22 03:15 sd.img -> sd/recovery-boot-sdcard.img
+2022-09-22T07:15:24 >> Check that board at 192.168.2.199 is alive
+2022-09-22T07:15:35 >> .Board at 192.168.2.199 is alive
+2022-09-22T07:15:35 >> # Host 192.168.2.199 found: line 4
+2022-09-22T07:15:35 >> /root/.ssh/known_hosts updated.
+2022-09-22T07:15:35 >> Original contents retained as /root/.ssh/known_hosts.old
+2022-09-22T07:15:35 >> Board at 192.168.2.199 ready
+2022-09-22T07:15:35 >> boot.bin                                        0%    0     0.0KB/s   --:-- ETAboot.bin                                      100% 1817KB  41.7MB/s   00:00    
+2022-09-22T07:15:35 >> sel-reg-ImageA.bin                              0%    0     0.0KB/s   --:-- ETAsel-reg-ImageA.bin                            100%  256   589.6KB/s   00:00    
+2022-09-22T07:15:35 >> kria-deploy.sh                                  0%    0     0.0KB/s   --:-- ETAkria-deploy.sh                                100%   11KB  13.3MB/s   00:00    
+2022-09-22T07:15:35 >> Update Boot Image A with boot.bin
+2022-09-22T07:15:37 >> Erasing 13312 Kibyte @ 0 --  0 % complete Erasing 13312 Kibyte @ 0 -- 100 % complete 
+2022-09-22T07:15:40 >> 28+1 records in
+2022-09-22T07:15:40 >> 28+1 records out
+2022-09-22T07:15:40 >> Update Boot Image B with boot.bin
+2022-09-22T07:15:44 >> Erasing 13312 Kibyte @ 0 --  0 % complete Erasing 13312 Kibyte @ 0 -- 100 % complete 
+2022-09-22T07:15:47 >> 28+1 records in
+2022-09-22T07:15:47 >> 28+1 records out
+2022-09-22T07:15:47 >> Update IMGSEL variables
+2022-09-22T07:15:47 >> Erasing 128 Kibyte @ 0 --  0 % complete Erasing 128 Kibyte @ 0 -- 100 % complete 
+2022-09-22T07:15:47 >> 0+1 records in
+2022-09-22T07:15:47 >> 0+1 records out
+2022-09-22T07:15:47 >> Update 2nd copy
+2022-09-22T07:15:47 >> Erasing 128 Kibyte @ 0 --  0 % complete Erasing 128 Kibyte @ 0 -- 100 % complete 
+2022-09-22T07:15:47 >> 0+1 records in
+2022-09-22T07:15:47 >> 0+1 records out
+2022-09-22T07:15:47 >> TEMPDIR=/tmp/tmp.K8t4KruKs8 DEV=mmcblk1 FILE=sd.img BLOCK_SIZE=64M
+2022-09-22T07:15:47 >> splitting sd.img into 64M chunks
+2022-09-22T07:15:48 >> processing chunks:
+2022-09-22T07:16:15 >> *
+2022-09-22T07:16:15 >> DONE sd.img
+2022-09-22T07:16:15 Returned 0 in 50 seconds
+2022-09-22T07:16:15 Calling: 'nice' '/usr/local/bin/relayctl' 'relay3' '1' 'off'
+2022-09-22T07:16:15 Returned 0 in 0 seconds
+2022-09-22T07:16:15 Calling: 'nice' '/usr/local/bin/relayctl' 'relay3' '2' 'off'
+2022-09-22T07:16:15 Returned 0 in 0 seconds
+2022-09-22T07:16:15 end: 1.1 deploy-flasher (duration 00:01:24) [common]
+2022-09-22T07:16:15 end: 1 deploy-flasher-retry (duration 00:01:24) [common]
+2022-09-22T07:16:15 start: 2 minimal-boot (timeout 00:02:00) [common]
+2022-09-22T07:16:15 start: 2.1 connect-device (timeout 00:02:00) [common]
+2022-09-22T07:16:15 [common] connect-device Connecting to device using 'telnet localhost 7001'
+2022-09-22T07:16:15 Setting prompt string to ['lava-test: # ']
+2022-09-22T07:16:15 end: 2.1 connect-device (duration 00:00:00) [common]
+2022-09-22T07:16:15 start: 2.2 reset-device (timeout 00:02:00) [common]
+2022-09-22T07:16:15 start: 2.2.1 pdu-reboot (timeout 00:02:00) [common]
+2022-09-22T07:16:15 Calling: 'nice' '/usr/local/bin/relayctl' 'relay3' '1' 'cycle' '15'
+2022-09-22T07:16:30 Returned 0 in 15 seconds
+2022-09-22T07:16:30 end: 2.2.1 pdu-reboot (duration 00:00:15) [common]
+2022-09-22T07:16:30 {'case': 'pdu-reboot', 'definition': 'lava', 'duration': '15.18', 'extra': {'status': 'success'}, 'level': '2.2.1', 'namespace': 'common', 'result': 'pass'}
+2022-09-22T07:16:30 end: 2.2 reset-device (duration 00:00:15) [common]
+2022-09-22T07:16:30 start: 2.3 auto-login-action (timeout 00:01:45) [common]
+2022-09-22T07:16:30 Setting prompt string to ['Linux version [0-9]']
+2022-09-22T07:16:30 auto-login-action: Wait for prompt ['Linux version [0-9]'] (timeout 00:02:00)
+2022-09-22T07:16:30 Trying ::1...
+2022-09-22T07:16:30 Connected to localhost.
+2022-09-22T07:16:30 Escape character is '^]'.
+2022-09-22T07:16:30  
+2022-09-22T07:16:30  Xilinx Zynq MP First Stage Boot Loader 
+2022-09-22T07:16:30 Release 2022.1   Jul 25 2022  -  07:42:28
+2022-09-22T07:16:30 MultiBootOffset: 0x40
+2022-09-22T07:16:30 Reset Mode	:	System Reset
+2022-09-22T07:16:30 Platform: Silicon (4.0), Running on A53-0 (64-bit) Processor, Device Name: XCZUUNKNEG
+2022-09-22T07:16:30 QSPI 32 bit Boot Mode 
+2022-09-22T07:16:30 FlashID=0x20 0xBB 0x20
+2022-09-22T07:16:30 PMU Firmware 2022.1	Jul 25 2022   07:42:28
+2022-09-22T07:16:30 PMU_ROM Version: xpbr-v8.1.0-0
+2022-09-22T07:16:31 �NOTICE:  BL31: v2.6(release):xlnx_rebase_v2.6_2022.1_update1
+2022-09-22T07:16:31 NOTICE:  BL31: Built : 03:46:40, Mar 24 2022
+2022-09-22T07:16:32 
+2022-09-22T07:16:32 
+2022-09-22T07:16:32 U-Boot 2022.01-00002-g91ad7924e7 (Aug 24 2022 - 11:07:30 +0000)
+2022-09-22T07:16:32 
+2022-09-22T07:16:32 CPU:   ZynqMP
+2022-09-22T07:16:32 Silicon: v3
+2022-09-22T07:16:32 PMUFW no permission to change config object
+2022-09-22T07:16:32 Detected name: zynqmp-sm-k26-xcl2gc-rev1 -sck-kv-g-rev1
+2022-09-22T07:16:32 Model: ZynqMP SM-K26 Rev1/B/A
+2022-09-22T07:16:32 Board: Xilinx ZynqMP
+2022-09-22T07:16:33 DRAM:  4 GiB
+2022-09-22T07:16:33 PMUFW:	v1.1
+2022-09-22T07:16:33 PMUFW no permission to change config object
+2022-09-22T07:16:33 Xilinx I2C FRU format at nvmem0:
+2022-09-22T07:16:33  Manufacturer Name: XILINX
+2022-09-22T07:16:33  Product Name: SM-K26-XCL2GC
+2022-09-22T07:16:33  Serial No: XFL1OTRUW0NW
+2022-09-22T07:16:33  Part Number: 5057-02  
+2022-09-22T07:16:33  File ID: 0x0
+2022-09-22T07:16:33  Revision Number: 1 
+2022-09-22T07:16:34 Xilinx I2C FRU format at nvmem1:
+2022-09-22T07:16:34  Manufacturer Name: XILINX
+2022-09-22T07:16:34  Product Name: SCK-KV-G        
+2022-09-22T07:16:34  Serial No: XFL1EMYMAA30
+2022-09-22T07:16:34  Part Number: 5066-01  
+2022-09-22T07:16:34  File ID: 0x0
+2022-09-22T07:16:34  Revision Number: 1
+2022-09-22T07:16:34 EL Level:	EL2
+2022-09-22T07:16:34 Chip ID:	xck26
+2022-09-22T07:16:34 PMUFW no permission to change config object
+2022-09-22T07:16:34 NAND:  0 MiB
+2022-09-22T07:16:34 MMC:   PMUFW no permission to change config object
+2022-09-22T07:16:34 PMUFW no permission to change config object
+2022-09-22T07:16:35 mmc@ff160000: 0, mmc@ff170000: 1
+2022-09-22T07:16:35 Loading Environment from nowhere... OK
+2022-09-22T07:16:35 In:    serial
+2022-09-22T07:16:35 Out:   serial
+2022-09-22T07:16:35 Err:   serial
+2022-09-22T07:16:35 PMUFW no permission to change config object
+2022-09-22T07:16:35 PMUFW no permission to change config object
+2022-09-22T07:16:35 Bootmode: QSPI_MODE
+2022-09-22T07:16:35 Reset reason:	SOFT 
+2022-09-22T07:16:35 Net:   
+2022-09-22T07:16:35 ZYNQ GEM: ff0e0000, mdio bus ff0e0000, phyaddr 1, interface rgmii-id
+2022-09-22T07:16:35 PMUFW no permission to change config object
+2022-09-22T07:16:35 
+2022-09-22T07:16:35 Warning: ethernet@ff0e0000 MAC addresses don't match:
+2022-09-22T07:16:35 Address in ROM is		ff:ff:ff:ff:ff:ff
+2022-09-22T07:16:35 Address in environment is	00:0a:35:0e:88:50
+2022-09-22T07:16:35 eth0: ethernet@ff0e0000
+2022-09-22T07:16:35 PMUFW no permission to change config object
+2022-09-22T07:16:35 gpio: pin gpio@ff0a000038 (gpio 38) value is 0
+2022-09-22T07:16:35 gpio: pin gpio@ff0a000038 (gpio 38) value is 1
+2022-09-22T07:16:35 starting USB...
+2022-09-22T07:16:35 Bus usb@fe200000: Register 2000440 NbrPorts 2
+2022-09-22T07:16:35 Starting the controller
+2022-09-22T07:16:35 USB XHCI 1.00
+2022-09-22T07:16:37 scanning bus usb@fe200000 for devices... 5 USB Device(s) found
+2022-09-22T07:16:37        scanning usb for storage devices... 1 Storage Device(s) found
+2022-09-22T07:16:37 Autoboot in 2 seconds, Hit RR to stop
+2022-09-22T07:16:39 SM-K26-XCL2GC: No match
+2022-09-22T07:16:39 SM-K26-XCL2GC: No match
+2022-09-22T07:16:39 Card did not respond to voltage select! : -110
+2022-09-22T07:16:39 switch to partitions #0, OK
+2022-09-22T07:16:39 mmc1 is current device
+2022-09-22T07:16:39 Scanning mmc 1:1...
+2022-09-22T07:16:39 Found U-Boot script /boot.scr
+2022-09-22T07:16:39 298 bytes read in 15 ms (18.6 KiB/s)
+2022-09-22T07:16:39 ## Executing script at 20000000
+2022-09-22T07:16:39 *** KRIA: Boot recovery.fit as normal test payload ***
+2022-09-22T07:16:41 26059100 bytes read in 2357 ms (10.5 MiB/s)
+2022-09-22T07:16:41 ## Loading kernel from FIT Image at 10000000 ...
+2022-09-22T07:16:41    Using 'recovery' configuration
+2022-09-22T07:16:41    Trying 'kernel' kernel subimage
+2022-09-22T07:16:41      Description:  Kernel
+2022-09-22T07:16:41      Created:      2022-09-21  14:14:32 UTC
+2022-09-22T07:16:41      Type:         Kernel Image
+2022-09-22T07:16:41      Compression:  uncompressed
+2022-09-22T07:16:41      Data Start:   0x100000c0
+2022-09-22T07:16:41      Data Size:    22401536 Bytes = 21.4 MiB
+2022-09-22T07:16:41      Architecture: AArch64
+2022-09-22T07:16:41      OS:           Linux
+2022-09-22T07:16:41      Load Address: 0x18000000
+2022-09-22T07:16:41      Entry Point:  0x18000000
+2022-09-22T07:16:41      Hash algo:    sha1
+2022-09-22T07:16:41      Hash value:   74eee39410c56506467bb9c63400fd79af66b1fa
+2022-09-22T07:16:42    Verifying Hash Integrity ... sha1+ OK
+2022-09-22T07:16:42 ## Loading ramdisk from FIT Image at 10000000 ...
+2022-09-22T07:16:42    Using 'recovery' configuration
+2022-09-22T07:16:42    Trying 'initrd' ramdisk subimage
+2022-09-22T07:16:42      Description:  Initrd
+2022-09-22T07:16:42      Created:      2022-09-21  14:14:32 UTC
+2022-09-22T07:16:42      Type:         RAMDisk Image
+2022-09-22T07:16:42      Compression:  uncompressed
+2022-09-22T07:16:42      Data Start:   0x11567868
+2022-09-22T07:16:42      Data Size:    3613599 Bytes = 3.4 MiB
+2022-09-22T07:16:42      Architecture: AArch64
+2022-09-22T07:16:42      OS:           Linux
+2022-09-22T07:16:42      Load Address: unavailable
+2022-09-22T07:16:42      Entry Point:  unavailable
+2022-09-22T07:16:42      Hash algo:    sha1
+2022-09-22T07:16:42      Hash value:   c8532e17a5f1b349c408fcb34fe4a9cd718566c7
+2022-09-22T07:16:42    Verifying Hash Integrity ... sha1+ OK
+2022-09-22T07:16:42 ## Loading fdt from FIT Image at 10000000 ...
+2022-09-22T07:16:42    Using 'recovery' configuration
+2022-09-22T07:16:42    Trying 'fdt' fdt subimage
+2022-09-22T07:16:42      Description:  DTB
+2022-09-22T07:16:42      Created:      2022-09-21  14:14:32 UTC
+2022-09-22T07:16:42      Type:         Flat Device Tree
+2022-09-22T07:16:42      Compression:  uncompressed
+2022-09-22T07:16:42      Data Start:   0x1155d39c
+2022-09-22T07:16:42      Data Size:    41979 Bytes = 41 KiB
+2022-09-22T07:16:42      Architecture: AArch64
+2022-09-22T07:16:42      Load Address: 0x40000000
+2022-09-22T07:16:42      Hash algo:    sha1
+2022-09-22T07:16:42      Hash value:   3e52eeba1a95134c9c774410142e9069aece0f30
+2022-09-22T07:16:42    Verifying Hash Integrity ... sha1+ OK
+2022-09-22T07:16:42    Loading fdt from 0x1155d39c to 0x40000000
+2022-09-22T07:16:42    Booting using the fdt blob at 0x40000000
+2022-09-22T07:16:42    Loading Kernel Image
+2022-09-22T07:16:42    Loading Ramdisk to 78c8d000, end 78fff39f ... OK
+2022-09-22T07:16:42    Loading Device Tree to 000000000fff2000, end 000000000ffff3fa ... OK
+2022-09-22T07:16:42 
+2022-09-22T07:16:42 Starting kernel ...
+2022-09-22T07:16:42 
+2022-09-22T07:16:42 [    0.000000] Booting Linux on physical CPU 0x0000000000 [0x410fd034]
+2022-09-22T07:16:42 start: 2.3.1 login-action (timeout 00:01:33) [common]
+2022-09-22T07:16:42 Setting prompt string to ['-+\\[ cut here \\]-+\\s+(.*\\s+-+\\[ end trace (\\w*) \\]-+)', '(Unhandled fault.*)\\r\\n', 'Kernel panic - (.*) end Kernel panic', 'Stack:\\s+(.*\\s+-+\\[ end trace (\\w*) \\]-+)', '^[^\\n]+WARNING:.*?$', '^[^\\n]+Oops(?: -|:).*?$', '^[^\\n]+BUG:.*?$']
+2022-09-22T07:16:42 Using line separator: #'\n'#
+2022-09-22T07:16:42 Waiting for the login prompt
+2022-09-22T07:16:42 Parsing kernel messages
+2022-09-22T07:16:42 ['-+\\[ cut here \\]-+\\s+(.*\\s+-+\\[ end trace (\\w*) \\]-+)', '(Unhandled fault.*)\\r\\n', 'Kernel panic - (.*) end Kernel panic', 'Stack:\\s+(.*\\s+-+\\[ end trace (\\w*) \\]-+)', '^[^\\n]+WARNING:.*?$', '^[^\\n]+Oops(?: -|:).*?$', '^[^\\n]+BUG:.*?$', 'kria-recovery:', 'login:', 'Login incorrect']
+2022-09-22T07:16:42 [login-action] Waiting for messages, (timeout 00:01:33)
+2022-09-22T07:16:42 [    0.000000] Linux version 5.15.19-xilinx-v2022.1 (oe-user@oe-host) (aarch64-xilinx-linux-gcc (GCC) 11.2.0, GNU ld (GNU Binutils) 2.37.20210721) #1 SMP Thu May 12 09:05:30 UTC 2022
+2022-09-22T07:16:42 [    0.000000] Machine model: ZynqMP SM-K26 Rev1/B/A
+2022-09-22T07:16:42 [    0.000000] earlycon: cdns0 at MMIO 0x00000000ff010000 (options '115200n8')
+2022-09-22T07:16:42 [    0.000000] printk: bootconsole [cdns0] enabled
+2022-09-22T07:16:42 [    0.000000] efi: UEFI not found.
+2022-09-22T07:16:42 [    0.000000] Zone ranges:
+2022-09-22T07:16:42 [    0.000000]   DMA32    [mem 0x0000000000000000-0x00000000ffffffff]
+2022-09-22T07:16:42 [    0.000000]   Normal   [mem 0x0000000100000000-0x000000087fffffff]
+2022-09-22T07:16:42 [    0.000000] Movable zone start for each node
+2022-09-22T07:16:42 [    0.000000] Early memory node ranges
+2022-09-22T07:16:42 [    0.000000]   node   0: [mem 0x0000000000000000-0x000000007fffffff]
+2022-09-22T07:16:42 [    0.000000]   node   0: [mem 0x0000000800000000-0x000000087fffffff]
+2022-09-22T07:16:42 [    0.000000] Initmem setup node 0 [mem 0x0000000000000000-0x000000087fffffff]
+2022-09-22T07:16:42 [    0.000000] cma: Reserved 256 MiB at 0x0000000068c00000
+2022-09-22T07:16:42 [    0.000000] psci: probing for conduit method from DT.
+2022-09-22T07:16:42 [    0.000000] psci: PSCIv1.1 detected in firmware.
+2022-09-22T07:16:42 [    0.000000] psci: Using standard PSCI v0.2 function IDs
+2022-09-22T07:16:42 [    0.000000] psci: MIGRATE_INFO_TYPE not supported.
+2022-09-22T07:16:42 [    0.000000] psci: SMC Calling Convention v1.2
+2022-09-22T07:16:42 [    0.000000] percpu: Embedded 18 pages/cpu s34776 r8192 d30760 u73728
+2022-09-22T07:16:42 [    0.000000] Detected VIPT I-cache on CPU0
+2022-09-22T07:16:42 [    0.000000] CPU features: detected: ARM erratum 845719
+2022-09-22T07:16:42 [    0.000000] Built 1 zonelists, mobility grouping on.  Total pages: 1032192
+2022-09-22T07:16:42 [    0.000000] Kernel command line: earlycon
+2022-09-22T07:16:42 [    0.000000] Dentry cache hash table entries: 524288 (order: 10, 4194304 bytes, linear)
+2022-09-22T07:16:42 [    0.000000] Inode-cache hash table entries: 262144 (order: 9, 2097152 bytes, linear)
+2022-09-22T07:16:42 [    0.000000] mem auto-init: stack:off, heap alloc:off, heap free:off
+2022-09-22T07:16:42 [    0.000000] software IO TLB: mapped [mem 0x000000007c000000-0x0000000080000000] (64MB)
+2022-09-22T07:16:42 [    0.000000] Memory: 3759416K/4194304K available (14528K kernel code, 1012K rwdata, 4056K rodata, 2176K init, 571K bss, 172744K reserved, 262144K cma-reserved)
+2022-09-22T07:16:42 [    0.000000] rcu: Hierarchical RCU implementation.
+2022-09-22T07:16:42 [    0.000000] rcu: 	RCU event tracing is enabled.
+2022-09-22T07:16:42 [    0.000000] rcu: RCU calculated value of scheduler-enlistment delay is 25 jiffies.
+2022-09-22T07:16:42 [    0.000000] NR_IRQS: 64, nr_irqs: 64, preallocated irqs: 0
+2022-09-22T07:16:42 [    0.000000] GIC: Adjusting CPU interface base to 0x00000000f902f000
+2022-09-22T07:16:42 [    0.000000] Root IRQ handler: gic_handle_irq
+2022-09-22T07:16:42 [    0.000000] GIC: Using split EOI/Deactivate mode
+2022-09-22T07:16:42 [    0.000000] random: get_random_bytes called from start_kernel+0x474/0x6d4 with crng_init=0
+2022-09-22T07:16:42 [    0.000000] arch_timer: cp15 timer(s) running at 99.99MHz (phys).
+2022-09-22T07:16:42 [    0.000000] clocksource: arch_sys_counter: mask: 0xffffffffffffff max_cycles: 0x171015c90f, max_idle_ns: 440795203080 ns
+2022-09-22T07:16:42 [    0.000000] sched_clock: 56 bits at 99MHz, resolution 10ns, wraps every 4398046511101ns
+2022-09-22T07:16:42 [    0.008292] Console: colour dummy device 80x25
+2022-09-22T07:16:42 [    0.012374] printk: console [tty0] enabled
+2022-09-22T07:16:42 [    0.016436] printk: bootconsole [cdns0] disabled
+2022-09-22T07:16:45 [    0.000000] Booting Linux on physical CPU 0x0000000000 [0x410fd034]
+2022-09-22T07:16:45 [    0.000000] Linux version 5.15.19-xilinx-v2022.1 (oe-user@oe-host) (aarch64-xilinx-linux-gcc (GCC) 11.2.0, GNU ld (GNU Binutils) 2.37.20210721) #1 SMP Thu May 12 09:05:30 UTC 2022
+2022-09-22T07:16:45 [    0.000000] Machine model: ZynqMP SM-K26 Rev1/B/A
+2022-09-22T07:16:45 [    0.000000] earlycon: cdns0 at MMIO 0x00000000ff010000 (options '115200n8')
+2022-09-22T07:16:45 [    0.000000] printk: bootconsole [cdns0] enabled
+2022-09-22T07:16:45 [    0.000000] efi: UEFI not found.
+2022-09-22T07:16:45 [    0.000000] Zone ranges:
+2022-09-22T07:16:45 [    0.000000]   DMA32    [mem 0x0000000000000000-0x00000000ffffffff]
+2022-09-22T07:16:45 [    0.000000]   Normal   [mem 0x0000000100000000-0x000000087fffffff]
+2022-09-22T07:16:45 [    0.000000] Movable zone start for each node
+2022-09-22T07:16:45 [    0.000000] Early memory node ranges
+2022-09-22T07:16:45 [    0.000000]   node   0: [mem 0x0000000000000000-0x000000007fffffff]
+2022-09-22T07:16:45 [    0.000000]   node   0: [mem 0x0000000800000000-0x000000087fffffff]
+2022-09-22T07:16:45 [    0.000000] Initmem setup node 0 [mem 0x0000000000000000-0x000000087fffffff]
+2022-09-22T07:16:45 [    0.000000] cma: Reserved 256 MiB at 0x0000000068c00000
+2022-09-22T07:16:45 [    0.000000] psci: probing for conduit method from DT.
+2022-09-22T07:16:45 [    0.000000] psci: PSCIv1.1 detected in firmware.
+2022-09-22T07:16:45 [    0.000000] psci: Using standard PSCI v0.2 function IDs
+2022-09-22T07:16:45 [    0.000000] psci: MIGRATE_INFO_TYPE not supported.
+2022-09-22T07:16:45 [    0.000000] psci: SMC Calling Convention v1.2
+2022-09-22T07:16:45 [    0.000000] percpu: Embedded 18 pages/cpu s34776 r8192 d30760 u73728
+2022-09-22T07:16:45 [    0.000000] Detected VIPT I-cache on CPU0
+2022-09-22T07:16:45 [    0.000000] CPU features: detected: ARM erratum 845719
+2022-09-22T07:16:45 [    0.000000] Built 1 zonelists, mobility grouping on.  Total pages: 1032192
+2022-09-22T07:16:45 [    0.000000] Kernel command line: earlycon
+2022-09-22T07:16:45 [    0.000000] Dentry cache hash table entries: 524288 (order: 10, 4194304 bytes, linear)
+2022-09-22T07:16:45 [    0.000000] Inode-cache hash table entries: 262144 (order: 9, 2097152 bytes, linear)
+2022-09-22T07:16:45 [    0.000000] mem auto-init: stack:off, heap alloc:off, heap free:off
+2022-09-22T07:16:45 [    0.000000] software IO TLB: mapped [mem 0x000000007c000000-0x0000000080000000] (64MB)
+2022-09-22T07:16:45 [    0.000000] Memory: 3759416K/4194304K available (14528K kernel code, 1012K rwdata, 4056K rodata, 2176K init, 571K bss, 172744K reserved, 262144K cma-reserved)
+2022-09-22T07:16:45 [    0.000000] rcu: Hierarchical RCU implementation.
+2022-09-22T07:16:45 [    0.000000] rcu: 	RCU event tracing is enabled.
+2022-09-22T07:16:45 [    0.000000] rcu: RCU calculated value of scheduler-enlistment delay is 25 jiffies.
+2022-09-22T07:16:45 [    0.000000] NR_IRQS: 64, nr_irqs: 64, preallocated irqs: 0
+2022-09-22T07:16:45 [    0.000000] GIC: Adjusting CPU interface base to 0x00000000f902f000
+2022-09-22T07:16:45 [    0.000000] Root IRQ handler: gic_handle_irq
+2022-09-22T07:16:45 [    0.000000] GIC: Using split EOI/Deactivate mode
+2022-09-22T07:16:45 [    0.000000] random: get_random_bytes called from start_kernel+0x474/0x6d4 with crng_init=0
+2022-09-22T07:16:45 [    0.000000] arch_timer: cp15 timer(s) running at 99.99MHz (phys).
+2022-09-22T07:16:45 [    0.000000] clocksource: arch_sys_counter: mask: 0xffffffffffffff max_cycles: 0x171015c90f, max_idle_ns: 440795203080 ns
+2022-09-22T07:16:45 [    0.000000] sched_clock: 56 bits at 99MHz, resolution 10ns, wraps every 4398046511101ns
+2022-09-22T07:16:45 [    0.008292] Console: colour dummy device 80x25
+2022-09-22T07:16:45 [    0.012374] printk: console [tty0] enabled
+2022-09-22T07:16:45 [    0.016436] printk: bootconsole [cdns0] disabled
+2022-09-22T07:16:45 [    0.021044] Calibrating delay loop (skipped), value calculated using timer frequency.. 199.99 BogoMIPS (lpj=399996)
+2022-09-22T07:16:45 [    0.021061] pid_max: default: 32768 minimum: 301
+2022-09-22T07:16:45 [    0.021239] Mount-cache hash table entries: 8192 (order: 4, 65536 bytes, linear)
+2022-09-22T07:16:45 [    0.021262] Mountpoint-cache hash table entries: 8192 (order: 4, 65536 bytes, linear)
+2022-09-22T07:16:45 [    0.022239] rcu: Hierarchical SRCU implementation.
+2022-09-22T07:16:45 [    0.022471] EFI services will not be available.
+2022-09-22T07:16:45 [    0.022600] smp: Bringing up secondary CPUs ...
+2022-09-22T07:16:45 [    0.022947] Detected VIPT I-cache on CPU1
+2022-09-22T07:16:45 [    0.022984] CPU1: Booted secondary processor 0x0000000001 [0x410fd034]
+2022-09-22T07:16:45 [    0.023359] Detected VIPT I-cache on CPU2
+2022-09-22T07:16:45 [    0.023380] CPU2: Booted secondary processor 0x0000000002 [0x410fd034]
+2022-09-22T07:16:45 [    0.023721] Detected VIPT I-cache on CPU3
+2022-09-22T07:16:45 [    0.023743] CPU3: Booted secondary processor 0x0000000003 [0x410fd034]
+2022-09-22T07:16:45 [    0.023783] smp: Brought up 1 node, 4 CPUs
+2022-09-22T07:16:45 [    0.023816] SMP: Total of 4 processors activated.
+2022-09-22T07:16:45 [    0.023823] CPU features: detected: 32-bit EL0 Support
+2022-09-22T07:16:45 [    0.023831] CPU features: detected: CRC32 instructions
+2022-09-22T07:16:45 [    0.023872] CPU: All CPU(s) started at EL2
+2022-09-22T07:16:45 [    0.023889] alternatives: patching kernel code
+2022-09-22T07:16:45 [    0.024895] devtmpfs: initialized
+2022-09-22T07:16:45 [    0.030111] clocksource: jiffies: mask: 0xffffffff max_cycles: 0xffffffff, max_idle_ns: 7645041785100000 ns
+2022-09-22T07:16:45 [    0.030139] futex hash table entries: 1024 (order: 4, 65536 bytes, linear)
+2022-09-22T07:16:45 [    0.038225] pinctrl core: initialized pinctrl subsystem
+2022-09-22T07:16:45 [    0.038668] DMI not present or invalid.
+2022-09-22T07:16:45 [    0.038883] NET: Registered PF_NETLINK/PF_ROUTE protocol family
+2022-09-22T07:16:45 [    0.039825] DMA: preallocated 512 KiB GFP_KERNEL pool for atomic allocations
+2022-09-22T07:16:45 [    0.039918] DMA: preallocated 512 KiB GFP_KERNEL|GFP_DMA32 pool for atomic allocations
+2022-09-22T07:16:45 [    0.039962] audit: initializing netlink subsys (disabled)
+2022-09-22T07:16:45 [    0.040042] audit: type=2000 audit(0.032:1): state=initialized audit_enabled=0 res=1
+2022-09-22T07:16:45 [    0.040372] hw-breakpoint: found 6 breakpoint and 4 watchpoint registers.
+2022-09-22T07:16:45 [    0.040434] ASID allocator initialised with 65536 entries
+2022-09-22T07:16:45 [    0.040537] Serial: AMBA PL011 UART driver
+2022-09-22T07:16:45 [    0.057832] HugeTLB registered 1.00 GiB page size, pre-allocated 0 pages
+2022-09-22T07:16:45 [    0.057856] HugeTLB registered 32.0 MiB page size, pre-allocated 0 pages
+2022-09-22T07:16:45 [    0.057866] HugeTLB registered 2.00 MiB page size, pre-allocated 0 pages
+2022-09-22T07:16:45 [    0.057876] HugeTLB registered 64.0 KiB page size, pre-allocated 0 pages
+2022-09-22T07:16:45 [    1.020453] cryptd: max_cpu_qlen set to 1000
+2022-09-22T07:16:45 [    1.042787] DRBG: Continuing without Jitter RNG
+2022-09-22T07:16:45 [    1.141793] raid6: neonx8   gen()  2364 MB/s
+2022-09-22T07:16:45 [    1.209844] raid6: neonx8   xor()  1762 MB/s
+2022-09-22T07:16:45 [    1.277909] raid6: neonx4   gen()  2426 MB/s
+2022-09-22T07:16:45 [    1.345955] raid6: neonx4   xor()  1723 MB/s
+2022-09-22T07:16:45 [    1.414018] raid6: neonx2   gen()  2296 MB/s
+2022-09-22T07:16:45 [    1.482066] raid6: neonx2   xor()  1584 MB/s
+2022-09-22T07:16:45 [    1.550127] raid6: neonx1   gen()  1960 MB/s
+2022-09-22T07:16:45 [    1.618176] raid6: neonx1   xor()  1348 MB/s
+2022-09-22T07:16:45 [    1.686236] raid6: int64x8  gen()  1518 MB/s
+2022-09-22T07:16:45 [    1.754279] raid6: int64x8  xor()   859 MB/s
+2022-09-22T07:16:45 [    1.822342] raid6: int64x4  gen()  1776 MB/s
+2022-09-22T07:16:45 [    1.890404] raid6: int64x4  xor()   941 MB/s
+2022-09-22T07:16:45 [    1.958458] raid6: int64x2  gen()  1552 MB/s
+2022-09-22T07:16:45 [    2.026521] raid6: int64x2  xor()   834 MB/s
+2022-09-22T07:16:45 [    2.094576] raid6: int64x1  gen()  1147 MB/s
+2022-09-22T07:16:45 [    2.162644] raid6: int64x1  xor()   575 MB/s
+2022-09-22T07:16:45 [    2.162653] raid6: using algorithm neonx4 gen() 2426 MB/s
+2022-09-22T07:16:45 [    2.162662] raid6: .... xor() 1723 MB/s, rmw enabled
+2022-09-22T07:16:45 [    2.162670] raid6: using neon recovery algorithm
+2022-09-22T07:16:45 [    2.163120] iommu: Default domain type: Translated 
+2022-09-22T07:16:45 [    2.163131] iommu: DMA domain TLB invalidation policy: strict mode 
+2022-09-22T07:16:45 [    2.163341] SCSI subsystem initialized
+2022-09-22T07:16:45 [    2.163477] usbcore: registered new interface driver usbfs
+2022-09-22T07:16:45 [    2.163511] usbcore: registered new interface driver hub
+2022-09-22T07:16:45 [    2.163538] usbcore: registered new device driver usb
+2022-09-22T07:16:45 [    2.163590] mc: Linux media interface: v0.10
+2022-09-22T07:16:45 [    2.163611] videodev: Linux video capture interface: v2.00
+2022-09-22T07:16:45 [    2.163649] pps_core: LinuxPPS API ver. 1 registered
+2022-09-22T07:16:45 [    2.163658] pps_core: Software ver. 5.3.6 - Copyright 2005-2007 Rodolfo Giometti <giometti@linux.it>
+2022-09-22T07:16:45 [    2.163678] PTP clock support registered
+2022-09-22T07:16:45 [    2.163705] EDAC MC: Ver: 3.0.0
+2022-09-22T07:16:45 [    2.163971] zynqmp-ipi-mbox mailbox@ff990400: Registered ZynqMP IPI mbox with TX/RX channels.
+2022-09-22T07:16:45 [    2.164156] FPGA manager framework
+2022-09-22T07:16:45 [    2.164256] Advanced Linux Sound Architecture Driver Initialized.
+2022-09-22T07:16:45 [    2.164553] Bluetooth: Core ver 2.22
+2022-09-22T07:16:45 [    2.164578] NET: Registered PF_BLUETOOTH protocol family
+2022-09-22T07:16:45 [    2.164587] Bluetooth: HCI device and connection manager initialized
+2022-09-22T07:16:45 [    2.164599] Bluetooth: HCI socket layer initialized
+2022-09-22T07:16:45 [    2.164609] Bluetooth: L2CAP socket layer initialized
+2022-09-22T07:16:45 [    2.164623] Bluetooth: SCO socket layer initialized
+2022-09-22T07:16:45 [    2.164922] clocksource: Switched to clocksource arch_sys_counter
+2022-09-22T07:16:45 [    2.165045] VFS: Disk quotas dquot_6.6.0
+2022-09-22T07:16:45 [    2.165086] VFS: Dquot-cache hash table entries: 512 (order 0, 4096 bytes)
+2022-09-22T07:16:45 [    2.168886] NET: Registered PF_INET protocol family
+2022-09-22T07:16:45 [    2.169030] IP idents hash table entries: 65536 (order: 7, 524288 bytes, linear)
+2022-09-22T07:16:45 [    2.170469] tcp_listen_portaddr_hash hash table entries: 2048 (order: 3, 32768 bytes, linear)
+2022-09-22T07:16:45 [    2.170522] TCP established hash table entries: 32768 (order: 6, 262144 bytes, linear)
+2022-09-22T07:16:45 [    2.170715] TCP bind hash table entries: 32768 (order: 7, 524288 bytes, linear)
+2022-09-22T07:16:45 [    2.171079] TCP: Hash tables configured (established 32768 bind 32768)
+2022-09-22T07:16:45 [    2.171153] UDP hash table entries: 2048 (order: 4, 65536 bytes, linear)
+2022-09-22T07:16:45 [    2.171228] UDP-Lite hash table entries: 2048 (order: 4, 65536 bytes, linear)
+2022-09-22T07:16:46 [    2.171361] NET: Registered PF_UNIX/PF_LOCAL protocol family
+2022-09-22T07:16:46 [    2.171737] RPC: Registered named UNIX socket transport module.
+2022-09-22T07:16:46 [    2.171748] RPC: Registered udp transport module.
+2022-09-22T07:16:46 [    2.171756] RPC: Registered tcp transport module.
+2022-09-22T07:16:46 [    2.171763] RPC: Registered tcp NFSv4.1 backchannel transport module.
+2022-09-22T07:16:46 [    2.172340] PCI: CLS 0 bytes, default 64
+2022-09-22T07:16:46 [    2.172524] Trying to unpack rootfs image as initramfs...
+2022-09-22T07:16:46 [    2.193199] armv8-pmu pmu: hw perfevents: no interrupt-affinity property, guessing.
+2022-09-22T07:16:46 [    2.193445] hw perfevents: enabled with armv8_pmuv3 PMU driver, 7 counters available
+2022-09-22T07:16:46 [    2.307445] Freeing initrd memory: 3528K
+2022-09-22T07:16:46 [    2.358879] Initialise system trusted keyrings
+2022-09-22T07:16:46 [    2.358988] workingset: timestamp_bits=46 max_order=20 bucket_order=0
+2022-09-22T07:16:46 [    2.359707] NFS: Registering the id_resolver key type
+2022-09-22T07:16:46 [    2.359724] Key type id_resolver registered
+2022-09-22T07:16:46 [    2.359733] Key type id_legacy registered
+2022-09-22T07:16:46 [    2.359754] nfs4filelayout_init: NFSv4 File Layout Driver Registering...
+2022-09-22T07:16:46 [    2.359765] nfs4flexfilelayout_init: NFSv4 Flexfile Layout Driver Registering...
+2022-09-22T07:16:46 [    2.359790] jffs2: version 2.2. (NAND) (SUMMARY)  © 2001-2006 Red Hat, Inc.
+2022-09-22T07:16:46 [    2.392439] NET: Registered PF_ALG protocol family
+2022-09-22T07:16:46 [    2.392453] xor: measuring software checksum speed
+2022-09-22T07:16:46 [    2.396216]    8regs           :  2626 MB/sec
+2022-09-22T07:16:46 [    2.399393]    32regs          :  3110 MB/sec
+2022-09-22T07:16:46 [    2.403240]    arm64_neon      :  2564 MB/sec
+2022-09-22T07:16:46 [    2.403248] xor: using function: 32regs (3110 MB/sec)
+2022-09-22T07:16:46 [    2.403259] Key type asymmetric registered
+2022-09-22T07:16:46 [    2.403267] Asymmetric key parser 'x509' registered
+2022-09-22T07:16:46 [    2.403308] Block layer SCSI generic (bsg) driver version 0.4 loaded (major 244)
+2022-09-22T07:16:46 [    2.403320] io scheduler mq-deadline registered
+2022-09-22T07:16:46 [    2.403328] io scheduler kyber registered
+2022-09-22T07:16:46 [    2.428008] Serial: 8250/16550 driver, 4 ports, IRQ sharing disabled
+2022-09-22T07:16:46 [    2.429016] Serial: AMBA driver
+2022-09-22T07:16:46 [    2.429745] cacheinfo: Unable to detect cache hierarchy for CPU 0
+2022-09-22T07:16:46 [    2.433748] brd: module loaded
+2022-09-22T07:16:46 [    2.436897] loop: module loaded
+2022-09-22T07:16:46 [    2.437698] mtdoops: mtd device (mtddev=name/number) must be supplied
+2022-09-22T07:16:46 [    2.440236] tun: Universal TUN/TAP device driver, 1.6
+2022-09-22T07:16:46 [    2.440314] CAN device driver interface
+2022-09-22T07:16:46 [    2.440837] SPI driver wl1271_spi has no spi_device_id for ti,wl1271
+2022-09-22T07:16:46 [    2.440848] SPI driver wl1271_spi has no spi_device_id for ti,wl1273
+2022-09-22T07:16:46 [    2.440857] SPI driver wl1271_spi has no spi_device_id for ti,wl1281
+2022-09-22T07:16:46 [    2.440865] SPI driver wl1271_spi has no spi_device_id for ti,wl1283
+2022-09-22T07:16:46 [    2.440874] SPI driver wl1271_spi has no spi_device_id for ti,wl1285
+2022-09-22T07:16:46 [    2.440882] SPI driver wl1271_spi has no spi_device_id for ti,wl1801
+2022-09-22T07:16:46 [    2.440890] SPI driver wl1271_spi has no spi_device_id for ti,wl1805
+2022-09-22T07:16:46 [    2.440899] SPI driver wl1271_spi has no spi_device_id for ti,wl1807
+2022-09-22T07:16:46 [    2.440907] SPI driver wl1271_spi has no spi_device_id for ti,wl1831
+2022-09-22T07:16:46 [    2.440933] SPI driver wl1271_spi has no spi_device_id for ti,wl1835
+2022-09-22T07:16:46 [    2.440942] SPI driver wl1271_spi has no spi_device_id for ti,wl1837
+2022-09-22T07:16:46 [    2.441025] usbcore: registered new interface driver asix
+2022-09-22T07:16:46 [    2.441069] usbcore: registered new interface driver ax88179_178a
+2022-09-22T07:16:46 [    2.441095] usbcore: registered new interface driver cdc_ether
+2022-09-22T07:16:46 [    2.441121] usbcore: registered new interface driver net1080
+2022-09-22T07:16:46 [    2.441146] usbcore: registered new interface driver cdc_subset
+2022-09-22T07:16:46 [    2.441171] usbcore: registered new interface driver zaurus
+2022-09-22T07:16:46 [    2.441208] usbcore: registered new interface driver cdc_ncm
+2022-09-22T07:16:46 [    2.441848] usbcore: registered new interface driver uas
+2022-09-22T07:16:46 [    2.441885] usbcore: registered new interface driver usb-storage
+2022-09-22T07:16:46 [    2.442485] rtc_zynqmp ffa60000.rtc: registered as rtc0
+2022-09-22T07:16:46 [    2.442507] rtc_zynqmp ffa60000.rtc: setting system clock to 1970-01-01T00:00:06 UTC (6)
+2022-09-22T07:16:46 [    2.442567] i2c_dev: i2c /dev entries driver
+2022-09-22T07:16:46 [    2.443962] usbcore: registered new interface driver uvcvideo
+2022-09-22T07:16:46 [    2.444687] Bluetooth: HCI UART driver ver 2.3
+2022-09-22T07:16:46 [    2.444698] Bluetooth: HCI UART protocol H4 registered
+2022-09-22T07:16:46 [    2.444708] Bluetooth: HCI UART protocol BCSP registered
+2022-09-22T07:16:46 [    2.444729] Bluetooth: HCI UART protocol LL registered
+2022-09-22T07:16:46 [    2.444738] Bluetooth: HCI UART protocol ATH3K registered
+2022-09-22T07:16:46 [    2.444759] Bluetooth: HCI UART protocol Three-wire (H5) registered
+2022-09-22T07:16:46 [    2.444797] Bluetooth: HCI UART protocol Intel registered
+2022-09-22T07:16:46 [    2.444820] Bluetooth: HCI UART protocol QCA registered
+2022-09-22T07:16:46 [    2.444849] usbcore: registered new interface driver bcm203x
+2022-09-22T07:16:46 [    2.444877] usbcore: registered new interface driver bpa10x
+2022-09-22T07:16:46 [    2.444908] usbcore: registered new interface driver bfusb
+2022-09-22T07:16:46 [    2.444948] usbcore: registered new interface driver btusb
+2022-09-22T07:16:46 [    2.444986] usbcore: registered new interface driver ath3k
+2022-09-22T07:16:46 [    2.445065] EDAC MC: ECC not enabled
+2022-09-22T07:16:46 [    2.445183] EDAC DEVICE0: Giving out device to module edac controller cache_err: DEV edac (POLLED)
+2022-09-22T07:16:46 [    2.445334] EDAC DEVICE1: Giving out device to module zynqmp-ocm-edac controller zynqmp_ocm: DEV ff960000.memory-controller (INTERRUPT)
+2022-09-22T07:16:46 [    2.445693] sdhci: Secure Digital Host Controller Interface driver
+2022-09-22T07:16:46 [    2.445703] sdhci: Copyright(c) Pierre Ossman
+2022-09-22T07:16:46 [    2.445710] sdhci-pltfm: SDHCI platform and OF driver helper
+2022-09-22T07:16:46 [    2.446027] ledtrig-cpu: registered to indicate activity on CPUs
+2022-09-22T07:16:46 [    2.446128] SMCCC: SOC_ID: ARCH_SOC_ID not implemented, skipping ....
+2022-09-22T07:16:46 [    2.446199] zynqmp_firmware_probe Platform Management API v1.1
+2022-09-22T07:16:46 [    2.446211] zynqmp_firmware_probe Trustzone version v1.0
+2022-09-22T07:16:46 [    2.474166] securefw securefw: securefw probed
+2022-09-22T07:16:46 [    2.474438] alg: No test for xilinx-zynqmp-aes (zynqmp-aes)
+2022-09-22T07:16:46 [    2.474465] zynqmp_aes firmware:zynqmp-firmware:zynqmp-aes: AES Successfully Registered
+2022-09-22T07:16:46 [    2.474644] alg: No test for xilinx-keccak-384 (zynqmp-keccak-384)
+2022-09-22T07:16:46 [    2.474813] alg: No test for xilinx-zynqmp-rsa (zynqmp-rsa)
+2022-09-22T07:16:46 [    2.474959] usbcore: registered new interface driver usbhid
+2022-09-22T07:16:46 [    2.474970] usbhid: USB HID core driver
+2022-09-22T07:16:46 [    2.478110] fpga_manager fpga0: Xilinx ZynqMP FPGA Manager registered
+2022-09-22T07:16:46 [    2.478481] usbcore: registered new interface driver snd-usb-audio
+2022-09-22T07:16:46 [    2.479192] pktgen: Packet Generator for packet performance testing. Version: 2.75
+2022-09-22T07:16:46 [    2.479899] Initializing XFRM netlink socket
+2022-09-22T07:16:46 [    2.479973] NET: Registered PF_INET6 protocol family
+2022-09-22T07:16:46 [    2.480422] Segment Routing with IPv6
+2022-09-22T07:16:46 [    2.480445] In-situ OAM (IOAM) with IPv6
+2022-09-22T07:16:46 [    2.480512] sit: IPv6, IPv4 and MPLS over IPv4 tunneling driver
+2022-09-22T07:16:46 [    2.480826] NET: Registered PF_PACKET protocol family
+2022-09-22T07:16:46 [    2.480844] NET: Registered PF_KEY protocol family
+2022-09-22T07:16:46 [    2.480865] can: controller area network core
+2022-09-22T07:16:46 [    2.480895] NET: Registered PF_CAN protocol family
+2022-09-22T07:16:46 [    2.480904] can: raw protocol
+2022-09-22T07:16:46 [    2.480936] can: broadcast manager protocol
+2022-09-22T07:16:46 [    2.480948] can: netlink gateway - max_hops=1
+2022-09-22T07:16:46 [    2.481030] Bluetooth: RFCOMM TTY layer initialized
+2022-09-22T07:16:46 [    2.481044] Bluetooth: RFCOMM socket layer initialized
+2022-09-22T07:16:46 [    2.481061] Bluetooth: RFCOMM ver 1.11
+2022-09-22T07:16:46 [    2.481073] Bluetooth: BNEP (Ethernet Emulation) ver 1.3
+2022-09-22T07:16:46 [    2.481082] Bluetooth: BNEP filters: protocol multicast
+2022-09-22T07:16:46 [    2.481093] Bluetooth: BNEP socket layer initialized
+2022-09-22T07:16:46 [    2.481101] Bluetooth: HIDP (Human Interface Emulation) ver 1.2
+2022-09-22T07:16:46 [    2.481112] Bluetooth: HIDP socket layer initialized
+2022-09-22T07:16:46 [    2.481146] 8021q: 802.1Q VLAN Support v1.8
+2022-09-22T07:16:46 [    2.481247] 9pnet: Installing 9P2000 support
+2022-09-22T07:16:46 [    2.481270] Key type dns_resolver registered
+2022-09-22T07:16:46 [    2.481370] registered taskstats version 1
+2022-09-22T07:16:46 [    2.481379] Loading compiled-in X.509 certificates
+2022-09-22T07:16:46 [    2.482422] Btrfs loaded, crc32c=crc32c-generic, zoned=no, fsverity=no
+2022-09-22T07:16:46 [    2.490956] ff010000.serial: ttyPS1 at MMIO 0xff010000 (irq = 52, base_baud = 6249999) is a xuartps
+2022-09-22T07:16:46 [    3.903066] printk: console [ttyPS1] enabled
+2022-09-22T07:16:46 [    3.907763] of-fpga-region fpga-full: FPGA Region probed
+2022-09-22T07:16:46 [    3.913934] xilinx-zynqmp-dma fd500000.dma-controller: ZynqMP DMA driver Probe success
+2022-09-22T07:16:46 [    3.922010] xilinx-zynqmp-dma fd510000.dma-controller: ZynqMP DMA driver Probe success
+2022-09-22T07:16:46 [    3.930080] xilinx-zynqmp-dma fd520000.dma-controller: ZynqMP DMA driver Probe success
+2022-09-22T07:16:46 [    3.938157] xilinx-zynqmp-dma fd530000.dma-controller: ZynqMP DMA driver Probe success
+2022-09-22T07:16:46 [    3.946225] xilinx-zynqmp-dma fd540000.dma-controller: ZynqMP DMA driver Probe success
+2022-09-22T07:16:46 [    3.954302] xilinx-zynqmp-dma fd550000.dma-controller: ZynqMP DMA driver Probe success
+2022-09-22T07:16:46 [    3.962372] xilinx-zynqmp-dma fd560000.dma-controller: ZynqMP DMA driver Probe success
+2022-09-22T07:16:46 [    3.970443] xilinx-zynqmp-dma fd570000.dma-controller: ZynqMP DMA driver Probe success
+2022-09-22T07:16:46 [    3.978585] xilinx-zynqmp-dma ffa80000.dma-controller: ZynqMP DMA driver Probe success
+2022-09-22T07:16:46 [    3.986655] xilinx-zynqmp-dma ffa90000.dma-controller: ZynqMP DMA driver Probe success
+2022-09-22T07:16:46 [    3.994729] xilinx-zynqmp-dma ffaa0000.dma-controller: ZynqMP DMA driver Probe success
+2022-09-22T07:16:46 [    4.002802] xilinx-zynqmp-dma ffab0000.dma-controller: ZynqMP DMA driver Probe success
+2022-09-22T07:16:46 [    4.010878] xilinx-zynqmp-dma ffac0000.dma-controller: ZynqMP DMA driver Probe success
+2022-09-22T07:16:46 [    4.018947] xilinx-zynqmp-dma ffad0000.dma-controller: ZynqMP DMA driver Probe success
+2022-09-22T07:16:46 [    4.027018] xilinx-zynqmp-dma ffae0000.dma-controller: ZynqMP DMA driver Probe success
+2022-09-22T07:16:46 [    4.035093] xilinx-zynqmp-dma ffaf0000.dma-controller: ZynqMP DMA driver Probe success
+2022-09-22T07:16:46 [    4.043477] xilinx-zynqmp-dpdma fd4c0000.dma-controller: Xilinx DPDMA engine is probed
+2022-09-22T07:16:46 [    4.054655] zynqmp-display fd4a0000.display: vtc bridge property not present
+2022-09-22T07:16:46 [    4.064565] xilinx-dp-snd-codec fd4a0000.display:zynqmp_dp_snd_codec0: Xilinx DisplayPort Sound Codec probed
+2022-09-22T07:16:46 [    4.074622] xilinx-dp-snd-pcm zynqmp_dp_snd_pcm0: Xilinx DisplayPort Sound PCM probed
+2022-09-22T07:16:46 [    4.082654] xilinx-dp-snd-pcm zynqmp_dp_snd_pcm1: Xilinx DisplayPort Sound PCM probed
+2022-09-22T07:16:46 [    4.091569] xilinx-dp-snd-card fd4a0000.display:zynqmp_dp_snd_card: Xilinx DisplayPort Sound Card probed
+2022-09-22T07:16:46 [    4.101139] OF: graph: no port node found in /axi/display@fd4a0000
+2022-09-22T07:16:46 [    4.107487] zynqmp_pll_disable() clock disable failed for dpll_int, ret = -13
+2022-09-22T07:16:46 [    4.114840] xlnx-drm xlnx-drm.0: bound fd4a0000.display (ops 0xffff800008f031e0)
+2022-09-22T07:16:47 [    4.336163] Console: switching to colour frame buffer device 128x48
+2022-09-22T07:16:47 [    4.359126] zynqmp-display fd4a0000.display: [drm] fb0: xlnxdrmfb frame buffer device
+2022-09-22T07:16:47 [    4.367209] [drm] Initialized xlnx 1.0.0 20130509 for fd4a0000.display on minor 0
+2022-09-22T07:16:47 [    4.374769] zynqmp-display fd4a0000.display: ZynqMP DisplayPort Subsystem driver probed
+2022-09-22T07:16:47 [    4.384465] spi-nor spi0.0: mt25qu512a (65536 Kbytes)
+2022-09-22T07:16:47 [    4.386680] tpm_tis_spi spi2.0: 2.0 TPM (device-id 0x1B, rev-id 22)
+2022-09-22T07:16:47 [    4.389622] 16 fixed-partitions partitions found on MTD device spi0.0
+2022-09-22T07:16:47 [    4.398267] tpm tpm0: A TPM error (256) occurred attempting the self test
+2022-09-22T07:16:47 [    4.402353] Creating 16 MTD partitions on \"spi0.0\":
+2022-09-22T07:16:47 [    4.409182] tpm tpm0: starting up the TPM manually
+2022-09-22T07:16:47 [    4.414092] 0x000000000000-0x000000080000 : \"Image Selector\"
+2022-09-22T07:16:47 [    4.419608] random: fast init done
+2022-09-22T07:16:47 [    4.425435] 0x000000080000-0x000000100000 : \"Image Selector Golden\"
+2022-09-22T07:16:47 [    4.434964] 0x000000100000-0x000000120000 : \"Persistent Register\"
+2022-09-22T07:16:47 [    4.441772] 0x000000120000-0x000000140000 : \"Persistent Register Backup\"
+2022-09-22T07:16:47 [    4.449180] 0x000000140000-0x000000200000 : \"Open_1\"
+2022-09-22T07:16:47 [    4.454828] 0x000000200000-0x000000f00000 : \"Image A (FSBL, PMU, ATF, U-Boot)\"
+2022-09-22T07:16:47 [    4.462758] 0x000000f00000-0x000000f80000 : \"ImgSel Image A Catch\"
+2022-09-22T07:16:47 [    4.469636] 0x000000f80000-0x000001c80000 : \"Image B (FSBL, PMU, ATF, U-Boot)\"
+2022-09-22T07:16:47 [    4.477574] 0x000001c80000-0x000001d00000 : \"ImgSel Image B Catch\"
+2022-09-22T07:16:47 [    4.484463] 0x000001d00000-0x000001e00000 : \"Open_2\"
+2022-09-22T07:16:47 [    4.490114] 0x000001e00000-0x000002000000 : \"Recovery Image\"
+2022-09-22T07:16:47 [    4.496462] 0x000002000000-0x000002200000 : \"Recovery Image Backup\"
+2022-09-22T07:16:47 [    4.503430] 0x000002200000-0x000002220000 : \"U-Boot storage variables\"
+2022-09-22T07:16:47 [    4.512611] 0x000002220000-0x000002240000 : \"U-Boot storage variables backup\"
+2022-09-22T07:16:47 [    4.522352] 0x000002240000-0x000002250000 : \"SHA256\"
+2022-09-22T07:16:47 [    4.529895] 0x000002250000-0x000004000000 : \"User\"
+2022-09-22T07:16:47 [    4.539032] macb ff0e0000.ethernet: Not enabling partial store and forward
+2022-09-22T07:16:47 [    4.552399] macb ff0e0000.ethernet eth0: Cadence GEM rev 0x50070106 at 0xff0e0000 irq 37 (00:0a:35:0e:88:50)
+2022-09-22T07:16:47 [    4.564585] xilinx-axipmon ffa00000.perf-monitor: Probed Xilinx APM
+2022-09-22T07:16:47 [    4.573020] xilinx-axipmon fd0b0000.perf-monitor: Probed Xilinx APM
+2022-09-22T07:16:47 [    4.581344] xilinx-axipmon fd490000.perf-monitor: Probed Xilinx APM
+2022-09-22T07:16:47 [    4.589618] xilinx-axipmon ffa10000.perf-monitor: Probed Xilinx APM
+2022-09-22T07:16:47 [    4.620996] xhci-hcd xhci-hcd.1.auto: xHCI Host Controller
+2022-09-22T07:16:47 [    4.628242] xhci-hcd xhci-hcd.1.auto: new USB bus registered, assigned bus number 1
+2022-09-22T07:16:47 [    4.637738] xhci-hcd xhci-hcd.1.auto: hcc params 0x0238f625 hci version 0x100 quirks 0x0000000002010810
+2022-09-22T07:16:47 [    4.648920] xhci-hcd xhci-hcd.1.auto: irq 58, io mem 0xfe200000
+2022-09-22T07:16:47 [    4.656759] usb usb1: New USB device found, idVendor=1d6b, idProduct=0002, bcdDevice= 5.15
+2022-09-22T07:16:47 [    4.666770] usb usb1: New USB device strings: Mfr=3, Product=2, SerialNumber=1
+2022-09-22T07:16:47 [    4.675716] usb usb1: Product: xHCI Host Controller
+2022-09-22T07:16:47 [    4.682296] usb usb1: Manufacturer: Linux 5.15.19-xilinx-v2022.1 xhci-hcd
+2022-09-22T07:16:47 [    4.690786] usb usb1: SerialNumber: xhci-hcd.1.auto
+2022-09-22T07:16:47 [    4.697677] hub 1-0:1.0: USB hub found
+2022-09-22T07:16:47 [    4.703086] hub 1-0:1.0: 1 port detected
+2022-09-22T07:16:47 [    4.708799] xhci-hcd xhci-hcd.1.auto: xHCI Host Controller
+2022-09-22T07:16:47 [    4.715899] xhci-hcd xhci-hcd.1.auto: new USB bus registered, assigned bus number 2
+2022-09-22T07:16:47 [    4.725170] xhci-hcd xhci-hcd.1.auto: Host supports USB 3.0 SuperSpeed
+2022-09-22T07:16:47 [    4.733408] usb usb2: New USB device found, idVendor=1d6b, idProduct=0003, bcdDevice= 5.15
+2022-09-22T07:16:47 [    4.743286] usb usb2: New USB device strings: Mfr=3, Product=2, SerialNumber=1
+2022-09-22T07:16:47 [    4.752094] usb usb2: Product: xHCI Host Controller
+2022-09-22T07:16:47 [    4.758532] usb usb2: Manufacturer: Linux 5.15.19-xilinx-v2022.1 xhci-hcd
+2022-09-22T07:16:47 [    4.766881] usb usb2: SerialNumber: xhci-hcd.1.auto
+2022-09-22T07:16:47 [    4.773530] hub 2-0:1.0: USB hub found
+2022-09-22T07:16:47 [    4.778819] hub 2-0:1.0: 1 port detected
+2022-09-22T07:16:47 [    4.786040] at24 1-0050: supply vcc not found, using dummy regulator
+2022-09-22T07:16:47 [    4.794211] at24 1-0050: 8192 byte 24c64 EEPROM, writable, 1 bytes/write
+2022-09-22T07:16:47 [    4.802543] at24 1-0051: supply vcc not found, using dummy regulator
+2022-09-22T07:16:47 [    4.810689] at24 1-0051: 8192 byte 24c64 EEPROM, writable, 1 bytes/write
+2022-09-22T07:16:47 [    4.819091] cdns-i2c ff030000.i2c: 400 kHz mmio ff030000 irq 39
+2022-09-22T07:16:47 [    4.827917] cdns-wdt fd4d0000.watchdog: Xilinx Watchdog Timer with timeout 60s
+2022-09-22T07:16:47 [    4.836864] cdns-wdt ff150000.watchdog: Xilinx Watchdog Timer with timeout 10s
+2022-09-22T07:16:47 [    4.846626] zynqmp-pinctrl firmware:zynqmp-firmware:pinctrl: set mux failed for pin 13
+2022-09-22T07:16:47 [    4.848679] clk: couldn't set sdio1_ref clk rate to 187498123 (-16), current rate: 187499999
+2022-09-22T07:16:47 [    4.849523] input: gpio-keys as /devices/platform/gpio-keys/input/input0
+2022-09-22T07:16:47 [    4.849799] of_cfs_init
+2022-09-22T07:16:47 [    4.849819] of_cfs_init: OK
+2022-09-22T07:16:47 [    4.849949] cfg80211: Loading compiled-in X.509 certificates for regulatory database
+2022-09-22T07:16:47 [    4.856311] sdhci-arasan ff160000.mmc: Error applying setting, reverse things back
+2022-09-22T07:16:47 [    4.866627] clk: couldn't set sdio1_ref clk rate to 187498123 (-16), current rate: 187499999
+2022-09-22T07:16:47 [    4.874678] zynqmp_clk_divider_set_rate() set divider failed for sdio0_ref_div1, ret = -13
+2022-09-22T07:16:47 [    4.921621] zynqmp_gpd_attach_dev() domain13 request failed for node 39: -13
+2022-09-22T07:16:47 [    4.930413] sdhci-arasan ff160000.mmc: failed to add to PM domain domain13: -13
+2022-09-22T07:16:47 [    4.939498] sdhci-arasan: probe of ff160000.mmc failed with error -13
+2022-09-22T07:16:47 [    4.954833] mmc1: SDHCI controller on ff170000.mmc [ff170000.mmc] using ADMA 64-bit
+2022-09-22T07:16:47 [    4.970041] cfg80211: Loaded X.509 cert 'sforshee: 00b28ddf47aef9cea7'
+2022-09-22T07:16:47 [    4.979522] ALSA device list:
+2022-09-22T07:16:47 [    4.984276]   #0: DisplayPort monitor
+2022-09-22T07:16:47 [    4.989940] usb 1-1: new high-speed USB device number 2 using xhci-hcd
+2022-09-22T07:16:47 [    4.998349] platform regulatory.0: Direct firmware load for regulatory.db failed with error -2
+2022-09-22T07:16:47 [    5.008849] cfg80211: failed to load regulatory.db
+2022-09-22T07:16:47 [    5.008946] Freeing unused kernel memory: 2176K
+2022-09-22T07:16:47 [    5.040964] Run /init as init process
+2022-09-22T07:16:47 INIT: version 3.01 booting
+2022-09-22T07:16:47 Starting udev
+2022-09-22T07:16:47 [    5.149325] udevd[261]: starting version 3.2.10
+2022-09-22T07:16:47 [    5.155964] random: udevd: uninitialized urandom read (16 bytes read)
+2022-09-22T07:16:47 [    5.164438] random: udevd: uninitialized urandom read (16 bytes read)
+2022-09-22T07:16:47 [    5.173046] random: udevd: uninitialized urandom read (16 bytes read)
+2022-09-22T07:16:47 [    5.181286] usb 1-1: New USB device found, idVendor=0424, idProduct=2744, bcdDevice= 2.21
+2022-09-22T07:16:47 [    5.186974] udevd[262]: starting eudev-3.2.10
+2022-09-22T07:16:47 [    5.191305] usb 1-1: New USB device strings: Mfr=1, Product=2, SerialNumber=0
+2022-09-22T07:16:47 [    5.206435] usb 1-1: Product: USB2744
+2022-09-22T07:16:47 [    5.211923] usb 1-1: Manufacturer: Microchip Tech
+2022-09-22T07:16:48 [    5.277605] hub 1-1:1.0: USB hub found
+2022-09-22T07:16:48 [    5.283675] hub 1-1:1.0: 5 ports detected
+2022-09-22T07:16:48 [    5.309337] usb 2-1: new SuperSpeed USB device number 2 using xhci-hcd
+2022-09-22T07:16:48 [    5.337344] usb 2-1: New USB device found, idVendor=0424, idProduct=5744, bcdDevice= 2.21
+2022-09-22T07:16:48 [    5.347425] usb 2-1: New USB device strings: Mfr=2, Product=3, SerialNumber=0
+2022-09-22T07:16:48 [    5.356407] usb 2-1: Product: USB5744
+2022-09-22T07:16:48 [    5.361879] usb 2-1: Manufacturer: Microchip Tech
+2022-09-22T07:16:48 [    5.421549] hub 2-1:1.0: USB hub found
+2022-09-22T07:16:48 [    5.427248] hub 2-1:1.0: 4 ports detected
+2022-09-22T07:16:48 [    5.660945] usb 1-1.4: new high-speed USB device number 3 using xhci-hcd
+2022-09-22T07:16:48 [    5.778694] usb 1-1.4: New USB device found, idVendor=ffff, idProduct=5678, bcdDevice= 2.00
+2022-09-22T07:16:48 [    5.779654] macb ff0e0000.ethernet eth0: PHY [ff0e0000.ethernet-ffffffff:01] driver [TI DP83867] (irq=POLL)
+2022-09-22T07:16:48 [    5.789012] usb 1-1.4: New USB device strings: Mfr=1, Product=2, SerialNumber=3
+2022-09-22T07:16:48 [    5.800622] macb ff0e0000.ethernet eth0: configuring for phy/rgmii-id link mode
+2022-09-22T07:16:48 [    5.809837] usb 1-1.4: Product: Disk 2.0
+2022-09-22T07:16:48 [    5.809842] usb 1-1.4: Manufacturer: USB
+2022-09-22T07:16:48 [    5.819781] pps pps0: new PPS source ptp0
+2022-09-22T07:16:48 [    5.824936] usb 1-1.4: SerialNumber: 9008081036552619038
+2022-09-22T07:16:48 [    5.830844] macb ff0e0000.ethernet: gem-ptp-timer ptp clock registered.
+2022-09-22T07:16:48 [    5.845629] usb-storage 1-1.4:1.0: USB Mass Storage device detected
+2022-09-22T07:16:48 [    5.862704] scsi host0: usb-storage 1-1.4:1.0
+2022-09-22T07:16:48 [    5.953019] usb 1-1.5: new high-speed USB device number 4 using xhci-hcd
+2022-09-22T07:16:48 [    6.061597] usb 1-1.5: New USB device found, idVendor=0424, idProduct=2740, bcdDevice= 2.00
+2022-09-22T07:16:48 [    6.071823] usb 1-1.5: New USB device strings: Mfr=1, Product=2, SerialNumber=0
+2022-09-22T07:16:48 [    6.080991] usb 1-1.5: Product: Hub Controller
+2022-09-22T07:16:48 [    6.087252] usb 1-1.5: Manufacturer: Microchip Tech
+2022-09-22T07:16:49 [    6.277470] mmc1: new SDHC card at address 0001
+2022-09-22T07:16:49 [    6.284247] mmcblk1: mmc1:0001 SD16G 14.6 GiB 
+2022-09-22T07:16:49 [    6.292552]  mmcblk1: p1
+2022-09-22T07:16:49 [    6.889489] scsi 0:0:0:0: Direct-Access     VendorCo ProductCode      2.00 PQ: 0 ANSI: 4
+2022-09-22T07:16:49 [    6.899961] sd 0:0:0:0: [sda] 61440000 512-byte logical blocks: (31.5 GB/29.3 GiB)
+2022-09-22T07:16:49 [    6.909779] sd 0:0:0:0: [sda] Write Protect is off
+2022-09-22T07:16:49 [    6.916603] sd 0:0:0:0: [sda] No Caching mode page found
+2022-09-22T07:16:49 [    6.923767] sd 0:0:0:0: [sda] Assuming drive cache: write through
+2022-09-22T07:16:49 [    6.933351]  sda: sda1 sda2
+2022-09-22T07:16:49 [    6.938825] sd 0:0:0:0: [sda] Attached SCSI removable disk
+2022-09-22T07:16:51 [    8.874613] macb ff0e0000.ethernet eth0: Link is Up - 1Gbps/Full - flow control off
+2022-09-22T07:16:51 [    8.884177] IPv6: ADDRCONF(NETDEV_CHANGE): eth0: link becomes ready
+2022-09-22T07:16:53 [   11.200950] random: crng init done
+2022-09-22T07:16:53 [   11.206315] random: 4 urandom warning(s) missed due to ratelimiting
+2022-09-22T07:16:55 
+2022-09-22T07:16:55 Poky (Yocto Project Reference Distro) 3.4+snapshot-c70cb9b7d96bea5823ba2dd7ccd57fd820485e6e kria-recovery /dev/ttyPS1
+2022-09-22T07:16:55 
+2022-09-22T07:16:55 Matched prompt #8: login:
+2022-09-22T07:16:55 {'case': 'kernel-messages', 'definition': 'lava', 'duration': '12.74', 'extra': {'extra': [{'success': 'login:'}]}, 'level': '2.3.1', 'namespace': 'common', 'result': 'pass'}
+2022-09-22T07:16:55 Sending username root
+2022-09-22T07:16:55 root
+2022-09-22T07:16:55 kria-recovery login: root
+2022-09-22T07:16:55 Setting prompt string to ['kria-recovery:']
+2022-09-22T07:16:55 Waiting for password prompt
+2022-09-22T07:16:55 login-action: Wait for prompt ['kria-recovery:', 'Password:', 'Login timed out'] (timeout 00:01:20)
+2022-09-22T07:16:55 root
+2022-09-22T07:16:55 root
+2022-09-22T07:16:58 Sending password root
+2022-09-22T07:16:58 root
+2022-09-22T07:16:58 7[r[999;999H[6nroot@kria-recovery:~# root
+2022-09-22T07:16:58 Setting prompt string to ['kria-recovery:']
+2022-09-22T07:16:58 login-action: Wait for prompt ['kria-recovery:', 'Login incorrect', 'Login timed out'] (timeout 00:01:17)
+2022-09-22T07:16:58 root
+2022-09-22T07:16:58 root
+2022-09-22T07:16:58 -sh: root: not found
+2022-09-22T07:16:58 root@kria-recovery:~# 
+2022-09-22T07:16:58 Setting prompt string to ['kria-recovery:']
+2022-09-22T07:16:58 end: 2.3.1 login-action (duration 00:00:16) [common]
+2022-09-22T07:16:58 {'case': 'login-action', 'definition': 'lava', 'duration': '15.98', 'extra': {'success': 'login:'}, 'level': '2.3.1', 'namespace': 'common', 'result': 'pass'}
+2022-09-22T07:16:58 end: 2.3 auto-login-action (duration 00:00:28) [common]
+2022-09-22T07:16:58 end: 2 minimal-boot (duration 00:00:43) [common]
+2022-09-22T07:16:58 start: 3 finalize (timeout 00:10:00) [common]
+2022-09-22T07:16:58 start: 3.1 power-off (timeout 00:00:10) [common]
+2022-09-22T07:16:58 Calling: 'nice' '/usr/local/bin/relayctl' 'relay3' '1' 'off'
+2022-09-22T07:16:58 Returned 0 in 0 seconds
+2022-09-22T07:16:58 Calling: 'nice' '/usr/local/bin/relayctl' 'relay3' '2' 'off'
+2022-09-22T07:16:58 Returned 0 in 0 seconds
+2022-09-22T07:16:58 end: 3.1 power-off (duration 00:00:00) [common]
+2022-09-22T07:16:58 {'case': 'power-off', 'definition': 'lava', 'duration': '0.31', 'extra': {'status': 'success'}, 'level': '3.1', 'namespace': 'common', 'result': 'pass'}
+2022-09-22T07:16:58 start: 3.2 read-feedback (timeout 00:10:00) [common]
+2022-09-22T07:16:58 Listened to connection for namespace 'common' for up to 1s
+2022-09-22T07:16:58 Listened to connection for namespace 'common' for up to 1s
+2022-09-22T07:16:59 Finalising connection for namespace 'common'
+2022-09-22T07:16:59 Disconnecting from telnet: Finalise
+2022-09-22T07:16:59 ]
+2022-09-22T07:16:59 quit
+2022-09-22T07:16:59 root@kria-recovery:~# quit
+2022-09-22T07:16:59 end: 3.2 read-feedback (duration 00:00:01) [common]
+2022-09-22T07:16:59 end: 3 finalize (duration 00:00:02) [common]
+2022-09-22T07:16:59 Cleaning after the job
+2022-09-22T07:16:59 Cleaning up download directory: /var/lib/lava/dispatcher/tmp/386/deploy-flasher-6bydee2h/boot
+2022-09-22T07:16:59 Cleaning up download directory: /var/lib/lava/dispatcher/tmp/386/deploy-flasher-6bydee2h/sd
+2022-09-22T07:16:59 Root tmp directory removed at /var/lib/lava/dispatcher/tmp/386
+2022-09-22T07:16:59 Job finished correctly
+2022-09-22T07:16:59 {'case': 'job', 'definition': 'lava', 'result': 'pass'}
