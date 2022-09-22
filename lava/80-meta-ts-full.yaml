@@ -42,9 +42,9 @@ actions:
     to: flasher
     images:
       ImageA:
-        url: https://snapshots.linaro.org/components/ledge/ts/264/zynqmp-starter/ImageA.bin
+        url: https://snapshots.linaro.org/components/ledge/ts/279/zynqmp-starter/ImageA.bin
       ImageB:
-        url: https://snapshots.linaro.org/components/ledge/ts/264/zynqmp-starter/ImageB.bin
+        url: https://snapshots.linaro.org/components/ledge/ts/279/zynqmp-starter/ImageB.bin
       sd:
         url: http://snapshots.linaro.org/components/ledge/oe/ledge-multi-armv8/1472/rpb/ledge-qemuarm64/ledge-iot-lava-ledge-qemuarm64-20220912232805.rootfs.wic.gz
         compression: gz
