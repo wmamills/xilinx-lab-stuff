@@ -1,0 +1,39 @@
+device_type: xilinx-zcu102
+job_name: Boot Xilinx PetaLinux on ZCU102
+visibility: public
+timeouts:
+  job:
+    minutes: 60
+  action:
+    minutes: 60
+  connection:
+    minutes: 2
+
+actions:
+
+- deploy:
+    to: flasher
+    images:
+      image:
+        url: https://people.linaro.org/~bill.mills/xilinx-images/xilinx-2022.2-zcu102/petalinux-sdimage.wic.xz
+        compression: xz
+
+- boot:
+    method: minimal
+    timeout:
+      minutes: 10
+    auto_login:
+      login_prompt: 'login:'
+      username: 'petalinux'
+      password_prompt: 'password:'
+      password: 'petalinux'
+      login_commands:
+        - ls -l /
+        - stty 115200 </dev/ttyPS1
+        - echo "HELLO from the 2nd UART" >/dev/ttyPS1
+    prompts:
+      - petalinux@(.*):[/~]\$
+      - xilinx-zcu102-20222:[/~]\$
+      - root@(.*):[/~]#
+
+

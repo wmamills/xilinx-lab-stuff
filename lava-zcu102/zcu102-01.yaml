@@ -1,0 +1,31 @@
+{% extends 'xilinx-zcu102.jinja2' %}
+{% set connection_list = ['uart1', 'uart2', 'uart3', 'uart4'] %}
+{% set connection_commands = {
+  'uart1': 'telnet labhost1 7101',
+  'uart2': 'telnet labhost1 7102',
+  'uart3': 'telnet labhost1 7103',
+  'uart4': 'telnet labhost1 7104'
+} %}
+{% set connection_tags = {
+  'uart1': ['primary', 'telnet'],
+  'uart2': ['telnet'],
+  'uart3': ['telnet'],
+  'uart4': ['telnet']
+} %}
+{% set connection_commands = {'uart1': 'telnet labhost1 7101'} %}
+{% set connection_tags = {'uart1': ['primary', 'telnet']} %}
+{% set hard_reset_command = 'relayctl pwrsw1 1 cycle 20' %}
+{% set power_on_command = 'relayctl pwrsw1 1 on' %}
+{% set power_off_command = 'relayctl pwrsw1 1 off' %}
+{# FIXME replace the sleeps with something better #}
+{% set flasher_deploy_commands = [
+     "usbsdmux /dev/usb-sd-mux/id-000000001281 host",
+     "sleep 5",
+     "dd if={IMAGE} of=/dev/disk/by-id/usb-LinuxAut_sdmux_HS-SD_MMC_000000001281-0:0 bs=1M oflag=sync conv=nocreat,notrunc status=progress",
+     "sync",
+     "usbsdmux /dev/usb-sd-mux/id-000000001281 dut",
+     "sleep 5",
+  ]
+%}
+{% set sync_to_lava = {'device_type': 'zcu102', 'worker': 'labhost1.bills-basement.org' } %}
+
