@@ -1,0 +1,1204 @@
+2023-04-11T23:52:11 lava-dispatcher, installed at version: 2022.08
+2023-04-11T23:52:11 start: 0 validate
+2023-04-11T23:52:11 Start time: 2023-04-11 23:52:11.433670+00:00 (UTC)
+2023-04-11T23:52:11 Validating that https://people.linaro.org/~bill.mills/xilinx-images/rebuilt-2022.2-zcu102/zcu102-ext4.img.bz2 exists
+2023-04-11T23:52:11 validate duration: 0.05
+2023-04-11T23:52:11 {'case': 'validate', 'definition': 'lava', 'result': 'pass'}
+2023-04-11T23:52:11 start: 1 deploy-flasher-retry (timeout 01:00:00) [common]
+2023-04-11T23:52:11 start: 1.1 deploy-flasher (timeout 01:00:00) [common]
+2023-04-11T23:52:11 start: 1.1.1 download-retry (timeout 00:05:00) [common]
+2023-04-11T23:52:11 start: 1.1.1.1 http-download (timeout 00:05:00) [common]
+2023-04-11T23:52:11 downloading https://people.linaro.org/~bill.mills/xilinx-images/rebuilt-2022.2-zcu102/zcu102-ext4.img.bz2
+2023-04-11T23:52:11 saving as /var/lib/lava/dispatcher/tmp/1350/deploy-flasher-k5ohz1pu/image/zcu102-ext4.img
+2023-04-11T23:52:11 total size: 56941472 (54MB)
+2023-04-11T23:52:11 Using bunzip2 to decompress bz2
+2023-04-11T23:52:11 progress   0% (0MB)
+2023-04-11T23:52:12 progress   5% (2MB)
+2023-04-11T23:52:12 progress  10% (5MB)
+2023-04-11T23:52:13 progress  15% (8MB)
+2023-04-11T23:52:13 progress  20% (10MB)
+2023-04-11T23:52:13 progress  25% (13MB)
+2023-04-11T23:52:13 progress  30% (16MB)
+2023-04-11T23:52:14 progress  35% (19MB)
+2023-04-11T23:52:14 progress  40% (21MB)
+2023-04-11T23:52:14 progress  45% (24MB)
+2023-04-11T23:52:14 progress  50% (27MB)
+2023-04-11T23:52:15 progress  55% (29MB)
+2023-04-11T23:52:15 progress  60% (32MB)
+2023-04-11T23:52:15 progress  65% (35MB)
+2023-04-11T23:52:16 progress  70% (38MB)
+2023-04-11T23:52:16 progress  75% (40MB)
+2023-04-11T23:52:16 progress  80% (43MB)
+2023-04-11T23:52:16 progress  85% (46MB)
+2023-04-11T23:52:17 progress  90% (48MB)
+2023-04-11T23:52:17 progress  95% (51MB)
+2023-04-11T23:52:17 progress 100% (54MB)
+2023-04-11T23:52:19 54MB downloaded in 7.64s (7.10MB/s)
+2023-04-11T23:52:19 end: 1.1.1.1 http-download (duration 00:00:08) [common]
+2023-04-11T23:52:19 {'case': 'http-download', 'definition': 'lava', 'duration': '7.65', 'extra': {'label': 'image', 'md5sum': 'cbdd8210eadf2d5696c53fa3eea335af', 'sha256sum': '6e9680a6c25970432baddb3103e6b89fbd17e6d849e6b2e88412ff6b685196b1', 'sha512sum': '04577b090ca765419ab992e55d2d7e646d6e2697544d520fc16708c503691e5465ce320e09fa9c09adf6436c2f077bc84ed10d77635f0ce6c293b9e7e7a25db7', 'size': 56941472}, 'level': '1.1.1.1', 'namespace': 'common', 'result': 'pass'}
+2023-04-11T23:52:19 end: 1.1.1 download-retry (duration 00:00:08) [common]
+2023-04-11T23:52:19 Calling: 'nice' 'usbsdmux' '/dev/usb-sd-mux/id-000000001281' 'host'
+2023-04-11T23:52:20 Returned 0 in 1 seconds
+2023-04-11T23:52:20 Calling: 'nice' 'sleep' '5'
+2023-04-11T23:52:25 Returned 0 in 5 seconds
+2023-04-11T23:52:25 Calling: 'nice' 'dd' 'if=image/zcu102-ext4.img' 'of=/dev/disk/by-id/usb-LinuxAut_sdmux_HS-SD_MMC_000000001281-0:0' 'bs=1M' 'oflag=sync' 'conv=nocreat,notrunc' 'status=progress'
+2023-04-11T23:55:59 >> 4194304 bytes (4.2 MB, 4.0 MiB) copied, 1 s, 3.6 MB/s8388608 bytes (8.4 MB, 8.0 MiB) copied, 2 s, 3.7 MB/s11534336 bytes (12 MB, 11 MiB) copied, 3 s, 3.7 MB/s 15728640 bytes (16 MB, 15 MiB) copied, 4 s, 3.7 MB/s18874368 bytes (19 MB, 18 MiB) copied, 5 s, 3.7 MB/s25165824 bytes (25 MB, 24 MiB) copied, 6 s, 4.1 MB/s30408704 bytes (30 MB, 29 MiB) copied, 7 s, 4.2 MB/s35651584 bytes (36 MB, 34 MiB) copied, 8 s, 4.4 MB/s40894464 bytes (41 MB, 39 MiB) copied, 9 s, 4.5 MB/s46137344 bytes (46 MB, 44 MiB) copied, 10 s, 4.6 MB/s51380224 bytes (51 MB, 49 MiB) copied, 11 s, 4.6 MB/s57671680 bytes (58 MB, 55 MiB) copied, 12 s, 4.7 MB/s61865984 bytes (62 MB, 59 MiB) copied, 13 s, 4.7 MB/s67108864 bytes (67 MB, 64 MiB) copied, 14 s, 4.8 MB/s72351744 bytes (72 MB, 69 MiB) copied, 15 s, 4.8 MB/s76546048 bytes (77 MB, 73 MiB) copied, 16 s, 4.8 MB/s82837504 bytes (83 MB, 79 MiB) copied, 17 s, 4.8 MB/s87031808 bytes (87 MB, 83 MiB) copied, 18 s, 4.8 MB/s92274688 bytes (92 MB, 88 MiB) copied, 19 s, 4.8 MB/s97517568 bytes (98 MB, 93 MiB) copied, 20 s, 4.8 MB/s101711872 bytes (102 MB, 97 MiB) copied, 21 s, 4.8 MB/s108003328 bytes (108 MB, 103 MiB) copied, 22 s, 4.9 MB/s112197632 bytes (112 MB, 107 MiB) copied, 23 s, 4.9 MB/s117440512 bytes (117 MB, 112 MiB) copied, 24 s, 4.9 MB/s122683392 bytes (123 MB, 117 MiB) copied, 25 s, 4.9 MB/s126877696 bytes (127 MB, 121 MiB) copied, 26 s, 4.9 MB/s133169152 bytes (133 MB, 127 MiB) copied, 27 s, 4.9 MB/s137363456 bytes (137 MB, 131 MiB) copied, 28 s, 4.9 MB/s142606336 bytes (143 MB, 136 MiB) copied, 29 s, 4.9 MB/s147849216 bytes (148 MB, 141 MiB) copied, 30 s, 4.9 MB/s152043520 bytes (152 MB, 145 MiB) copied, 31 s, 4.9 MB/s157286400 bytes (157 MB, 150 MiB) copied, 32 s, 4.9 MB/s162529280 bytes (163 MB, 155 MiB) copied, 33 s, 4.9 MB/s167772160 bytes (168 MB, 160 MiB) copied, 34 s, 4.9 MB/s173015040 bytes (173 MB, 165 MiB) copied, 35 s, 4.9 MB/s177209344 bytes (177 MB, 169 MiB) copied, 36 s, 4.9 MB/s183500800 bytes (184 MB, 175 MiB) copied, 37 s, 4.9 MB/s187695104 bytes (188 MB, 179 MiB) copied, 38 s, 4.9 MB/s192937984 bytes (193 MB, 184 MiB) copied, 39 s, 4.9 MB/s198180864 bytes (198 MB, 189 MiB) copied, 40 s, 4.9 MB/s202375168 bytes (202 MB, 193 MiB) copied, 41 s, 4.9 MB/s207618048 bytes (208 MB, 198 MiB) copied, 42 s, 4.9 MB/s212860928 bytes (213 MB, 203 MiB) copied, 43 s, 4.9 MB/s218103808 bytes (218 MB, 208 MiB) copied, 44 s, 4.9 MB/s223346688 bytes (223 MB, 213 MiB) copied, 45 s, 4.9 MB/s227540992 bytes (228 MB, 217 MiB) copied, 46 s, 4.9 MB/s233832448 bytes (234 MB, 223 MiB) copied, 47 s, 4.9 MB/s238026752 bytes (238 MB, 227 MiB) copied, 48 s, 4.9 MB/s243269632 bytes (243 MB, 232 MiB) copied, 49 s, 5.0 MB/s248512512 bytes (249 MB, 237 MiB) copied, 50 s, 5.0 MB/s252706816 bytes (253 MB, 241 MiB) copied, 51 s, 5.0 MB/s257949696 bytes (258 MB, 246 MiB) copied, 52 s, 5.0 MB/s263192576 bytes (263 MB, 251 MiB) copied, 53 s, 5.0 MB/s268435456 bytes (268 MB, 256 MiB) copied, 54 s, 5.0 MB/s273678336 bytes (274 MB, 261 MiB) copied, 55 s, 5.0 MB/s277872640 bytes (278 MB, 265 MiB) copied, 56 s, 5.0 MB/s283115520 bytes (283 MB, 270 MiB) copied, 57 s, 5.0 MB/s288358400 bytes (288 MB, 275 MiB) copied, 58 s, 5.0 MB/s293601280 bytes (294 MB, 280 MiB) copied, 59 s, 5.0 MB/s298844160 bytes (299 MB, 285 MiB) copied, 60 s, 5.0 MB/s303038464 bytes (303 MB, 289 MiB) copied, 61 s, 5.0 MB/s308281344 bytes (308 MB, 294 MiB) copied, 62 s, 5.0 MB/s313524224 bytes (314 MB, 299 MiB) copied, 63 s, 5.0 MB/s317718528 bytes (318 MB, 303 MiB) copied, 64 s, 5.0 MB/s324009984 bytes (324 MB, 309 MiB) copied, 65 s, 5.0 MB/s328204288 bytes (328 MB, 313 MiB) copied, 66 s, 5.0 MB/s333447168 bytes (333 MB, 318 MiB) copied, 67 s, 5.0 MB/s338690048 bytes (339 MB, 323 MiB) copied, 68 s, 5.0 MB/s342884352 bytes (343 MB, 327 MiB) copied, 69 s, 5.0 MB/s348127232 bytes (348 MB, 332 MiB) copied, 70 s, 5.0 MB/s353370112 bytes (353 MB, 337 MiB) copied, 71 s, 5.0 MB/s358612992 bytes (359 MB, 342 MiB) copied, 72 s, 5.0 MB/s363855872 bytes (364 MB, 347 MiB) copied, 73 s, 5.0 MB/s368050176 bytes (368 MB, 351 MiB) copied, 74 s, 5.0 MB/s373293056 bytes (373 MB, 356 MiB) copied, 75 s, 5.0 MB/s378535936 bytes (379 MB, 361 MiB) copied, 76 s, 5.0 MB/s382730240 bytes (383 MB, 365 MiB) copied, 77 s, 5.0 MB/s389021696 bytes (389 MB, 371 MiB) copied, 78 s, 5.0 MB/s391118848 bytes (391 MB, 373 MiB) copied, 79 s, 4.9 MB/s397410304 bytes (397 MB, 379 MiB) copied, 80 s, 5.0 MB/s402653184 bytes (403 MB, 384 MiB) copied, 81 s, 5.0 MB/s405798912 bytes (406 MB, 387 MiB) copied, 82 s, 4.9 MB/s414187520 bytes (414 MB, 395 MiB) copied, 83 s, 5.0 MB/s416284672 bytes (416 MB, 397 MiB) copied, 84 s, 4.9 MB/s422576128 bytes (423 MB, 403 MiB) copied, 85 s, 5.0 MB/s427819008 bytes (428 MB, 408 MiB) copied, 86 s, 5.0 MB/s430964736 bytes (431 MB, 411 MiB) copied, 87 s, 5.0 MB/s439353344 bytes (439 MB, 419 MiB) copied, 88 s, 5.0 MB/s441450496 bytes (441 MB, 421 MiB) copied, 89 s, 5.0 MB/s447741952 bytes (448 MB, 427 MiB) copied, 90 s, 5.0 MB/s452984832 bytes (453 MB, 432 MiB) copied, 91 s, 5.0 MB/s456130560 bytes (456 MB, 435 MiB) copied, 92 s, 5.0 MB/s464519168 bytes (465 MB, 443 MiB) copied, 93 s, 5.0 MB/s466616320 bytes (467 MB, 445 MiB) copied, 94 s, 5.0 MB/s472907776 bytes (473 MB, 451 MiB) copied, 95 s, 5.0 MB/s478150656 bytes (478 MB, 456 MiB) copied, 96 s, 5.0 MB/s481296384 bytes (481 MB, 459 MiB) copied, 97 s, 5.0 MB/s489684992 bytes (490 MB, 467 MiB) copied, 98 s, 5.0 MB/s491782144 bytes (492 MB, 469 MiB) copied, 99 s, 5.0 MB/s498073600 bytes (498 MB, 475 MiB) copied, 100 s, 5.0 MB/s503316480 bytes (503 MB, 480 MiB) copied, 101 s, 5.0 MB/s506462208 bytes (506 MB, 483 MiB) copied, 102 s, 5.0 MB/s514850816 bytes (515 MB, 491 MiB) copied, 103 s, 5.0 MB/s516947968 bytes (517 MB, 493 MiB) copied, 104 s, 5.0 MB/s523239424 bytes (523 MB, 499 MiB) copied, 105 s, 5.0 MB/s528482304 bytes (528 MB, 504 MiB) copied, 106 s, 5.0 MB/s531628032 bytes (532 MB, 507 MiB) copied, 107 s, 5.0 MB/s540016640 bytes (540 MB, 515 MiB) copied, 108 s, 5.0 MB/s542113792 bytes (542 MB, 517 MiB) copied, 109 s, 5.0 MB/s548405248 bytes (548 MB, 523 MiB) copied, 110 s, 5.0 MB/s553648128 bytes (554 MB, 528 MiB) copied, 111 s, 5.0 MB/s556793856 bytes (557 MB, 531 MiB) copied, 112 s, 5.0 MB/s565182464 bytes (565 MB, 539 MiB) copied, 113 s, 5.0 MB/s567279616 bytes (567 MB, 541 MiB) copied, 114 s, 5.0 MB/s573571072 bytes (574 MB, 547 MiB) copied, 115 s, 5.0 MB/s578813952 bytes (579 MB, 552 MiB) copied, 116 s, 5.0 MB/s581959680 bytes (582 MB, 555 MiB) copied, 117 s, 5.0 MB/s590348288 bytes (590 MB, 563 MiB) copied, 118 s, 5.0 MB/s592445440 bytes (592 MB, 565 MiB) copied, 119 s, 5.0 MB/s598736896 bytes (599 MB, 571 MiB) copied, 120 s, 5.0 MB/s603979776 bytes (604 MB, 576 MiB) copied, 121 s, 5.0 MB/s607125504 bytes (607 MB, 579 MiB) copied, 122 s, 5.0 MB/s614465536 bytes (614 MB, 586 MiB) copied, 123 s, 5.0 MB/s619708416 bytes (620 MB, 591 MiB) copied, 124 s, 5.0 MB/s623902720 bytes (624 MB, 595 MiB) copied, 125 s, 5.0 MB/s629145600 bytes (629 MB, 600 MiB) copied, 126 s, 5.0 MB/s634388480 bytes (634 MB, 605 MiB) copied, 127 s, 5.0 MB/s639631360 bytes (640 MB, 610 MiB) copied, 128 s, 5.0 MB/s644874240 bytes (645 MB, 615 MiB) copied, 129 s, 5.0 MB/s649068544 bytes (649 MB, 619 MiB) copied, 130 s, 5.0 MB/s655360000 bytes (655 MB, 625 MiB) copied, 131 s, 5.0 MB/s659554304 bytes (660 MB, 629 MiB) copied, 132 s, 5.0 MB/s664797184 bytes (665 MB, 634 MiB) copied, 133 s, 5.0 MB/s670040064 bytes (670 MB, 639 MiB) copied, 134 s, 5.0 MB/s674234368 bytes (674 MB, 643 MiB) copied, 135 s, 5.0 MB/s680525824 bytes (681 MB, 649 MiB) copied, 136 s, 5.0 MB/s684720128 bytes (685 MB, 653 MiB) copied, 137 s, 5.0 MB/s689963008 bytes (690 MB, 658 MiB) copied, 138 s, 5.0 MB/s695205888 bytes (695 MB, 663 MiB) copied, 139 s, 5.0 MB/s700448768 bytes (700 MB, 668 MiB) copied, 140 s, 5.0 MB/s705691648 bytes (706 MB, 673 MiB) copied, 141 s, 5.0 MB/s709885952 bytes (710 MB, 677 MiB) copied, 142 s, 5.0 MB/s715128832 bytes (715 MB, 682 MiB) copied, 143 s, 5.0 MB/s720371712 bytes (720 MB, 687 MiB) copied, 144 s, 5.0 MB/s725614592 bytes (726 MB, 692 MiB) copied, 145 s, 5.0 MB/s730857472 bytes (731 MB, 697 MiB) copied, 146 s, 5.0 MB/s735051776 bytes (735 MB, 701 MiB) copied, 147 s, 5.0 MB/s740294656 bytes (740 MB, 706 MiB) copied, 148 s, 5.0 MB/s745537536 bytes (746 MB, 711 MiB) copied, 149 s, 5.0 MB/s750780416 bytes (751 MB, 716 MiB) copied, 150 s, 5.0 MB/s756023296 bytes (756 MB, 721 MiB) copied, 151 s, 5.0 MB/s760217600 bytes (760 MB, 725 MiB) copied, 152 s, 5.0 MB/s765460480 bytes (765 MB, 730 MiB) copied, 153 s, 5.0 MB/s770703360 bytes (771 MB, 735 MiB) copied, 154 s, 5.0 MB/s775946240 bytes (776 MB, 740 MiB) copied, 155 s, 5.0 MB/s781189120 bytes (781 MB, 745 MiB) copied, 156 s, 5.0 MB/s785383424 bytes (785 MB, 749 MiB) copied, 157 s, 5.0 MB/s791674880 bytes (792 MB, 755 MiB) copied, 158 s, 5.0 MB/s795869184 bytes (796 MB, 759 MiB) copied, 159 s, 5.0 MB/s801112064 bytes (801 MB, 764 MiB) copied, 160 s, 5.0 MB/s806354944 bytes (806 MB, 769 MiB) copied, 161 s, 5.0 MB/s810549248 bytes (811 MB, 773 MiB) copied, 162 s, 5.0 MB/s816840704 bytes (817 MB, 779 MiB) copied, 163 s, 5.0 MB/s821035008 bytes (821 MB, 783 MiB) copied, 164 s, 5.0 MB/s826277888 bytes (826 MB, 788 MiB) copied, 165 s, 5.0 MB/s831520768 bytes (832 MB, 793 MiB) copied, 166 s, 5.0 MB/s836763648 bytes (837 MB, 798 MiB) copied, 167 s, 5.0 MB/s842006528 bytes (842 MB, 803 MiB) copied, 168 s, 5.0 MB/s846200832 bytes (846 MB, 807 MiB) copied, 169 s, 5.0 MB/s851443712 bytes (851 MB, 812 MiB) copied, 170 s, 5.0 MB/s856686592 bytes (857 MB, 817 MiB) copied, 171 s, 5.0 MB/s861929472 bytes (862 MB, 822 MiB) copied, 172 s, 5.0 MB/s867172352 bytes (867 MB, 827 MiB) copied, 173 s, 5.0 MB/s871366656 bytes (871 MB, 831 MiB) copied, 174 s, 5.0 MB/s877658112 bytes (878 MB, 837 MiB) copied, 175 s, 5.0 MB/s881852416 bytes (882 MB, 841 MiB) copied, 176 s, 5.0 MB/s887095296 bytes (887 MB, 846 MiB) copied, 177 s, 5.0 MB/s892338176 bytes (892 MB, 851 MiB) copied, 178 s, 5.0 MB/s896532480 bytes (897 MB, 855 MiB) copied, 179 s, 5.0 MB/s902823936 bytes (903 MB, 861 MiB) copied, 180 s, 5.0 MB/s907018240 bytes (907 MB, 865 MiB) copied, 181 s, 5.0 MB/s912261120 bytes (912 MB, 870 MiB) copied, 182 s, 5.0 MB/s917504000 bytes (918 MB, 875 MiB) copied, 183 s, 5.0 MB/s921698304 bytes (922 MB, 879 MiB) copied, 184 s, 5.0 MB/s927989760 bytes (928 MB, 885 MiB) copied, 185 s, 5.0 MB/s932184064 bytes (932 MB, 889 MiB) copied, 186 s, 5.0 MB/s937426944 bytes (937 MB, 894 MiB) copied, 187 s, 5.0 MB/s942669824 bytes (943 MB, 899 MiB) copied, 188 s, 5.0 MB/s946864128 bytes (947 MB, 903 MiB) copied, 189 s, 5.0 MB/s953155584 bytes (953 MB, 909 MiB) copied, 190 s, 5.0 MB/s957349888 bytes (957 MB, 913 MiB) copied, 191 s, 5.0 MB/s962592768 bytes (963 MB, 918 MiB) copied, 192 s, 5.0 MB/s967835648 bytes (968 MB, 923 MiB) copied, 193 s, 5.0 MB/s972029952 bytes (972 MB, 927 MiB) copied, 194 s, 5.0 MB/s978321408 bytes (978 MB, 933 MiB) copied, 195 s, 5.0 MB/s982515712 bytes (983 MB, 937 MiB) copied, 196 s, 5.0 MB/s987758592 bytes (988 MB, 942 MiB) copied, 197 s, 5.0 MB/s993001472 bytes (993 MB, 947 MiB) copied, 198 s, 5.0 MB/s997195776 bytes (997 MB, 951 MiB) copied, 199 s, 5.0 MB/s1002438656 bytes (1.0 GB, 956 MiB) copied, 200 s, 5.0 MB/s1007681536 bytes (1.0 GB, 961 MiB) copied, 201 s, 5.0 MB/s1012924416 bytes (1.0 GB, 966 MiB) copied, 202 s, 5.0 MB/s1018167296 bytes (1.0 GB, 971 MiB) copied, 203 s, 5.0 MB/s1022361600 bytes (1.0 GB, 975 MiB) copied, 204 s, 5.0 MB/s1028653056 bytes (1.0 GB, 981 MiB) copied, 205 s, 5.0 MB/s1032847360 bytes (1.0 GB, 985 MiB) copied, 206 s, 5.0 MB/s1038090240 bytes (1.0 GB, 990 MiB) copied, 207 s, 5.0 MB/s1043333120 bytes (1.0 GB, 995 MiB) copied, 208 s, 5.0 MB/s1047527424 bytes (1.0 GB, 999 MiB) copied, 209 s, 5.0 MB/s1053818880 bytes (1.1 GB, 1005 MiB) copied, 210 s, 5.0 MB/s1058013184 bytes (1.1 GB, 1009 MiB) copied, 211 s, 5.0 MB/s1063256064 bytes (1.1 GB, 1014 MiB) copied, 212 s, 5.0 MB/s1068498944 bytes (1.1 GB, 1019 MiB) copied, 213 s, 5.0 MB/s1072693248 bytes (1.1 GB, 1023 MiB) copied, 214 s, 5.0 MB/s
+2023-04-11T23:55:59 >> 1024+0 records in
+2023-04-11T23:55:59 >> 1024+0 records out
+2023-04-11T23:55:59 >> 1073741824 bytes (1.1 GB, 1.0 GiB) copied, 214.334 s, 5.0 MB/s
+2023-04-11T23:55:59 Returned 0 in 214 seconds
+2023-04-11T23:55:59 Calling: 'nice' 'sync'
+2023-04-11T23:55:59 Returned 0 in 0 seconds
+2023-04-11T23:55:59 Calling: 'nice' 'usbsdmux' '/dev/usb-sd-mux/id-000000001281' 'dut'
+2023-04-11T23:56:01 Returned 0 in 1 seconds
+2023-04-11T23:56:01 Calling: 'nice' 'sleep' '5'
+2023-04-11T23:56:06 Returned 0 in 5 seconds
+2023-04-11T23:56:06 end: 1.1 deploy-flasher (duration 00:03:55) [common]
+2023-04-11T23:56:06 end: 1 deploy-flasher-retry (duration 00:03:55) [common]
+2023-04-11T23:56:06 start: 2 minimal-boot (timeout 00:10:00) [common]
+2023-04-11T23:56:06 start: 2.1 connect-device (timeout 00:10:00) [common]
+2023-04-11T23:56:06 [common] connect-device Connecting to device using 'telnet labhost1 7101'
+2023-04-11T23:56:06 Setting prompt string to ['lava-test: # ']
+2023-04-11T23:56:06 end: 2.1 connect-device (duration 00:00:00) [common]
+2023-04-11T23:56:06 start: 2.2 reset-device (timeout 00:10:00) [common]
+2023-04-11T23:56:06 start: 2.2.1 pdu-reboot (timeout 00:10:00) [common]
+2023-04-11T23:56:06 Calling: 'nice' 'relayctl' 'pwrsw1' '1' 'cycle' '20'
+2023-04-11T23:56:27 Returned 0 in 21 seconds
+2023-04-11T23:56:27 end: 2.2.1 pdu-reboot (duration 00:00:21) [common]
+2023-04-11T23:56:27 {'case': 'pdu-reboot', 'definition': 'lava', 'duration': '21.18', 'extra': {'status': 'success'}, 'level': '2.2.1', 'namespace': 'common', 'result': 'pass'}
+2023-04-11T23:56:27 end: 2.2 reset-device (duration 00:00:21) [common]
+2023-04-11T23:56:27 start: 2.3 auto-login-action (timeout 00:09:39) [common]
+2023-04-11T23:56:27 Setting prompt string to ['Linux version [0-9]']
+2023-04-11T23:56:27 auto-login-action: Wait for prompt ['Linux version [0-9]'] (timeout 00:10:00)
+2023-04-11T23:56:27 Trying 127.0.1.1...
+2023-04-11T23:56:27 Connected to labhost1.home.
+2023-04-11T23:56:27 Escape character is '^]'.
+2023-04-11T23:56:30 Xilinx Zynq MP First Stage Boot Loader 
+2023-04-11T23:56:30 Release 2022.2   Oct  7 2022  -  04:56:16
+2023-04-11T23:56:30 PMU Firmware 2022.2	Oct  7 2022   04:56:16
+2023-04-11T23:56:30 PMU_ROM Version: xpbr-v8.1.0-0
+2023-04-11T23:56:33 NOTICE:  BL31: v2.6(release):xlnx_rebase_v2.6_2022.2
+2023-04-11T23:56:33 NOTICE:  BL31: Built : 03:55:03, Sep  9 2022
+2023-04-11T23:56:34 
+2023-04-11T23:56:34 
+2023-04-11T23:56:34 U-Boot 2022.01 (Sep 20 2022 - 06:35:33 +0000)
+2023-04-11T23:56:34 
+2023-04-11T23:56:34 CPU:   ZynqMP
+2023-04-11T23:56:34 Silicon: v3
+2023-04-11T23:56:34 Model: ZynqMP ZCU102 Rev1.0
+2023-04-11T23:56:34 Board: Xilinx ZynqMP
+2023-04-11T23:56:35 DRAM:  4 GiB
+2023-04-11T23:56:35 PMUFW:	v1.1
+2023-04-11T23:56:35 PMUFW no permission to change config object
+2023-04-11T23:56:35 EL Level:	EL2
+2023-04-11T23:56:35 Chip ID:	zu9eg
+2023-04-11T23:56:35 NAND:  0 MiB
+2023-04-11T23:56:35 MMC:   mmc@ff170000: 0
+2023-04-11T23:56:35 Loading Environment from FAT... *** Error - No Valid Environment Area found
+2023-04-11T23:56:35 *** Warning - bad env area, using default environment
+2023-04-11T23:56:35 
+2023-04-11T23:56:35 In:    serial
+2023-04-11T23:56:35 Out:   serial
+2023-04-11T23:56:35 Err:   serial
+2023-04-11T23:56:35 Bootmode: LVL_SHFT_SD_MODE1
+2023-04-11T23:56:35 Reset reason:	EXTERNAL 
+2023-04-11T23:56:35 Net:   FEC: can't find phy-handle
+2023-04-11T23:56:35 
+2023-04-11T23:56:35 ZYNQ GEM: ff0e0000, mdio bus ff0e0000, phyaddr 12, interface rgmii-id
+2023-04-11T23:56:35 eth0: ethernet@ff0e0000
+2023-04-11T23:56:35 scanning bus for devices...
+2023-04-11T23:56:35 SATA link 0 timeout.
+2023-04-11T23:56:35 SATA link 1 timeout.
+2023-04-11T23:56:35 AHCI 0001.0301 32 slots 2 ports 6 Gbps 0x3 impl SATA mode
+2023-04-11T23:56:35 flags: 64bit ncq pm clo only pmp fbss pio slum part ccc apst 
+2023-04-11T23:56:35 starting USB...
+2023-04-11T23:56:36 Bus usb@fe200000: Register 2000440 NbrPorts 2
+2023-04-11T23:56:36 Starting the controller
+2023-04-11T23:56:36 USB XHCI 1.00
+2023-04-11T23:56:37 scanning bus usb@fe200000 for devices... 1 USB Device(s) found
+2023-04-11T23:56:37        scanning usb for storage devices... 0 Storage Device(s) found
+2023-04-11T23:56:39 Hit any key to stop autoboot:  2  1  0 
+2023-04-11T23:56:39 switch to partitions #0, OK
+2023-04-11T23:56:39 mmc0 is current device
+2023-04-11T23:56:39 Scanning mmc 0:1...
+2023-04-11T23:56:39 Found U-Boot script /boot.scr
+2023-04-11T23:56:39 752 bytes read in 9 ms (81.1 KiB/s)
+2023-04-11T23:56:39 ## Executing script at 20000000
+2023-04-11T23:56:41 21592576 bytes read in 1924 ms (10.7 MiB/s)
+2023-04-11T23:56:41 57593 bytes read in 24 ms (2.3 MiB/s)
+2023-04-11T23:56:41 ## Flattened Device Tree blob at 00100000
+2023-04-11T23:56:41    Booting using the fdt blob at 0x100000
+2023-04-11T23:56:41    Loading Device Tree to 000000007bbe5000, end 000000007bbf60f8 ... OK
+2023-04-11T23:56:41 
+2023-04-11T23:56:41 Starting kernel ...
+2023-04-11T23:56:41 
+2023-04-11T23:56:41 [    0.000000] Booting Linux on physical CPU 0x0000000000 [0x410fd034]
+2023-04-11T23:56:41 [    0.000000] Linux version 5.15.36-xilinx-v2022.2 (oe-user@oe-host) (aarch64-xilinx-linux-gcc (GCC) 11.2.0, GNU ld (GNU Binutils) 2.37.20210721) #1 SMP Mon Oct 3 07:50:07 UTC 2022
+2023-04-11T23:56:41 start: 2.3.1 login-action (timeout 00:09:25) [common]
+2023-04-11T23:56:41 Setting prompt string to ['-+\\[ cut here \\]-+\\s+(.*\\s+-+\\[ end trace (\\w*) \\]-+)', '(Unhandled fault.*)\\r\\n', 'Kernel panic - (.*) end Kernel panic', 'Stack:\\s+(.*\\s+-+\\[ end trace (\\w*) \\]-+)', '^[^\\n]+WARNING:.*?$', '^[^\\n]+Oops(?: -|:).*?$', '^[^\\n]+BUG:.*?$']
+2023-04-11T23:56:41 Using line separator: #'\n'#
+2023-04-11T23:56:41 Waiting for the login prompt
+2023-04-11T23:56:41 Parsing kernel messages
+2023-04-11T23:56:41 ['-+\\[ cut here \\]-+\\s+(.*\\s+-+\\[ end trace (\\w*) \\]-+)', '(Unhandled fault.*)\\r\\n', 'Kernel panic - (.*) end Kernel panic', 'Stack:\\s+(.*\\s+-+\\[ end trace (\\w*) \\]-+)', '^[^\\n]+WARNING:.*?$', '^[^\\n]+Oops(?: -|:).*?$', '^[^\\n]+BUG:.*?$', 'petalinux@(.*):[/~]\\$', 'zcu102-zynqmp:[/~]\\$', 'root@(.*):[/~]#', 'login:', 'Login incorrect']
+2023-04-11T23:56:41 [login-action] Waiting for messages, (timeout 00:09:25)
+2023-04-11T23:56:41 [    0.000000] Machine model: ZynqMP ZCU102 Rev1.0
+2023-04-11T23:56:41 [    0.000000] earlycon: cdns0 at MMIO 0x00000000ff000000 (options '115200n8')
+2023-04-11T23:56:41 [    0.000000] printk: bootconsole [cdns0] enabled
+2023-04-11T23:56:41 [    0.000000] efi: UEFI not found.
+2023-04-11T23:56:41 [    0.000000] Zone ranges:
+2023-04-11T23:56:41 [    0.000000]   DMA32    [mem 0x0000000000000000-0x00000000ffffffff]
+2023-04-11T23:56:41 [    0.000000]   Normal   [mem 0x0000000100000000-0x000000087fffffff]
+2023-04-11T23:56:41 [    0.000000] Movable zone start for each node
+2023-04-11T23:56:41 [    0.000000] Early memory node ranges
+2023-04-11T23:56:41 [    0.000000]   node   0: [mem 0x0000000000000000-0x000000007fefffff]
+2023-04-11T23:56:41 [    0.000000]   node   0: [mem 0x0000000800000000-0x000000087fffffff]
+2023-04-11T23:56:41 [    0.000000] Initmem setup node 0 [mem 0x0000000000000000-0x000000087fffffff]
+2023-04-11T23:56:41 [    0.000000] On node 0, zone Normal: 256 pages in unavailable ranges
+2023-04-11T23:56:41 [    0.000000] cma: Reserved 256 MiB at 0x000000006b800000
+2023-04-11T23:56:41 [    0.000000] psci: probing for conduit method from DT.
+2023-04-11T23:56:41 [    0.000000] psci: PSCIv1.1 detected in firmware.
+2023-04-11T23:56:41 [    0.000000] psci: Using standard PSCI v0.2 function IDs
+2023-04-11T23:56:41 [    0.000000] psci: MIGRATE_INFO_TYPE not supported.
+2023-04-11T23:56:41 [    0.000000] psci: SMC Calling Convention v1.2
+2023-04-11T23:56:41 [    0.000000] percpu: Embedded 18 pages/cpu s34776 r8192 d30760 u73728
+2023-04-11T23:56:41 [    0.000000] pcpu-alloc: s34776 r8192 d30760 u73728 alloc=18*4096
+2023-04-11T23:56:41 [    0.000000] pcpu-alloc: [0] 0 [0] 1 [0] 2 [0] 3 
+2023-04-11T23:56:41 [    0.000000] Detected VIPT I-cache on CPU0
+2023-04-11T23:56:41 [    0.000000] CPU features: detected: ARM erratum 845719
+2023-04-11T23:56:41 [    0.000000] Built 1 zonelists, mobility grouping on.  Total pages: 1031940
+2023-04-11T23:56:41 [    0.000000] Kernel command line: earlycon clk_ignore_unused root=/dev/mmcblk0p2 ro rootwait earlyprintk debug uio_pdrv_genirq.of_id=generic-uio
+2023-04-11T23:56:41 [    0.000000] Unknown kernel command line parameters \"earlyprintk\", will be passed to user space.
+2023-04-11T23:56:41 [    0.000000] Dentry cache hash table entries: 524288 (order: 10, 4194304 bytes, linear)
+2023-04-11T23:56:41 [    0.000000] Inode-cache hash table entries: 262144 (order: 9, 2097152 bytes, linear)
+2023-04-11T23:56:41 [    0.000000] mem auto-init: stack:off, heap alloc:off, heap free:off
+2023-04-11T23:56:41 [    0.000000] software IO TLB: mapped [mem 0x000000007bf00000-0x000000007ff00000] (64MB)
+2023-04-11T23:56:42 [    0.000000] Memory: 3762612K/4193280K available (13888K kernel code, 990K rwdata, 3916K rodata, 2176K init, 573K bss, 168524K reserved, 262144K cma-reserved)
+2023-04-11T23:56:42 [    0.000000] rcu: Hierarchical RCU implementation.
+2023-04-11T23:56:42 [    0.000000] rcu: 	RCU event tracing is enabled.
+2023-04-11T23:56:42 [    0.000000] rcu: 	RCU restricting CPUs from NR_CPUS=16 to nr_cpu_ids=4.
+2023-04-11T23:56:42 [    0.000000] rcu: RCU calculated value of scheduler-enlistment delay is 25 jiffies.
+2023-04-11T23:56:42 [    0.000000] rcu: Adjusting geometry for rcu_fanout_leaf=16, nr_cpu_ids=4
+2023-04-11T23:56:42 [    0.000000] NR_IRQS: 64, nr_irqs: 64, preallocated irqs: 0
+2023-04-11T23:56:42 [    0.000000] GIC: Adjusting CPU interface base to 0x00000000f902f000
+2023-04-11T23:56:42 [    0.000000] Root IRQ handler: gic_handle_irq
+2023-04-11T23:56:42 [    0.000000] GIC: Using split EOI/Deactivate mode
+2023-04-11T23:56:42 [    0.000000] random: get_random_bytes called from start_kernel+0x474/0x6d8 with crng_init=0
+2023-04-11T23:56:42 [    0.000000] arch_timer: cp15 timer(s) running at 99.99MHz (phys).
+2023-04-11T23:56:42 [    0.000000] clocksource: arch_sys_counter: mask: 0xffffffffffffff max_cycles: 0x170f8de2d3, max_idle_ns: 440795206112 ns
+2023-04-11T23:56:42 [    0.000000] sched_clock: 56 bits at 99MHz, resolution 10ns, wraps every 4398046511101ns
+2023-04-11T23:56:42 [    0.008342] Console: colour dummy device 80x25
+2023-04-11T23:56:42 [    0.012376] printk: console [tty0] enabled
+2023-04-11T23:56:42 [    0.016439] printk: bootconsole [cdns0] disabled
+2023-04-11T23:56:44 [    0.000000] Booting Linux on physical CPU 0x0000000000 [0x410fd034]
+2023-04-11T23:56:44 [    0.000000] Linux version 5.15.36-xilinx-v2022.2 (oe-user@oe-host) (aarch64-xilinx-linux-gcc (GCC) 11.2.0, GNU ld (GNU Binutils) 2.37.20210721) #1 SMP Mon Oct 3 07:50:07 UTC 2022
+2023-04-11T23:56:44 [    0.000000] Machine model: ZynqMP ZCU102 Rev1.0
+2023-04-11T23:56:44 [    0.000000] earlycon: cdns0 at MMIO 0x00000000ff000000 (options '115200n8')
+2023-04-11T23:56:44 [    0.000000] printk: bootconsole [cdns0] enabled
+2023-04-11T23:56:44 [    0.000000] efi: UEFI not found.
+2023-04-11T23:56:44 [    0.000000] Zone ranges:
+2023-04-11T23:56:44 [    0.000000]   DMA32    [mem 0x0000000000000000-0x00000000ffffffff]
+2023-04-11T23:56:44 [    0.000000]   Normal   [mem 0x0000000100000000-0x000000087fffffff]
+2023-04-11T23:56:44 [    0.000000] Movable zone start for each node
+2023-04-11T23:56:44 [    0.000000] Early memory node ranges
+2023-04-11T23:56:44 [    0.000000]   node   0: [mem 0x0000000000000000-0x000000007fefffff]
+2023-04-11T23:56:44 [    0.000000]   node   0: [mem 0x0000000800000000-0x000000087fffffff]
+2023-04-11T23:56:44 [    0.000000] Initmem setup node 0 [mem 0x0000000000000000-0x000000087fffffff]
+2023-04-11T23:56:44 [    0.000000] On node 0, zone Normal: 256 pages in unavailable ranges
+2023-04-11T23:56:44 [    0.000000] cma: Reserved 256 MiB at 0x000000006b800000
+2023-04-11T23:56:44 [    0.000000] psci: probing for conduit method from DT.
+2023-04-11T23:56:44 [    0.000000] psci: PSCIv1.1 detected in firmware.
+2023-04-11T23:56:44 [    0.000000] psci: Using standard PSCI v0.2 function IDs
+2023-04-11T23:56:44 [    0.000000] psci: MIGRATE_INFO_TYPE not supported.
+2023-04-11T23:56:44 [    0.000000] psci: SMC Calling Convention v1.2
+2023-04-11T23:56:44 [    0.000000] percpu: Embedded 18 pages/cpu s34776 r8192 d30760 u73728
+2023-04-11T23:56:44 [    0.000000] pcpu-alloc: s34776 r8192 d30760 u73728 alloc=18*4096
+2023-04-11T23:56:44 [    0.000000] pcpu-alloc: [0] 0 [0] 1 [0] 2 [0] 3 
+2023-04-11T23:56:44 [    0.000000] Detected VIPT I-cache on CPU0
+2023-04-11T23:56:44 [    0.000000] CPU features: detected: ARM erratum 845719
+2023-04-11T23:56:44 [    0.000000] Built 1 zonelists, mobility grouping on.  Total pages: 1031940
+2023-04-11T23:56:44 [    0.000000] Kernel command line: earlycon clk_ignore_unused root=/dev/mmcblk0p2 ro rootwait earlyprintk debug uio_pdrv_genirq.of_id=generic-uio
+2023-04-11T23:56:44 [    0.000000] Unknown kernel command line parameters \"earlyprintk\", will be passed to user space.
+2023-04-11T23:56:44 [    0.000000] Dentry cache hash table entries: 524288 (order: 10, 4194304 bytes, linear)
+2023-04-11T23:56:44 [    0.000000] Inode-cache hash table entries: 262144 (order: 9, 2097152 bytes, linear)
+2023-04-11T23:56:44 [    0.000000] mem auto-init: stack:off, heap alloc:off, heap free:off
+2023-04-11T23:56:44 [    0.000000] software IO TLB: mapped [mem 0x000000007bf00000-0x000000007ff00000] (64MB)
+2023-04-11T23:56:44 [    0.000000] Memory: 3762612K/4193280K available (13888K kernel code, 990K rwdata, 3916K rodata, 2176K init, 573K bss, 168524K reserved, 262144K cma-reserved)
+2023-04-11T23:56:44 [    0.000000] rcu: Hierarchical RCU implementation.
+2023-04-11T23:56:44 [    0.000000] rcu: 	RCU event tracing is enabled.
+2023-04-11T23:56:44 [    0.000000] rcu: 	RCU restricting CPUs from NR_CPUS=16 to nr_cpu_ids=4.
+2023-04-11T23:56:44 [    0.000000] rcu: RCU calculated value of scheduler-enlistment delay is 25 jiffies.
+2023-04-11T23:56:44 [    0.000000] rcu: Adjusting geometry for rcu_fanout_leaf=16, nr_cpu_ids=4
+2023-04-11T23:56:44 [    0.000000] NR_IRQS: 64, nr_irqs: 64, preallocated irqs: 0
+2023-04-11T23:56:44 [    0.000000] GIC: Adjusting CPU interface base to 0x00000000f902f000
+2023-04-11T23:56:44 [    0.000000] Root IRQ handler: gic_handle_irq
+2023-04-11T23:56:44 [    0.000000] GIC: Using split EOI/Deactivate mode
+2023-04-11T23:56:44 [    0.000000] random: get_random_bytes called from start_kernel+0x474/0x6d8 with crng_init=0
+2023-04-11T23:56:44 [    0.000000] arch_timer: cp15 timer(s) running at 99.99MHz (phys).
+2023-04-11T23:56:44 [    0.000000] clocksource: arch_sys_counter: mask: 0xffffffffffffff max_cycles: 0x170f8de2d3, max_idle_ns: 440795206112 ns
+2023-04-11T23:56:44 [    0.000000] sched_clock: 56 bits at 99MHz, resolution 10ns, wraps every 4398046511101ns
+2023-04-11T23:56:44 [    0.008342] Console: colour dummy device 80x25
+2023-04-11T23:56:44 [    0.012376] printk: console [tty0] enabled
+2023-04-11T23:56:44 [    0.016439] printk: bootconsole [cdns0] disabled
+2023-04-11T23:56:44 [    0.021047] Calibrating delay loop (skipped), value calculated using timer frequency.. 199.98 BogoMIPS (lpj=399960)
+2023-04-11T23:56:44 [    0.021064] pid_max: default: 32768 minimum: 301
+2023-04-11T23:56:44 [    0.021282] Mount-cache hash table entries: 8192 (order: 4, 65536 bytes, linear)
+2023-04-11T23:56:44 [    0.021306] Mountpoint-cache hash table entries: 8192 (order: 4, 65536 bytes, linear)
+2023-04-11T23:56:44 [    0.022368] rcu: Hierarchical SRCU implementation.
+2023-04-11T23:56:44 [    0.022669] EFI services will not be available.
+2023-04-11T23:56:44 [    0.022810] smp: Bringing up secondary CPUs ...
+2023-04-11T23:56:44 [    0.023183] Detected VIPT I-cache on CPU1
+2023-04-11T23:56:44 [    0.023223] CPU1: Booted secondary processor 0x0000000001 [0x410fd034]
+2023-04-11T23:56:44 [    0.023621] Detected VIPT I-cache on CPU2
+2023-04-11T23:56:44 [    0.023645] CPU2: Booted secondary processor 0x0000000002 [0x410fd034]
+2023-04-11T23:56:44 [    0.024018] Detected VIPT I-cache on CPU3
+2023-04-11T23:56:44 [    0.024041] CPU3: Booted secondary processor 0x0000000003 [0x410fd034]
+2023-04-11T23:56:44 [    0.024085] smp: Brought up 1 node, 4 CPUs
+2023-04-11T23:56:44 [    0.024122] SMP: Total of 4 processors activated.
+2023-04-11T23:56:44 [    0.024131] CPU features: detected: 32-bit EL0 Support
+2023-04-11T23:56:44 [    0.024139] CPU features: detected: CRC32 instructions
+2023-04-11T23:56:44 [    0.024182] CPU: All CPU(s) started at EL2
+2023-04-11T23:56:44 [    0.024201] alternatives: patching kernel code
+2023-04-11T23:56:44 [    0.025187] devtmpfs: initialized
+2023-04-11T23:56:45 [    0.031775] clocksource: jiffies: mask: 0xffffffff max_cycles: 0xffffffff, max_idle_ns: 7645041785100000 ns
+2023-04-11T23:56:45 [    0.031805] futex hash table entries: 1024 (order: 4, 65536 bytes, linear)
+2023-04-11T23:56:45 [    0.038258] pinctrl core: initialized pinctrl subsystem
+2023-04-11T23:56:45 [    0.038709] DMI not present or invalid.
+2023-04-11T23:56:45 [    0.038942] NET: Registered PF_NETLINK/PF_ROUTE protocol family
+2023-04-11T23:56:45 [    0.039958] DMA: preallocated 512 KiB GFP_KERNEL pool for atomic allocations
+2023-04-11T23:56:45 [    0.040059] DMA: preallocated 512 KiB GFP_KERNEL|GFP_DMA32 pool for atomic allocations
+2023-04-11T23:56:45 [    0.040107] audit: initializing netlink subsys (disabled)
+2023-04-11T23:56:45 [    0.040207] audit: type=2000 audit(0.032:1): state=initialized audit_enabled=0 res=1
+2023-04-11T23:56:45 [    0.040576] hw-breakpoint: found 6 breakpoint and 4 watchpoint registers.
+2023-04-11T23:56:45 [    0.040644] ASID allocator initialised with 65536 entries
+2023-04-11T23:56:45 [    0.040758] Serial: AMBA PL011 UART driver
+2023-04-11T23:56:45 [    0.063015] HugeTLB registered 1.00 GiB page size, pre-allocated 0 pages
+2023-04-11T23:56:45 [    0.063041] HugeTLB registered 32.0 MiB page size, pre-allocated 0 pages
+2023-04-11T23:56:45 [    0.063053] HugeTLB registered 2.00 MiB page size, pre-allocated 0 pages
+2023-04-11T23:56:45 [    0.063064] HugeTLB registered 64.0 KiB page size, pre-allocated 0 pages
+2023-04-11T23:56:45 [    1.132345] cryptd: max_cpu_qlen set to 1000
+2023-04-11T23:56:45 [    1.156195] DRBG: Continuing without Jitter RNG
+2023-04-11T23:56:45 [    1.257973] raid6: neonx8   gen()  2124 MB/s
+2023-04-11T23:56:45 [    1.326009] raid6: neonx8   xor()  1585 MB/s
+2023-04-11T23:56:45 [    1.394054] raid6: neonx4   gen()  2174 MB/s
+2023-04-11T23:56:45 [    1.462100] raid6: neonx4   xor()  1555 MB/s
+2023-04-11T23:56:45 [    1.530150] raid6: neonx2   gen()  2067 MB/s
+2023-04-11T23:56:45 [    1.598190] raid6: neonx2   xor()  1433 MB/s
+2023-04-11T23:56:45 [    1.666238] raid6: neonx1   gen()  1761 MB/s
+2023-04-11T23:56:45 [    1.734276] raid6: neonx1   xor()  1212 MB/s
+2023-04-11T23:56:45 [    1.802325] raid6: int64x8  gen()  1356 MB/s
+2023-04-11T23:56:45 [    1.870363] raid6: int64x8  xor()   773 MB/s
+2023-04-11T23:56:45 [    1.938411] raid6: int64x4  gen()  1596 MB/s
+2023-04-11T23:56:45 [    2.006462] raid6: int64x4  xor()   854 MB/s
+2023-04-11T23:56:45 [    2.074520] raid6: int64x2  gen()  1397 MB/s
+2023-04-11T23:56:45 [    2.142556] raid6: int64x2  xor()   747 MB/s
+2023-04-11T23:56:45 [    2.210612] raid6: int64x1  gen()  1032 MB/s
+2023-04-11T23:56:45 [    2.278647] raid6: int64x1  xor()   517 MB/s
+2023-04-11T23:56:45 [    2.278656] raid6: using algorithm neonx4 gen() 2174 MB/s
+2023-04-11T23:56:45 [    2.278665] raid6: .... xor() 1555 MB/s, rmw enabled
+2023-04-11T23:56:45 [    2.278674] raid6: using neon recovery algorithm
+2023-04-11T23:56:45 [    2.279206] iommu: Default domain type: Translated 
+2023-04-11T23:56:45 [    2.279217] iommu: DMA domain TLB invalidation policy: strict mode 
+2023-04-11T23:56:45 [    2.279439] SCSI subsystem initialized
+2023-04-11T23:56:45 [    2.279472] libata version 3.00 loaded.
+2023-04-11T23:56:45 [    2.279595] usbcore: registered new interface driver usbfs
+2023-04-11T23:56:45 [    2.279630] usbcore: registered new interface driver hub
+2023-04-11T23:56:45 [    2.279658] usbcore: registered new device driver usb
+2023-04-11T23:56:45 [    2.279733] mc: Linux media interface: v0.10
+2023-04-11T23:56:45 [    2.279757] videodev: Linux video capture interface: v2.00
+2023-04-11T23:56:45 [    2.279797] pps_core: LinuxPPS API ver. 1 registered
+2023-04-11T23:56:45 [    2.279807] pps_core: Software ver. 5.3.6 - Copyright 2005-2007 Rodolfo Giometti <giometti@linux.it>
+2023-04-11T23:56:45 [    2.279828] PTP clock support registered
+2023-04-11T23:56:45 [    2.279858] EDAC MC: Ver: 3.0.0
+2023-04-11T23:56:45 [    2.280143] zynqmp-ipi-mbox mailbox@ff990400: Registered ZynqMP IPI mbox with TX/RX channels.
+2023-04-11T23:56:45 [    2.280351] FPGA manager framework
+2023-04-11T23:56:45 [    2.280489] Advanced Linux Sound Architecture Driver Initialized.
+2023-04-11T23:56:45 [    2.280804] Bluetooth: Core ver 2.22
+2023-04-11T23:56:45 [    2.280830] NET: Registered PF_BLUETOOTH protocol family
+2023-04-11T23:56:45 [    2.280840] Bluetooth: HCI device and connection manager initialized
+2023-04-11T23:56:45 [    2.280853] Bluetooth: HCI socket layer initialized
+2023-04-11T23:56:45 [    2.280864] Bluetooth: L2CAP socket layer initialized
+2023-04-11T23:56:45 [    2.280879] Bluetooth: SCO socket layer initialized
+2023-04-11T23:56:45 [    2.281219] clocksource: Switched to clocksource arch_sys_counter
+2023-04-11T23:56:45 [    2.281349] VFS: Disk quotas dquot_6.6.0
+2023-04-11T23:56:45 [    2.281393] VFS: Dquot-cache hash table entries: 512 (order 0, 4096 bytes)
+2023-04-11T23:56:45 [    2.285585] NET: Registered PF_INET protocol family
+2023-04-11T23:56:45 [    2.285720] IP idents hash table entries: 65536 (order: 7, 524288 bytes, linear)
+2023-04-11T23:56:45 [    2.287296] tcp_listen_portaddr_hash hash table entries: 2048 (order: 3, 32768 bytes, linear)
+2023-04-11T23:56:45 [    2.287352] TCP established hash table entries: 32768 (order: 6, 262144 bytes, linear)
+2023-04-11T23:56:45 [    2.287569] TCP bind hash table entries: 32768 (order: 7, 524288 bytes, linear)
+2023-04-11T23:56:45 [    2.287959] TCP: Hash tables configured (established 32768 bind 32768)
+2023-04-11T23:56:45 [    2.288035] UDP hash table entries: 2048 (order: 4, 65536 bytes, linear)
+2023-04-11T23:56:45 [    2.288117] UDP-Lite hash table entries: 2048 (order: 4, 65536 bytes, linear)
+2023-04-11T23:56:45 [    2.288260] NET: Registered PF_UNIX/PF_LOCAL protocol family
+2023-04-11T23:56:45 [    2.288571] RPC: Registered named UNIX socket transport module.
+2023-04-11T23:56:45 [    2.288583] RPC: Registered udp transport module.
+2023-04-11T23:56:45 [    2.288592] RPC: Registered tcp transport module.
+2023-04-11T23:56:45 [    2.288599] RPC: Registered tcp NFSv4.1 backchannel transport module.
+2023-04-11T23:56:45 [    2.288612] PCI: CLS 0 bytes, default 64
+2023-04-11T23:56:45 [    2.288962] armv8-pmu pmu: hw perfevents: no interrupt-affinity property, guessing.
+2023-04-11T23:56:45 [    2.289137] hw perfevents: enabled with armv8_pmuv3 PMU driver, 7 counters available
+2023-04-11T23:56:45 [    2.314778] Initialise system trusted keyrings
+2023-04-11T23:56:45 [    2.314885] workingset: timestamp_bits=46 max_order=20 bucket_order=0
+2023-04-11T23:56:45 [    2.315559] NFS: Registering the id_resolver key type
+2023-04-11T23:56:45 [    2.315579] Key type id_resolver registered
+2023-04-11T23:56:45 [    2.315588] Key type id_legacy registered
+2023-04-11T23:56:45 [    2.315611] nfs4filelayout_init: NFSv4 File Layout Driver Registering...
+2023-04-11T23:56:45 [    2.315622] nfs4flexfilelayout_init: NFSv4 Flexfile Layout Driver Registering...
+2023-04-11T23:56:45 [    2.315646] jffs2: version 2.2. (NAND) (SUMMARY)  © 2001-2006 Red Hat, Inc.
+2023-04-11T23:56:45 [    2.351963] NET: Registered PF_ALG protocol family
+2023-04-11T23:56:45 [    2.351981] xor: measuring software checksum speed
+2023-04-11T23:56:45 [    2.356162]    8regs           :  2363 MB/sec
+2023-04-11T23:56:45 [    2.359695]    32regs          :  2798 MB/sec
+2023-04-11T23:56:45 [    2.363971]    arm64_neon      :  2307 MB/sec
+2023-04-11T23:56:45 [    2.363981] xor: using function: 32regs (2798 MB/sec)
+2023-04-11T23:56:45 [    2.363993] Key type asymmetric registered
+2023-04-11T23:56:45 [    2.364001] Asymmetric key parser 'x509' registered
+2023-04-11T23:56:45 [    2.364045] Block layer SCSI generic (bsg) driver version 0.4 loaded (major 244)
+2023-04-11T23:56:45 [    2.364060] io scheduler mq-deadline registered
+2023-04-11T23:56:45 [    2.364069] io scheduler kyber registered
+2023-04-11T23:56:45 [    2.364377] irq-xilinx: mismatch in kind-of-intr param
+2023-04-11T23:56:45 [    2.364387] irq-xilinx: /amba_pl@0/interrupt-controller@80020000: num_irq=32, sw_irq=0, edge=0x1
+2023-04-11T23:56:45 [    2.392218] Serial: 8250/16550 driver, 4 ports, IRQ sharing disabled
+2023-04-11T23:56:45 [    2.393377] Serial: AMBA driver
+2023-04-11T23:56:45 [    2.394306] cacheinfo: Unable to detect cache hierarchy for CPU 0
+2023-04-11T23:56:45 [    2.398553] brd: module loaded
+2023-04-11T23:56:45 [    2.402019] loop: module loaded
+2023-04-11T23:56:45 [    2.402994] mtdoops: mtd device (mtddev=name/number) must be supplied
+2023-04-11T23:56:45 [    2.405862] tun: Universal TUN/TAP device driver, 1.6
+2023-04-11T23:56:45 [    2.405956] CAN device driver interface
+2023-04-11T23:56:45 [    2.406734] usbcore: registered new interface driver asix
+2023-04-11T23:56:45 [    2.406782] usbcore: registered new interface driver ax88179_178a
+2023-04-11T23:56:45 [    2.406812] usbcore: registered new interface driver cdc_ether
+2023-04-11T23:56:45 [    2.406840] usbcore: registered new interface driver net1080
+2023-04-11T23:56:45 [    2.406868] usbcore: registered new interface driver cdc_subset
+2023-04-11T23:56:45 [    2.406895] usbcore: registered new interface driver zaurus
+2023-04-11T23:56:45 [    2.406935] usbcore: registered new interface driver cdc_ncm
+2023-04-11T23:56:45 [    2.407699] usbcore: registered new interface driver uas
+2023-04-11T23:56:45 [    2.407736] usbcore: registered new interface driver usb-storage
+2023-04-11T23:56:45 [    2.408387] rtc_zynqmp ffa60000.rtc: registered as rtc0
+2023-04-11T23:56:45 [    2.408409] rtc_zynqmp ffa60000.rtc: setting system clock to 2023-04-11T23:56:44 UTC (1681257404)
+2023-04-11T23:56:45 [    2.408484] i2c_dev: i2c /dev entries driver
+2023-04-11T23:56:45 [    2.410485] usbcore: registered new interface driver uvcvideo
+2023-04-11T23:56:45 [    2.411437] Bluetooth: HCI UART driver ver 2.3
+2023-04-11T23:56:45 [    2.411449] Bluetooth: HCI UART protocol H4 registered
+2023-04-11T23:56:45 [    2.411459] Bluetooth: HCI UART protocol BCSP registered
+2023-04-11T23:56:45 [    2.411481] Bluetooth: HCI UART protocol LL registered
+2023-04-11T23:56:45 [    2.411491] Bluetooth: HCI UART protocol ATH3K registered
+2023-04-11T23:56:45 [    2.411511] Bluetooth: HCI UART protocol Three-wire (H5) registered
+2023-04-11T23:56:45 [    2.411558] Bluetooth: HCI UART protocol Intel registered
+2023-04-11T23:56:45 [    2.411579] Bluetooth: HCI UART protocol QCA registered
+2023-04-11T23:56:45 [    2.411611] usbcore: registered new interface driver bcm203x
+2023-04-11T23:56:45 [    2.411644] usbcore: registered new interface driver bpa10x
+2023-04-11T23:56:45 [    2.411675] usbcore: registered new interface driver bfusb
+2023-04-11T23:56:45 [    2.411706] usbcore: registered new interface driver btusb
+2023-04-11T23:56:45 [    2.411751] usbcore: registered new interface driver ath3k
+2023-04-11T23:56:45 [    2.411840] EDAC MC: ECC not enabled
+2023-04-11T23:56:45 [    2.411980] EDAC DEVICE0: Giving out device to module edac controller cache_err: DEV edac (POLLED)
+2023-04-11T23:56:45 [    2.412163] EDAC DEVICE1: Giving out device to module zynqmp-ocm-edac controller zynqmp_ocm: DEV ff960000.memory-controller (INTERRUPT)
+2023-04-11T23:56:45 [    2.412659] sdhci: Secure Digital Host Controller Interface driver
+2023-04-11T23:56:45 [    2.412669] sdhci: Copyright(c) Pierre Ossman
+2023-04-11T23:56:45 [    2.412677] sdhci-pltfm: SDHCI platform and OF driver helper
+2023-04-11T23:56:45 [    2.413056] ledtrig-cpu: registered to indicate activity on CPUs
+2023-04-11T23:56:45 [    2.413166] SMCCC: SOC_ID: ARCH_SOC_ID not implemented, skipping ....
+2023-04-11T23:56:45 [    2.413250] zynqmp_firmware_probe Platform Management API v1.1
+2023-04-11T23:56:45 [    2.413264] zynqmp_firmware_probe Trustzone version v1.0
+2023-04-11T23:56:45 [    2.443286] securefw securefw: securefw probed
+2023-04-11T23:56:45 [    2.443405] zynqmp_aes firmware:zynqmp-firmware:zynqmp-aes: The zynqmp-aes driver shall be deprecated in 2022.2 and removed in 2023.1
+2023-04-11T23:56:45 [    2.443560] alg: No test for xilinx-zynqmp-aes (zynqmp-aes)
+2023-04-11T23:56:45 [    2.443587] zynqmp_aes firmware:zynqmp-firmware:zynqmp-aes: AES Successfully Registered
+2023-04-11T23:56:45 [    2.443721] zynqmp-keccak-384 firmware:zynqmp-firmware:sha384: The zynqmp-sha-deprecated driver shall be deprecated in 2022.2 and removed in 2023.1 release
+2023-04-11T23:56:45 [    2.443804] alg: No test for xilinx-keccak-384 (zynqmp-keccak-384)
+2023-04-11T23:56:45 [    2.444000] alg: No test for xilinx-zynqmp-rsa (zynqmp-rsa)
+2023-04-11T23:56:45 [    2.444154] usbcore: registered new interface driver usbhid
+2023-04-11T23:56:45 [    2.444165] usbhid: USB HID core driver
+2023-04-11T23:56:45 [    2.447319] ARM CCI_400_r1 PMU driver probed
+2023-04-11T23:56:45 [    2.447989] fpga_manager fpga0: Xilinx ZynqMP FPGA Manager registered
+2023-04-11T23:56:45 [    2.448435] usbcore: registered new interface driver snd-usb-audio
+2023-04-11T23:56:45 [    2.449340] pktgen: Packet Generator for packet performance testing. Version: 2.75
+2023-04-11T23:56:45 [    2.450106] Initializing XFRM netlink socket
+2023-04-11T23:56:45 [    2.450183] NET: Registered PF_INET6 protocol family
+2023-04-11T23:56:45 [    2.450632] Segment Routing with IPv6
+2023-04-11T23:56:45 [    2.450655] In-situ OAM (IOAM) with IPv6
+2023-04-11T23:56:45 [    2.450731] sit: IPv6, IPv4 and MPLS over IPv4 tunneling driver
+2023-04-11T23:56:45 [    2.451057] NET: Registered PF_PACKET protocol family
+2023-04-11T23:56:45 [    2.451079] NET: Registered PF_KEY protocol family
+2023-04-11T23:56:45 [    2.451101] can: controller area network core
+2023-04-11T23:56:45 [    2.451135] NET: Registered PF_CAN protocol family
+2023-04-11T23:56:45 [    2.451145] can: raw protocol
+2023-04-11T23:56:45 [    2.451153] can: broadcast manager protocol
+2023-04-11T23:56:45 [    2.451165] can: netlink gateway - max_hops=1
+2023-04-11T23:56:45 [    2.451243] Bluetooth: RFCOMM TTY layer initialized
+2023-04-11T23:56:45 [    2.451258] Bluetooth: RFCOMM socket layer initialized
+2023-04-11T23:56:45 [    2.451277] Bluetooth: RFCOMM ver 1.11
+2023-04-11T23:56:45 [    2.451290] Bluetooth: BNEP (Ethernet Emulation) ver 1.3
+2023-04-11T23:56:45 [    2.451300] Bluetooth: BNEP filters: protocol multicast
+2023-04-11T23:56:45 [    2.451311] Bluetooth: BNEP socket layer initialized
+2023-04-11T23:56:45 [    2.451320] Bluetooth: HIDP (Human Interface Emulation) ver 1.2
+2023-04-11T23:56:45 [    2.451332] Bluetooth: HIDP socket layer initialized
+2023-04-11T23:56:45 [    2.451367] 8021q: 802.1Q VLAN Support v1.8
+2023-04-11T23:56:45 [    2.451477] 9pnet: Installing 9P2000 support
+2023-04-11T23:56:45 [    2.451502] Key type dns_resolver registered
+2023-04-11T23:56:45 [    2.451642] registered taskstats version 1
+2023-04-11T23:56:45 [    2.451652] Loading compiled-in X.509 certificates
+2023-04-11T23:56:46 [    2.452738] Btrfs loaded, crc32c=crc32c-generic, zoned=no, fsverity=no
+2023-04-11T23:56:46 [    2.461725] ff000000.serial: ttyPS0 at MMIO 0xff000000 (irq = 55, base_baud = 6249375) is a xuartps
+2023-04-11T23:56:46 [    3.888451] printk: console [ttyPS0] enabled
+2023-04-11T23:56:46 [    3.893501] ff010000.serial: ttyPS1 at MMIO 0xff010000 (irq = 56, base_baud = 6249375) is a xuartps
+2023-04-11T23:56:46 [    3.902846] of-fpga-region fpga-full: FPGA Region probed
+2023-04-11T23:56:46 [    3.909376] nwl-pcie fd0e0000.pcie: host bridge /axi/pcie@fd0e0000 ranges:
+2023-04-11T23:56:46 [    3.916282] nwl-pcie fd0e0000.pcie:      MEM 0x00e0000000..0x00efffffff -> 0x00e0000000
+2023-04-11T23:56:46 [    3.924302] nwl-pcie fd0e0000.pcie:      MEM 0x0600000000..0x07ffffffff -> 0x0600000000
+2023-04-11T23:56:46 [    3.932385] nwl-pcie fd0e0000.pcie: Link is DOWN
+2023-04-11T23:56:46 [    3.937154] nwl-pcie fd0e0000.pcie: PCI host bridge to bus 0000:00
+2023-04-11T23:56:46 [    3.943338] pci_bus 0000:00: root bus resource [bus 00-ff]
+2023-04-11T23:56:46 [    3.948829] pci_bus 0000:00: root bus resource [mem 0xe0000000-0xefffffff]
+2023-04-11T23:56:46 [    3.955705] pci_bus 0000:00: root bus resource [mem 0x600000000-0x7ffffffff pref]
+2023-04-11T23:56:46 [    3.963217] pci 0000:00:00.0: [10ee:d021] type 01 class 0x060400
+2023-04-11T23:56:46 [    3.969287] pci 0000:00:00.0: PME# supported from D0 D1 D2 D3hot
+2023-04-11T23:56:46 [    3.979147] pci 0000:00:00.0: PCI bridge to [bus 01-0c]
+2023-04-11T23:56:46 [    3.984699] xilinx-zynqmp-dma fd500000.dma-controller: ZynqMP DMA driver Probe success
+2023-04-11T23:56:46 [    3.992791] xilinx-zynqmp-dma fd510000.dma-controller: ZynqMP DMA driver Probe success
+2023-04-11T23:56:46 [    4.000883] xilinx-zynqmp-dma fd520000.dma-controller: ZynqMP DMA driver Probe success
+2023-04-11T23:56:46 [    4.008971] xilinx-zynqmp-dma fd530000.dma-controller: ZynqMP DMA driver Probe success
+2023-04-11T23:56:46 [    4.017061] xilinx-zynqmp-dma fd540000.dma-controller: ZynqMP DMA driver Probe success
+2023-04-11T23:56:46 [    4.025150] xilinx-zynqmp-dma fd550000.dma-controller: ZynqMP DMA driver Probe success
+2023-04-11T23:56:46 [    4.033250] xilinx-zynqmp-dma fd560000.dma-controller: ZynqMP DMA driver Probe success
+2023-04-11T23:56:46 [    4.041349] xilinx-zynqmp-dma fd570000.dma-controller: ZynqMP DMA driver Probe success
+2023-04-11T23:56:46 [    4.049511] xilinx-zynqmp-dma ffa80000.dma-controller: ZynqMP DMA driver Probe success
+2023-04-11T23:56:46 [    4.057601] xilinx-zynqmp-dma ffa90000.dma-controller: ZynqMP DMA driver Probe success
+2023-04-11T23:56:46 [    4.065695] xilinx-zynqmp-dma ffaa0000.dma-controller: ZynqMP DMA driver Probe success
+2023-04-11T23:56:46 [    4.073788] xilinx-zynqmp-dma ffab0000.dma-controller: ZynqMP DMA driver Probe success
+2023-04-11T23:56:46 [    4.081882] xilinx-zynqmp-dma ffac0000.dma-controller: ZynqMP DMA driver Probe success
+2023-04-11T23:56:46 [    4.089972] xilinx-zynqmp-dma ffad0000.dma-controller: ZynqMP DMA driver Probe success
+2023-04-11T23:56:46 [    4.098068] xilinx-zynqmp-dma ffae0000.dma-controller: ZynqMP DMA driver Probe success
+2023-04-11T23:56:46 [    4.106161] xilinx-zynqmp-dma ffaf0000.dma-controller: ZynqMP DMA driver Probe success
+2023-04-11T23:56:46 [    4.114485] xilinx-zynqmp-dpdma fd4c0000.dma-controller: Xilinx DPDMA engine is probed
+2023-04-11T23:56:46 [    4.122639] ahci-ceva fd0c0000.ahci: supply ahci not found, using dummy regulator
+2023-04-11T23:56:46 [    4.130202] ahci-ceva fd0c0000.ahci: supply phy not found, using dummy regulator
+2023-04-11T23:56:46 [    4.137632] ahci-ceva fd0c0000.ahci: supply target not found, using dummy regulator
+2023-04-11T23:56:46 [    4.145435] ahci-ceva fd0c0000.ahci: AHCI 0001.0301 32 slots 2 ports 6 Gbps 0x3 impl platform mode
+2023-04-11T23:56:46 [    4.154408] ahci-ceva fd0c0000.ahci: flags: 64bit ncq sntf pm clo only pmp fbs pio slum part ccc sds apst 
+2023-04-11T23:56:46 [    4.164925] scsi host0: ahci-ceva
+2023-04-11T23:56:46 [    4.168602] scsi host1: ahci-ceva
+2023-04-11T23:56:46 [    4.172025] ata1: SATA max UDMA/133 mmio [mem 0xfd0c0000-0xfd0c1fff] port 0x100 irq 53
+2023-04-11T23:56:46 [    4.179955] ata2: SATA max UDMA/133 mmio [mem 0xfd0c0000-0xfd0c1fff] port 0x180 irq 53
+2023-04-11T23:56:46 [    4.188429] spi-nor spi0.0: found n25q512a, expected m25p80
+2023-04-11T23:56:46 [    4.194296] spi-nor spi0.0: n25q512a (131072 Kbytes)
+2023-04-11T23:56:46 [    4.199293] 4 fixed-partitions partitions found on MTD device spi0.0
+2023-04-11T23:56:46 [    4.205646] Creating 4 MTD partitions on \"spi0.0\":
+2023-04-11T23:56:46 [    4.210437] 0x000000000000-0x000000100000 : \"qspi-fsbl-uboot\"
+2023-04-11T23:56:46 [    4.217021] 0x000000100000-0x000000600000 : \"qspi-linux\"
+2023-04-11T23:56:46 [    4.223051] 0x000000600000-0x000000620000 : \"qspi-device-tree\"
+2023-04-11T23:56:46 [    4.229593] 0x000000620000-0x000000c00000 : \"qspi-rootfs\"
+2023-04-11T23:56:46 [    4.236634] xilinx_can ff070000.can can0: TDC Offset value not in range 
+2023-04-11T23:56:46 [    4.244861] macb ff0e0000.ethernet: Not enabling partial store and forward
+2023-04-11T23:56:46 [    4.253078] macb ff0e0000.ethernet eth0: Cadence GEM rev 0x50070106 at 0xff0e0000 irq 39 (00:0a:35:04:90:ca)
+2023-04-11T23:56:46 [    4.263206] xilinx-axipmon ffa00000.perf-monitor: Probed Xilinx APM
+2023-04-11T23:56:46 [    4.269742] xilinx-axipmon fd0b0000.perf-monitor: Probed Xilinx APM
+2023-04-11T23:56:46 [    4.276235] xilinx-axipmon fd490000.perf-monitor: Probed Xilinx APM
+2023-04-11T23:56:46 [    4.282725] xilinx-axipmon ffa10000.perf-monitor: Probed Xilinx APM
+2023-04-11T23:56:46 [    4.289994] pca953x 0-0020: supply vcc not found, using dummy regulator
+2023-04-11T23:56:46 [    4.296699] pca953x 0-0020: using no AI
+2023-04-11T23:56:46 [    4.301205] pca953x 0-0021: supply vcc not found, using dummy regulator
+2023-04-11T23:56:46 [    4.307885] pca953x 0-0021: using no AI
+2023-04-11T23:56:46 [    4.320779] i2c i2c-0: Added multiplexed i2c bus 2
+2023-04-11T23:56:46 [    4.332172] i2c i2c-0: Added multiplexed i2c bus 3
+2023-04-11T23:56:46 [    4.348761] random: fast init done
+2023-04-11T23:56:46 [    4.389972] i2c i2c-0: Added multiplexed i2c bus 4
+2023-04-11T23:56:46 [    4.394891] i2c i2c-0: Added multiplexed i2c bus 5
+2023-04-11T23:56:46 [    4.399691] pca954x 0-0075: registered 4 multiplexed busses for I2C mux pca9544
+2023-04-11T23:56:46 [    4.407061] cdns-i2c ff020000.i2c: 400 kHz mmio ff020000 irq 41
+2023-04-11T23:56:46 [    4.414417] at24 6-0054: supply vcc not found, using dummy regulator
+2023-04-11T23:56:46 [    4.421312] at24 6-0054: 1024 byte 24c08 EEPROM, writable, 1 bytes/write
+2023-04-11T23:56:46 [    4.428055] i2c i2c-1: Added multiplexed i2c bus 6
+2023-04-11T23:56:46 [    4.433400] si5341 7-0036: no regulator set, defaulting vdd_sel to 2.5V for out
+2023-04-11T23:56:46 [    4.440718] si5341 7-0036: no regulator set, defaulting vdd_sel to 2.5V for out
+2023-04-11T23:56:46 [    4.448034] si5341 7-0036: no regulator set, defaulting vdd_sel to 2.5V for out
+2023-04-11T23:56:46 [    4.455341] si5341 7-0036: no regulator set, defaulting vdd_sel to 2.5V for out
+2023-04-11T23:56:46 [    4.462651] si5341 7-0036: no regulator set, defaulting vdd_sel to 2.5V for out
+2023-04-11T23:56:46 [    4.469959] si5341 7-0036: no regulator set, defaulting vdd_sel to 2.5V for out
+2023-04-11T23:56:46 [    4.477274] si5341 7-0036: no regulator set, defaulting vdd_sel to 2.5V for out
+2023-04-11T23:56:46 [    4.484588] si5341 7-0036: no regulator set, defaulting vdd_sel to 2.5V for out
+2023-04-11T23:56:46 [    4.492995] si5341 7-0036: Chip: 5341 Grade: 1 Rev: 1
+2023-04-11T23:56:46 [    4.499492] ata1: SATA link down (SStatus 0 SControl 330)
+2023-04-11T23:56:46 [    4.504914] ata2: SATA link down (SStatus 0 SControl 330)
+2023-04-11T23:56:46 [    4.531307] i2c i2c-1: Added multiplexed i2c bus 7
+2023-04-11T23:56:46 [    4.538932] si570 8-005d: registered, current frequency 300000000 Hz
+2023-04-11T23:56:46 [    4.545333] i2c i2c-1: Added multiplexed i2c bus 8
+2023-04-11T23:56:46 [    4.565082] si570 9-005d: registered, current frequency 148500000 Hz
+2023-04-11T23:56:46 [    4.571478] i2c i2c-1: Added multiplexed i2c bus 9
+2023-04-11T23:56:46 [    4.576487] si5324 10-0069: si5328 probed
+2023-04-11T23:56:46 [    4.641543] si5324 10-0069: si5328 probe successful
+2023-04-11T23:56:46 [    4.646464] i2c i2c-1: Added multiplexed i2c bus 10
+2023-04-11T23:56:46 [    4.651472] i2c i2c-1: Added multiplexed i2c bus 11
+2023-04-11T23:56:46 [    4.656480] i2c i2c-1: Added multiplexed i2c bus 12
+2023-04-11T23:56:46 [    4.661478] i2c i2c-1: Added multiplexed i2c bus 13
+2023-04-11T23:56:46 [    4.666360] pca954x 1-0074: registered 8 multiplexed busses for I2C switch pca9548
+2023-04-11T23:56:46 [    4.674308] i2c i2c-1: Added multiplexed i2c bus 14
+2023-04-11T23:56:46 [    4.679319] i2c i2c-1: Added multiplexed i2c bus 15
+2023-04-11T23:56:46 [    4.684328] i2c i2c-1: Added multiplexed i2c bus 16
+2023-04-11T23:56:46 [    4.689347] i2c i2c-1: Added multiplexed i2c bus 17
+2023-04-11T23:56:46 [    4.694359] i2c i2c-1: Added multiplexed i2c bus 18
+2023-04-11T23:56:46 [    4.699381] i2c i2c-1: Added multiplexed i2c bus 19
+2023-04-11T23:56:46 [    4.704391] i2c i2c-1: Added multiplexed i2c bus 20
+2023-04-11T23:56:46 [    4.709408] i2c i2c-1: Added multiplexed i2c bus 21
+2023-04-11T23:56:46 [    4.714296] pca954x 1-0075: registered 8 multiplexed busses for I2C switch pca9548
+2023-04-11T23:56:46 [    4.721906] cdns-i2c ff030000.i2c: 400 kHz mmio ff030000 irq 42
+2023-04-11T23:56:46 [    4.731570] cdns-wdt fd4d0000.watchdog: Xilinx Watchdog Timer with timeout 60s
+2023-04-11T23:56:46 [    4.739039] cdns-wdt ff150000.watchdog: Xilinx Watchdog Timer with timeout 10s
+2023-04-11T23:56:46 [    4.746759] cpufreq: cpufreq_online: CPU0: Running at unlisted initial frequency: 1199880 KHz, changing to: 1199999 KHz
+2023-04-11T23:56:46 [    4.759605] zynqmp-display fd4a0000.display: vtc bridge property not present
+2023-04-11T23:56:46 [    4.768672] xilinx-dp-snd-codec fd4a0000.display:zynqmp_dp_snd_codec0: Xilinx DisplayPort Sound Codec probed
+2023-04-11T23:56:46 [    4.778758] xilinx-dp-snd-pcm zynqmp_dp_snd_pcm0: Xilinx DisplayPort Sound PCM probed
+2023-04-11T23:56:46 [    4.786835] xilinx-dp-snd-pcm zynqmp_dp_snd_pcm1: Xilinx DisplayPort Sound PCM probed
+2023-04-11T23:56:46 [    4.795593] xilinx-dp-snd-card fd4a0000.display:zynqmp_dp_snd_card: Xilinx DisplayPort Sound Card probed
+2023-04-11T23:56:46 [    4.805189] OF: graph: no port node found in /axi/display@fd4a0000
+2023-04-11T23:56:46 [    4.809247] mmc0: SDHCI controller on ff170000.mmc [ff170000.mmc] using ADMA 64-bit
+2023-04-11T23:56:46 [    4.811700] xlnx-drm xlnx-drm.0: bound fd4a0000.display (ops 0xffff800008e649d8)
+2023-04-11T23:56:46 [    4.850766] mmc0: new SDHC card at address 0001
+2023-04-11T23:56:46 [    4.855648] mmcblk0: mmc0:0001 SD16G 14.6 GiB 
+2023-04-11T23:56:46 [    4.862546]  mmcblk0: p1 p2
+2023-04-11T23:56:48 [    5.905247] zynqmp-display fd4a0000.display: [drm] Cannot find any crtc or sizes
+2023-04-11T23:56:48 [    5.912882] [drm] Initialized xlnx 1.0.0 20130509 for fd4a0000.display on minor 0
+2023-04-11T23:56:48 [    5.920392] zynqmp-display fd4a0000.display: ZynqMP DisplayPort Subsystem driver probed
+2023-04-11T23:56:48 [    5.951040] xhci-hcd xhci-hcd.1.auto: xHCI Host Controller
+2023-04-11T23:56:48 [    5.956546] xhci-hcd xhci-hcd.1.auto: new USB bus registered, assigned bus number 1
+2023-04-11T23:56:48 [    5.964303] xhci-hcd xhci-hcd.1.auto: hcc params 0x0238f625 hci version 0x100 quirks 0x0000000002010810
+2023-04-11T23:56:48 [    5.973737] xhci-hcd xhci-hcd.1.auto: irq 63, io mem 0xfe200000
+2023-04-11T23:56:48 [    5.979866] usb usb1: New USB device found, idVendor=1d6b, idProduct=0002, bcdDevice= 5.15
+2023-04-11T23:56:48 [    5.988136] usb usb1: New USB device strings: Mfr=3, Product=2, SerialNumber=1
+2023-04-11T23:56:48 [    5.995364] usb usb1: Product: xHCI Host Controller
+2023-04-11T23:56:48 [    6.000239] usb usb1: Manufacturer: Linux 5.15.36-xilinx-v2022.2 xhci-hcd
+2023-04-11T23:56:48 [    6.007028] usb usb1: SerialNumber: xhci-hcd.1.auto
+2023-04-11T23:56:48 [    6.012198] hub 1-0:1.0: USB hub found
+2023-04-11T23:56:48 [    6.015965] hub 1-0:1.0: 1 port detected
+2023-04-11T23:56:48 [    6.020087] xhci-hcd xhci-hcd.1.auto: xHCI Host Controller
+2023-04-11T23:56:48 [    6.025575] xhci-hcd xhci-hcd.1.auto: new USB bus registered, assigned bus number 2
+2023-04-11T23:56:48 [    6.033247] xhci-hcd xhci-hcd.1.auto: Host supports USB 3.0 SuperSpeed
+2023-04-11T23:56:48 [    6.039884] usb usb2: New USB device found, idVendor=1d6b, idProduct=0003, bcdDevice= 5.15
+2023-04-11T23:56:48 [    6.048157] usb usb2: New USB device strings: Mfr=3, Product=2, SerialNumber=1
+2023-04-11T23:56:48 [    6.055383] usb usb2: Product: xHCI Host Controller
+2023-04-11T23:56:48 [    6.060257] usb usb2: Manufacturer: Linux 5.15.36-xilinx-v2022.2 xhci-hcd
+2023-04-11T23:56:48 [    6.067047] usb usb2: SerialNumber: xhci-hcd.1.auto
+2023-04-11T23:56:48 [    6.072192] hub 2-0:1.0: USB hub found
+2023-04-11T23:56:48 [    6.075973] hub 2-0:1.0: 1 port detected
+2023-04-11T23:56:48 [    6.083026] input: gpio-keys as /devices/platform/gpio-keys/input/input0
+2023-04-11T23:56:48 [    6.090074] of_cfs_init
+2023-04-11T23:56:48 [    6.092528] of_cfs_init: OK
+2023-04-11T23:56:48 [    6.095476] clk: Not disabling unused clocks
+2023-04-11T23:56:48 [    6.100018] ALSA device list:
+2023-04-11T23:56:48 [    6.102983]   #0: DisplayPort monitor
+2023-04-11T23:56:48 [    6.133437] EXT4-fs (mmcblk0p2): mounted filesystem with ordered data mode. Opts: (null). Quota mode: none.
+2023-04-11T23:56:48 [    6.143211] VFS: Mounted root (ext4 filesystem) readonly on device 179:2.
+2023-04-11T23:56:48 [    6.153477] devtmpfs: mounted
+2023-04-11T23:56:48 [    6.156935] Freeing unused kernel memory: 2176K
+2023-04-11T23:56:48 [    6.161526] Run /sbin/init as init process
+2023-04-11T23:56:48 [    6.165620]   with arguments:
+2023-04-11T23:56:48 [    6.168581]     /sbin/init
+2023-04-11T23:56:48 [    6.171287]     earlyprintk
+2023-04-11T23:56:48 [    6.174073]   with environment:
+2023-04-11T23:56:48 [    6.177201]     HOME=/
+2023-04-11T23:56:48 [    6.179558]     TERM=linux
+2023-04-11T23:56:49 [    6.989255] zynqmp-display fd4a0000.display: [drm] Cannot find any crtc or sizes
+2023-04-11T23:56:49 [    7.278232] systemd[1]: systemd 249 running in system mode (+PAM -AUDIT -SELINUX -APPARMOR +IMA -SMACK +SECCOMP -GCRYPT -GNUTLS -OPENSSL +ACL +BLKID -CURL -ELFUTILS -FIDO2 -IDN2 -IDN -IPTC +KMOD -LIBCRYPTSETUP +LIBFDISK -PCRE2 -PWQUALITY -P11KIT -QRENCODE -BZIP2 -LZ4 -XZ -ZLIB +ZSTD +XKBCOMMON +UTMP +SYSVINIT default-hierarchy=hybrid)
+2023-04-11T23:56:49 [    7.307948] systemd[1]: No virtualization found in DMI vendor table.
+2023-04-11T23:56:49 [    7.314329] systemd[1]: Unable to read /sys/firmware/dmi/entries/0-0/raw, using the virtualization information found in DMI vendor table, ignoring: No such file or directory
+2023-04-11T23:56:49 [    7.330015] systemd[1]: UML virtualization not found in /proc/cpuinfo.
+2023-04-11T23:56:49 [    7.336554] systemd[1]: No virtualization found in CPUID
+2023-04-11T23:56:49 [    7.341879] systemd[1]: Virtualization XEN not found, /proc/xen does not exist
+2023-04-11T23:56:49 [    7.349264] systemd[1]: No virtualization found in /proc/device-tree/*
+2023-04-11T23:56:49 [    7.355805] systemd[1]: This platform does not support /proc/sysinfo
+2023-04-11T23:56:49 [    7.362163] systemd[1]: Found VM virtualization none
+2023-04-11T23:56:49 [    7.367132] systemd[1]: Detected architecture arm64.
+2023-04-11T23:56:49 [    7.372146] systemd[1]: Detected initialized system, this is not the first boot.
+2023-04-11T23:56:49 [    7.379808] systemd[1]: Mounting cgroup to /sys/fs/cgroup/cpu,cpuacct of type cgroup with options cpu,cpuacct.
+2023-04-11T23:56:49 [    7.390085] systemd[1]: Mounting cgroup to /sys/fs/cgroup/cpuset of type cgroup with options cpuset.
+2023-04-11T23:56:49 [    7.417344] systemd[1]: Mounting cgroup to /sys/fs/cgroup/net_cls,net_prio of type cgroup with options net_cls,net_prio.
+2023-04-11T23:56:49 [    7.428437] systemd[1]: Mounting cgroup to /sys/fs/cgroup/pids of type cgroup with options pids.
+2023-04-11T23:56:49 [    7.437394] systemd[1]: Mounting cgroup to /sys/fs/cgroup/blkio of type cgroup with options blkio.
+2023-04-11T23:56:49 [    7.446534] systemd[1]: Mounting cgroup to /sys/fs/cgroup/perf_event of type cgroup with options perf_event.
+2023-04-11T23:56:49 [    7.456534] systemd[1]: Mounting cgroup to /sys/fs/cgroup/freezer of type cgroup with options freezer.
+2023-04-11T23:56:49 [    7.466015] systemd[1]: Mounting cgroup to /sys/fs/cgroup/devices of type cgroup with options devices.
+2023-04-11T23:56:49 [    7.475501] systemd[1]: Mounting cgroup to /sys/fs/cgroup/memory of type cgroup with options memory.
+2023-04-11T23:56:49 [    7.484882] systemd[1]: Mounting cgroup to /sys/fs/cgroup/debug of type cgroup with options debug.
+2023-04-11T23:56:49 
+2023-04-11T23:56:49 Welcome to [1mPetaLinux 2022.2_dev (honister)[0m!
+2023-04-11T23:56:49 
+2023-04-11T23:56:49 [    7.506651] systemd[1]: Hostname set to <zcu102-zynqmp>.
+2023-04-11T23:56:49 [    7.526086] random: systemd: uninitialized urandom read (16 bytes read)
+2023-04-11T23:56:49 [    7.532724] systemd[1]: Initializing machine ID from random generator.
+2023-04-11T23:56:49 [    7.539341] systemd[1]: Bind-mounting /run/machine-id on /etc/machine-id (MS_BIND \"\")...
+2023-04-11T23:56:49 [    7.547466] systemd[1]: Installed transient /etc/machine-id file.
+2023-04-11T23:56:49 [    7.553577] systemd[1]: Remounting /etc/machine-id (MS_RDONLY|MS_REMOUNT|MS_BIND \"\")...
+2023-04-11T23:56:49 [    7.580492] systemd[1]: Successfully added address 127.0.0.1 to loopback interface
+2023-04-11T23:56:49 [    7.588097] systemd[1]: Successfully added address ::1 to loopback interface
+2023-04-11T23:56:49 [    7.595170] systemd[1]: Successfully brought loopback interface up
+2023-04-11T23:56:49 [    7.601509] systemd[1]: Setting 'fs/file-max' to '9223372036854775807'.
+2023-04-11T23:56:49 [    7.608192] systemd[1]: Setting 'fs/nr_open' to '2147483640'.
+2023-04-11T23:56:49 [    7.613975] systemd[1]: Couldn't write fs.nr_open as 2147483640, halving it.
+2023-04-11T23:56:49 [    7.621073] systemd[1]: Setting 'fs/nr_open' to '1073741816'.
+2023-04-11T23:56:49 [    7.626847] systemd[1]: Successfully bumped fs.nr_open to 1073741816
+2023-04-11T23:56:49 [    7.633406] systemd[1]: Found cgroup2 on /sys/fs/cgroup/unified, unified hierarchy for systemd controller
+2023-04-11T23:56:49 [    7.674314] systemd[1]: Found cgroup2 on /sys/fs/cgroup/unified, unified hierarchy for systemd controller
+2023-04-11T23:56:49 [    7.683898] systemd[1]: Unified cgroup hierarchy is located at /sys/fs/cgroup/unified. Controllers are on legacy hierarchies.
+2023-04-11T23:56:49 [    7.702001] systemd[1]: Can't load kernel CGROUP SKB BPF program, BPF firewalling is not supported: Function not implemented
+2023-04-11T23:56:49 [    7.713242] systemd[1]: Can't load kernel CGROUP DEVICE BPF program, BPF device control is not supported: Function not implemented
+2023-04-11T23:56:49 [    7.725009] systemd[1]: Controller 'cpu' supported: yes
+2023-04-11T23:56:49 [    7.730245] systemd[1]: Controller 'cpuacct' supported: yes
+2023-04-11T23:56:49 [    7.735832] systemd[1]: Controller 'cpuset' supported: no
+2023-04-11T23:56:49 [    7.741240] systemd[1]: Controller 'io' supported: no
+2023-04-11T23:56:49 [    7.746299] systemd[1]: Controller 'blkio' supported: yes
+2023-04-11T23:56:49 [    7.751700] systemd[1]: Controller 'memory' supported: yes
+2023-04-11T23:56:49 [    7.757185] systemd[1]: Controller 'devices' supported: yes
+2023-04-11T23:56:49 [    7.762758] systemd[1]: Controller 'pids' supported: yes
+2023-04-11T23:56:49 [    7.768071] systemd[1]: Controller 'bpf-firewall' supported: no
+2023-04-11T23:56:49 [    7.773992] systemd[1]: Controller 'bpf-devices' supported: no
+2023-04-11T23:56:49 [    7.779825] systemd[1]: Controller 'bpf-foreign' supported: no
+2023-04-11T23:56:49 [    7.785658] systemd[1]: Controller 'bpf-socket-bind' supported: no
+2023-04-11T23:56:49 [    7.791866] systemd[1]: Set up TFD_TIMER_CANCEL_ON_SET timerfd.
+2023-04-11T23:56:49 [    7.797811] systemd[1]: Failed to stat /etc/localtime, ignoring: No such file or directory
+2023-04-11T23:56:49 [    7.806090] systemd[1]: /etc/localtime doesn't exist yet, watching /etc instead.
+2023-04-11T23:56:49 [    7.813884] systemd[1]: Enabling (yes) showing of status (commandline).
+2023-04-11T23:56:49 [    7.821041] systemd[1]: Successfully forked off '(sd-executor)' as PID 234.
+2023-04-11T23:56:49 [    7.828704] systemd[234]: Successfully forked off '(direxec)' as PID 236.
+2023-04-11T23:56:49 [    7.835789] systemd[234]: Successfully forked off '(direxec)' as PID 238.
+2023-04-11T23:56:49 [    7.842987] systemd[234]: Successfully forked off '(direxec)' as PID 239.
+2023-04-11T23:56:49 [    7.850279] systemd[234]: Successfully forked off '(direxec)' as PID 240.
+2023-04-11T23:56:49 [    7.851066] systemd-fstab-generator[238]: Parsing /etc/fstab...
+2023-04-11T23:56:49 [    7.857499] systemd[234]: Successfully forked off '(direxec)' as PID 241.
+2023-04-11T23:56:49 [    7.870284] systemd[234]: Successfully forked off '(direxec)' as PID 243.
+2023-04-11T23:56:49 [    7.870321] systemd-getty-generator[239]: Automatically adding serial getty for /dev/ttyPS0.
+2023-04-11T23:56:50 [    7.877498] systemd[234]: Successfully forked off '(direxec)' as PID 244.
+2023-04-11T23:56:50 [    7.882605] systemd-hibernate-resume-generator[241]: Not running in an initrd, quitting.
+2023-04-11T23:56:50 [    7.883267] systemd-gpt-auto-generator[240]: Disabling root partition auto-detection, root= is defined.
+2023-04-11T23:56:50 [    7.883421] systemd-gpt-auto-generator[240]: Failed to chase block device '/', ignoring: No such file or directory
+2023-04-11T23:56:50 [    7.890665] systemd-rc-local-generator[243]: /etc/rc.local does not exist, skipping.
+2023-04-11T23:56:50 [    7.892850] systemd[234]: Successfully forked off '(direxec)' as PID 245.
+2023-04-11T23:56:50 [    7.901280] systemd-gpt-auto-generator[240]: mmcblk0p2: Root device /dev/mmcblk0.
+2023-04-11T23:56:50 [    7.910236] systemd[234]: Successfully forked off '(direxec)' as PID 246.
+2023-04-11T23:56:50 [    7.922081] systemd-fstab-generator[238]: Found entry what=/dev/root where=/ type=auto makefs=no growfs=no noauto=no nofail=no
+2023-04-11T23:56:50 [    7.960915] systemd-fstab-generator[238]: Found entry what=proc where=/proc type=proc makefs=no growfs=no noauto=no nofail=no
+2023-04-11T23:56:50 [    7.972311] systemd-fstab-generator[238]: Found entry what=devpts where=/dev/pts type=devpts makefs=no growfs=no noauto=no nofail=no
+2023-04-11T23:56:50 [    7.984612] systemd-sysv-generator[246]: Cannot find unit nfsserver.service.
+2023-04-11T23:56:50 [    7.984901] systemd-fstab-generator[238]: Found entry what=tmpfs where=/run type=tmpfs makefs=no growfs=no noauto=no nofail=no
+2023-04-11T23:56:50 [    7.991782] systemd-sysv-generator[246]: SysV service '/etc/init.d/nfsserver' lacks a native systemd unit file. Automatically generating a unit file for compatibility. Please update package to include a native systemd unit file, in order to make it more safe and robust.
+2023-04-11T23:56:50 [    8.003194] systemd-fstab-generator[238]: Found entry what=tmpfs where=/var/volatile type=tmpfs makefs=no growfs=no noauto=no nofail=no
+2023-04-11T23:56:50 [    8.029179] systemd-sysv-generator[246]: Native unit for tcf-agent.service already exists, skipping.
+2023-04-11T23:56:50 [    8.048522] systemd-sysv-generator[246]: Cannot find unit nfscommon.service.
+2023-04-11T23:56:50 [    8.055631] systemd-sysv-generator[246]: SysV service '/etc/init.d/nfscommon' lacks a native systemd unit file. Automatically generating a unit file for compatibility. Please update package to include a native systemd unit file, in order to make it more safe and robust.
+2023-04-11T23:56:50 [    8.080155] systemd-sysv-generator[246]: Native unit for systemd-udevd.service already exists, skipping.
+2023-04-11T23:56:50 [    8.090248] systemd-sysv-generator[246]: Native unit for rpcbind.service already exists, skipping.
+2023-04-11T23:56:50 [    8.099425] systemd-sysv-generator[246]: Native unit for networking.service already exists, skipping.
+2023-04-11T23:56:50 [    8.109366] systemd-sysv-generator[246]: Native unit for syslog.service already exists, skipping.
+2023-04-11T23:56:50 [    8.118380] systemd-sysv-generator[246]: Cannot find unit dropbear.service.
+2023-04-11T23:56:50 [    8.125380] systemd-sysv-generator[246]: SysV service '/etc/init.d/dropbear' lacks a native systemd unit file. Automatically generating a unit file for compatibility. Please update package to include a native systemd unit file, in order to make it more safe and robust.
+2023-04-11T23:56:50 [    8.149540] systemd-sysv-generator[246]: Cannot find unit inetd.busybox.service.
+2023-04-11T23:56:50 [    8.156979] systemd-sysv-generator[246]: SysV service '/etc/init.d/inetd.busybox' lacks a native systemd unit file. Automatically generating a unit file for compatibility. Please update package to include a native systemd unit file, in order to make it more safe and robust.
+2023-04-11T23:56:50 [    8.181420] systemd-sysv-generator[246]: Native unit for dbus-1.service already exists, skipping.
+2023-04-11T23:56:50 [    8.190489] systemd-sysv-generator[246]: Native unit for modutils.service already exists, skipping.
+2023-04-11T23:56:50 [    8.199722] systemd-sysv-generator[246]: Native unit for hwclock.service already exists, skipping.
+2023-04-11T23:56:50 [    8.209293] systemd-sysv-generator[246]: Native unit for haveged.service already exists, skipping.
+2023-04-11T23:56:50 [    8.223683] systemd-sysv-generator[246]: Ignoring S01networking symlink in rc2.d, not generating networking.service.
+2023-04-11T23:56:50 [    8.234244] systemd-sysv-generator[246]: Ignoring S02dbus-1 symlink in rc2.d, not generating dbus-1.service.
+2023-04-11T23:56:50 [    8.244132] systemd-sysv-generator[246]: Ignoring S09haveged symlink in rc2.d, not generating haveged.service.
+2023-04-11T23:56:50 [    8.254180] systemd-sysv-generator[246]: Ignoring S20hwclock.sh symlink in rc2.d, not generating hwclock.service.
+2023-04-11T23:56:50 [    8.264479] systemd-sysv-generator[246]: Ignoring S12rpcbind symlink in rc2.d, not generating rpcbind.service.
+2023-04-11T23:56:50 [    8.274516] systemd-sysv-generator[246]: Ignoring S20syslog symlink in rc2.d, not generating syslog.service.
+2023-04-11T23:56:50 [    8.317479] systemd-sysv-generator[246]: Ignoring S01networking symlink in rc3.d, not generating networking.service.
+2023-04-11T23:56:50 [    8.328032] systemd-sysv-generator[246]: Ignoring S99tcf-agent symlink in rc3.d, not generating tcf-agent.service.
+2023-04-11T23:56:50 [    8.338399] systemd-sysv-generator[246]: Ignoring S02dbus-1 symlink in rc3.d, not generating dbus-1.service.
+2023-04-11T23:56:50 [    8.348254] systemd-sysv-generator[246]: Ignoring S09haveged symlink in rc3.d, not generating haveged.service.
+2023-04-11T23:56:50 [    8.358317] systemd-sysv-generator[246]: Ignoring S20hwclock.sh symlink in rc3.d, not generating hwclock.service.
+2023-04-11T23:56:50 [    8.368616] systemd-sysv-generator[246]: Ignoring S12rpcbind symlink in rc3.d, not generating rpcbind.service.
+2023-04-11T23:56:50 [    8.378640] systemd-sysv-generator[246]: Ignoring S20syslog symlink in rc3.d, not generating syslog.service.
+2023-04-11T23:56:50 [    8.420958] systemd-sysv-generator[246]: Ignoring S01networking symlink in rc4.d, not generating networking.service.
+2023-04-11T23:56:50 [    8.431529] systemd-sysv-generator[246]: Ignoring S09haveged symlink in rc4.d, not generating haveged.service.
+2023-04-11T23:56:50 [    8.441552] systemd-sysv-generator[246]: Ignoring S20hwclock.sh symlink in rc4.d, not generating hwclock.service.
+2023-04-11T23:56:50 [    8.451847] systemd-sysv-generator[246]: Ignoring S12rpcbind symlink in rc4.d, not generating rpcbind.service.
+2023-04-11T23:56:50 [    8.461896] systemd-sysv-generator[246]: Ignoring S20syslog symlink in rc4.d, not generating syslog.service.
+2023-04-11T23:56:50 [    8.472297] systemd-gpt-auto-generator[240]: No suitable partition table found, ignoring.
+2023-04-11T23:56:50 [    8.481447] systemd[234]: /lib/systemd/system-generators/systemd-gpt-auto-generator succeeded.
+2023-04-11T23:56:50 [    8.482935] systemd-sysv-generator[246]: Ignoring S01networking symlink in rc5.d, not generating networking.service.
+2023-04-11T23:56:50 [    8.490131] systemd[234]: /lib/systemd/system-generators/systemd-hibernate-resume-generator succeeded.
+2023-04-11T23:56:50 [    8.500604] systemd-sysv-generator[246]: Ignoring S99tcf-agent symlink in rc5.d, not generating tcf-agent.service.
+2023-04-11T23:56:50 [    8.509936] systemd[234]: /lib/systemd/system-generators/systemd-fstab-generator succeeded.
+2023-04-11T23:56:50 [    8.520256] systemd-sysv-generator[246]: Ignoring S02dbus-1 symlink in rc5.d, not generating dbus-1.service.
+2023-04-11T23:56:50 [    8.528646] systemd[234]: /lib/systemd/system-generators/systemd-system-update-generator succeeded.
+2023-04-11T23:56:50 [    8.538450] systemd-sysv-generator[246]: Ignoring S09haveged symlink in rc5.d, not generating haveged.service.
+2023-04-11T23:56:50 [    8.547505] systemd[234]: /lib/systemd/system-generators/systemd-run-generator succeeded.
+2023-04-11T23:56:50 [    8.557480] systemd-sysv-generator[246]: Ignoring S20hwclock.sh symlink in rc5.d, not generating hwclock.service.
+2023-04-11T23:56:50 [    8.565681] systemd[234]: /lib/systemd/system-generators/systemd-rc-local-generator succeeded.
+2023-04-11T23:56:50 [    8.575939] systemd-sysv-generator[246]: Ignoring S12rpcbind symlink in rc5.d, not generating rpcbind.service.
+2023-04-11T23:56:50 [    8.594528] systemd-sysv-generator[246]: Ignoring S20syslog symlink in rc5.d, not generating syslog.service.
+2023-04-11T23:56:50 [    8.604437] systemd-sysv-generator[246]: Loading SysV script /etc/init.d/nfsserver
+2023-04-11T23:56:50 [    8.613661] systemd-sysv-generator[246]: Adding Provides: alias 'nfs-kernel-server.service' for 'nfsserver.service'
+2023-04-11T23:56:50 [    8.625003] systemd-sysv-generator[246]: Loading SysV script /etc/init.d/nfscommon
+2023-04-11T23:56:50 [    8.633849] systemd-sysv-generator[246]: Adding Provides: alias 'nfs-common.service' for 'nfscommon.service'
+2023-04-11T23:56:50 [    8.644130] systemd-sysv-generator[246]: Loading SysV script /etc/init.d/dropbear
+2023-04-11T23:56:50 [    8.652709] systemd-sysv-generator[246]: Adding Provides: alias 'sshd.service' for 'dropbear.service'
+2023-04-11T23:56:50 [    8.662469] systemd-sysv-generator[246]: Loading SysV script /etc/init.d/inetd.busybox
+2023-04-11T23:56:50 [    8.673159] systemd[234]: /lib/systemd/system-generators/systemd-sysv-generator succeeded.
+2023-04-11T23:56:50 [    8.681474] systemd[234]: /lib/systemd/system-generators/systemd-debug-generator succeeded.
+2023-04-11T23:56:50 [    8.689865] systemd[234]: /lib/systemd/system-generators/systemd-getty-generator succeeded.
+2023-04-11T23:56:50 [    8.698641] systemd[1]: (sd-executor) succeeded.
+2023-04-11T23:56:50 [    8.703336] systemd[1]: Looking for unit files in (higher priority first):
+2023-04-11T23:56:50 [    8.710217] systemd[1]: 	/etc/systemd/system.control
+2023-04-11T23:56:50 [    8.715188] systemd[1]: 	/run/systemd/system.control
+2023-04-11T23:56:50 [    8.720152] systemd[1]: 	/run/systemd/transient
+2023-04-11T23:56:50 [    8.724684] systemd[1]: 	/run/systemd/generator.early
+2023-04-11T23:56:50 [    8.729736] systemd[1]: 	/etc/systemd/system
+2023-04-11T23:56:50 [    8.734005] systemd[1]: 	/etc/systemd/system.attached
+2023-04-11T23:56:50 [    8.739060] systemd[1]: 	/run/systemd/system
+2023-04-11T23:56:50 [    8.743329] systemd[1]: 	/run/systemd/system.attached
+2023-04-11T23:56:50 [    8.748383] systemd[1]: 	/run/systemd/generator
+2023-04-11T23:56:50 [    8.752912] systemd[1]: 	/usr/local/lib/systemd/system
+2023-04-11T23:56:50 [    8.758057] systemd[1]: 	/lib/systemd/system
+2023-04-11T23:56:50 [    8.762333] systemd[1]: 	/usr/lib/systemd/system
+2023-04-11T23:56:50 [    8.766950] systemd[1]: 	/run/systemd/generator.late
+2023-04-11T23:56:50 [    8.792764] systemd[1]: Modification times have changed, need to update cache.
+2023-04-11T23:56:50 [    8.800266] systemd[1]: unit_file_build_name_map: alias: /etc/systemd/system/ctrl-alt-del.target → reboot.target
+2023-04-11T23:56:50 [    8.810777] systemd[1]: unit_file_build_name_map: alias: /etc/systemd/system/default.target → multi-user.target
+2023-04-11T23:56:50 [    8.821165] systemd[1]: unit_file_build_name_map: alias: /etc/systemd/system/dbus-org.freedesktop.network1.service → systemd-networkd.service
+2023-04-11T23:56:50 [    8.834112] systemd[1]: unit_file_build_name_map: linked unit file: /etc/systemd/system/dbus-1.service → /dev/null
+2023-04-11T23:56:50 [    8.844725] systemd[1]: unit_file_build_name_map: linked unit file: /etc/systemd/system/networking.service → /dev/null
+2023-04-11T23:56:50 [    8.855758] systemd[1]: unit_file_build_name_map: alias: /etc/systemd/system/dbus-org.freedesktop.resolve1.service → systemd-resolved.service
+2023-04-11T23:56:50 [    8.868774] systemd[1]: unit_file_build_name_map: alias: /etc/systemd/system/dbus-org.freedesktop.timesync1.service → systemd-timesyncd.service
+2023-04-11T23:56:51 [    8.881887] systemd[1]: unit_file_build_name_map: linked unit file: /etc/systemd/system/hwclock.service → /dev/null
+2023-04-11T23:56:51 [    8.892566] systemd[1]: unit_file_build_name_map: linked unit file: /etc/systemd/system/modutils.service → /dev/null
+2023-04-11T23:56:51 [    8.903357] systemd[1]: unit_file_build_name_map: alias: /etc/systemd/system/syslog.service → busybox-syslog.service
+2023-04-11T23:56:51 [    8.914170] systemd[1]: unit_file_build_name_map: normal unit file: /run/systemd/generator/var-volatile.mount
+2023-04-11T23:56:51 [    8.924111] systemd[1]: unit_file_build_name_map: normal unit file: /run/systemd/generator/-.mount
+2023-04-11T23:56:51 [    8.933396] systemd[1]: unit_file_build_name_map: normal unit file: /lib/systemd/system/hybrid-sleep.target
+2023-04-11T23:56:51 [    8.943217] systemd[1]: unit_file_build_name_map: normal unit file: /lib/systemd/system/time-sync.target
+2023-04-11T23:56:51 [    8.952711] systemd[1]: unit_file_build_name_map: normal unit file: /lib/systemd/system/poweroff.target
+2023-04-11T23:56:51 [    8.962209] systemd[1]: unit_file_build_name_map: alias: /lib/systemd/system/runlevel3.target → multi-user.target
+2023-04-11T23:56:51 [    8.972662] systemd[1]: unit_file_build_name_map: normal unit file: /lib/systemd/system/systemd-ask-password-console.path
+2023-04-11T23:56:51 [    8.983633] systemd[1]: unit_file_build_name_map: normal unit file: /lib/systemd/system/systemd-hwdb-update.service
+2023-04-11T23:56:51 [    8.994202] systemd[1]: unit_file_build_name_map: alias: /lib/systemd/system/runlevel5.target → graphical.target
+2023-04-11T23:56:51 [    9.004575] systemd[1]: unit_file_build_name_map: normal unit file: /lib/systemd/system/system-update-pre.target
+2023-04-11T23:56:51 [    9.014777] systemd[1]: unit_file_build_name_map: normal unit file: /lib/systemd/system/systemd-update-done.service
+2023-04-11T23:56:51 [    9.025237] systemd[1]: unit_file_build_name_map: normal unit file: /lib/systemd/system/systemd-journald.service
+2023-04-11T23:56:51 [    9.035430] systemd[1]: unit_file_build_name_map: normal unit file: /lib/systemd/system/systemd-userdbd.socket
+2023-04-11T23:56:51 [    9.045452] systemd[1]: unit_file_build_name_map: normal unit file: /lib/systemd/system/systemd-resolved.service
+2023-04-11T23:56:51 [    9.055647] systemd[1]: unit_file_build_name_map: normal unit file: /lib/systemd/system/network-pre.target
+2023-04-11T23:56:51 [    9.065337] systemd[1]: unit_file_build_name_map: normal unit file: /lib/systemd/system/sigpwr.target
+2023-04-11T23:56:51 [    9.074575] systemd[1]: unit_file_build_name_map: normal unit file: /lib/systemd/system/quotaon.service
+2023-04-11T23:56:51 [    9.083983] systemd[1]: unit_file_build_name_map: normal unit file: /lib/systemd/system/dev-mqueue.mount
+2023-04-11T23:56:51 [    9.093480] systemd[1]: unit_file_build_name_map: normal unit file: /lib/systemd/system/suspend-then-hibernate.target
+2023-04-11T23:56:51 [    9.104116] systemd[1]: unit_file_build_name_map: normal unit file: /lib/systemd/system/basic.target
+2023-04-11T23:56:51 [    9.113266] systemd[1]: unit_file_build_name_map: normal unit file: /lib/systemd/system/emergency.target
+2023-04-11T23:56:51 [    9.122770] systemd[1]: unit_file_build_name_map: normal unit file: /lib/systemd/system/reboot.target
+2023-04-11T23:56:51 [    9.132123] systemd[1]: unit_file_build_name_map: alias: /lib/systemd/system/runlevel1.target → rescue.target
+2023-04-11T23:56:51 [    9.142336] systemd[1]: unit_file_build_name_map: normal unit file: /lib/systemd/system/hibernate.target
+2023-04-11T23:56:51 [    9.151834] systemd[1]: unit_file_build_name_map: normal unit file: /lib/systemd/system/systemd-networkd.service
+2023-04-11T23:56:51 [    9.162024] systemd[1]: unit_file_build_name_map: normal unit file: /lib/systemd/system/systemd-hostnamed.service
+2023-04-11T23:56:51 [    9.172306] systemd[1]: unit_file_build_name_map: normal unit file: /lib/systemd/system/final.target
+2023-04-11T23:56:51 [    9.181459] systemd[1]: unit_file_build_name_map: normal unit file: /lib/systemd/system/shutdown.target
+2023-04-11T23:56:51 [    9.190869] systemd[1]: unit_file_build_name_map: normal unit file: /lib/systemd/system/paths.target
+2023-04-11T23:56:51 [    9.200020] systemd[1]: unit_file_build_name_map: normal unit file: /lib/systemd/system/smartcard.target
+2023-04-11T23:56:51 [    9.209530] systemd[1]: unit_file_build_name_map: normal unit file: /lib/systemd/system/systemd-journal-flush.service
+2023-04-11T23:56:51 [    9.220162] systemd[1]: unit_file_build_name_map: normal unit file: /lib/systemd/system/system-update.target
+2023-04-11T23:56:51 [    9.230011] systemd[1]: unit_file_build_name_map: normal unit file: /lib/systemd/system/haveged.service
+2023-04-11T23:56:51 [    9.239422] systemd[1]: unit_file_build_name_map: normal unit file: /lib/systemd/system/local-fs.target
+2023-04-11T23:56:51 [    9.248839] systemd[1]: unit_file_build_name_map: normal unit file: /lib/systemd/system/systemd-suspend-then-hibernate.service
+2023-04-11T23:56:51 [    9.260362] systemd[1]: unit_file_build_name_map: alias: /lib/systemd/system/dbus-org.freedesktop.hostname1.service → systemd-hostnamed.service
+2023-04-11T23:56:51 [    9.273424] systemd[1]: unit_file_build_name_map: normal unit file: /lib/systemd/system/nfs-statd.service
+2023-04-11T23:56:51 [    9.283011] systemd[1]: unit_file_build_name_map: normal unit file: /lib/systemd/system/bluetooth.target
+2023-04-11T23:56:51 [    9.292507] systemd[1]: unit_file_build_name_map: normal unit file: /lib/systemd/system/initrd-switch-root.service
+2023-04-11T23:56:51 [    9.302916] systemd[1]: unit_file_build_name_map: normal unit file: /lib/systemd/system/systemd-modules-load.service
+2023-04-11T23:56:51 [    9.313468] systemd[1]: unit_file_build_name_map: normal unit file: /lib/systemd/system/getty-pre.target
+2023-04-11T23:56:51 [    9.322969] systemd[1]: unit_file_build_name_map: normal unit file: /lib/systemd/system/getty@.service
+2023-04-11T23:56:51 [    9.332293] systemd[1]: unit_file_build_name_map: normal unit file: /lib/systemd/system/systemd-backlight@.service
+2023-04-11T23:56:51 [    9.342655] systemd[1]: unit_file_build_name_map: normal unit file: /lib/systemd/system/network-online.target
+2023-04-11T23:56:51 [    9.352587] systemd[1]: unit_file_build_name_map: normal unit file: /lib/systemd/system/systemd-remount-fs.service
+2023-04-11T23:56:51 [    9.362954] systemd[1]: unit_file_build_name_map: normal unit file: /lib/systemd/system/systemd-poweroff.service
+2023-04-11T23:56:51 [    9.373146] systemd[1]: unit_file_build_name_map: normal unit file: /lib/systemd/system/sys-fs-fuse-connections.mount
+2023-04-11T23:56:51 [    9.383769] systemd[1]: unit_file_build_name_map: normal unit file: /lib/systemd/system/systemd-time-wait-sync.service
+2023-04-11T23:56:51 [    9.394481] systemd[1]: unit_file_build_name_map: normal unit file: /lib/systemd/system/initrd-fs.target
+2023-04-11T23:56:51 [    9.403976] systemd[1]: unit_file_build_name_map: normal unit file: /lib/systemd/system/exit.target
+2023-04-11T23:56:51 [    9.413039] systemd[1]: unit_file_build_name_map: normal unit file: /lib/systemd/system/pam_namespace.service
+2023-04-11T23:56:51 [    9.422996] systemd[1]: unit_file_build_name_map: normal unit file: /lib/systemd/system/systemd-ask-password-console.service
+2023-04-11T23:56:51 [    9.434239] systemd[1]: unit_file_build_name_map: normal unit file: /lib/systemd/system/systemd-udevd-kernel.socket
+2023-04-11T23:56:51 [    9.444695] systemd[1]: unit_file_build_name_map: normal unit file: /lib/systemd/system/busybox-klogd.service
+2023-04-11T23:56:51 [    9.454633] systemd[1]: unit_file_build_name_map: normal unit file: /lib/systemd/system/systemd-journal-catalog-update.service
+2023-04-11T23:56:51 [    9.466153] systemd[1]: unit_file_build_name_map: alias: /lib/systemd/system/dbus-org.freedesktop.timedate1.service → systemd-timedated.service
+2023-04-11T23:56:51 [    9.479225] systemd[1]: unit_file_build_name_map: normal unit file: /lib/systemd/system/sound.target
+2023-04-11T23:56:51 [    9.488376] systemd[1]: unit_file_build_name_map: normal unit file: /lib/systemd/system/var-volatile-spool.service
+2023-04-11T23:56:51 [    9.498753] systemd[1]: unit_file_build_name_map: normal unit file: /lib/systemd/system/initrd-parse-etc.service
+2023-04-11T23:56:51 [    9.508949] systemd[1]: unit_file_build_name_map: normal unit file: /lib/systemd/system/initrd.target
+2023-04-11T23:56:51 [    9.518296] systemd[1]: unit_file_build_name_map: alias: /lib/systemd/system/autovt@.service → getty@.service
+2023-04-11T23:56:51 [    9.528412] systemd[1]: unit_file_build_name_map: normal unit file: /lib/systemd/system/var-volatile-cache.service
+2023-04-11T23:56:51 [    9.538985] systemd[1]: unit_file_build_name_map: normal unit file: /lib/systemd/system/dev-hugepages.mount
+2023-04-11T23:56:51 [    9.548742] systemd[1]: unit_file_build_name_map: normal unit file: /lib/systemd/system/sys-kernel-config.mount
+2023-04-11T23:56:51 [    9.558850] systemd[1]: unit_file_build_name_map: normal unit file: /lib/systemd/system/slices.target
+2023-04-11T23:56:51 [    9.568087] systemd[1]: unit_file_build_name_map: normal unit file: /lib/systemd/system/sleep.target
+2023-04-11T23:56:51 [    9.577238] systemd[1]: unit_file_build_name_map: normal unit file: /lib/systemd/system/rpcbind.service
+2023-04-11T23:56:51 [    9.586649] systemd[1]: unit_file_build_name_map: normal unit file: /lib/systemd/system/systemd-journald@.service
+2023-04-11T23:56:51 [    9.596929] systemd[1]: unit_file_build_name_map: normal unit file: /lib/systemd/system/serial-getty@.service
+2023-04-11T23:56:51 [    9.606857] systemd[1]: unit_file_build_name_map: normal unit file: /lib/systemd/system/systemd-userdbd.service
+2023-04-11T23:56:51 [    9.617062] systemd[1]: unit_file_build_name_map: alias: /lib/systemd/system/runlevel0.target → poweroff.target
+2023-04-11T23:56:51 [    9.627345] systemd[1]: unit_file_build_name_map: normal unit file: /lib/systemd/system/systemd-sysusers.service
+2023-04-11T23:56:51 [    9.637547] systemd[1]: unit_file_build_name_map: normal unit file: /lib/systemd/system/systemd-journald.socket
+2023-04-11T23:56:51 [    9.647657] systemd[1]: unit_file_build_name_map: normal unit file: /lib/systemd/system/getty.target
+2023-04-11T23:56:51 [    9.656816] systemd[1]: unit_file_build_name_map: normal unit file: /lib/systemd/system/systemd-udev-trigger.service
+2023-04-11T23:56:51 [    9.667358] systemd[1]: unit_file_build_name_map: normal unit file: /lib/systemd/system/systemd-hibernate-resume@.service
+2023-04-11T23:56:51 [    9.678329] systemd[1]: unit_file_build_name_map: normal unit file: /lib/systemd/system/user.slice
+2023-04-11T23:56:51 [    9.687307] systemd[1]: unit_file_build_name_map: normal unit file: /lib/systemd/system/systemd-exit.service
+2023-04-11T23:56:51 [    9.697156] systemd[1]: unit_file_build_name_map: normal unit file: /lib/systemd/system/systemd-network-generator.service
+2023-04-11T23:56:51 [    9.708129] systemd[1]: unit_file_build_name_map: normal unit file: /lib/systemd/system/container-getty@.service
+2023-04-11T23:56:51 [    9.718321] systemd[1]: unit_file_build_name_map: normal unit file: /lib/systemd/system/systemd-machine-id-commit.service
+2023-04-11T23:56:51 [    9.729298] systemd[1]: unit_file_build_name_map: normal unit file: /lib/systemd/system/proc-fs-nfsd.mount
+2023-04-11T23:56:51 [    9.738970] systemd[1]: unit_file_build_name_map: normal unit file: /lib/systemd/system/systemd-timesyncd.service
+2023-04-11T23:56:51 [    9.749264] systemd[1]: unit_file_build_name_map: normal unit file: /lib/systemd/system/graphical.target
+2023-04-11T23:56:51 [    9.758769] systemd[1]: unit_file_build_name_map: normal unit file: /lib/systemd/system/dbus.service
+2023-04-11T23:56:51 [    9.767924] systemd[1]: unit_file_build_name_map: normal unit file: /lib/systemd/system/swap.target
+2023-04-11T23:56:51 [    9.776985] systemd[1]: unit_file_build_name_map: normal unit file: /lib/systemd/system/systemd-fsck-root.service
+2023-04-11T23:56:51 [    9.787334] systemd[1]: unit_file_build_name_map: normal unit file: /lib/systemd/system/systemd-vconsole-setup.service
+2023-04-11T23:56:51 [    9.798046] systemd[1]: unit_file_build_name_map: normal unit file: /lib/systemd/system/systemd-logind.service
+2023-04-11T23:56:51 [    9.808064] systemd[1]: unit_file_build_name_map: normal unit file: /lib/systemd/system/remote-fs.target
+2023-04-11T23:56:51 [    9.817569] systemd[1]: unit_file_build_name_map: normal unit file: /lib/systemd/system/console-getty.service
+2023-04-11T23:56:51 [    9.827500] systemd[1]: unit_file_build_name_map: normal unit file: /lib/systemd/system/busybox-syslog.service
+2023-04-11T23:56:51 [    9.837594] systemd[1]: unit_file_build_name_map: normal unit file: /lib/systemd/system/dropbear@.service
+2023-04-11T23:56:51 [    9.847297] systemd[1]: unit_file_build_name_map: alias: /lib/systemd/system/dbus-org.freedesktop.login1.service → systemd-logind.service
+2023-04-11T23:56:51 [    9.859854] systemd[1]: unit_file_build_name_map: normal unit file: /lib/systemd/system/systemd-quotacheck.service
+2023-04-11T23:56:51 [    9.870220] systemd[1]: unit_file_build_name_map: normal unit file: /lib/systemd/system/systemd-pstore.service
+2023-04-11T23:56:52 [    9.880234] systemd[1]: unit_file_build_name_map: normal unit file: /lib/systemd/system/boot-complete.target
+2023-04-11T23:56:52 [    9.890165] systemd[1]: unit_file_build_name_map: alias: /lib/systemd/system/runlevel6.target → reboot.target
+2023-04-11T23:56:52 [    9.900271] systemd[1]: unit_file_build_name_map: normal unit file: /lib/systemd/system/kexec.target
+2023-04-11T23:56:52 [    9.909424] systemd[1]: unit_file_build_name_map: normal unit file: /lib/systemd/system/systemd-udevd-control.socket
+2023-04-11T23:56:52 [    9.919970] systemd[1]: unit_file_build_name_map: normal unit file: /lib/systemd/system/timers.target
+2023-04-11T23:56:52 [    9.929204] systemd[1]: unit_file_build_name_map: normal unit file: /lib/systemd/system/nfs-mountd.service
+2023-04-11T23:56:52 [    9.938883] systemd[1]: unit_file_build_name_map: normal unit file: /lib/systemd/system/first-boot-complete.target
+2023-04-11T23:56:52 [    9.949255] systemd[1]: unit_file_build_name_map: normal unit file: /lib/systemd/system/systemd-localed.service
+2023-04-11T23:56:52 [    9.959363] systemd[1]: unit_file_build_name_map: normal unit file: /lib/systemd/system/systemd-udevd.service
+2023-04-11T23:56:52 [    9.969304] systemd[1]: unit_file_build_name_map: normal unit file: /lib/systemd/system/systemd-timedated.service
+2023-04-11T23:56:52 [    9.979583] systemd[1]: unit_file_build_name_map: normal unit file: /lib/systemd/system/halt.target
+2023-04-11T23:56:52 [    9.988648] systemd[1]: unit_file_build_name_map: normal unit file: /lib/systemd/system/user@.service
+2023-04-11T23:56:52 [    9.997887] systemd[1]: unit_file_build_name_map: normal unit file: /lib/systemd/system/emergency.service
+2023-04-11T23:56:52 [   10.007471] systemd[1]: unit_file_build_name_map: normal unit file: /lib/systemd/system/kmod-static-nodes.service
+2023-04-11T23:56:52 [   10.017748] systemd[1]: unit_file_build_name_map: normal unit file: /lib/systemd/system/initrd-root-device.target
+2023-04-11T23:56:52 [   10.028028] systemd[1]: unit_file_build_name_map: normal unit file: /lib/systemd/system/sys-kernel-debug.mount
+2023-04-11T23:56:52 [   10.038045] systemd[1]: unit_file_build_name_map: normal unit file: /lib/systemd/system/systemd-tmpfiles-clean.service
+2023-04-11T23:56:52 [   10.048854] systemd[1]: unit_file_build_name_map: alias: /lib/systemd/system/runlevel2.target → multi-user.target
+2023-04-11T23:56:52 [   10.059305] systemd[1]: unit_file_build_name_map: normal unit file: /lib/systemd/system/rescue.service
+2023-04-11T23:56:52 [   10.068626] systemd[1]: unit_file_build_name_map: normal unit file: /lib/systemd/system/systemd-halt.service
+2023-04-11T23:56:52 [   10.078489] systemd[1]: unit_file_build_name_map: normal unit file: /lib/systemd/system/var-volatile-lib.service
+2023-04-11T23:56:52 [   10.088686] systemd[1]: unit_file_build_name_map: normal unit file: /lib/systemd/system/dbus.socket
+2023-04-11T23:56:52 [   10.447063] random: systemd: uninitialized urandom read (16 bytes read)
+2023-04-11T23:56:52 [[0;32m  OK  [0m] Created slice [0;1;39mSlice /system/getty[0m.
+2023-04-11T23:56:52 [   10.501374] random: systemd: uninitialized urandom read (16 bytes read)
+2023-04-11T23:56:52 [[0;32m  OK  [0m] Created slice [0;1;39mSlice /system/modprobe[0m.
+2023-04-11T23:56:52 [   10.525304] random: systemd: uninitialized urandom read (16 bytes read)
+2023-04-11T23:56:52 [[0;32m  OK  [0m] Created slice [0;1;39mSlice /system/serial-getty[0m.
+2023-04-11T23:56:52 [[0;32m  OK  [0m] Created slice [0;1;39mUser and Session Slice[0m.
+2023-04-11T23:56:52 [[0;32m  OK  [0m] Started [0;1;39mDispatch Password …ts to Console Directory Watch[0m.
+2023-04-11T23:56:52 [[0;32m  OK  [0m] Started [0;1;39mForward Password R…uests to Wall Directory Watch[0m.
+2023-04-11T23:56:52 [[0;32m  OK  [0m] Reached target [0;1;39mPath Units[0m.
+2023-04-11T23:56:52 [[0;32m  OK  [0m] Reached target [0;1;39mRemote File Systems[0m.
+2023-04-11T23:56:52 [[0;32m  OK  [0m] Reached target [0;1;39mSlice Units[0m.
+2023-04-11T23:56:52 [[0;32m  OK  [0m] Reached target [0;1;39mSwaps[0m.
+2023-04-11T23:56:52 [[0;32m  OK  [0m] Listening on [0;1;39mRPCbind Server Activation Socket[0m.
+2023-04-11T23:56:52 [[0;32m  OK  [0m] Reached target [0;1;39mRPC Port Mapper[0m.
+2023-04-11T23:56:52 [[0;32m  OK  [0m] Listening on [0;1;39mSyslog Socket[0m.
+2023-04-11T23:56:52 [[0;32m  OK  [0m] Listening on [0;1;39minitctl Compatibility Named Pipe[0m.
+2023-04-11T23:56:52 [[0;32m  OK  [0m] Listening on [0;1;39mJournal Audit Socket[0m.
+2023-04-11T23:56:52 [[0;32m  OK  [0m] Listening on [0;1;39mJournal Socket (/dev/log)[0m.
+2023-04-11T23:56:52 [[0;32m  OK  [0m] Listening on [0;1;39mJournal Socket[0m.
+2023-04-11T23:56:52 [[0;32m  OK  [0m] Listening on [0;1;39mNetwork Service Netlink Socket[0m.
+2023-04-11T23:56:52 [[0;32m  OK  [0m] Listening on [0;1;39mudev Control Socket[0m.
+2023-04-11T23:56:52 [[0;32m  OK  [0m] Listening on [0;1;39mudev Kernel Socket[0m.
+2023-04-11T23:56:52 [[0;32m  OK  [0m] Listening on [0;1;39mUser Database Manager Socket[0m.
+2023-04-11T23:56:52          Mounting [0;1;39mHuge Pages File System[0m...
+2023-04-11T23:56:52          Mounting [0;1;39mPOSIX Message Queue File System[0m...
+2023-04-11T23:56:52          Mounting [0;1;39mKernel Debug File System[0m...
+2023-04-11T23:56:52          Mounting [0;1;39mTemporary Directory /tmp[0m...
+2023-04-11T23:56:53          Starting [0;1;39mLoad Kernel Module configfs[0m...
+2023-04-11T23:56:53          Starting [0;1;39mLoad Kernel Module drm[0m...
+2023-04-11T23:56:53          Starting [0;1;39mLoad Kernel Module fuse[0m...
+2023-04-11T23:56:53          Starting [0;1;39mRPC Bind[0m...
+2023-04-11T23:56:53          Starting [0;1;39mFile System Check on Root Device[0m...
+2023-04-11T23:56:53          Mounting [0;1;39mNFSD configuration filesystem[0m...
+2023-04-11T23:56:53          Starting [0;1;39mApply Kernel Variables[0m...
+2023-04-11T23:56:53          Starting [0;1;39mColdplug All udev Devices[0m...
+2023-04-11T23:56:53 [[0;32m  OK  [0m] Mounted [0;1;39mHuge Pages File System[0m.
+2023-04-11T23:56:53 [[0;32m  OK  [0m] Mounted [0;1;39mPOSIX Message Queue File System[0m.
+2023-04-11T23:56:53 [[0;32m  OK  [0m] Mounted [0;1;39mKernel Debug File System[0m.
+2023-04-11T23:56:53 [[0;32m  OK  [0m] Mounted [0;1;39mTemporary Directory /tmp[0m.
+2023-04-11T23:56:53 [[0;32m  OK  [0m] Finished [0;1;39mLoad Kernel Module configfs[0m.
+2023-04-11T23:56:53 [[0;32m  OK  [0m] Finished [0;1;39mLoad Kernel Module drm[0m.
+2023-04-11T23:56:53 [[0;32m  OK  [0m] Finished [0;1;39mLoad Kernel Module fuse[0m.
+2023-04-11T23:56:53 [[0;1;31mFAILED[0m] Failed to mount [0;1;39mNFSD configuration filesystem[0m.
+2023-04-11T23:56:53 See 'systemctl status proc-fs-nfsd.mount' for details.
+2023-04-11T23:56:53 [[0;1;38;5;185mDEPEND[0m] Dependency failed for [0;1;39mNFS Mount Daemon[0m.
+2023-04-11T23:56:53 [[0;1;38;5;185mDEPEND[0m] Dependency failed for [0;1;39mNFS server and services[0m.
+2023-04-11T23:56:53          Mounting [0;1;39mKernel Configuration File System[0m...
+2023-04-11T23:56:53 [[0;32m  OK  [0m] Mounted [0;1;39mKernel Configuration File System[0m.
+2023-04-11T23:56:53 [[0;32m  OK  [0m] Finished [0;1;39mApply Kernel Variables[0m.
+2023-04-11T23:56:53 [[0;32m  OK  [0m] Started [0;1;39mRPC Bind[0m.
+2023-04-11T23:56:53 [[0;32m  OK  [0m] Finished [0;1;39mFile System Check on Root Device[0m.
+2023-04-11T23:56:53          Starting [0;1;39mRemount Root and Kernel File Systems[0m...
+2023-04-11T23:56:53 [   11.630995] EXT4-fs (mmcblk0p2): re-mounted. Opts: (null). Quota mode: none.
+2023-04-11T23:56:53 [[0;32m  OK  [0m] Finished [0;1;39mRemount Root and Kernel File Systems[0m.
+2023-04-11T23:56:53          Starting [0;1;39mCreate System Users[0m...
+2023-04-11T23:56:53 [[0;32m  OK  [0m] Finished [0;1;39mCreate System Users[0m.
+2023-04-11T23:56:53          Starting [0;1;39mCreate Static Device Nodes in /dev[0m...
+2023-04-11T23:56:53 [[0;32m  OK  [0m] Finished [0;1;39mColdplug All udev Devices[0m.
+2023-04-11T23:56:53 [[0;32m  OK  [0m] Finished [0;1;39mCreate Static Device Nodes in /dev[0m.
+2023-04-11T23:56:54 [[0;32m  OK  [0m] Reached target [0;1;39mPreparation for Local File Systems[0m.
+2023-04-11T23:56:54          Mounting [0;1;39m/var/volatile[0m...
+2023-04-11T23:56:54 [[0;32m  OK  [0m] Started [0;1;39mEntropy Daemon based on the HAVEGE algorithm[0m.
+2023-04-11T23:56:54          Starting [0;1;39mJournal Service[0m...
+2023-04-11T23:56:54          Starting [0;1;39mRule-based Manage…for Device Events and Files[0m...
+2023-04-11T23:56:54 [[0;32m  OK  [0m] Mounted [0;1;39m/var/volatile[0m.
+2023-04-11T23:56:54          Starting [0;1;39mLoad/Save Random Seed[0m...
+2023-04-11T23:56:54 [[0;32m  OK  [0m] Reached target [0;1;39mLocal File Systems[0m.
+2023-04-11T23:56:54 [   12.019788] systemd-journald[283]: Auditing in kernel turned on.
+2023-04-11T23:56:54          Starting [0;1;39mRebuild Dynamic Linker Cache[0m...
+2023-04-11T23:56:54 [   12.027911] systemd-journald[283]: Journal effective settings seal=no keyed_hash=yes compress=yes compress_threshold_bytes=512B
+2023-04-11T23:56:54 [   12.043502] systemd-journald[283]: Fixed min_use=15.7M max_use=64.0M max_size=8.0M min_size=512.0K keep_free=39.3M n_max_files=100
+2023-04-11T23:56:54 [   12.055414] systemd-journald[283]: Reserving 333 entries in field hash table.
+2023-04-11T23:56:54 [   12.068513] systemd-journald[283]: Reserving 14563 entries in data hash table.
+2023-04-11T23:56:54 [   12.076030] systemd-journald[283]: Vacuuming...
+2023-04-11T23:56:54 [   12.080629] systemd-journald[283]: Vacuuming done, freed 0B of archived journals from /run/log/journal/aa1a457f23ae4beb843732b219d2c3d0.
+2023-04-11T23:56:54 [   12.092938] systemd-journald[283]: Flushing /dev/kmsg...
+2023-04-11T23:56:54 [   12.201413] systemd-journald[283]: systemd-journald running as PID 283 for the system.
+2023-04-11T23:56:54 [   12.210195] systemd-journald[283]: Sent READY=1 notification.
+2023-04-11T23:56:54 [   12.216044] systemd-journald[283]: Sent WATCHDOG=1 notification.
+2023-04-11T23:56:54 [[0;32m  OK  [0m] Started [0;1;39mJournal Service[0m.
+2023-04-11T23:56:54 [   12.223138] systemd-journald[283]: Successfully sent stream file descriptor to service manager.
+2023-04-11T23:56:54 [   12.237123] systemd-journald[283]: Successfully sent stream file descriptor to service manager.
+2023-04-11T23:56:54 [   12.246775] systemd-journald[283]: Successfully sent stream file descriptor to service manager.
+2023-04-11T23:56:54 [   12.256333] systemd-journald[283]: Successfully sent stream file descriptor to service manager.
+2023-04-11T23:56:54 [   12.265951] systemd-journald[283]: Successfully sent stream file descriptor to service manager.
+2023-04-11T23:56:54 [   12.275549] systemd-journald[283]: Successfully sent stream file descriptor to service manager.
+2023-04-11T23:56:54          Starting [0;1;39mFlush Journal to Persistent Storage[0[   12.285198] systemd-journald[283]: Successfully sent stream file descriptor to service manager.
+2023-04-11T23:56:54 m...
+2023-04-11T23:56:54 [   12.300342] systemd-journald[283]: Successfully sent stream file descriptor to service manager.
+2023-04-11T23:56:54 [   12.309902] systemd-journald[283]: Successfully sent stream file descriptor to service manager.
+2023-04-11T23:56:54 [   12.320068] systemd-journald[283]: Successfully sent stream file descriptor to service manager.
+2023-04-11T23:56:54 [   12.329750] systemd-journald[283]: Successfully sent stream file descriptor to service manager.
+2023-04-11T23:56:54 [   12.338538] systemd-journald[283]: varlink: New incoming connection.
+2023-04-11T23:56:54 [   12.344952] systemd-journald[283]: varlink-20: Setting state idle-server
+2023-04-11T23:56:54 [   12.351954] systemd-journald[283]: varlink-20: New incoming message: {\"method\":\"io.systemd.Journal.FlushToVar\",\"parameters\":{}}
+2023-04-11T23:56:54 [   12.363576] systemd-journald[283]: varlink-20: Changing state idle-server → processing-method
+2023-04-11T23:56:54 [   12.372299] systemd-journald[283]: Received client request to flush runtime journal.
+2023-04-11T23:56:54 [   12.380175] systemd-journald[283]: Vacuuming...
+2023-04-11T23:56:54 [   12.384794] systemd-journald[283]: Vacuuming done, freed 0B of archived journals from /run/log/journal/aa1a457f23ae4beb843732b219d2c3d0.
+2023-04-11T23:56:54 [   12.397421] systemd-journald[283]: varlink-20: Sending message: {\"parameters\":{}}
+2023-04-11T23:56:54 [   12.404929] systemd-journald[283]: varlink-20: Changing state processing-method → processed-method
+2023-04-11T23:56:54 [   12.414086] systemd-journald[283]: varlink-20: Changing state processed-method → idle-server
+2023-04-11T23:56:54 [   12.423363] systemd-journald[283]: varlink-20: Got POLLHUP from socket.
+2023-04-11T23:56:54 [   12.430126] systemd-journald[283]: varlink-20: Changing state idle-server → pending-disconnect
+2023-04-11T23:56:54 [   12.439027] systemd-journald[283]: varlink-20: Changing state pending-disconnect → processing-disconnect
+2023-04-11T23:56:54 [[0;32m  OK  [0m] Finished [0;1;39mFlush Journal to Persistent[   12.448767] systemd-journald[283]: varlink-20: Changing state processing-disconnect → disconnected
+2023-04-11T23:56:54  Storage[0m.
+2023-04-11T23:56:54 [   12.464571] systemd-journald[283]: Successfully sent stream file descriptor to service manager.
+2023-04-11T23:56:54 [   12.474300] systemd-journald[283]: Successfully sent stream file descriptor to service manager.
+2023-04-11T23:56:54 [   12.483980] systemd-journald[283]: Successfully sent stream file descriptor to service manager.
+2023-04-11T23:56:54 [   12.493567] systemd-journald[283]: Successfully sent stream file descriptor to service manager.
+2023-04-11T23:56:54 [   12.502858] systemd-journald[283]: Successfully sent stream file descriptor to service manager.
+2023-04-11T23:56:54 [   12.512062] systemd-journald[283]: Successfully sent stream file descriptor to service manager.
+2023-04-11T23:56:54 [   12.521604] systemd-journald[283]: Successfully sent stream file descriptor to service manager.
+2023-04-11T23:56:54          Starting [0;1;39mCreate Volatile Files and Directories[   12.531823] systemd-journald[283]: Successfully sent stream file descriptor to service manager.
+2023-04-11T23:56:54 [0m...
+2023-04-11T23:56:54 [   12.545618] systemd-journald[283]: Successfully sent stream file descriptor to service manager.
+2023-04-11T23:56:54 [   12.554943] systemd-journald[283]: Successfully sent stream file descriptor to service manager.
+2023-04-11T23:56:54 [   12.564074] systemd-journald[283]: Successfully sent stream file descriptor to service manager.
+2023-04-11T23:56:54 [   12.573171] systemd-journald[283]: Successfully sent stream file descriptor to service manager.
+2023-04-11T23:56:54 [   12.582297] systemd-journald[283]: Successfully sent stream file descriptor to service manager.
+2023-04-11T23:56:54 [[0;32m  OK  [0m] Finished [0;1;39mCreate Volatile Files and Directories[0m.
+2023-04-11T23:56:54          Starting [0;1;39mRebuild Journal Catalog[0m...
+2023-04-11T23:56:54 [   12.630160] systemd-journald[283]: Successfully sent stream file descriptor to service manager.
+2023-04-11T23:56:54          Starting [0;1;39mNetwork Time Synchronization[0m...
+2023-04-11T23:56:54 [   12.656507] systemd-journald[283]: Successfully sent stream file descriptor to service manager.
+2023-04-11T23:56:54          Starting [0;1;39mRecord System Boot/Shutdown in UTMP[0[   12.682806] systemd-journald[283]: Successfully sent stream file descriptor to service manager.
+2023-04-11T23:56:54 m...
+2023-04-11T23:56:54 [[0;32m  OK  [0m] Started [0;1;39mRule-based Manager for Device Events and Files[0m.
+2023-04-11T23:56:55          Starting [0;1;39mNetwork Configuration[0m...
+2023-04-11T23:56:55 [   12.916793] systemd-journald[283]: Successfully sent stream file descriptor to service manager.
+2023-04-11T23:56:55 [[0;32m  OK  [0m] Finished [0;1;39mRecord System Boot/Shutdown in UTMP[0m.
+2023-04-11T23:56:55 [   12.973826] random: crng init done
+2023-04-11T23:56:55 [   12.977268] random: 6 urandom warning(s) missed due to ratelimiting
+2023-04-11T23:56:55 [[0;32m  OK  [0m] Finished [0;1;39mLoad/Save Random Seed[0m.
+2023-04-11T23:56:55          Starting [0;1;39mCommit a transient machine-id on disk[   13.123535] systemd-journald[283]: Successfully sent stream file descriptor to service manager.
+2023-04-11T23:56:55 [0m...
+2023-04-11T23:56:55 [[0;32m  OK  [0m] Started [0;1;39mNetwork Time Synchronization[0m.
+2023-04-11T23:56:55 [[0;32m  OK  [0m] Finished [0;1;39mRebuild Journal Catalog[0m.
+2023-04-11T23:56:55 [[0;32m  OK  [0m] Reached target [0;1;39mSystem Time Set[0m.
+2023-04-11T23:56:55 [   13.555600] systemd-journald[283]: Data hash table of /run/log/journal/aa1a457f23ae4beb843732b219d2c3d0/system.journal has a fill level at 75.0 (10923 of 14563 items, 8388608 file size, 767 bytes per hash table item), suggesting rotation.
+2023-04-11T23:56:55 [   13.576775] systemd-journald[283]: /run/log/journal/aa1a457f23ae4beb843732b219d2c3d0/system.journal: Journal header limits reached or header out-of-date, rotating.
+2023-04-11T23:56:55 [   13.591399] systemd-journald[283]: Rotating...
+2023-04-11T23:56:55 [   13.596190] systemd-journald[283]: Reserving 333 entries in field hash table.
+2023-04-11T23:56:55 [   13.609296] systemd-journald[283]: Reserving 14563 entries in data hash table.
+2023-04-11T23:56:55 [   13.616919] systemd-journald[283]: Vacuuming...
+2023-04-11T23:56:55 [   13.621625] systemd-journald[283]: Vacuuming done, freed 0B of archived journals from /run/log/journal/aa1a457f23ae4beb843732b219d2c3d0.
+2023-04-11T23:56:55 [[0;32m  OK  [0m] Finished [0;1;39mCommit a transient machine-id on disk[0m.
+2023-04-11T23:56:56 [[0;32m  OK  [0m] Finished [0;1;39mRebuild Dynamic Linker Cache[0m.
+2023-04-11T23:56:56 [   14.006056] systemd-journald[283]: Successfully sent stream file descriptor to service manager.
+2023-04-11T23:56:56          Starting [0;1;39mUpdate is Completed[0m...
+2023-04-11T23:56:56 [[0;32m  OK  [0m] Started [0;1;39mNetwork Configuration[0m.
+2023-04-11T23:56:56 [[0;32m  OK  [0m] Finished [0;1;39mUpdate is Completed[0m.
+2023-04-11T23:56:56 [[0;32m  OK  [0m] Reached target [0;1;39mSystem Initialization[0m.
+2023-04-11T23:56:56 [[0;32m  OK  [0m] Started [0;1;39mDaily Cleanup of Temporary Directories[0m.
+2023-04-11T23:56:56 [[0;32m  OK  [0m] Reached target [0;1;39mTimer Units[0m.
+2023-04-11T23:56:56 [[0;32m  OK  [0m] Listening on [0;1;39mD-Bus System Message Bus Socket[0m.
+2023-04-11T23:56:56 [[0;32m  OK  [0m] Listening on [0;1;39mdropbear.socket[0m.
+2023-04-11T23:56:56 [[0;32m  OK  [0m] Reached target [0;1;39mSocket Units[0m.
+2023-04-11T23:56:56 [[0;32m  OK  [0m] Reached target [0;1;39mBasic System[0m.
+2023-04-11T23:56:56 [   14.242524] systemd-journald[283]: Successfully sent stream file descriptor to service manager.
+2023-04-11T23:56:56 [[0;32m  OK  [0m] Started [0;1;39mKernel Logging Service[0m.
+2023-04-11T23:56:56 [   14.315978] systemd-journald[283]: Successfully sent stream file descriptor to service manager.
+2023-04-11T23:56:56 [[0;32m  OK  [0m] Started [0;1;39mSystem Logging Service[0m.
+2023-04-11T23:56:56 [   14.351151] systemd-journald[283]: Successfully sent stream file descriptor to service manager.
+2023-04-11T23:56:56 [[0;32m  OK  [0m] Started [0;1;39mD-Bus System Message Bus[0m.
+2023-04-11T23:56:56          Starting [0;1;39mLSB: NFS support for both client and s[   14.405373] systemd-journald[283]: Successfully sent stream file descriptor to service manager.
+2023-04-11T23:56:56 erver[0m...
+2023-04-11T23:56:56          Starting [0;1;39mUser Login Management[0m...
+2023-04-11T23:56:56 [   14.442001] systemd-journald[283]: Successfully sent stream file descriptor to service manager.
+2023-04-11T23:56:56          Starting [0;1;39mNetwork Name Resolution[0m...
+2023-04-11T23:56:56 [   14.478173] systemd-journald[283]: Successfully sent stream file descriptor to service manager.
+2023-04-11T23:56:56 [[0;32m  OK  [0m] Reached target [0;1;39mSound Card[0m.
+2023-04-11T23:56:56 [   14.790780] macb ff0e0000.ethernet eth0: PHY [ff0e0000.ethernet-ffffffff:0c] driver [TI DP83867] (irq=POLL)
+2023-04-11T23:56:56 [   14.800588] macb ff0e0000.ethernet eth0: configuring for phy/rgmii-id link mode
+2023-04-11T23:56:56 [   14.808676] pps pps0: new PPS source ptp0
+2023-04-11T23:56:56 [   14.812878] macb ff0e0000.ethernet: gem-ptp-timer ptp clock registered.
+2023-04-11T23:56:56 [   14.814062] systemd-journald[283]: Data hash table of /run/log/journal/aa1a457f23ae4beb843732b219d2c3d0/system.journal has a fill level at 75.0 (10924 of 14563 items, 8388608 file size, 767 bytes per hash table item), suggesting rotation.
+2023-04-11T23:56:56 [   14.840662] systemd-journald[283]: /run/log/journal/aa1a457f23ae4beb843732b219d2c3d0/system.journal: Journal header limits reached or header out-of-date, rotating.
+2023-04-11T23:56:56 [   14.855348] systemd-journald[283]: Rotating...
+2023-04-11T23:56:56 [   14.860163] systemd-journald[283]: Reserving 333 entries in field hash table.
+2023-04-11T23:56:56 [   14.873296] systemd-journald[283]: Reserving 14563 entries in data hash table.
+2023-04-11T23:56:57 [   14.882615] systemd-journald[283]: Vacuuming...
+2023-04-11T23:56:57 [   14.887410] systemd-journald[283]: Vacuuming done, freed 0B of archived journals from /run/log/journal/aa1a457f23ae4beb843732b219d2c3d0.
+2023-04-11T23:56:57 [[0;32m  OK  [0m] Started [0;1;39mLSB: NFS support for both client and server[0m.
+2023-04-11T23:56:57          Starting [0;1;39minetd.busybox.service[0m...
+2023-04-11T23:56:57 [   15.013164] systemd-journald[283]: Successfully sent stream file descriptor to service manager.
+2023-04-11T23:56:57          Starting [0;1;39mLSB: Kernel NFS server support[0m...[   15.032401] systemd-journald[283]: Successfully sent stream file descriptor to service manager.
+2023-04-11T23:56:57 
+2023-04-11T23:56:57 [[0;32m  OK  [0m] Started [0;1;39minetd.busybox.service[0m.
+2023-04-11T23:56:57 [[0;1;31mFAILED[0m] Failed to start [0;1;39mLSB: Kernel NFS server support[0m.
+2023-04-11T23:56:57 See 'systemctl status nfsserver.service' for details.
+2023-04-11T23:56:57 [[0;32m  OK  [0m] Started [0;1;39mUser Login Management[0m.
+2023-04-11T23:56:57 [[0;32m  OK  [0m] Started [0;1;39mNetwork Name Resolution[0m.
+2023-04-11T23:56:57 [[0;32m  OK  [0m] Reached target [0;1;39mNetwork[0m.
+2023-04-11T23:56:57 [[0;32m  OK  [0m] Reached target [0;1;39mHost and Network Name Lookups[0m.
+2023-04-11T23:56:57 [   15.617618] systemd-journald[283]: Successfully sent stream file descriptor to service manager.
+2023-04-11T23:56:57 [[0;32m  OK  [0m] Started [0;1;39mNFS status monitor for NFSv2/3 locking.[0m.
+2023-04-11T23:56:57 [   15.672319] systemd-journald[283]: Successfully sent stream file descriptor to service manager.
+2023-04-11T23:56:57 [   15.682364] systemd[1]: Sent message type=signal sender=n/a destination=n/a path=/org/freedesktop/systemd1/unit/systemd_2duser_2dsessions_2eservice interface=org.freedesktop.DBus.Properties member=PropertiesChanged cookie=49 reply_cookie=0 signature=sa{sv}as error-name=n/a error-message=n/a
+2023-04-11T23:56:57          Starting [0;1;39mPermit User Sessions[0m...
+2023-04-11T23:56:57          Starting [0;1;39mTarget Communication Framework agent[[   15.732337] systemd-journald[283]: Successfully sent stream file descriptor to service manager.
+2023-04-11T23:56:57 0m...
+2023-04-11T23:56:57 [[0;32m  OK  [0m] Finished [0;1;39mPermit User Sessions[0m.
+2023-04-11T23:56:58 [   16.115845] systemd-journald[283]: Data hash table of /run/log/journal/aa1a457f23ae4beb843732b219d2c3d0/system.journal has a fill level at 75.0 (10925 of 14563 items, 8388608 file size, 767 bytes per hash table item), suggesting rotation.
+2023-04-11T23:56:58 [   16.137013] systemd-journald[283]: /run/log/journal/aa1a457f23ae4beb843732b219d2c3d0/system.journal: Journal header limits reached or header out-of-date, rotating.
+2023-04-11T23:56:58 [   16.151645] systemd-journald[283]: Rotating...
+2023-04-11T23:56:58 [   16.153252] systemd[1]: dev.mount: Failed to load configuration: No such file or directory
+2023-04-11T23:56:58 [   16.156417] systemd-journald[283]: Reserving 333 entries in field hash table.
+2023-04-11T23:56:58 [   16.177334] systemd[1]: dev-rfkill.mount: Failed to load configuration: No such file or directory
+2023-04-11T23:56:58 [   16.177530] systemd-journald[283]: Reserving 14563 entries in data hash table.
+2023-04-11T23:56:58 [   16.193746] systemd-journald[283]: Vacuuming...
+2023-04-11T23:56:58 [   16.198602] systemd-journald[283]: Vacuuming done, freed 0B of archived journals from /run/log/journal/aa1a457f23ae4beb843732b219d2c3d0.
+2023-04-11T23:56:58 [[0;32m  OK  [0m] Started [0;1;39mTarget Communication Framework agent[0m.
+2023-04-11T23:56:58 [[0;32m  OK  [0m] Listening on [0;1;39mLoad/Save RF …itch Status /dev/rfkill Watch[0m.
+2023-04-11T23:56:58 [[0;32m  OK  [0m] Started [0;1;39mGetty on tty1[0m.
+2023-04-11T23:56:58 [[0;32m  OK  [0m] Started [0;1;39mSerial Getty on ttyPS0[0m.
+2023-04-11T23:56:58 [[0;32m  OK  [0m] Reached target [0;1;39mLogin Prompts[0m.
+2023-04-11T23:56:58 [[0;32m  OK  [0m] Reached target [0;1;39mMulti-User System[0m.
+2023-04-11T23:56:58 [   16.446680] systemd-journald[283]: Successfully sent stream file descriptor to service manager.
+2023-04-11T23:56:58          Starting [0;1;39mRecord Runlevel Change in UTMP[0m...
+2023-04-11T23:56:58 [[0;32m  OK  [0m] Finished [0;1;39mRecord Runlevel Change in UTMP[0m.
+2023-04-11T23:56:58 [   16.577485] systemd-journald[283]: Successfully sent stream file descriptor to service manager.
+2023-04-11T23:56:58 [   16.588865] systemd-journald[283]: Successfully sent stream file descriptor to service manager.
+2023-04-11T23:56:59 [   17.229876] systemd-journald[283]: Data hash table of /run/log/journal/aa1a457f23ae4beb843732b219d2c3d0/system.journal has a fill level at 75.0 (10923 of 14563 items, 8388608 file size, 767 bytes per hash table item), suggesting rotation.
+2023-04-11T23:56:59 [   17.251105] systemd-journald[283]: /run/log/journal/aa1a457f23ae4beb843732b219d2c3d0/system.journal: Journal header limits reached or header out-of-date, rotating.
+2023-04-11T23:56:59 [   17.253234] systemd[1]: dev-ttyb5.device: Changed dead -> plugged
+2023-04-11T23:56:59 [   17.265726] systemd-journald[283]: Rotating...
+2023-04-11T23:56:59 [   17.276603] systemd-journald[283]: Reserving 333 entries in field hash table.
+2023-04-11T23:56:59 [   17.285241] systemd[1]: sys-devices-virtual-tty-ttyb5.device: Changed dead -> plugged
+2023-04-11T23:56:59 [   17.289706] systemd-journald[283]: Reserving 14563 entries in data hash table.
+2023-04-11T23:56:59 [   17.301553] systemd-journald[283]: Vacuuming...
+2023-04-11T23:56:59 [   17.306452] systemd-journald[283]: Vacuuming done, freed 0B of archived journals from /run/log/journal/aa1a457f23ae4beb843732b219d2c3d0.
+2023-04-11T23:56:59 [   17.309231] systemd[1]: Sent message type=signal sender=n/a destination=n/a path=/org/freedesktop/systemd1 interface=org.freedesktop.systemd1.Manager member=UnitNew cookie=226 reply_cookie=0 signature=so error-name=n/a error-message=n/a
+2023-04-11T23:56:59 
+2023-04-11T23:56:59 PetaLinux 2022.2_dev zcu102-zynqmp ttyPS0
+2023-04-11T23:56:59 
+2023-04-11T23:56:59 Matched prompt #10: login:
+2023-04-11T23:56:59 {'case': 'kernel-messages', 'definition': 'lava', 'duration': '18.02', 'extra': {'extra': []}, 'level': '2.3.1', 'namespace': 'common', 'result': 'pass'}
+2023-04-11T23:56:59 Sending username root
+2023-04-11T23:56:59 root
+2023-04-11T23:56:59 zcu102-zynqmp login: root
+2023-04-11T23:56:59 Setting prompt string to ['petalinux@(.*):[/~]\\$', 'zcu102-zynqmp:[/~]\\$', 'root@(.*):[/~]#']
+2023-04-11T23:56:59 login-action: Wait for prompt ['petalinux@(.*):[/~]\\$', 'zcu102-zynqmp:[/~]\\$', 'root@(.*):[/~]#', 'Login incorrect', 'Login timed out'] (timeout 00:09:07)
+2023-04-11T23:56:59 root
+2023-04-11T23:56:59 root
+2023-04-11T23:57:00 [   18.280989] systemd-journald[283]: Successfully sent stream file descriptor to service manager.
+2023-04-11T23:57:00 [   18.534394] systemd-journald[283]: Successfully sent stream file descriptor to service manager.
+2023-04-11T23:57:00 [   18.563058] systemd-journald[283]: Successfully sent stream file descriptor to service manager.
+2023-04-11T23:57:00 [   18.576182] audit: type=1006 audit(1681257420.663:2): pid=365 uid=0 old-auid=4294967295 auid=0 tty=(none) old-ses=4294967295 ses=1 res=1
+2023-04-11T23:57:00 [   18.588553] audit: type=1300 audit(1681257420.663:2): arch=c00000b7 syscall=64 success=yes exit=1 a0=8 a1=ffffe9912300 a2=1 a3=ffffbc5de6b0 items=0 ppid=1 pid=365 auid=0 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=(none) ses=1 comm=\"(systemd)\" exe=\"/lib/systemd/systemd\" key=(null)
+2023-04-11T23:57:00 [   18.614858] audit: type=1327 audit(1681257420.663:2): proctitle=\"(systemd)\"
+2023-04-11T23:57:01 [   18.890963] macb ff0e0000.ethernet eth0: Link is Up - 1Gbps/Full - flow control off
+2023-04-11T23:57:01 [   18.898665] IPv6: ADDRCONF(NETDEV_CHANGE): eth0: link becomes ready
+2023-04-11T23:57:02 [   20.017206] systemd-journald[283]: Successfully sent stream file descriptor to service manager.
+2023-04-11T23:57:02 Matched 2 root@(.*):[/~]#
+2023-04-11T23:57:02 Setting prompt string to ['petalinux@(.*):[/~]\\$', 'zcu102-zynqmp:[/~]\\$', 'root@(.*):[/~]#']
+2023-04-11T23:57:02 Running login commands
+2023-04-11T23:57:02 ls -l /
+2023-04-11T23:57:02 7[r[999;999H[6n8root@zcu102-zynqmp:~# ls -l /
+2023-04-11T23:57:02 ls -l /
+2023-04-11T23:57:02 ls -l /
+2023-04-11T23:57:02 total 60
+2023-04-11T23:57:02 drwxr-xr-x    2 root     root          4096 Apr 11 22:08 bin
+2023-04-11T23:57:02 drwxr-xr-x    3 root     root          4096 Apr 11 22:08 boot
+2023-04-11T23:57:02 drwxr-xr-x   15 root     root         14760 Apr 11 23:56 dev
+2023-04-11T23:57:02 drwxrwxr-x   36 root     root          4096 Apr 11 23:56 etc
+2023-04-11T23:57:02 drwxr-xr-x    4 root     root          4096 Apr 11 22:08 home
+2023-04-11T23:57:02 lrwxrwxrwx    1 root     root            10 Apr 11 22:08 init -> /sbin/init
+2023-04-11T23:57:02 drwxr-xr-x    8 root     root          4096 Apr 11 22:08 lib
+2023-04-11T23:57:02 drwx------    2 root     root         16384 Apr 11 22:08 lost+found
+2023-04-11T23:57:02 drwxr-xr-x    2 root     root          4096 Apr 11 22:08 media
+2023-04-11T23:57:02 drwxr-xr-x    2 root     root          4096 Apr 11 22:08 mnt
+2023-04-11T23:57:02 dr-xr-xr-x  197 root     root             0 Apr 11 23:56 proc
+2023-04-11T23:57:02 drwxr-xr-x   12 root     root           460 Apr 11 23:56 run
+2023-04-11T23:57:02 drwxr-xr-x    2 root     root          4096 Apr 11 22:08 sbin
+2023-04-11T23:57:02 drwxr-xr-x    2 root     root          4096 Apr 11 22:08 srv
+2023-04-11T23:57:02 dr-xr-xr-x   13 root     root             0 Apr 11 23:56 sys
+2023-04-11T23:57:02 drwxrwxrwt   10 root     root           200 Apr 11 23:57 tmp
+2023-04-11T23:57:02 drwxr-xr-x   10 root     root          4096 Apr 11 22:08 usr
+2023-04-11T23:57:02 drwxr-xr-x    8 root     root          4096 Apr 11 23:56 var
+2023-04-11T23:57:02 root@zcu102-zynqmp:~# 
+2023-04-11T23:57:02 stty 115200 </dev/ttyPS1
+2023-04-11T23:57:02 stty 115200 </dev/ttyPS1
+2023-04-11T23:57:02 root@zcu102-zynqmp:~# stty 115200 </dev/ttyPS1
+2023-04-11T23:57:02 echo "HELLO from the 2nd UART" >/dev/ttyPS1
+2023-04-11T23:57:02 echo \"HELLO from the 2nd UART\" >/dev/ttyPS1
+2023-04-11T23:57:02 stty 115200 </dev/ttyPS1
+2023-04-11T23:57:02 root@zcu102-zynqmp:~# 
+2023-04-11T23:57:02 root@zcu102-zynqmp:~# echo \"HELLO from the 2nd UART\" >/dev/ttyPS1
+2023-04-11T23:57:02 end: 2.3.1 login-action (duration 00:00:21) [common]
+2023-04-11T23:57:02 {'case': 'login-action', 'definition': 'lava', 'duration': '20.95', 'extra': {'success': 'No kernel warnings or errors detected.'}, 'level': '2.3.1', 'namespace': 'common', 'result': 'pass'}
+2023-04-11T23:57:02 end: 2.3 auto-login-action (duration 00:00:35) [common]
+2023-04-11T23:57:02 end: 2 minimal-boot (duration 00:00:56) [common]
+2023-04-11T23:57:02 start: 3 finalize (timeout 00:55:09) [common]
+2023-04-11T23:57:02 start: 3.1 power-off (timeout 00:00:10) [common]
+2023-04-11T23:57:02 Calling: 'nice' 'relayctl' 'pwrsw1' '1' 'off'
+2023-04-11T23:57:03 Returned 0 in 0 seconds
+2023-04-11T23:57:03 end: 3.1 power-off (duration 00:00:01) [common]
+2023-04-11T23:57:03 {'case': 'power-off', 'definition': 'lava', 'duration': '0.68', 'extra': {'status': 'success'}, 'level': '3.1', 'namespace': 'common', 'result': 'pass'}
+2023-04-11T23:57:03 start: 3.2 read-feedback (timeout 00:55:08) [common]
+2023-04-11T23:57:03 Listened to connection for namespace 'common' for up to 1s
+2023-04-11T23:57:03 echo \"HELLO from the 2nd UART\" >/dev/ttyPS1
+2023-04-11T23:57:03 root@zcu102-zynqmp:~# 
+2023-04-11T23:57:03 Listened to connection for namespace 'common' for up to 1s
+2023-04-11T23:57:04 Finalising connection for namespace 'common'
+2023-04-11T23:57:04 Disconnecting from telnet: Finalise
+2023-04-11T23:57:04 ]
+2023-04-11T23:57:04 quit
+2023-04-11T23:57:04 root@zcu102-zynqmp:~# quit
+2023-04-11T23:57:04 end: 3.2 read-feedback (duration 00:00:01) [common]
+2023-04-11T23:57:04 end: 3 finalize (duration 00:00:02) [common]
+2023-04-11T23:57:04 Cleaning after the job
+2023-04-11T23:57:04 Cleaning up download directory: /var/lib/lava/dispatcher/tmp/1350/deploy-flasher-k5ohz1pu/image
+2023-04-11T23:57:04 Root tmp directory removed at /var/lib/lava/dispatcher/tmp/1350
+2023-04-11T23:57:04 Job finished correctly
+2023-04-11T23:57:04 {'case': 'job', 'definition': 'lava', 'result': 'pass'}

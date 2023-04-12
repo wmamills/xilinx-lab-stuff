@@ -15,8 +15,8 @@ actions:
     to: flasher
     images:
       image:
-        url: https://people.linaro.org/~bill.mills/xilinx-images/xilinx-2022.2-zcu102/petalinux-sdimage.wic.xz
-        compression: xz
+        url: https://people.linaro.org/~bill.mills/xilinx-images/rebuilt-2022.2-zcu102/zcu102-ext4.img.bz2
+        compression: bz2
 
 - boot:
     method: minimal
@@ -24,16 +24,12 @@ actions:
       minutes: 10
     auto_login:
       login_prompt: 'login:'
-      username: 'petalinux'
-      password_prompt: 'password:'
-      password: 'petalinux'
+      username: 'root'
       login_commands:
         - ls -l /
         - stty 115200 </dev/ttyPS1
         - echo "HELLO from the 2nd UART" >/dev/ttyPS1
     prompts:
       - petalinux@(.*):[/~]\$
-      - xilinx-zcu102-20222:[/~]\$
+      - zcu102-zynqmp:[/~]\$
       - root@(.*):[/~]#
-
-
