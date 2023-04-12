@@ -1,0 +1,22 @@
+# Boot from vfat partition w/ initrd
+
+setenv kernel_addr_r    00200000
+setenv fdt_addr_r       00100000
+setenv ramdisk_addr_r   04000000
+
+setenv devtype          mmc
+setenv devnum           0
+setenv bootpart         1
+setenv rootpart         2
+
+setenv prefix           /
+setenv kernel_name      Image-zcu102-zynqmp.bin
+setenv dtb_name         system.dtb
+setenv ramdisk_name     petalinux-hacked-image-min-zcu102.cpio.gz
+
+setenv bootargs earlycon clk_ignore_unused root=/dev/mmcblk0p2 ro rootwait earlyprintk debug uio_pdrv_genirq.of_id=generic-uio
+
+load $devtype ${devnum}:${bootpart} $kernel_addr_r  ${prefix}${kernel_name}
+load $devtype ${devnum}:${bootpart} $fdt_addr_r     ${prefix}${dtb_name}
+load $devtype ${devnum}:${bootpart} $ramdisk_addr_r ${prefix}${ramdisk_name}
+booti $kernel_addr_r $ramdisk_addr_r:$filesize $fdt_addr_r
