@@ -1,0 +1,21 @@
+# Example for TFTP where DHCP gives bootfile of zcu102/uEnv.txt
+
+bootargs=earlycon clk_ignore_unused root=/dev/mmcblk0p2 ro rootwait earlyprintk debug uio_pdrv_genirq.of_id=generic-uio
+
+prefix=zcu102/
+kernel_addr_r=00200000
+fdt_addr_r=00100000
+ramdisk_addr_r=04000000
+
+kernel_name=Image-zcu102-zynqmp.bin
+dtb_name=system.dtb
+ramdisk_name=petalinux-hacked-image-min-zcu102.cpio.gz
+
+uenvcmd=\
+tftpboot $kernel_addr_r  ${prefix}${kernel_name}; \
+tftpboot $fdt_addr_r     ${prefix}${dtb_name}; \
+\
+# this must be last so filesize is still set below \
+tftpboot $ramdisk_addr_r ${prefix}${ramdisk_name}; \
+\
+booti $kernel_addr_r $ramdisk_addr_r:$filesize $fdt_addr_r
