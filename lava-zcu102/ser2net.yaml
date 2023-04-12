@@ -1,0 +1,66 @@
+%YAML 1.1
+---
+# This is a ser2net configuration file
+# It shows the config stanzas for:
+# * Xilinx ZynqMP/Kria kv260 board
+# * Xilinx ZynqMP ZCU102 board
+
+define: &banner \r\nser2net port \p device \d [\B] (Debian GNU/Linux)\r\n\r\n
+
+#########################
+# Other Boards
+#########################
+
+######################### ZCU102
+
+# This is a ser2net configuration file
+# It shows the config stanzas for the kv260 board
+#
+# NOTE: The string BCA68DE82B6E93B611E715387C8649A" is the serial number of
+#       the UART to USB bridge device.
+
+# Unlike the kv260 all 4 interfaces of the USB bridge chip are actual UARTS
+# The first two are in hard logic in the SOC and should always be avilable
+# The second two are in the FPGA and are available with the right FPGA bit file.
+
+# Note: -if00 is main console
+connection: &zcu102_uart1
+    accepter: tcp,7101
+    enable: on
+    options:
+      kickolduser: true
+      telnet-brk-on-sync: true
+    connector: serialdev,
+              /dev/serial/by-id/usb-Silicon_Labs_CP2108_Quad_USB_to_UART_Bridge_Controller_BCA68DE82B6E93B611E715387C8649A-if00-port0,
+              115200n81,local
+
+connection: &zcu102_uart2
+    accepter: tcp,7102
+    enable: on
+    options:
+      kickolduser: true
+      telnet-brk-on-sync: true
+    connector: serialdev,
+              /dev/serial/by-id/usb-Silicon_Labs_CP2108_Quad_USB_to_UART_Bridge_Controller_BCA68DE82B6E93B611E715387C8649A-if01-port0,
+              115200n81,local
+
+connection: &zcu102_uart3
+    accepter: tcp,7103
+    enable: on
+    options:
+      kickolduser: true
+      telnet-brk-on-sync: true
+    connector: serialdev,
+              /dev/serial/by-id/usb-Silicon_Labs_CP2108_Quad_USB_to_UART_Bridge_Controller_BCA68DE82B6E93B611E715387C8649A-if02-port0,
+              115200n81,local
+
+connection: &zcu102_uart4
+    accepter: tcp,7104
+    enable: on
+    options:
+      kickolduser: true
+      telnet-brk-on-sync: true
+    connector: serialdev,
+              /dev/serial/by-id/usb-Silicon_Labs_CP2108_Quad_USB_to_UART_Bridge_Controller_BCA68DE82B6E93B611E715387C8649A-if03-port0,
+              115200n81,local
+
