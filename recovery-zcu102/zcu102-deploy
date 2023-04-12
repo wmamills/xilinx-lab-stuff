@@ -1,0 +1,42 @@
+#!/bin/bash
+
+if [ ! -r "$1" ]; then
+    echo "Expected sd card image as first and only argument"
+    exit 2
+fi
+
+SDMUX_SN=000000001281
+DISK=/dev/disk/by-id/usb-LinuxAut_sdmux_HS-SD_MMC_${SDMUX_SN}-0:0
+SDMUX_CTRL=/dev/usb-sd-mux/id-${SDMUX_SN}
+
+boardctl zcu102 off
+sleep 2
+usbsdmux $SDMUX_CTRL host
+sleep 2
+
+case $1 in
+*.gz)
+    CAT=zcat
+    ;;
+*.bz2)
+    CAT=bzcat
+    ;;
+*.xz)
+    CAT=xzcat
+    ;;
+*.img)
+    CAT=cat
+    ;;
+*)
+    echo "Unknow file type for $1"
+    exit 2
+    ;;
+esac
+
+echo "writing $1 to zcu102 sd card"
+$CAT $1 | sudo dd of=$DISK bs=1M oflag=direct iflag=fullblock status=progress
+
+sync; sync
+sudo /usr/sbin/fdisk -l $DISK
+sudo eject $DISK
+usbsdmux $SDMUX_CTRL dut
