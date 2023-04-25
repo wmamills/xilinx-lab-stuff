@@ -1,0 +1,39 @@
+#! /usr/bin/env python3
+
+import sys
+
+relay_type=sys.argv[1]
+tty=sys.argv[2]
+relay=int(sys.argv[3])
+action_verb=sys.argv[4]
+
+start = 0xa0
+
+if relay < 1 or relay > 16:
+    sys.exit("Relay number must be 1 to 16")
+
+if action_verb == "on":
+    action = 1
+elif action_verb == "off":
+    action = 0
+else:
+    sys.exit("action must be on or off")
+
+if relay_type == "--sum":
+    check = start + relay + action
+    seq = bytearray([start, relay, action, check])
+elif relay_type == "--a1a2":
+    # this type always treats relay as 1
+    # someone messed up or was lazy
+    check = start + action + 1
+    seq = bytearray([start, relay, action, check])
+elif relay_type == "--devantech":
+    # just 1 byte to turn on or turn off
+    start = 0x65 if action else 0x6F
+    seq = bytearray([start + relay-1 ])
+else:
+    sys.exit("Relay type must be --sum or --a0a1")
+
+# Write bytes to file
+with open(tty, "wb") as f:
+    f.write(bytes(seq))
