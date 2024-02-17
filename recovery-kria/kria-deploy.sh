@@ -113,7 +113,7 @@ do_on_target() {
     if [ -r u-boot-vars.bin ]; then
         echo "Update U-boot vars (NON-UEFI)"
         flash_erase /dev/mtd11 0 0
-        dd if=u-boot-vars2.bin of=/dev/mtd11 bs=64k
+        dd if=u-boot-vars.bin of=/dev/mtd11 bs=64k
 
         if ! $VARS2_DONE; then
             echo "Update 2nd copy"
