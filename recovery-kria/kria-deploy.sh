@@ -13,6 +13,9 @@ BLOCK_SIZE="${BLOCK_SIZE_MEG}M"
 BLOCK_SIZE_FULL="$(( $BLOCK_SIZE_MEG * 1024 * 1024 ))"
 USER=root
 
+# recovery has a new SSH machine ID each time, disable know_hosts
+SSH_OPTION="-o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null -o LogLevel=ERROR"
+
 set -e
 
 ssh_rekey() {
@@ -31,12 +34,12 @@ ssh_rekey() {
     done
     echo "Board at ${DEV_IP} is alive"
 
-    # recovery has a new SSH machine ID each time, re-prime
-    ssh-keygen -R ${DEV_IP}
+    # we are not doing known_host's anymore so we don't need this
+    # ssh-keygen -R ${DEV_IP}
 
     TIMEOUT=60
     COUNT=0
-    while ! ssh -o StrictHostKeyChecking=no ${USER}@${DEV_IP} true >/dev/null 2>&1; do
+    while ! ssh $SSH_OPTION ${USER}@${DEV_IP} true >/dev/null 2>&1; do
         if [ $COUNT -gt $TIMEOUT ]; then
             echo "Can't ssh into Board at ${DEV_IP}"
             exit 3
@@ -46,6 +49,21 @@ ssh_rekey() {
         COUNT=$(( COUNT + 1 ))
     done
     echo "Board at ${DEV_IP} ready"
+}
+
+# Newer versions of openssh-client's scp command use sftp-server
+# dropbear does not support that, use -O to use the old method
+# However older versions of openssh-client do not support -O
+# New default ~= 9.2 in debian 12 bookworm
+# -O supported but new not default, 8.9 Ubuntu 22.04
+# Old ~= 8.2 in Ubuntu 20.04, 8.4 in debian 11 bullseye
+scp_setup() {
+    if scp -O 2>&1 | grep "unknown option" >/dev/null; then
+        SCP_OPTION=""
+    else
+        SCP_OPTION="-O"
+        echo "Using -O option for scp"
+    fi
 }
 
 do_on_target() {
@@ -219,8 +237,8 @@ do_host_big_file() {
         fi
 
         #echo "f=$f BLOCK=$BLOCK"
-        scp $f ${USER}@${DEV_IP}: >/dev/null 
-        ssh ${USER}@${DEV_IP} ./${ME_BASE} on_target_chunk $DEV $f $BLOCK
+        scp $SCP_OPTION $SSH_OPTION $f ${USER}@${DEV_IP}: >/dev/null 
+        ssh $SSH_OPTION ${USER}@${DEV_IP} ./${ME_BASE} on_target_chunk $DEV $f $BLOCK
     done
 
     echo ""
@@ -305,6 +323,7 @@ do_on_host() {
         fi
     done
 
+    scp_setup
     ssh_rekey
 
     for f in ./sd.img ./emmc.img ./usb.img; do
@@ -321,7 +340,7 @@ do_on_host() {
              ./u-boot-vars.bin ./u-boot-vars2.bin; do
         if [ -r $f ]; then
             #echo "Transfer $f"
-            scp $f ${USER}@${DEV_IP}:
+            scp $SCP_OPTION $SSH_OPTION $f ${USER}@${DEV_IP}:
             ANY_MTD=true
             ANY=true
         fi
@@ -329,7 +348,7 @@ do_on_host() {
 
     # if an explicit sel-bin.bin is given, use it
     if [ -r ./sel-reg.bin ]; then
-            scp ./sel-reg.bin ${USER}@${DEV_IP}:
+            scp $SCP_OPTION $SSH_OPTION ./sel-reg.bin ${USER}@${DEV_IP}:
             ANY=true
             ANY_MTD=true
     elif $ANY_MTD; then
@@ -338,7 +357,7 @@ do_on_host() {
             echo "error: default imgsel settings file ${DEF_SEL_REG} not found"
             exit 2
         fi
-        scp ${DEF_SEL_REG} ${USER}@${DEV_IP}:sel-reg.bin
+        scp $SCP_OPTION $SSH_OPTION ${DEF_SEL_REG} ${USER}@${DEV_IP}:sel-reg.bin
     fi
 
     if ! $ANY; then
@@ -348,12 +367,12 @@ do_on_host() {
     
     # copy this script to the DUT
     #echo "Transfer ${ME}"
-    scp ${ME} ${USER}@${DEV_IP}:
+    scp $SCP_OPTION $SSH_OPTION ${ME} ${USER}@${DEV_IP}:
 
     # now execute on DUT
     # return code is whatever subscript returns
     if $ANY_MTD; then
-        ssh ${USER}@${DEV_IP} ./${ME_BASE} on_target
+        ssh $SSH_OPTION ${USER}@${DEV_IP} ./${ME_BASE} on_target
     fi
 
     for f in ./sd.img ./emmc.img ./usb.img; do
