@@ -1,0 +1,139 @@
+#!/bin/sh
+
+echo "Lock or Unlock the first blocks of the QSPI on Kira Production SOM"
+
+NUM_BLOCKS=16
+SYSFS_DT_QSPI=/sys/firmware/devicetree/base/axi/spi\@ff0f0000/flash\@0
+
+# first check that the no-wp node was specified in the DTB
+if [ ! -f $SYSFS_DT_QSPI/no-wp ]; then
+    echo "no-wp device tree property is not specified in the dtb"
+    echo "It is not safe to try locking"
+    exit 2
+fi
+
+# and that it made it into the flash params
+if ! grep -qEe '^flags.* NO_WP' /sys/kernel/debug/spi-nor/spi0.0/params; then
+    echo "NO_WP setting is not present in the flash params"
+    echo "It is not safe to try locking"
+    exit 2
+fi
+
+if [ -e $SYSFS_DT_QSPI/partitions/partition\@0/read-only ]; then
+    echo "/dev/mtd0 partition is marked read-only in dtb"
+    echo "flash lock or unlock will not work"
+    exit 2
+fi
+
+# check to make sure mtd0 is 1M
+MTD0_SIZE=$(cat /sys/class/mtd/mtd0/size)
+EXPECTED_SIZE=1048576
+if [ "$MTD0_SIZE" != "$EXPECTED_SIZE" ]; then
+    echo "/dev/mtd0 partition should be expanded to 1M and it is not"
+    echo "size=$MTD0_SIZE expected_size=$EXPECTED_SIZE"
+    echo "Locking of 16 blocks will fail"
+    exit 2
+fi
+
+# Make sure we are on a Production SOM
+if [ ! -b /dev/mmcblk0boot0 ]; then
+    echo "This script is only for Production SOMs, this does not look like one"
+    echo "No emmc device found (/dev/mmcblock0boot0)"
+    echo "Either this is not a Production SOM or the wrong dtb was used to boot"
+    echo "Fail"
+    exit 2
+fi
+
+case $1 in
+lock|"")
+    if ! flash_lock /dev/mtd0 0 $NUM_BLOCKS; then
+        echo "Lock failed"
+        exit 2
+    else
+        echo "Lock worked"
+    fi
+    ;;
+unlock)
+    if ! flash_unlock /dev/mtd0 0 $NUM_BLOCKS; then
+        echo "Unlock failed"
+        exit 2
+    else
+        echo "Unlock worked"
+    fi
+    ;;
+check)
+    echo "All checks passed"
+    ;;
+*)
+    echo "Unknown operation $1"
+    exit 2
+    ;;
+esac
+
+
+# Notes on testing, do not call this function
+test_notes() {
+
+# Test scrap area
+# (mtd3 is old mtd4, name "Open_1", size = 768K)
+flash_eraseall /dev/mtd3
+hd /dev/mtd3 | tail
+# (all ff's)
+dd if=/dev/zero of=/dev/mtd3 bs=64K
+hd /dev/mtd3 | tail
+# (all 00's)
+flash_erase /dev/mtd3 524288 1
+# 524288 == 0x8_0000 == 512K
+hd /dev/mtd3 | tail
+# 512K of 00's, 64K of ff's, and then 192k of 00's again
+
+# Test on real ImgSel areas
+# /dev/mtd0 is now 1M and covers both ImgSel and ImgSel Golden
+# first off save a copy
+dd if=/dev/mtd0 of=mtd0-and-1.bin bs=64K
+flash_lock /dev/mtd0 0 16
+
+# locking when already locked is fine
+flash_lock /dev/mtd0 0 16
+
+# try to erase the 2nd 512K
+flash_erase /dev/mtd0 524288 8
+# (many error messages)
+# contents still valid
+cmp /dev/mtd0 mtd0-and-1.bin; echo $?
+0
+
+# now unlock and try again
+flash_unlock /dev/mtd0 0 16
+# unlocking when already unlocked is also fine
+flash_unlock /dev/mtd0 0 16
+
+# now erase the second 512K
+flash_erase /dev/mtd0 524288 8
+# OK
+
+# check if it is really erased, yep
+hd /dev/mtd0 | tail
+[other stuff]
+0011850  00 00 00 00 00 00 00 00  00 00 00 00 00 00 00 00  |................|
+*
+00080000  ff ff ff ff ff ff ff ff  ff ff ff ff ff ff ff ff  |................|
+*
+00100000
+
+# compare fails now
+cmp /dev/mtd0 mtd0-and-1.bin; echo $?
+/dev/mtd0 mtd0-and-1.bin differ: char 524289, line 184
+1
+
+# Now restore 2nd 512K
+dd if=mtd0-and-1.bin of=/dev/mtd0 bs=64K skip=8 seek=8
+
+# check restore
+cmp /dev/mtd0 mtd0-and-1.bin; echo $?
+0
+
+# now lock it again
+/flash_lock /dev/mtd0 0 16
+
+}

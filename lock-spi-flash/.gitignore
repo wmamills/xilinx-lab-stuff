@@ -1,0 +1,7 @@
+Image-*
+*.cpio.gz.u-boot
+*.scr
+*.dtb
+*.img
+*.img.bz2
+save/

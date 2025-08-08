@@ -1,0 +1,29 @@
+# This is a boot script for U-Boot with generic root parameters used by yocto machine configuration file.
+# Generate boot.scr:
+# mkimage -c none -A arm64 -T script -d boot.script boot.sc
+#
+################
+
+kernel_name=Image-6.12.10-xilinx-g0a0f70e531c7
+ramdisk_name=kria-image-initramfs-k26-smk-kv.cpio.gz.u-boot
+dtb_name=mod-kv260-prodsom.dtb
+devtype=mmc
+devnum=1
+distro_bootpart=1
+
+echo "Loading ${kernel_name} at 0x00200000"
+fatload ${devtype} ${devnum}:${distro_bootpart} 0x00200000 ${kernel_name}
+
+echo "Loading system.dtb at 0x00100000"
+fatload ${devtype} ${devnum}:${distro_bootpart} 0x00100000 ${dtb_name}
+
+echo "Loading ${ramdisk_name} at 0x04000000";
+fatload ${devtype} ${devnum}:${distro_bootpart} 0x04000000 ${ramdisk_name};
+
+# get and append to kernel command line
+fdt addr 0x00100000
+fdt get value bootargs /chosen bootargs
+setenv bootargs $bootargs root=LABEL=root console=/dev/ttyPS1,115200 autorun=./lock-qspi
+
+# boot it
+booti 0x00200000 0x04000000 0x00100000
