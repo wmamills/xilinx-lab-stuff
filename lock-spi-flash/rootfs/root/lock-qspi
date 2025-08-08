@@ -38,7 +38,7 @@ fi
 # Make sure we are on a Production SOM
 if [ ! -b /dev/mmcblk0boot0 ]; then
     echo "This script is only for Production SOMs, this does not look like one"
-    echo "No emmc device found (/dev/mmcblock0boot0)"
+    echo "No emmc device found (/dev/mmcblk0boot0)"
     echo "Either this is not a Production SOM or the wrong dtb was used to boot"
     echo "Fail"
     exit 2
