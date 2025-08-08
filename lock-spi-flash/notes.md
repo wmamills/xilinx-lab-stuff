@@ -9,6 +9,15 @@ you want to run manually or do something else.  Likewise, there is a stoppable
 This image is here:
 https://people.linaro.org/~bill.mills/xilinx-lab-stuff/kv260-prodsom-lock-qspi.img.bz2
 
+Use with this boot.bin:
+https://people.linaro.org/~bill.mills/xilinx-images/rebuilt-2023.2-kv260/boot.bin
+
+(In theory any boot.bin that boots from sd card by default and handles boot.scr
+*should* work but testing has shown problems.  Trusted Substrate builds won't
+process boot.scr by default.  AMD 2025.1 wont boot. AMD 2024.2 has a u-boot menu
+and boots from emmc by default and won't see the emmc if sd is manually selected.
+AMD 2024.1 won't see the emmc so the script fails. etc )
+
 ## An aside on the Starter SOM
 
 Note: The Stater SOM already has (*most?*) recovery assets already lock using 
