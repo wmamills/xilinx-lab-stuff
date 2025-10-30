@@ -1,0 +1,80 @@
+test # 1
+ping FAILED for 192.168.157.49 from cold start
+ping OK     for 192.168.157.49 from warm start
+ssh  OK     for vpr-5050A-arm from warm start
+test # 2
+ping FAILED for 192.168.157.49 from cold start
+ping OK     for 192.168.157.49 from warm start
+ssh  OK     for vpr-5050A-arm from warm start
+test # 3
+ping FAILED for 192.168.157.49 from cold start
+ping OK     for 192.168.157.49 from warm start
+ssh  OK     for vpr-5050A-arm from warm start
+test # 4
+ping FAILED for 192.168.157.49 from cold start
+ping OK     for 192.168.157.49 from warm start
+ssh  OK     for vpr-5050A-arm from warm start
+test # 5
+ping FAILED for 192.168.157.49 from cold start
+ping OK     for 192.168.157.49 from warm start
+ssh  OK     for vpr-5050A-arm from warm start
+test # 6
+ping FAILED for 192.168.157.49 from cold start
+ping OK     for 192.168.157.49 from warm start
+ssh  OK     for vpr-5050A-arm from warm start
+test # 7
+ping FAILED for 192.168.157.49 from cold start
+ping OK     for 192.168.157.49 from warm start
+ssh  OK     for vpr-5050A-arm from warm start
+test # 8
+ping FAILED for 192.168.157.49 from cold start
+ping OK     for 192.168.157.49 from warm start
+ssh  OK     for vpr-5050A-arm from warm start
+test # 9
+ping FAILED for 192.168.157.49 from cold start
+ping OK     for 192.168.157.49 from warm start
+ssh  OK     for vpr-5050A-arm from warm start
+test # 10
+ping FAILED for 192.168.157.49 from cold start
+ping OK     for 192.168.157.49 from warm start
+ssh  OK     for vpr-5050A-arm from warm start
+test # 11
+ping FAILED for 192.168.157.49 from cold start
+ping OK     for 192.168.157.49 from warm start
+ssh  OK     for vpr-5050A-arm from warm start
+test # 12
+ping FAILED for 192.168.157.49 from cold start
+ping OK     for 192.168.157.49 from warm start
+ssh  OK     for vpr-5050A-arm from warm start
+test # 13
+ping FAILED for 192.168.157.49 from cold start
+ping OK     for 192.168.157.49 from warm start
+ssh  OK     for vpr-5050A-arm from warm start
+test # 14
+ping FAILED for 192.168.157.49 from cold start
+ping OK     for 192.168.157.49 from warm start
+ssh  OK     for vpr-5050A-arm from warm start
+test # 15
+ping FAILED for 192.168.157.49 from cold start
+ping OK     for 192.168.157.49 from warm start
+ssh  OK     for vpr-5050A-arm from warm start
+test # 16
+ping FAILED for 192.168.157.49 from cold start
+ping OK     for 192.168.157.49 from warm start
+ssh  OK     for vpr-5050A-arm from warm start
+test # 17
+ping FAILED for 192.168.157.49 from cold start
+ping OK     for 192.168.157.49 from warm start
+ssh  OK     for vpr-5050A-arm from warm start
+test # 18
+ping FAILED for 192.168.157.49 from cold start
+ping OK     for 192.168.157.49 from warm start
+ssh  OK     for vpr-5050A-arm from warm start
+test # 19
+ping FAILED for 192.168.157.49 from cold start
+ping OK     for 192.168.157.49 from warm start
+ssh  OK     for vpr-5050A-arm from warm start
+test # 20
+ping FAILED for 192.168.157.49 from cold start
+ping OK     for 192.168.157.49 from warm start
+ssh  OK     for vpr-5050A-arm from warm start
