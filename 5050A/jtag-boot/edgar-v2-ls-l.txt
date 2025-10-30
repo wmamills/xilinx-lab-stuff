@@ -1,0 +1,19 @@
+total 1.2G
+drwxrwxr-x 2 bill bill 4.0K Oct 30 13:54 .
+drwxrwxr-x 5 bill bill 4.0K Oct 30 13:56 ..
+-rw-rw-r-- 1 bill bill 750M Oct 29 11:59 5050a-versal.tgz
+-rw-rw-r-- 1 bill bill 7.3M Oct 29 08:10 boot.bin-edgar
+-rw-rw-r-- 1 bill bill 1.5K Oct 29 08:11 boot.scr
+-rw-rw-r-- 1 bill bill 1.5K Oct 29 08:11 boot.script
+-rw-rw-r-- 1 bill bill  805 Oct 29 08:09 jtag-boot.tcl
+-rw-rw-r-- 1 bill bill 162K Oct 29 11:44 kernelconfig-x86
+-rw-rw-r-- 1 bill bill 384M Oct 29 11:44 kernel-mods-x86.tgz
+-rwxr-xr-x 1 bill bill 4.7K Oct 29 17:50 orig-mmc1-boot.scr
+-rw-rw-r-- 1 bill bill  86M Oct 30 08:02 qemu-system-aarch64
+-rw-rw-r-- 1 bill bill  385 Oct 30 08:02 run-versal-virtio-msg-net-backend.sh
+-rw-rw-r-- 1 bill bill  41K Oct 29 08:11 system-brian.dtb
+-rw-rw-r-- 1 bill bill 405K Oct 30 08:26 virtio_msg_amp.ko
+-rw-rw-r-- 1 bill bill 367K Oct 30 08:26 virtio_msg_amp_pci.ko
+-rw-rw-r-- 1 bill bill 367K Oct 30 08:26 virtio_msg_loopback.ko
+-rw-rw-r-- 1 bill bill 378K Oct 30 08:26 virtio_msg_sapphire.ko
+-rw-rw-r-- 1 bill bill 606K Oct 30 08:25 virtio_msg_transport.ko
