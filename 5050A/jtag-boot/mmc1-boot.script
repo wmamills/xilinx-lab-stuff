@@ -1,0 +1,3 @@
+# boot scrpt to sit in mmc 1:1 dir
+# chain to the script loaded by jtag
+source 0x02100000

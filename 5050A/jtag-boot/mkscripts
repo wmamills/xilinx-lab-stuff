@@ -1,0 +1,19 @@
+#!/bin/bash
+
+shopt -s nullglob
+
+T=tmp-scripts
+rm -rf tmp-scripts
+mkdir -p $T
+
+
+for i in $(find -name "boot-*.frag"); do
+    cat common.frag $i >$T/${i%.*}.script
+done
+
+for i in $(find -name "*.script"); do
+    F=$(basename $i)
+    mkimage -T script -d $i $T/${F%.*}.scr
+done
+
+rm $T/boot-*.script
